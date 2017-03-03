@@ -12,10 +12,10 @@ import sqlite3
 
 def getHistory(symbol, maxlookback):
     #richie you do this
-    return pd.read_csv('./data/5m_#TeslaMotor.csv')
+    return pd.read_csv('./data/5m_#TeslaMotor.csv')[-maxlookback:]
 
 
-class FrankiesSystem():
+class Frankenstein():
     #i'll do this
     def __init__(self, symbol, feed, maxlookback=20):
         self.maxlookback = maxlookback
@@ -23,11 +23,14 @@ class FrankiesSystem():
         self.data = feed(symbol, maxlookback)
 
     def save(self):
+        print 'lookback', len(self.data)
         print self.data.tail()
+        signal_change = True
+        if signal_change:
+            self.transmit()
 
     def transmit(self):
         print 'transmitting to broker'
 
-poochie = FrankiesSystem('F', getHistory)
+poochie = Frankenstein('F', getHistory)
 poochie.save()
-poochie.transmit()
