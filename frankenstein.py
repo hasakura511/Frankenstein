@@ -58,7 +58,7 @@ class Frankenstein():
         data.to_csv(dataPath+self.symbol+'_last.csv')
         #print data.iloc[-1]
         print data.iloc[-1].Date,
-        filename = dataPath+self.symbol+'.csv'
+        filename = dataPath+self.symbol+'_signals.csv'
         if isfile(filename):
             signalfile=pd.read_csv(filename).append(data.iloc[-1])
             signalfile.to_csv(filename, index=False)
