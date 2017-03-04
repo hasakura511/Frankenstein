@@ -10,7 +10,7 @@ from os.path import isfile, join
 
 #API
 #SYM = FrankiesSystem(symbol, get_hist_func)
-#SYM.check() - saves signal transmits to broker
+#SYM.run() - saves signal transmits to broker
 
 dataPath='./data/'
 def getBackendDB():
