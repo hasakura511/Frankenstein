@@ -23,7 +23,7 @@ def getFeed(symbol, maxlookback, barsize='5min'):
     #richie you do this
     #return history
     #if there is no new feed then return None
-    return pd.read_csv('./data/'+symbol+'.csv')
+    return
 
 def getHistory(symbol, maxlookback):
     global dataPath
