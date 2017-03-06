@@ -19,7 +19,7 @@ def getBackendDB():
     readConn = sqlite3.connect(dbPath)
     return readConn
 
-def getFeed(symbol, maxlookback):
+def getFeed(symbol, maxlookback, barsize='5min'):
     #richie you do this
     #return history
     #if there is no new feed then return None
