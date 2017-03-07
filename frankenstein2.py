@@ -14,10 +14,6 @@ from datetime import datetime as dt
 #API
 #SYM = FrankiesSystem(symbol, get_hist_func)
 #SYM.run() - saves signal transmits to broker
-c2id="110064634"
-c2key="aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
-type="stock"
-duration="DAY"
 
 dataPath='./data/'
 def getBackendDB():
@@ -52,7 +48,7 @@ def getHistory(symbol, maxlookback):
 
 
 def place_order(action, quant, sym, type, systemid, apikey, parentsig=None):
-    url = 'https://api.collective2.com/world/apiv3/submitSignal'
+    url = 'https://collective2.com/world/apiv2/submitSignal'
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
     parentsig = "" if parentsig == None else parentsig
     data = {
@@ -64,7 +60,7 @@ def place_order(action, quant, sym, type, systemid, apikey, parentsig=None):
             "symbol": sym,
             "typeofsymbol": type,
             "market": 1,  # "limit": 31.05,
-            "duration": duration,
+            "duration": "DAY",
             "signalid": "",
             "conditionalupon": parentsig
         }
@@ -86,50 +82,73 @@ class Frankenstein():
         self.maxlookback = max(ema_lookback, vwap_lookback)
         self.feed = feed(symbol, self.maxlookback)
         self.dbConn=getBackendDB()
+        self.signal_filename=dataPath+self.symbol+'_signals.csv'
 
     def check(self):
         #print 'lookback', self.maxlookback
         data=self.feed.next().copy()
-        start_idx=[(i,date) for i,date in enumerate(data.index)\
-                   if date.minute == 35 and date.hour ==9]
-        if len(start_idx)==0:
-            print data.to_csv(dataPath+'startidx0.csv')
-        else:
-            start_ema = start_idx[-1][0] - self.ema_lookback
-            print start_idx[-1], start_ema,
 
-            data=data.iloc[start_ema+1:]
-            print 'start_ema', data.iloc[0].name,
-            data['EMA']=ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
 
-            #start_vwap=start_idx[-1][1]
-            #data=data.ix[start_vwap:]
+        print 'last',data.iloc[-1].name
+        #print dir(self)
+        if 'signals' in dir(self):
+            #later data requests
+            data= self.signals.append(data.iloc[-1]).iloc[-self.ema_lookback:].copy()
+            #print data.iloc[-self.ema_lookback:]
             #print data
-            data=data.dropna()
-            data['VP']=(data.High+data.Low+data.Close)/3*data.Volume
+
+            #data = data.dropna()
+            #print data
+            self.lastdata=data
+            lastbar=self.lastbar=data.iloc[-1]
+            #print lastbar
+            #print ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
+            lastbar['EMA'] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback)[-1]
+            if lastbar.name.minute == 35 and lastbar.name.hour ==9:
+                #print lastbar
+                lastbar['VP'] = (lastbar.High + lastbar.Low + lastbar.Close) / 3 * lastbar.Volume
+                lastbar['TotalVP'] = lastbar['VP']
+                lastbar['TotalVolume'] =lastbar['Volume']
+                lastbar['VWAP'] = lastbar.TotalVP / lastbar.TotalVolume
+                lastbar['EMA>VWAP'] = np.where(lastbar.EMA > lastbar.VWAP, 1, -1)
+                #print lastbar
+            else:
+
+                lastbar['VP'] = (lastbar.High + lastbar.Low + lastbar.Close) / 3 * lastbar.Volume
+                lastbar['TotalVP'] = data.iloc[-2].TotalVP+lastbar['VP']
+                lastbar['TotalVolume'] = data.iloc[-2].TotalVolume+lastbar['Volume']
+                lastbar['VWAP'] = lastbar.TotalVP / lastbar.TotalVolume
+                lastbar['EMA>VWAP'] = np.where(lastbar.EMA > lastbar.VWAP, 1, -1)
+            #print lastbar
+            self.signals=self.signals.append(lastbar)
+        else:
+            #first data request
+            data['EMA'] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
+            start_idx = [(i, date) for i, date in enumerate(data.index) \
+                         if date.minute == 35 and date.hour == 9]
+            bars_from_new_day = data.iloc[start_idx[-1][0]:].shape[0]
+            #print len(data), start_idx[-1], 'bars from new day', bars_from_new_day
+
+            if len(start_idx) == 0:
+                # print data.to_csv(dataPath+'startidx0.csv')
+                print 'no start_idx found!'
+                sys.exit()
+
+            data = data.iloc[start_idx[-1][0]:]
+            #data = data.dropna()
+            #self.data=data
+            #print data.High.values + data.Low.values + data.Close.values
+            data['VP'] = (data.High + data.Low + data.Close) / 3 * data.Volume
             data['TotalVP'] = data.VP.cumsum()
             data['TotalVolume'] = data.Volume.cumsum()
-            data['VWAP'] = data.TotalVP/data.TotalVolume
-            data['EMA>VWAP']=np.where(data.EMA>data.VWAP,1,-1)
-            self.lastdata=data
+            data['VWAP'] = data.TotalVP / data.TotalVolume
+            data['EMA>VWAP'] = np.where(data.EMA > data.VWAP, 1, -1)
+            self.signals=data.copy()
+            self.lastbar = data.iloc[-1]
 
-            #savedata
-            data.to_csv(dataPath+self.symbol+'_last.csv')
-            #print data.iloc[-1]
-            print 'end',data.iloc[-1].name
-            filename = dataPath+self.symbol+'_signals.csv'
-            if isfile(filename):
-                signalfile=pd.read_csv(filename, index_col='Date').append(data.iloc[-1])
-                signalfile.to_csv(filename, index=True)
-            else:
-                signalfile=data.iloc[-2:]
-                signalfile.to_csv(filename, index=True)
-            #data.iloc[-1].to_sql(name=self.symbol, con=self.dbConn,
-            #                 index=False, if_exists='replace')
-
-            signal_change = False
-            if signal_change:
-                self.transmit()
+        signal_change = False
+        if signal_change:
+            self.transmit()
 
     def transmit(self):
         print 'transmitting signal to broker'
@@ -141,6 +160,8 @@ class Frankenstein():
             except StopIteration:
                 print 'EOF'
                 break
+        self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
+        self.signals.to_csv(self.signal_filename, index=True)
 
 if __name__ == "__main__":
 
