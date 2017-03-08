@@ -11,10 +11,10 @@ from bs4 import BeautifulSoup
 
 sys.path.append("../")
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tsdp.settings")
-import tsdp
-import tsdp.settings as bsettings
-from feed.models import *
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
+import beCOMPANY
+import beCOMPANY.settings as bsettings
+from main.models import *
 import datetime
 import re
 import csv

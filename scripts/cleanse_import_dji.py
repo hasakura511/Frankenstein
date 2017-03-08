@@ -7,10 +7,10 @@ import sys
 
 sys.path.append("../")
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tsdp.settings")
-import tsdp
-import tsdp.settings as bsettings
-from feed.models import *
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
+import beCOMPANY
+import beCOMPANY.settings as bsettings
+from main.models import *
 import datetime
 import re
 import csv
@@ -68,7 +68,7 @@ def read_csv(filename):
               'is_public': True,
               #'company_website': Summary_Quote,
             }
-             
+            
             company=comp.getCompany(jsonobj)
             cr_list=CompanyResource.objects.filter(resource_id=resource.id, company_id=company.id)
             if cr_list and len(cr_list) > 0:

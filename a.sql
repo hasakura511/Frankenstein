@@ -2,2316 +2,1599 @@ BEGIN;
 commit;
 
 --
+-- Create model BidAsk
+--
+CREATE TABLE "main_bidask" ("id" serial NOT NULL PRIMARY KEY, "frequency" integer NULL, "ask" double precision NULL, "asksize" double precision NULL, "bid" double precision NULL, "bidsize" double precision NULL, "date" timestamp with time zone NULL, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "crawl_source" varchar(200) NULL);
+commit;
+
+--
 -- Create model City
 --
-CREATE TABLE "feed_city" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL);
+CREATE TABLE "main_city" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL);
 commit;
 
 --
 -- Create model Company
 --
-CREATE TABLE "feed_company" ("id" serial NOT NULL PRIMARY KEY, "is_private_company_all" boolean NOT NULL, "is_private_company_class" boolean NOT NULL, "is_private_investor_class" boolean NOT NULL, "is_private_company_short" boolean NOT NULL, "is_private_company_long" boolean NOT NULL, "is_private_company_industry" boolean NOT NULL, "is_private_company_country" boolean NOT NULL, "is_private_company_city" boolean NOT NULL, "is_private_company_state" boolean NOT NULL, "is_private_company_region" boolean NOT NULL, "is_private_company_employee" boolean NOT NULL, "is_private_corporation" boolean NOT NULL, "is_private_company_established" boolean NOT NULL, "is_private_company_founded_year" boolean NOT NULL, "is_private_patent" boolean NOT NULL, "is_private_team" boolean NOT NULL, "is_private_company_fundraising" boolean NOT NULL, "is_private_company_logo" boolean NOT NULL, "is_private_company_website" boolean NOT NULL, "is_private_company_founded_day" boolean NOT NULL, "is_private_company_founded_month" boolean NOT NULL, "is_private_company_name" boolean NOT NULL, "company_favorite_count" integer NOT NULL, "company_recommendation_count" integer NOT NULL, "is_active" boolean NOT NULL, "is_public" boolean NOT NULL, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "is_trusted_vc" boolean NOT NULL, "is_partner" boolean NOT NULL, "is_angel" boolean NOT NULL, "is_government" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_dcamp" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "is_dart" boolean NOT NULL, "is_bizinkorea" boolean NOT NULL, "is_startup" boolean NOT NULL, "is_investor" boolean NOT NULL, "ticker" varchar(100) NULL, "exchange" varchar(100) NULL, "sec_cik" varchar(100) NULL, "sec_cik_int" varchar(100) NULL, "partner_order" integer NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NULL, "company_name" varchar(1000) NOT NULL, "company_kor_name" varchar(1000) NULL, "company_class" varchar(15) NOT NULL, "tips_start_date" date NULL, "rocketpunch_url" varchar(1001) NULL, "angellist_url" varchar(702) NULL, "sec_url" varchar(701) NULL, "e27_url" varchar(700) NULL, "f6s_url" varchar(703) NULL, "forbes_url" varchar(707) NULL, "investor_class" varchar(1000) NOT NULL, "company_short" varchar(10001) NOT NULL, "company_long" text NOT NULL, "company_industry" varchar(5002) NOT NULL, "company_continent" varchar(300) NULL, "company_country" varchar(300) NOT NULL, "company_city" varchar(300) NOT NULL, "company_state" varchar(300) NULL, "company_region" varchar(300) NULL, "company_location" varchar(1003) NULL, "company_location_latitude" integer NOT NULL, "company_location_longitude" integer NOT NULL, "company_employee" varchar(20) NOT NULL, "corporation" varchar(10) NOT NULL, "company_established" varchar(30) NULL, "company_founded_year" integer NULL, "company_founded_month" integer NULL, "company_founded_day" integer NULL, "company_website" varchar(1007) NOT NULL, "company_logo" varchar(1008) NOT NULL, "company_fundraising" varchar(300) NOT NULL, "company_fundraising_currency" varchar(300) NULL, "company_fundraising_highlight" varchar(300) NULL, "company_fundraising_deck" varchar(1009) NULL, "company_number" varchar(210) NULL, "corporate_number" varchar(211) NULL, "employee_total" integer NOT NULL, "employee_total_month_ago" integer NOT NULL, "employee_added_this_month" integer NOT NULL, "employee_growth_month" integer NOT NULL, "employee_total_6month_ago" integer NOT NULL, "employee_added_in_6month" integer NOT NULL, "employee_growth_6month" integer NOT NULL, "employee_added_since_funding" integer NOT NULL, "employee_months_since_funding" integer NOT NULL, "employee_growth_since_funding" integer NOT NULL, "investor_list_csv" varchar(5012) NULL, "product_list_csv" varchar(5013) NULL, "product_market_csv" varchar(5014) NULL, "invested_funding_stage_csv" varchar(5015) NULL, "traffic_growth_month" integer NOT NULL, "last_funding_amt" double precision NOT NULL, "last_funding_date" timestamp with time zone NULL, "last_funding_months_ago" integer NOT NULL, "total_funding_amt" double precision NOT NULL, "funding_stage_name" varchar(116) NULL, "product_app_store" varchar(217) NULL, "product_google_play" varchar(218) NULL, "company_top_keywords" varchar(5019) NULL, "company_interests" varchar(5020) NULL, "company_alerts" varchar(221) NULL, "traffic_monthly_unique" integer NOT NULL, "traffic_monthly_unique_week_ago" integer NOT NULL, "traffic_monthly_weekly_growth" integer NOT NULL, "traffic_monthly_unique_month_ago" integer NOT NULL, "traffic_monthly_monthly_growth" integer NOT NULL, "traffic_mobile_download" integer NOT NULL, "traffic_mobile_download_week_ago" integer NOT NULL, "traffic_mobile_download_weekly_growth" integer NOT NULL, "traffic_mobile_download_month_ago" integer NOT NULL, "traffic_mobile_download_monthly_growth" integer NOT NULL, "revenue" double precision NOT NULL, "total_valuation" double precision NOT NULL, "total_asset" double precision NOT NULL, "total_debt" double precision NOT NULL, "total_capital" double precision NOT NULL, "total_sales" double precision NOT NULL, "net_income" double precision NOT NULL, "operating_income" double precision NOT NULL, "ratio_sales_net" double precision NOT NULL, "ratio_sales_operating" double precision NOT NULL, "period_end_date" timestamp with time zone NULL, "investor_fund_sold_3yr" integer NOT NULL, "investor_last_funding_date" timestamp with time zone NULL, "investor_portfolio_size" integer NOT NULL, "investor_total_deals" integer NOT NULL, "score1" double precision NOT NULL, "score2" double precision NOT NULL, "score3" double precision NOT NULL, "score4" double precision NOT NULL, "score5" double precision NOT NULL, "company_linkedin_page" varchar(1017) NULL, "company_facebook_page" varchar(1018) NULL, "company_twitter" varchar(1019) NULL, "crawl_source" varchar(200) NULL, "slug" varchar(50) NULL UNIQUE, "invested_stages_csv" varchar(5013) NULL, "invested_success" integer NOT NULL, "invested_success_amt" double precision NOT NULL, "invested_founder_csv" varchar(5014) NULL, "invested_market_csv" varchar(5015) NULL, "invested_continent_csv" varchar(5016) NULL, "city_id" integer NULL);
+CREATE TABLE "main_company" ("id" serial NOT NULL PRIMARY KEY, "is_private_company_all" boolean NOT NULL, "is_private_company_class" boolean NOT NULL, "is_private_investor_class" boolean NOT NULL, "is_private_company_short" boolean NOT NULL, "is_private_company_long" boolean NOT NULL, "is_private_company_industry" boolean NOT NULL, "is_private_company_country" boolean NOT NULL, "is_private_company_city" boolean NOT NULL, "is_private_company_state" boolean NOT NULL, "is_private_company_region" boolean NOT NULL, "is_private_company_employee" boolean NOT NULL, "is_private_corporation" boolean NOT NULL, "is_private_company_established" boolean NOT NULL, "is_private_company_founded_year" boolean NOT NULL, "is_private_patent" boolean NOT NULL, "is_private_team" boolean NOT NULL, "is_private_company_fundraising" boolean NOT NULL, "is_private_company_logo" boolean NOT NULL, "is_private_company_website" boolean NOT NULL, "is_private_company_founded_day" boolean NOT NULL, "is_private_company_founded_month" boolean NOT NULL, "is_private_company_name" boolean NOT NULL, "company_favorite_count" integer NOT NULL, "company_recommendation_count" integer NOT NULL, "is_active" boolean NOT NULL, "is_public" boolean NOT NULL, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "is_trusted_vc" boolean NOT NULL, "is_partner" boolean NOT NULL, "is_angel" boolean NOT NULL, "is_government" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_dcamp" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "is_dart" boolean NOT NULL, "is_bizinkorea" boolean NOT NULL, "is_startup" boolean NOT NULL, "is_investor" boolean NOT NULL, "ticker" varchar(100) NULL, "exchange" varchar(100) NULL, "sec_cik" varchar(100) NULL, "sec_cik_int" varchar(100) NULL, "partner_order" integer NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NULL, "company_name" varchar(1000) NOT NULL, "company_kor_name" varchar(1000) NULL, "company_class" varchar(15) NOT NULL, "tips_start_date" date NULL, "rocketpunch_url" varchar(1001) NULL, "angellist_url" varchar(702) NULL, "sec_url" varchar(701) NULL, "e27_url" varchar(700) NULL, "f6s_url" varchar(703) NULL, "forbes_url" varchar(707) NULL, "investor_class" varchar(1000) NOT NULL, "company_short" varchar(10001) NOT NULL, "company_long" text NOT NULL, "company_industry" varchar(5002) NOT NULL, "company_continent" varchar(300) NULL, "company_country" varchar(300) NOT NULL, "company_city" varchar(300) NOT NULL, "company_state" varchar(300) NULL, "company_region" varchar(300) NULL, "company_location" varchar(1003) NULL, "company_location_latitude" integer NOT NULL, "company_location_longitude" integer NOT NULL, "company_employee" varchar(20) NOT NULL, "corporation" varchar(10) NOT NULL, "company_established" varchar(30) NULL, "company_founded_year" integer NULL, "company_founded_month" integer NULL, "company_founded_day" integer NULL, "company_website" varchar(1007) NOT NULL, "company_logo" varchar(1008) NOT NULL, "company_fundraising" varchar(300) NOT NULL, "company_fundraising_currency" varchar(300) NULL, "company_fundraising_highlight" varchar(300) NULL, "company_fundraising_deck" varchar(1009) NULL, "company_number" varchar(210) NULL, "corporate_number" varchar(211) NULL, "employee_total" integer NOT NULL, "employee_total_month_ago" integer NOT NULL, "employee_added_this_month" integer NOT NULL, "employee_growth_month" integer NOT NULL, "employee_total_6month_ago" integer NOT NULL, "employee_added_in_6month" integer NOT NULL, "employee_growth_6month" integer NOT NULL, "employee_added_since_funding" integer NOT NULL, "employee_months_since_funding" integer NOT NULL, "employee_growth_since_funding" integer NOT NULL, "investor_list_csv" varchar(5012) NULL, "product_list_csv" varchar(5013) NULL, "product_market_csv" varchar(5014) NULL, "invested_funding_stage_csv" varchar(5015) NULL, "traffic_growth_month" integer NOT NULL, "last_funding_amt" double precision NOT NULL, "last_funding_date" timestamp with time zone NULL, "last_funding_months_ago" integer NOT NULL, "total_funding_amt" double precision NOT NULL, "funding_stage_name" varchar(116) NULL, "product_app_store" varchar(217) NULL, "product_google_play" varchar(218) NULL, "company_top_keywords" varchar(5019) NULL, "company_interests" varchar(5020) NULL, "company_alerts" varchar(221) NULL, "traffic_monthly_unique" integer NOT NULL, "traffic_monthly_unique_week_ago" integer NOT NULL, "traffic_monthly_weekly_growth" integer NOT NULL, "traffic_monthly_unique_month_ago" integer NOT NULL, "traffic_monthly_monthly_growth" integer NOT NULL, "traffic_mobile_download" integer NOT NULL, "traffic_mobile_download_week_ago" integer NOT NULL, "traffic_mobile_download_weekly_growth" integer NOT NULL, "traffic_mobile_download_month_ago" integer NOT NULL, "traffic_mobile_download_monthly_growth" integer NOT NULL, "revenue" double precision NOT NULL, "total_valuation" double precision NOT NULL, "total_asset" double precision NOT NULL, "total_debt" double precision NOT NULL, "total_capital" double precision NOT NULL, "total_sales" double precision NOT NULL, "net_income" double precision NOT NULL, "operating_income" double precision NOT NULL, "ratio_sales_net" double precision NOT NULL, "ratio_sales_operating" double precision NOT NULL, "period_end_date" timestamp with time zone NULL, "investor_fund_sold_3yr" integer NOT NULL, "investor_last_funding_date" timestamp with time zone NULL, "investor_portfolio_size" integer NOT NULL, "investor_total_deals" integer NOT NULL, "score1" double precision NOT NULL, "score2" double precision NOT NULL, "score3" double precision NOT NULL, "score4" double precision NOT NULL, "score5" double precision NOT NULL, "company_linkedin_page" varchar(1017) NULL, "company_facebook_page" varchar(1018) NULL, "company_twitter" varchar(1019) NULL, "crawl_source" varchar(200) NULL, "slug" varchar(50) NULL UNIQUE, "invested_stages_csv" varchar(5013) NULL, "invested_success" integer NOT NULL, "invested_success_amt" double precision NOT NULL, "invested_founder_csv" varchar(5014) NULL, "invested_market_csv" varchar(5015) NULL, "invested_continent_csv" varchar(5016) NULL, "city_id" integer NULL);
 commit;
 
 --
 -- Create model CompanyInvestingEvent
 --
-CREATE TABLE "feed_companyinvestingevent" ("id" serial NOT NULL PRIMARY KEY, "event_round" varchar(300) NULL, "event_investors" varchar(500) NULL, "event_investors_id" varchar(500) NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "is_user_input" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "event_day" integer NULL, "event_month" integer NULL, "event_year" integer NULL, "event_currency" varchar(100) NULL, "event_amount" varchar(200) NULL, "invest_currency" varchar(3) NULL, "invest_amt" double precision NOT NULL, "invest_date" timestamp with time zone NULL, "crawl_source" varchar(200) NULL);
+CREATE TABLE "main_companyinvestingevent" ("id" serial NOT NULL PRIMARY KEY, "event_round" varchar(300) NULL, "event_investors" varchar(500) NULL, "event_investors_id" varchar(500) NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "is_user_input" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "event_day" integer NULL, "event_month" integer NULL, "event_year" integer NULL, "event_currency" varchar(100) NULL, "event_amount" varchar(200) NULL, "invest_currency" varchar(3) NULL, "invest_amt" double precision NOT NULL, "invest_date" timestamp with time zone NULL, "crawl_source" varchar(200) NULL);
 commit;
 
 --
 -- Create model CompanyInvestor
 --
-CREATE TABLE "feed_companyinvestor" ("id" serial NOT NULL PRIMARY KEY, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NULL, "is_user_input" boolean NOT NULL, "investor_day" integer NULL, "investor_month" integer NULL, "investor_year" integer NULL, "investor_currency" varchar(100) NULL, "investor_amount" varchar(200) NULL, "invest_currency" varchar(3) NULL, "invest_amt" double precision NOT NULL, "invest_date" timestamp with time zone NULL, "is_active" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "is_estimate" boolean NOT NULL, "crawl_source" varchar(200) NULL);
+CREATE TABLE "main_companyinvestor" ("id" serial NOT NULL PRIMARY KEY, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NULL, "is_user_input" boolean NOT NULL, "investor_day" integer NULL, "investor_month" integer NULL, "investor_year" integer NULL, "investor_currency" varchar(100) NULL, "investor_amount" varchar(200) NULL, "invest_currency" varchar(3) NULL, "invest_amt" double precision NOT NULL, "invest_date" timestamp with time zone NULL, "is_active" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "is_estimate" boolean NOT NULL, "crawl_source" varchar(200) NULL);
 commit;
 
 --
 -- Create model CompanyResource
 --
-CREATE TABLE "feed_companyresource" ("id" serial NOT NULL PRIMARY KEY, "company_id" integer NOT NULL);
+CREATE TABLE "main_companyresource" ("id" serial NOT NULL PRIMARY KEY, "company_id" integer NOT NULL);
 commit;
 
 --
 -- Create model Continent
 --
-CREATE TABLE "feed_continent" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "crawl_source" varchar(200) NULL, "company_count" integer NOT NULL, "company_investor_count" integer NOT NULL, "company_startup_count" integer NOT NULL, "company_public_count" integer NOT NULL, "user_count" integer NOT NULL);
+CREATE TABLE "main_continent" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "crawl_source" varchar(200) NULL, "company_count" integer NOT NULL, "company_investor_count" integer NOT NULL, "company_startup_count" integer NOT NULL, "company_public_count" integer NOT NULL, "user_count" integer NOT NULL);
 commit;
 
 --
 -- Create model Country
 --
-CREATE TABLE "feed_country" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "company_count" integer NOT NULL, "company_investor_count" integer NOT NULL, "company_startup_count" integer NOT NULL, "company_public_count" integer NOT NULL, "user_count" integer NOT NULL, "continent_id" integer NOT NULL);
+CREATE TABLE "main_country" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "company_count" integer NOT NULL, "company_investor_count" integer NOT NULL, "company_startup_count" integer NOT NULL, "company_public_count" integer NOT NULL, "user_count" integer NOT NULL, "continent_id" integer NOT NULL);
+commit;
+
+--
+-- Create model Feed
+--
+CREATE TABLE "main_feed" ("id" serial NOT NULL PRIMARY KEY, "frequency" integer NULL, "date" timestamp with time zone NULL, "open" double precision NULL, "high" double precision NULL, "low" double precision NULL, "close" double precision NULL, "change" double precision NULL, "settle" double precision NULL, "open_interest" double precision NULL, "volume" double precision NULL, "wap" double precision NULL, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "crawl_source" varchar(200) NULL);
 commit;
 
 --
 -- Create model FundingStage
 --
-CREATE TABLE "feed_fundingstage" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(500) NOT NULL, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "count" integer NULL, "stage_step" integer NULL, "crawl_source" varchar(200) NULL);
+CREATE TABLE "main_fundingstage" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(500) NOT NULL, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "count" integer NULL, "stage_step" integer NULL, "crawl_source" varchar(200) NULL);
+commit;
+
+--
+-- Create model Instrument
+--
+CREATE TABLE "main_instrument" ("id" serial NOT NULL PRIMARY KEY, "broker" varchar(255) NULL, "sym" varchar(255) NULL, "cur" varchar(255) NULL, "exch" varchar(255) NULL, "secType" varchar(255) NULL, "trade_freq" integer NULL, "mult" double precision NULL, "local_sym" varchar(255) NULL, "contractMonth" varchar(255) NULL, "expiry" varchar(255) NULL, "evRule" varchar(255) NULL, "liquidHours" varchar(255) NULL, "longName" varchar(255) NULL, "minTick" double precision NULL, "timeZoneId" varchar(255) NULL, "tradingHours" varchar(255) NULL, "underConId" integer NULL, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "crawl_source" varchar(200) NULL, "company_id" integer NULL);
 commit;
 
 --
 -- Create model InvestorType
 --
-CREATE TABLE "feed_investortype" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(500) NOT NULL, "slug" varchar(50) NULL UNIQUE, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL);
+CREATE TABLE "main_investortype" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(500) NOT NULL, "slug" varchar(50) NULL UNIQUE, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL);
+commit;
+
+--
+-- Create model Market
+--
+CREATE TABLE "main_market" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(255) NULL, "vertical" varchar(255) NULL, "sub_vertical" varchar(255) NULL, "total" integer NOT NULL, "slug" varchar(50) NULL UNIQUE, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "crawl_source" varchar(200) NULL);
+commit;
+
+--
+-- Create model Prediction
+--
+CREATE TABLE "main_prediction" ("id" serial NOT NULL PRIMARY KEY, "frequency" integer NULL, "pred_start_date" timestamp with time zone NULL, "date" timestamp with time zone NULL, "open" double precision NULL, "high" double precision NULL, "low" double precision NULL, "close" double precision NULL, "volume" double precision NULL, "wap" double precision NULL, "algo_name" varchar(200) NULL, "is_scaled" boolean NOT NULL, "created_at" timestamp with time zone NULL, "updated_at" timestamp with time zone NULL, "crawl_source" varchar(200) NULL, "instrument_id" integer NOT NULL);
 commit;
 
 --
 -- Create model Region
 --
-CREATE TABLE "feed_region" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "crawl_source" varchar(200) NULL);
+CREATE TABLE "main_region" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "crawl_source" varchar(200) NULL);
+commit;
+
+--
+-- Create model Resource
+--
+CREATE TABLE "main_resource" ("id" serial NOT NULL PRIMARY KEY, "company_favorite_count" integer NOT NULL, "company_recommendation_count" integer NOT NULL, "resource_type" varchar(50) NOT NULL, "commodity_type" varchar(50) NOT NULL, "is_active" boolean NOT NULL, "is_commodity" boolean NOT NULL, "is_public" boolean NOT NULL, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "is_trusted_vc" boolean NOT NULL, "is_partner" boolean NOT NULL, "is_angel" boolean NOT NULL, "is_government" boolean NOT NULL, "is_tips" boolean NOT NULL, "is_rocketpunch" boolean NOT NULL, "is_startup" boolean NOT NULL, "is_investor" boolean NOT NULL, "ticker" varchar(100) NULL, "exchange" varchar(100) NULL, "sec_cik" varchar(100) NULL, "sec_cik_int" varchar(100) NULL, "partner_order" integer NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NULL, "company_name" varchar(1000) NOT NULL, "company_kor_name" varchar(1000) NULL, "company_class" varchar(15) NOT NULL, "tips_start_date" date NULL, "rocketpunch_url" varchar(1001) NULL, "angellist_url" varchar(702) NULL, "sec_url" varchar(701) NULL, "e27_url" varchar(700) NULL, "f6s_url" varchar(703) NULL, "forbes_url" varchar(707) NULL, "investor_class" varchar(1000) NOT NULL, "company_short" varchar(10001) NOT NULL, "company_long" text NOT NULL, "company_industry" varchar(5002) NOT NULL, "company_continent" varchar(300) NULL, "company_country" varchar(300) NOT NULL, "company_city" varchar(300) NOT NULL, "company_state" varchar(300) NULL, "company_region" varchar(300) NULL, "company_location" varchar(1003) NULL, "company_location_latitude" integer NOT NULL, "company_location_longitude" integer NOT NULL, "company_employee" varchar(20) NOT NULL, "corporation" varchar(10) NOT NULL, "company_established" varchar(30) NULL, "company_founded_year" integer NULL, "company_founded_month" integer NULL, "company_founded_day" integer NULL, "company_website" varchar(1007) NOT NULL, "company_logo" varchar(1008) NOT NULL, "company_fundraising" varchar(300) NOT NULL, "company_fundraising_currency" varchar(300) NULL, "company_fundraising_highlight" varchar(300) NULL, "company_fundraising_deck" varchar(1009) NULL, "company_number" varchar(210) NULL, "corporate_number" varchar(211) NULL, "employee_total" integer NOT NULL, "employee_total_month_ago" integer NOT NULL, "employee_added_this_month" integer NOT NULL, "employee_growth_month" integer NOT NULL, "employee_total_6month_ago" integer NOT NULL, "employee_added_in_6month" integer NOT NULL, "employee_growth_6month" integer NOT NULL, "employee_added_since_funding" integer NOT NULL, "employee_months_since_funding" integer NOT NULL, "employee_growth_since_funding" integer NOT NULL, "investor_list_csv" varchar(5012) NULL, "product_list_csv" varchar(5013) NULL, "product_market_csv" varchar(5014) NULL, "invested_funding_stage_csv" varchar(5015) NULL, "traffic_growth_month" integer NOT NULL, "last_funding_amt" double precision NOT NULL, "last_funding_date" timestamp with time zone NULL, "last_funding_months_ago" integer NOT NULL, "total_funding_amt" double precision NOT NULL, "funding_stage_name" varchar(116) NULL, "product_app_store" varchar(217) NULL, "product_google_play" varchar(218) NULL, "company_top_keywords" varchar(5019) NULL, "company_interests" varchar(5020) NULL, "company_alerts" varchar(221) NULL, "traffic_monthly_unique" integer NOT NULL, "traffic_monthly_unique_week_ago" integer NOT NULL, "traffic_monthly_weekly_growth" integer NOT NULL, "traffic_monthly_unique_month_ago" integer NOT NULL, "traffic_monthly_monthly_growth" integer NOT NULL, "traffic_mobile_download" integer NOT NULL, "traffic_mobile_download_week_ago" integer NOT NULL, "traffic_mobile_download_weekly_growth" integer NOT NULL, "traffic_mobile_download_month_ago" integer NOT NULL, "traffic_mobile_download_monthly_growth" integer NOT NULL, "revenue" double precision NOT NULL, "total_valuation" double precision NOT NULL, "total_asset" double precision NOT NULL, "total_debt" double precision NOT NULL, "total_capital" double precision NOT NULL, "total_sales" double precision NOT NULL, "net_income" double precision NOT NULL, "operating_income" double precision NOT NULL, "ratio_sales_net" double precision NOT NULL, "ratio_sales_operating" double precision NOT NULL, "period_end_date" timestamp with time zone NULL, "investor_fund_sold_3yr" integer NOT NULL, "investor_last_funding_date" timestamp with time zone NULL, "investor_portfolio_size" integer NOT NULL, "investor_total_deals" integer NOT NULL, "score1" double precision NOT NULL, "score2" double precision NOT NULL, "score3" double precision NOT NULL, "score4" double precision NOT NULL, "score5" double precision NOT NULL, "company_linkedin_page" varchar(1017) NULL, "company_facebook_page" varchar(1018) NULL, "company_twitter" varchar(1019) NULL, "crawl_source" varchar(200) NULL, "slug" varchar(50) NULL UNIQUE, "invested_stages_csv" varchar(5013) NULL, "invested_success" integer NOT NULL, "invested_success_amt" double precision NOT NULL, "invested_founder_csv" varchar(5014) NULL, "invested_market_csv" varchar(5015) NULL, "invested_continent_csv" varchar(5016) NULL, "city_id" integer NULL, "continent_id" integer NULL, "country_id" integer NULL, "funding_stage_id" integer NULL, "invested_stages_id" integer NULL, "investor_type_id" integer NULL, "owner_id" integer NULL, "region_id" integer NULL);
 commit;
 
 --
 -- Create model State
 --
-CREATE TABLE "feed_state" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "continent_id" integer NOT NULL, "country_id" integer NOT NULL);
+CREATE TABLE "main_state" ("id" serial NOT NULL PRIMARY KEY, "is_save" boolean NOT NULL, "is_confirm" boolean NOT NULL, "last_edited_time" timestamp with time zone NOT NULL, "created_time" timestamp with time zone NOT NULL, "name" varchar(500) NOT NULL, "latitude" integer NOT NULL, "longitude" integer NOT NULL, "continent_id" integer NOT NULL, "country_id" integer NOT NULL);
 commit;
 
 --
--- Add field angellist_url to resource
+-- Create model System
 --
-ALTER TABLE "feed_resource" ADD COLUMN "angellist_url" varchar(702) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "angellist_url" DROP DEFAULT;
-commit;
-
---
--- Add field company_alerts to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_alerts" varchar(221) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_alerts" DROP DEFAULT;
-commit;
-
---
--- Add field company_city to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_city" varchar(300) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_city" DROP DEFAULT;
-commit;
-
---
--- Add field company_class to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_class" varchar(15) DEFAULT 'Public' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_class" DROP DEFAULT;
-commit;
-
---
--- Add field company_continent to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_continent" varchar(300) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_continent" DROP DEFAULT;
-commit;
-
---
--- Add field company_country to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_country" varchar(300) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_country" DROP DEFAULT;
-commit;
-
---
--- Add field company_employee to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_employee" varchar(20) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_employee" DROP DEFAULT;
-commit;
-
---
--- Add field company_established to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_established" varchar(30) DEFAULT '1000-01-01' NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_established" DROP DEFAULT;
-commit;
-
---
--- Add field company_facebook_page to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_facebook_page" varchar(1018) DEFAULT '' NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_facebook_page" DROP DEFAULT;
-commit;
-
---
--- Add field company_favorite_count to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_favorite_count" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_favorite_count" DROP DEFAULT;
-commit;
-
---
--- Add field company_founded_day to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_founded_day" integer DEFAULT 1 NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_founded_day" DROP DEFAULT;
-commit;
-
---
--- Add field company_founded_month to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_founded_month" integer DEFAULT 1 NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_founded_month" DROP DEFAULT;
-commit;
-
---
--- Add field company_founded_year to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_founded_year" integer DEFAULT 2006 NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_founded_year" DROP DEFAULT;
-commit;
-
---
--- Add field company_fundraising to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_fundraising" varchar(300) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_fundraising" DROP DEFAULT;
-commit;
-
---
--- Add field company_fundraising_currency to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_fundraising_currency" varchar(300) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_fundraising_currency" DROP DEFAULT;
-commit;
-
---
--- Add field company_fundraising_deck to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_fundraising_deck" varchar(1009) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_fundraising_deck" DROP DEFAULT;
-commit;
-
---
--- Add field company_fundraising_highlight to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_fundraising_highlight" varchar(300) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_fundraising_highlight" DROP DEFAULT;
-commit;
-
---
--- Add field company_industry to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_industry" varchar(5002) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_industry" DROP DEFAULT;
-commit;
-
---
--- Add field company_interests to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_interests" varchar(5020) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_interests" DROP DEFAULT;
-commit;
-
---
--- Add field company_kor_name to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_kor_name" varchar(1000) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_kor_name" DROP DEFAULT;
-commit;
-
---
--- Add field company_linkedin_page to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_linkedin_page" varchar(1017) DEFAULT '' NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_linkedin_page" DROP DEFAULT;
-commit;
-
---
--- Add field company_location to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_location" varchar(1003) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_location" DROP DEFAULT;
-commit;
-
---
--- Add field company_location_latitude to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_location_latitude" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_location_latitude" DROP DEFAULT;
-commit;
-
---
--- Add field company_location_longitude to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_location_longitude" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_location_longitude" DROP DEFAULT;
-commit;
-
---
--- Add field company_logo to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_logo" varchar(1008) DEFAULT 'img/company/noimg.png' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_logo" DROP DEFAULT;
-commit;
-
---
--- Add field company_long to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_long" text DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_long" DROP DEFAULT;
-commit;
-
---
--- Add field company_number to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_number" varchar(210) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_number" DROP DEFAULT;
-commit;
-
---
--- Add field company_recommendation_count to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_recommendation_count" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_recommendation_count" DROP DEFAULT;
-commit;
-
---
--- Add field company_region to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_region" varchar(300) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_region" DROP DEFAULT;
-commit;
-
---
--- Add field company_short to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_short" varchar(10001) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_short" DROP DEFAULT;
-commit;
-
---
--- Add field company_state to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_state" varchar(300) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_state" DROP DEFAULT;
-commit;
-
---
--- Add field company_top_keywords to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_top_keywords" varchar(5019) DEFAULT '' NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_top_keywords" DROP DEFAULT;
-commit;
-
---
--- Add field company_twitter to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_twitter" varchar(1019) DEFAULT '' NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_twitter" DROP DEFAULT;
-commit;
-
---
--- Add field company_website to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "company_website" varchar(1007) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "company_website" DROP DEFAULT;
-commit;
-
---
--- Add field corporate_number to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "corporate_number" varchar(211) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "corporate_number" DROP DEFAULT;
-commit;
-
---
--- Add field corporation to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "corporation" varchar(10) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "corporation" DROP DEFAULT;
-commit;
-
---
--- Add field crawl_source to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "crawl_source" varchar(200) DEFAULT '' NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "crawl_source" DROP DEFAULT;
-commit;
-
---
--- Add field e27_url to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "e27_url" varchar(700) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "e27_url" DROP DEFAULT;
-commit;
-
---
--- Add field employee_added_in_6month to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_added_in_6month" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_added_in_6month" DROP DEFAULT;
-commit;
-
---
--- Add field employee_added_since_funding to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_added_since_funding" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_added_since_funding" DROP DEFAULT;
-commit;
-
---
--- Add field employee_added_this_month to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_added_this_month" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_added_this_month" DROP DEFAULT;
-commit;
-
---
--- Add field employee_growth_6month to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_growth_6month" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_growth_6month" DROP DEFAULT;
-commit;
-
---
--- Add field employee_growth_month to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_growth_month" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_growth_month" DROP DEFAULT;
-commit;
-
---
--- Add field employee_growth_since_funding to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_growth_since_funding" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_growth_since_funding" DROP DEFAULT;
-commit;
-
---
--- Add field employee_months_since_funding to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_months_since_funding" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_months_since_funding" DROP DEFAULT;
-commit;
-
---
--- Add field employee_total to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_total" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_total" DROP DEFAULT;
-commit;
-
---
--- Add field employee_total_6month_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_total_6month_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_total_6month_ago" DROP DEFAULT;
-commit;
-
---
--- Add field employee_total_month_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "employee_total_month_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "employee_total_month_ago" DROP DEFAULT;
-commit;
-
---
--- Add field f6s_url to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "f6s_url" varchar(703) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "f6s_url" DROP DEFAULT;
-commit;
-
---
--- Add field forbes_url to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "forbes_url" varchar(707) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "forbes_url" DROP DEFAULT;
-commit;
-
---
--- Add field funding_stage_name to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "funding_stage_name" varchar(116) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "funding_stage_name" DROP DEFAULT;
-commit;
-
---
--- Add field invested_continent_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_continent_csv" varchar(5016) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_continent_csv" DROP DEFAULT;
-commit;
-
---
--- Add field invested_founder_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_founder_csv" varchar(5014) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_founder_csv" DROP DEFAULT;
-commit;
-
---
--- Add field invested_funding_stage_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_funding_stage_csv" varchar(5015) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_funding_stage_csv" DROP DEFAULT;
-commit;
-
---
--- Add field invested_market_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_market_csv" varchar(5015) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_market_csv" DROP DEFAULT;
-commit;
-
---
--- Add field invested_stages_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_stages_csv" varchar(5013) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_stages_csv" DROP DEFAULT;
-commit;
-
---
--- Add field invested_success to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_success" integer DEFAULT  -1 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_success" DROP DEFAULT;
-commit;
-
---
--- Add field invested_success_amt to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_success_amt" double precision DEFAULT  -1.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_success_amt" DROP DEFAULT;
-commit;
-
---
--- Add field investor_class to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_class" varchar(1000) DEFAULT '' NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_class" DROP DEFAULT;
-commit;
-
---
--- Add field investor_fund_sold_3yr to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_fund_sold_3yr" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_fund_sold_3yr" DROP DEFAULT;
-commit;
-
---
--- Add field investor_last_funding_date to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_last_funding_date" timestamp with time zone NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_last_funding_date" DROP DEFAULT;
-commit;
-
---
--- Add field investor_list_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_list_csv" varchar(5012) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_list_csv" DROP DEFAULT;
-commit;
-
---
--- Add field investor_portfolio_size to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_portfolio_size" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_portfolio_size" DROP DEFAULT;
-commit;
-
---
--- Add field investor_total_deals to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_total_deals" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_total_deals" DROP DEFAULT;
-commit;
-
---
--- Add field is_angel to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_angel" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_angel" DROP DEFAULT;
-commit;
-
---
--- Add field is_confirm to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_confirm" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_confirm" DROP DEFAULT;
-commit;
-
---
--- Add field is_government to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_government" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_government" DROP DEFAULT;
-commit;
-
---
--- Add field is_investor to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_investor" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_investor" DROP DEFAULT;
-commit;
-
---
--- Add field is_partner to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_partner" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_partner" DROP DEFAULT;
-commit;
-
---
--- Add field is_rocketpunch to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_rocketpunch" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_rocketpunch" DROP DEFAULT;
-commit;
-
---
--- Add field is_save to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_save" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_save" DROP DEFAULT;
-commit;
-
---
--- Add field is_startup to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_startup" boolean DEFAULT true NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_startup" DROP DEFAULT;
-commit;
-
---
--- Add field is_tips to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_tips" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_tips" DROP DEFAULT;
-commit;
-
---
--- Add field is_trusted_vc to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "is_trusted_vc" boolean DEFAULT false NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "is_trusted_vc" DROP DEFAULT;
-commit;
-
---
--- Add field last_funding_amt to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "last_funding_amt" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "last_funding_amt" DROP DEFAULT;
-commit;
-
---
--- Add field last_funding_date to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "last_funding_date" timestamp with time zone DEFAULT '2000-01-01T00:00:00+00:00'::timestamptz NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "last_funding_date" DROP DEFAULT;
-commit;
-
---
--- Add field last_funding_months_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "last_funding_months_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "last_funding_months_ago" DROP DEFAULT;
-commit;
-
---
--- Add field net_income to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "net_income" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "net_income" DROP DEFAULT;
-commit;
-
---
--- Add field operating_income to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "operating_income" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "operating_income" DROP DEFAULT;
-commit;
-
---
--- Add field owner to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "owner_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "owner_id" DROP DEFAULT;
-commit;
-
---
--- Add field period_end_date to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "period_end_date" timestamp with time zone NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "period_end_date" DROP DEFAULT;
-commit;
-
---
--- Add field product_app_store to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "product_app_store" varchar(217) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "product_app_store" DROP DEFAULT;
-commit;
-
---
--- Add field product_google_play to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "product_google_play" varchar(218) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "product_google_play" DROP DEFAULT;
-commit;
-
---
--- Add field product_list_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "product_list_csv" varchar(5013) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "product_list_csv" DROP DEFAULT;
-commit;
-
---
--- Add field product_market_csv to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "product_market_csv" varchar(5014) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "product_market_csv" DROP DEFAULT;
-commit;
-
---
--- Add field ratio_sales_net to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "ratio_sales_net" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "ratio_sales_net" DROP DEFAULT;
-commit;
-
---
--- Add field ratio_sales_operating to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "ratio_sales_operating" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "ratio_sales_operating" DROP DEFAULT;
-commit;
-
---
--- Add field revenue to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "revenue" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "revenue" DROP DEFAULT;
-commit;
-
---
--- Add field rocketpunch_url to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "rocketpunch_url" varchar(1001) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "rocketpunch_url" DROP DEFAULT;
-commit;
-
---
--- Add field score1 to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "score1" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "score1" DROP DEFAULT;
-commit;
-
---
--- Add field score2 to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "score2" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "score2" DROP DEFAULT;
-commit;
-
---
--- Add field score3 to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "score3" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "score3" DROP DEFAULT;
-commit;
-
---
--- Add field score4 to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "score4" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "score4" DROP DEFAULT;
-commit;
-
---
--- Add field score5 to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "score5" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "score5" DROP DEFAULT;
-commit;
-
---
--- Add field sec_url to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "sec_url" varchar(701) NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "sec_url" DROP DEFAULT;
-commit;
-
---
--- Add field slug to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "slug" varchar(50) NULL UNIQUE;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "slug" DROP DEFAULT;
-commit;
-
---
--- Add field tips_start_date to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "tips_start_date" date NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "tips_start_date" DROP DEFAULT;
-commit;
-
---
--- Add field total_asset to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "total_asset" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "total_asset" DROP DEFAULT;
-commit;
-
---
--- Add field total_capital to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "total_capital" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "total_capital" DROP DEFAULT;
-commit;
-
---
--- Add field total_debt to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "total_debt" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "total_debt" DROP DEFAULT;
-commit;
-
---
--- Add field total_funding_amt to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "total_funding_amt" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "total_funding_amt" DROP DEFAULT;
-commit;
-
---
--- Add field total_sales to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "total_sales" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "total_sales" DROP DEFAULT;
-commit;
-
---
--- Add field total_valuation to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "total_valuation" double precision DEFAULT 0.0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "total_valuation" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_growth_month to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_growth_month" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_growth_month" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_mobile_download to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_mobile_download" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_mobile_download" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_mobile_download_month_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_mobile_download_month_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_mobile_download_month_ago" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_mobile_download_monthly_growth to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_mobile_download_monthly_growth" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_mobile_download_monthly_growth" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_mobile_download_week_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_mobile_download_week_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_mobile_download_week_ago" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_mobile_download_weekly_growth to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_mobile_download_weekly_growth" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_mobile_download_weekly_growth" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_monthly_monthly_growth to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_monthly_monthly_growth" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_monthly_monthly_growth" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_monthly_unique to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_monthly_unique" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_monthly_unique" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_monthly_unique_month_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_monthly_unique_month_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_monthly_unique_month_ago" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_monthly_unique_week_ago to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_monthly_unique_week_ago" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_monthly_unique_week_ago" DROP DEFAULT;
-commit;
-
---
--- Add field traffic_monthly_weekly_growth to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "traffic_monthly_weekly_growth" integer DEFAULT 0 NOT NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "traffic_monthly_weekly_growth" DROP DEFAULT;
-commit;
-
---
--- Alter field company_name on resource
---
-ALTER TABLE "feed_resource" ALTER COLUMN "company_name" TYPE varchar(1000) USING "company_name"::varchar(1000);
-commit;
-
---
--- Add field resource to companyresource
---
-ALTER TABLE "feed_companyresource" ADD COLUMN "resource_id" integer NOT NULL;
-commit;
-
-ALTER TABLE "feed_companyresource" ALTER COLUMN "resource_id" DROP DEFAULT;
-commit;
-
---
--- Add field funding_stage to companyinvestor
---
-ALTER TABLE "feed_companyinvestor" ADD COLUMN "funding_stage_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_companyinvestor" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
-commit;
-
---
--- Add field investor to companyinvestor
---
-ALTER TABLE "feed_companyinvestor" ADD COLUMN "investor_id" integer NOT NULL;
-commit;
-
-ALTER TABLE "feed_companyinvestor" ALTER COLUMN "investor_id" DROP DEFAULT;
-commit;
-
---
--- Add field owner to companyinvestor
---
-ALTER TABLE "feed_companyinvestor" ADD COLUMN "owner_id" integer NOT NULL;
-commit;
-
-ALTER TABLE "feed_companyinvestor" ALTER COLUMN "owner_id" DROP DEFAULT;
-commit;
-
---
--- Add field funding_stage to companyinvestingevent
---
-ALTER TABLE "feed_companyinvestingevent" ADD COLUMN "funding_stage_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_companyinvestingevent" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
-commit;
-
---
--- Add field investor to companyinvestingevent
---
-CREATE TABLE "feed_companyinvestingevent_investor" ("id" serial NOT NULL PRIMARY KEY, "companyinvestingevent_id" integer NOT NULL, "companyinvestor_id" integer NOT NULL);
-commit;
-
---
--- Add field owner to companyinvestingevent
---
-ALTER TABLE "feed_companyinvestingevent" ADD COLUMN "owner_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_companyinvestingevent" ALTER COLUMN "owner_id" DROP DEFAULT;
-commit;
-
---
--- Add field continent to company
---
-ALTER TABLE "feed_company" ADD COLUMN "continent_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "continent_id" DROP DEFAULT;
-commit;
-
---
--- Add field country to company
---
-ALTER TABLE "feed_company" ADD COLUMN "country_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "country_id" DROP DEFAULT;
-commit;
-
---
--- Add field funding_stage to company
---
-ALTER TABLE "feed_company" ADD COLUMN "funding_stage_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
-commit;
-
---
--- Add field invested_stages to company
---
-ALTER TABLE "feed_company" ADD COLUMN "invested_stages_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "invested_stages_id" DROP DEFAULT;
-commit;
-
---
--- Add field investor_type to company
---
-ALTER TABLE "feed_company" ADD COLUMN "investor_type_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "investor_type_id" DROP DEFAULT;
-commit;
-
---
--- Add field owner to company
---
-ALTER TABLE "feed_company" ADD COLUMN "owner_id" integer NOT NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "owner_id" DROP DEFAULT;
-commit;
-
---
--- Add field region to company
---
-ALTER TABLE "feed_company" ADD COLUMN "region_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "region_id" DROP DEFAULT;
-commit;
-
---
--- Add field state to company
---
-ALTER TABLE "feed_company" ADD COLUMN "state_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_company" ALTER COLUMN "state_id" DROP DEFAULT;
-commit;
-
---
--- Add field continent to city
---
-ALTER TABLE "feed_city" ADD COLUMN "continent_id" integer NOT NULL;
-commit;
-
-ALTER TABLE "feed_city" ALTER COLUMN "continent_id" DROP DEFAULT;
-commit;
-
---
--- Add field country to city
---
-ALTER TABLE "feed_city" ADD COLUMN "country_id" integer NOT NULL;
-commit;
-
-ALTER TABLE "feed_city" ALTER COLUMN "country_id" DROP DEFAULT;
-commit;
-
---
--- Add field state to city
---
-ALTER TABLE "feed_city" ADD COLUMN "state_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_city" ALTER COLUMN "state_id" DROP DEFAULT;
-commit;
-
---
--- Add field city to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "city_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "city_id" DROP DEFAULT;
-commit;
-
---
--- Add field continent to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "continent_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "continent_id" DROP DEFAULT;
-commit;
-
---
--- Add field country to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "country_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "country_id" DROP DEFAULT;
-commit;
-
---
--- Add field funding_stage to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "funding_stage_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
-commit;
-
---
--- Add field invested_stages to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "invested_stages_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "invested_stages_id" DROP DEFAULT;
-commit;
-
---
--- Add field investor_type to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "investor_type_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "investor_type_id" DROP DEFAULT;
-commit;
-
---
--- Add field region to resource
---
-ALTER TABLE "feed_resource" ADD COLUMN "region_id" integer NULL;
-commit;
-
-ALTER TABLE "feed_resource" ALTER COLUMN "region_id" DROP DEFAULT;
+CREATE TABLE "main_system" ("id" serial NOT NULL PRIMARY KEY, "version" varchar(255) NULL, "system" varchar(255) NULL, "name" varchar(255) NULL, "c2id" varchar(255) NULL, "c2api" varchar(255) NULL, "c2qty" integer NULL, "c2submit" boolean NOT NULL, "ibqty" integer NULL, "ibsubmit" boolean NOT NULL, "trade_freq" integer NULL, "ibmult" integer NULL, "c2mult" integer NULL, "signal" varchar(255) NULL, "c2instrument_id" integer NULL, "ibinstrument_id" integer NULL);
 commit;
 
 --
 -- Add field state to resource
 --
-ALTER TABLE "feed_resource" ADD COLUMN "state_id" integer NULL;
+ALTER TABLE "main_resource" ADD COLUMN "state_id" integer NULL;
 commit;
 
-ALTER TABLE "feed_resource" ALTER COLUMN "state_id" DROP DEFAULT;
+ALTER TABLE "main_resource" ALTER COLUMN "state_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_city_a9b0c97b" ON "feed_city" ("last_edited_time");
+--
+-- Add field resource to instrument
+--
+ALTER TABLE "main_instrument" ADD COLUMN "resource_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_city_bb5855f0" ON "feed_city" ("created_time");
+ALTER TABLE "main_instrument" ALTER COLUMN "resource_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_city_b068931c" ON "feed_city" ("name");
+--
+-- Add field instrument to feed
+--
+ALTER TABLE "main_feed" ADD COLUMN "instrument_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_city_28c1e37e" ON "feed_city" ("latitude");
+ALTER TABLE "main_feed" ALTER COLUMN "instrument_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_city_ba569b80" ON "feed_city" ("longitude");
+--
+-- Add field resource to companyresource
+--
+ALTER TABLE "main_companyresource" ADD COLUMN "resource_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_city_name_9665acd7_like" ON "feed_city" ("name" varchar_pattern_ops);
+ALTER TABLE "main_companyresource" ALTER COLUMN "resource_id" DROP DEFAULT;
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_city_id_79d6519e_fk_feed_city_id" FOREIGN KEY ("city_id") REFERENCES "feed_city" ("id") DEFERRABLE INITIALLY DEFERRED;
+--
+-- Add field funding_stage to companyinvestor
+--
+ALTER TABLE "main_companyinvestor" ADD COLUMN "funding_stage_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_4264c638" ON "feed_company" ("is_active");
+ALTER TABLE "main_companyinvestor" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_11725655" ON "feed_company" ("is_public");
+--
+-- Add field investor to companyinvestor
+--
+ALTER TABLE "main_companyinvestor" ADD COLUMN "investor_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_company_463223eb" ON "feed_company" ("is_confirm");
+ALTER TABLE "main_companyinvestor" ALTER COLUMN "investor_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_38c5f373" ON "feed_company" ("is_trusted_vc");
+--
+-- Add field owner to companyinvestor
+--
+ALTER TABLE "main_companyinvestor" ADD COLUMN "owner_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_company_f3d6f5c9" ON "feed_company" ("is_partner");
+ALTER TABLE "main_companyinvestor" ALTER COLUMN "owner_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_d8e3caae" ON "feed_company" ("is_angel");
+--
+-- Add field funding_stage to companyinvestingevent
+--
+ALTER TABLE "main_companyinvestingevent" ADD COLUMN "funding_stage_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_4df577bd" ON "feed_company" ("is_tips");
+ALTER TABLE "main_companyinvestingevent" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_9e1a2164" ON "feed_company" ("is_dcamp");
+--
+-- Add field investor to companyinvestingevent
+--
+CREATE TABLE "main_companyinvestingevent_investor" ("id" serial NOT NULL PRIMARY KEY, "companyinvestingevent_id" integer NOT NULL, "companyinvestor_id" integer NOT NULL);
 commit;
 
-CREATE INDEX "feed_company_fee55b15" ON "feed_company" ("is_rocketpunch");
+--
+-- Add field owner to companyinvestingevent
+--
+ALTER TABLE "main_companyinvestingevent" ADD COLUMN "owner_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_ade1cc8a" ON "feed_company" ("is_dart");
+ALTER TABLE "main_companyinvestingevent" ALTER COLUMN "owner_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_a2a803c4" ON "feed_company" ("is_bizinkorea");
+--
+-- Add field continent to company
+--
+ALTER TABLE "main_company" ADD COLUMN "continent_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_61f856e3" ON "feed_company" ("is_startup");
+ALTER TABLE "main_company" ALTER COLUMN "continent_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_6e2900d4" ON "feed_company" ("is_investor");
+--
+-- Add field country to company
+--
+ALTER TABLE "main_company" ADD COLUMN "country_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_8a084cf7" ON "feed_company" ("ticker");
+ALTER TABLE "main_company" ALTER COLUMN "country_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_5c731c8c" ON "feed_company" ("exchange");
+--
+-- Add field funding_stage to company
+--
+ALTER TABLE "main_company" ADD COLUMN "funding_stage_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_154c1303" ON "feed_company" ("sec_cik");
+ALTER TABLE "main_company" ALTER COLUMN "funding_stage_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_22b6a063" ON "feed_company" ("sec_cik_int");
+--
+-- Add field invested_stages to company
+--
+ALTER TABLE "main_company" ADD COLUMN "invested_stages_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_a9b0c97b" ON "feed_company" ("last_edited_time");
+ALTER TABLE "main_company" ALTER COLUMN "invested_stages_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_bb5855f0" ON "feed_company" ("created_time");
+--
+-- Add field investor_type to company
+--
+ALTER TABLE "main_company" ADD COLUMN "investor_type_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_c1007e8a" ON "feed_company" ("company_name");
+ALTER TABLE "main_company" ALTER COLUMN "investor_type_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_4264fa21" ON "feed_company" ("company_kor_name");
+--
+-- Add field owner to company
+--
+ALTER TABLE "main_company" ADD COLUMN "owner_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_company_bc4de5a9" ON "feed_company" ("company_class");
+ALTER TABLE "main_company" ALTER COLUMN "owner_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_f2452ee6" ON "feed_company" ("rocketpunch_url");
+--
+-- Add field region to company
+--
+ALTER TABLE "main_company" ADD COLUMN "region_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_fbff80ba" ON "feed_company" ("angellist_url");
+ALTER TABLE "main_company" ALTER COLUMN "region_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_f06814ed" ON "feed_company" ("sec_url");
+--
+-- Add field state to company
+--
+ALTER TABLE "main_company" ADD COLUMN "state_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_d69203b3" ON "feed_company" ("e27_url");
+ALTER TABLE "main_company" ALTER COLUMN "state_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_33780092" ON "feed_company" ("f6s_url");
+--
+-- Add field continent to city
+--
+ALTER TABLE "main_city" ADD COLUMN "continent_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_company_bba37091" ON "feed_company" ("forbes_url");
+ALTER TABLE "main_city" ALTER COLUMN "continent_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_d3380a28" ON "feed_company" ("investor_class");
+--
+-- Add field country to city
+--
+ALTER TABLE "main_city" ADD COLUMN "country_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_company_b7eb5d9c" ON "feed_company" ("company_industry");
+ALTER TABLE "main_city" ALTER COLUMN "country_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_7e214e10" ON "feed_company" ("company_continent");
+--
+-- Add field state to city
+--
+ALTER TABLE "main_city" ADD COLUMN "state_id" integer NULL;
 commit;
 
-CREATE INDEX "feed_company_9e2b0ee2" ON "feed_company" ("company_country");
+ALTER TABLE "main_city" ALTER COLUMN "state_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_0693b93b" ON "feed_company" ("company_city");
+--
+-- Add field instrument to bidask
+--
+ALTER TABLE "main_bidask" ADD COLUMN "instrument_id" integer NOT NULL;
 commit;
 
-CREATE INDEX "feed_company_3bd52307" ON "feed_company" ("company_state");
+ALTER TABLE "main_bidask" ALTER COLUMN "instrument_id" DROP DEFAULT;
 commit;
 
-CREATE INDEX "feed_company_16670d4e" ON "feed_company" ("company_region");
+CREATE INDEX "main_bidask_fad6c43b" ON "main_bidask" ("frequency");
 commit;
 
-CREATE INDEX "feed_company_8b6b622d" ON "feed_company" ("company_location");
+CREATE INDEX "main_bidask_5fc73231" ON "main_bidask" ("date");
 commit;
 
-CREATE INDEX "feed_company_6c50c7f1" ON "feed_company" ("company_location_latitude");
+CREATE INDEX "main_bidask_fde81f11" ON "main_bidask" ("created_at");
 commit;
 
-CREATE INDEX "feed_company_2885a201" ON "feed_company" ("company_location_longitude");
+CREATE INDEX "main_bidask_afd1a1a8" ON "main_bidask" ("updated_at");
 commit;
 
-CREATE INDEX "feed_company_192c3778" ON "feed_company" ("company_established");
+CREATE INDEX "main_city_a9b0c97b" ON "main_city" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_company_ad226066" ON "feed_company" ("company_founded_year");
+CREATE INDEX "main_city_bb5855f0" ON "main_city" ("created_time");
 commit;
 
-CREATE INDEX "feed_company_2c93df8c" ON "feed_company" ("company_founded_month");
+CREATE INDEX "main_city_b068931c" ON "main_city" ("name");
 commit;
 
-CREATE INDEX "feed_company_f6018d4e" ON "feed_company" ("company_founded_day");
+CREATE INDEX "main_city_28c1e37e" ON "main_city" ("latitude");
 commit;
 
-CREATE INDEX "feed_company_b109d4cd" ON "feed_company" ("company_website");
+CREATE INDEX "main_city_ba569b80" ON "main_city" ("longitude");
 commit;
 
-CREATE INDEX "feed_company_c5b49fd9" ON "feed_company" ("company_number");
+CREATE INDEX "main_city_name_ef161c88_like" ON "main_city" ("name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_company_7d826fd6" ON "feed_company" ("corporate_number");
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_city_id_5d91dee3_fk_main_city_id" FOREIGN KEY ("city_id") REFERENCES "main_city" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_company_ee724e2f" ON "feed_company" ("investor_list_csv");
+CREATE INDEX "main_company_4264c638" ON "main_company" ("is_active");
 commit;
 
-CREATE INDEX "feed_company_1bf93bcf" ON "feed_company" ("product_market_csv");
+CREATE INDEX "main_company_11725655" ON "main_company" ("is_public");
 commit;
 
-CREATE INDEX "feed_company_023e7239" ON "feed_company" ("invested_funding_stage_csv");
+CREATE INDEX "main_company_463223eb" ON "main_company" ("is_confirm");
 commit;
 
-CREATE INDEX "feed_company_b7e28c0c" ON "feed_company" ("last_funding_amt");
+CREATE INDEX "main_company_38c5f373" ON "main_company" ("is_trusted_vc");
 commit;
 
-CREATE INDEX "feed_company_e83ca751" ON "feed_company" ("last_funding_date");
+CREATE INDEX "main_company_f3d6f5c9" ON "main_company" ("is_partner");
 commit;
 
-CREATE INDEX "feed_company_cbbcbb27" ON "feed_company" ("total_funding_amt");
+CREATE INDEX "main_company_d8e3caae" ON "main_company" ("is_angel");
 commit;
 
-CREATE INDEX "feed_company_a66285ba" ON "feed_company" ("total_valuation");
+CREATE INDEX "main_company_4df577bd" ON "main_company" ("is_tips");
 commit;
 
-CREATE INDEX "feed_company_b2337225" ON "feed_company" ("total_asset");
+CREATE INDEX "main_company_9e1a2164" ON "main_company" ("is_dcamp");
 commit;
 
-CREATE INDEX "feed_company_74cf7cd2" ON "feed_company" ("total_debt");
+CREATE INDEX "main_company_fee55b15" ON "main_company" ("is_rocketpunch");
 commit;
 
-CREATE INDEX "feed_company_86a19171" ON "feed_company" ("total_capital");
+CREATE INDEX "main_company_ade1cc8a" ON "main_company" ("is_dart");
 commit;
 
-CREATE INDEX "feed_company_faf3b8e3" ON "feed_company" ("total_sales");
+CREATE INDEX "main_company_a2a803c4" ON "main_company" ("is_bizinkorea");
 commit;
 
-CREATE INDEX "feed_company_dc6fb62a" ON "feed_company" ("period_end_date");
+CREATE INDEX "main_company_61f856e3" ON "main_company" ("is_startup");
 commit;
 
-CREATE INDEX "feed_company_7271259c" ON "feed_company" ("score1");
+CREATE INDEX "main_company_6e2900d4" ON "main_company" ("is_investor");
 commit;
 
-CREATE INDEX "feed_company_ed28b0ab" ON "feed_company" ("score2");
+CREATE INDEX "main_company_8a084cf7" ON "main_company" ("ticker");
 commit;
 
-CREATE INDEX "feed_company_f6f63d76" ON "feed_company" ("score3");
+CREATE INDEX "main_company_5c731c8c" ON "main_company" ("exchange");
 commit;
 
-CREATE INDEX "feed_company_a164b067" ON "feed_company" ("score4");
+CREATE INDEX "main_company_154c1303" ON "main_company" ("sec_cik");
 commit;
 
-CREATE INDEX "feed_company_3d3a97ef" ON "feed_company" ("score5");
+CREATE INDEX "main_company_22b6a063" ON "main_company" ("sec_cik_int");
 commit;
 
-CREATE INDEX "feed_company_259764f4" ON "feed_company" ("invested_stages_csv");
+CREATE INDEX "main_company_a9b0c97b" ON "main_company" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_company_fe284ac2" ON "feed_company" ("invested_success");
+CREATE INDEX "main_company_bb5855f0" ON "main_company" ("created_time");
 commit;
 
-CREATE INDEX "feed_company_20ef32af" ON "feed_company" ("invested_success_amt");
+CREATE INDEX "main_company_c1007e8a" ON "main_company" ("company_name");
 commit;
 
-CREATE INDEX "feed_company_9a8daa8f" ON "feed_company" ("invested_founder_csv");
+CREATE INDEX "main_company_4264fa21" ON "main_company" ("company_kor_name");
 commit;
 
-CREATE INDEX "feed_company_5630e841" ON "feed_company" ("invested_market_csv");
+CREATE INDEX "main_company_bc4de5a9" ON "main_company" ("company_class");
 commit;
 
-CREATE INDEX "feed_company_0704c6f5" ON "feed_company" ("invested_continent_csv");
+CREATE INDEX "main_company_f2452ee6" ON "main_company" ("rocketpunch_url");
 commit;
 
-CREATE INDEX "feed_company_c7141997" ON "feed_company" ("city_id");
+CREATE INDEX "main_company_fbff80ba" ON "main_company" ("angellist_url");
 commit;
 
-CREATE INDEX "feed_company_ticker_1defaf98_like" ON "feed_company" ("ticker" varchar_pattern_ops);
+CREATE INDEX "main_company_f06814ed" ON "main_company" ("sec_url");
 commit;
 
-CREATE INDEX "feed_company_exchange_4ab3e587_like" ON "feed_company" ("exchange" varchar_pattern_ops);
+CREATE INDEX "main_company_d69203b3" ON "main_company" ("e27_url");
 commit;
 
-CREATE INDEX "feed_company_sec_cik_850a413d_like" ON "feed_company" ("sec_cik" varchar_pattern_ops);
+CREATE INDEX "main_company_33780092" ON "main_company" ("f6s_url");
 commit;
 
-CREATE INDEX "feed_company_sec_cik_int_f2b2ca0f_like" ON "feed_company" ("sec_cik_int" varchar_pattern_ops);
+CREATE INDEX "main_company_bba37091" ON "main_company" ("forbes_url");
 commit;
 
-CREATE INDEX "feed_company_company_name_5e575df3_like" ON "feed_company" ("company_name" varchar_pattern_ops);
+CREATE INDEX "main_company_d3380a28" ON "main_company" ("investor_class");
 commit;
 
-CREATE INDEX "feed_company_company_kor_name_864cb15b_like" ON "feed_company" ("company_kor_name" varchar_pattern_ops);
+CREATE INDEX "main_company_b7eb5d9c" ON "main_company" ("company_industry");
 commit;
 
-CREATE INDEX "feed_company_company_class_aedf5206_like" ON "feed_company" ("company_class" varchar_pattern_ops);
+CREATE INDEX "main_company_7e214e10" ON "main_company" ("company_continent");
 commit;
 
-CREATE INDEX "feed_company_rocketpunch_url_84f91831_like" ON "feed_company" ("rocketpunch_url" varchar_pattern_ops);
+CREATE INDEX "main_company_9e2b0ee2" ON "main_company" ("company_country");
 commit;
 
-CREATE INDEX "feed_company_angellist_url_07effa3f_like" ON "feed_company" ("angellist_url" varchar_pattern_ops);
+CREATE INDEX "main_company_0693b93b" ON "main_company" ("company_city");
 commit;
 
-CREATE INDEX "feed_company_sec_url_861a664a_like" ON "feed_company" ("sec_url" varchar_pattern_ops);
+CREATE INDEX "main_company_3bd52307" ON "main_company" ("company_state");
 commit;
 
-CREATE INDEX "feed_company_e27_url_1619be31_like" ON "feed_company" ("e27_url" varchar_pattern_ops);
+CREATE INDEX "main_company_16670d4e" ON "main_company" ("company_region");
 commit;
 
-CREATE INDEX "feed_company_f6s_url_0a6f8850_like" ON "feed_company" ("f6s_url" varchar_pattern_ops);
+CREATE INDEX "main_company_8b6b622d" ON "main_company" ("company_location");
 commit;
 
-CREATE INDEX "feed_company_forbes_url_d5f9a925_like" ON "feed_company" ("forbes_url" varchar_pattern_ops);
+CREATE INDEX "main_company_6c50c7f1" ON "main_company" ("company_location_latitude");
 commit;
 
-CREATE INDEX "feed_company_investor_class_fff0edac_like" ON "feed_company" ("investor_class" varchar_pattern_ops);
+CREATE INDEX "main_company_2885a201" ON "main_company" ("company_location_longitude");
 commit;
 
-CREATE INDEX "feed_company_company_industry_30e64c65_like" ON "feed_company" ("company_industry" varchar_pattern_ops);
+CREATE INDEX "main_company_192c3778" ON "main_company" ("company_established");
 commit;
 
-CREATE INDEX "feed_company_company_continent_ab867d9a_like" ON "feed_company" ("company_continent" varchar_pattern_ops);
+CREATE INDEX "main_company_ad226066" ON "main_company" ("company_founded_year");
 commit;
 
-CREATE INDEX "feed_company_company_country_81e3f073_like" ON "feed_company" ("company_country" varchar_pattern_ops);
+CREATE INDEX "main_company_2c93df8c" ON "main_company" ("company_founded_month");
 commit;
 
-CREATE INDEX "feed_company_company_city_983c7979_like" ON "feed_company" ("company_city" varchar_pattern_ops);
+CREATE INDEX "main_company_f6018d4e" ON "main_company" ("company_founded_day");
 commit;
 
-CREATE INDEX "feed_company_company_state_0593def8_like" ON "feed_company" ("company_state" varchar_pattern_ops);
+CREATE INDEX "main_company_b109d4cd" ON "main_company" ("company_website");
 commit;
 
-CREATE INDEX "feed_company_company_region_fb054d0e_like" ON "feed_company" ("company_region" varchar_pattern_ops);
+CREATE INDEX "main_company_c5b49fd9" ON "main_company" ("company_number");
 commit;
 
-CREATE INDEX "feed_company_company_location_3d8de653_like" ON "feed_company" ("company_location" varchar_pattern_ops);
+CREATE INDEX "main_company_7d826fd6" ON "main_company" ("corporate_number");
 commit;
 
-CREATE INDEX "feed_company_company_established_67038a48_like" ON "feed_company" ("company_established" varchar_pattern_ops);
+CREATE INDEX "main_company_ee724e2f" ON "main_company" ("investor_list_csv");
 commit;
 
-CREATE INDEX "feed_company_company_website_37720fff_like" ON "feed_company" ("company_website" varchar_pattern_ops);
+CREATE INDEX "main_company_1bf93bcf" ON "main_company" ("product_market_csv");
 commit;
 
-CREATE INDEX "feed_company_company_number_8d9aab27_like" ON "feed_company" ("company_number" varchar_pattern_ops);
+CREATE INDEX "main_company_023e7239" ON "main_company" ("invested_funding_stage_csv");
 commit;
 
-CREATE INDEX "feed_company_corporate_number_ebcf9637_like" ON "feed_company" ("corporate_number" varchar_pattern_ops);
+CREATE INDEX "main_company_b7e28c0c" ON "main_company" ("last_funding_amt");
 commit;
 
-CREATE INDEX "feed_company_investor_list_csv_5ab30abe_like" ON "feed_company" ("investor_list_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_e83ca751" ON "main_company" ("last_funding_date");
 commit;
 
-CREATE INDEX "feed_company_product_market_csv_2beebcd2_like" ON "feed_company" ("product_market_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_cbbcbb27" ON "main_company" ("total_funding_amt");
 commit;
 
-CREATE INDEX "feed_company_invested_funding_stage_csv_2caf81e5_like" ON "feed_company" ("invested_funding_stage_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_a66285ba" ON "main_company" ("total_valuation");
 commit;
 
-CREATE INDEX "feed_company_slug_9775fb03_like" ON "feed_company" ("slug" varchar_pattern_ops);
+CREATE INDEX "main_company_b2337225" ON "main_company" ("total_asset");
 commit;
 
-CREATE INDEX "feed_company_invested_stages_csv_62462ab8_like" ON "feed_company" ("invested_stages_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_74cf7cd2" ON "main_company" ("total_debt");
 commit;
 
-CREATE INDEX "feed_company_invested_founder_csv_208c9cee_like" ON "feed_company" ("invested_founder_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_86a19171" ON "main_company" ("total_capital");
 commit;
 
-CREATE INDEX "feed_company_invested_market_csv_94e7b1fe_like" ON "feed_company" ("invested_market_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_faf3b8e3" ON "main_company" ("total_sales");
 commit;
 
-CREATE INDEX "feed_company_invested_continent_csv_dca3c0cd_like" ON "feed_company" ("invested_continent_csv" varchar_pattern_ops);
+CREATE INDEX "main_company_dc6fb62a" ON "main_company" ("period_end_date");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_e04d39f6" ON "feed_companyinvestingevent" ("event_round");
+CREATE INDEX "main_company_7271259c" ON "main_company" ("score1");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_a9b0c97b" ON "feed_companyinvestingevent" ("last_edited_time");
+CREATE INDEX "main_company_ed28b0ab" ON "main_company" ("score2");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_bb5855f0" ON "feed_companyinvestingevent" ("created_time");
+CREATE INDEX "main_company_f6f63d76" ON "main_company" ("score3");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_4df577bd" ON "feed_companyinvestingevent" ("is_tips");
+CREATE INDEX "main_company_a164b067" ON "main_company" ("score4");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_fee55b15" ON "feed_companyinvestingevent" ("is_rocketpunch");
+CREATE INDEX "main_company_3d3a97ef" ON "main_company" ("score5");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_e7136bc0" ON "feed_companyinvestingevent" ("event_day");
+CREATE INDEX "main_company_259764f4" ON "main_company" ("invested_stages_csv");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_64a46b37" ON "feed_companyinvestingevent" ("event_month");
+CREATE INDEX "main_company_fe284ac2" ON "main_company" ("invested_success");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_3b200b75" ON "feed_companyinvestingevent" ("event_year");
+CREATE INDEX "main_company_20ef32af" ON "main_company" ("invested_success_amt");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_2b660b3e" ON "feed_companyinvestingevent" ("invest_currency");
+CREATE INDEX "main_company_9a8daa8f" ON "main_company" ("invested_founder_csv");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_1c5f0b93" ON "feed_companyinvestingevent" ("invest_amt");
+CREATE INDEX "main_company_5630e841" ON "main_company" ("invested_market_csv");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_40802acb" ON "feed_companyinvestingevent" ("invest_date");
+CREATE INDEX "main_company_0704c6f5" ON "main_company" ("invested_continent_csv");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_event_round_35dc15c5_like" ON "feed_companyinvestingevent" ("event_round" varchar_pattern_ops);
+CREATE INDEX "main_company_c7141997" ON "main_company" ("city_id");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_invest_currency_32444ef4_like" ON "feed_companyinvestingevent" ("invest_currency" varchar_pattern_ops);
+CREATE INDEX "main_company_ticker_4149c4db_like" ON "main_company" ("ticker" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_a9b0c97b" ON "feed_companyinvestor" ("last_edited_time");
+CREATE INDEX "main_company_exchange_1a05eba2_like" ON "main_company" ("exchange" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_bb5855f0" ON "feed_companyinvestor" ("created_time");
+CREATE INDEX "main_company_sec_cik_7b025924_like" ON "main_company" ("sec_cik" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_a669ba6c" ON "feed_companyinvestor" ("is_user_input");
+CREATE INDEX "main_company_sec_cik_int_3ba08eef_like" ON "main_company" ("sec_cik_int" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_e4c5f499" ON "feed_companyinvestor" ("investor_day");
+CREATE INDEX "main_company_company_name_c6596a83_like" ON "main_company" ("company_name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_6443feea" ON "feed_companyinvestor" ("investor_month");
+CREATE INDEX "main_company_company_kor_name_7e5c492f_like" ON "main_company" ("company_kor_name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_e840ed8f" ON "feed_companyinvestor" ("investor_year");
+CREATE INDEX "main_company_company_class_9cfdcf26_like" ON "main_company" ("company_class" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_c1b77059" ON "feed_companyinvestor" ("investor_currency");
+CREATE INDEX "main_company_rocketpunch_url_842d83a8_like" ON "main_company" ("rocketpunch_url" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_353c5b1f" ON "feed_companyinvestor" ("investor_amount");
+CREATE INDEX "main_company_angellist_url_540cf579_like" ON "main_company" ("angellist_url" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_2b660b3e" ON "feed_companyinvestor" ("invest_currency");
+CREATE INDEX "main_company_sec_url_6c371b03_like" ON "main_company" ("sec_url" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_1c5f0b93" ON "feed_companyinvestor" ("invest_amt");
+CREATE INDEX "main_company_e27_url_28e94143_like" ON "main_company" ("e27_url" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_40802acb" ON "feed_companyinvestor" ("invest_date");
+CREATE INDEX "main_company_f6s_url_7fc127ff_like" ON "main_company" ("f6s_url" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_4264c638" ON "feed_companyinvestor" ("is_active");
+CREATE INDEX "main_company_forbes_url_0d1c2eeb_like" ON "main_company" ("forbes_url" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_4df577bd" ON "feed_companyinvestor" ("is_tips");
+CREATE INDEX "main_company_investor_class_e512402e_like" ON "main_company" ("investor_class" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_fee55b15" ON "feed_companyinvestor" ("is_rocketpunch");
+CREATE INDEX "main_company_company_industry_3655f161_like" ON "main_company" ("company_industry" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_347a36a7" ON "feed_companyinvestor" ("is_estimate");
+CREATE INDEX "main_company_company_continent_f1dfdf47_like" ON "main_company" ("company_continent" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_investor_currency_1fbeddeb_like" ON "feed_companyinvestor" ("investor_currency" varchar_pattern_ops);
+CREATE INDEX "main_company_company_country_c1e38bbf_like" ON "main_company" ("company_country" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_investor_amount_df7556dc_like" ON "feed_companyinvestor" ("investor_amount" varchar_pattern_ops);
+CREATE INDEX "main_company_company_city_b794803c_like" ON "main_company" ("company_city" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyinvestor_invest_currency_b7987ac7_like" ON "feed_companyinvestor" ("invest_currency" varchar_pattern_ops);
+CREATE INDEX "main_company_company_state_6cad372a_like" ON "main_company" ("company_state" varchar_pattern_ops);
 commit;
 
-ALTER TABLE "feed_companyresource" ADD CONSTRAINT "feed_companyresource_company_id_571051f5_fk_feed_company_id" FOREIGN KEY ("company_id") REFERENCES "feed_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_company_company_region_58fd4651_like" ON "main_company" ("company_region" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_companyresource_447d3092" ON "feed_companyresource" ("company_id");
+CREATE INDEX "main_company_company_location_ae7335e0_like" ON "main_company" ("company_location" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_a9b0c97b" ON "feed_continent" ("last_edited_time");
+CREATE INDEX "main_company_company_established_659a4c36_like" ON "main_company" ("company_established" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_bb5855f0" ON "feed_continent" ("created_time");
+CREATE INDEX "main_company_company_website_3804a77f_like" ON "main_company" ("company_website" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_b068931c" ON "feed_continent" ("name");
+CREATE INDEX "main_company_company_number_1f6438c9_like" ON "main_company" ("company_number" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_28c1e37e" ON "feed_continent" ("latitude");
+CREATE INDEX "main_company_corporate_number_5a682158_like" ON "main_company" ("corporate_number" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_ba569b80" ON "feed_continent" ("longitude");
+CREATE INDEX "main_company_investor_list_csv_3fd74834_like" ON "main_company" ("investor_list_csv" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_225d95cb" ON "feed_continent" ("company_count");
+CREATE INDEX "main_company_product_market_csv_f1473e2b_like" ON "main_company" ("product_market_csv" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_1a1d3fe1" ON "feed_continent" ("company_investor_count");
+CREATE INDEX "main_company_invested_funding_stage_csv_7a97f97a_like" ON "main_company" ("invested_funding_stage_csv" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_43f5deee" ON "feed_continent" ("company_startup_count");
+CREATE INDEX "main_company_slug_3e49a6e4_like" ON "main_company" ("slug" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_e4dfb059" ON "feed_continent" ("company_public_count");
+CREATE INDEX "main_company_invested_stages_csv_6a57e968_like" ON "main_company" ("invested_stages_csv" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_68c7b353" ON "feed_continent" ("user_count");
+CREATE INDEX "main_company_invested_founder_csv_7c883131_like" ON "main_company" ("invested_founder_csv" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_continent_name_44c0a5ed_like" ON "feed_continent" ("name" varchar_pattern_ops);
+CREATE INDEX "main_company_invested_market_csv_478006cd_like" ON "main_company" ("invested_market_csv" varchar_pattern_ops);
 commit;
 
-ALTER TABLE "feed_country" ADD CONSTRAINT "feed_country_continent_id_4a829f2f_fk_feed_continent_id" FOREIGN KEY ("continent_id") REFERENCES "feed_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_company_invested_continent_csv_8dece8e7_like" ON "main_company" ("invested_continent_csv" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_country_a9b0c97b" ON "feed_country" ("last_edited_time");
+CREATE INDEX "main_companyinvestingevent_e04d39f6" ON "main_companyinvestingevent" ("event_round");
 commit;
 
-CREATE INDEX "feed_country_bb5855f0" ON "feed_country" ("created_time");
+CREATE INDEX "main_companyinvestingevent_a9b0c97b" ON "main_companyinvestingevent" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_country_b068931c" ON "feed_country" ("name");
+CREATE INDEX "main_companyinvestingevent_bb5855f0" ON "main_companyinvestingevent" ("created_time");
 commit;
 
-CREATE INDEX "feed_country_28c1e37e" ON "feed_country" ("latitude");
+CREATE INDEX "main_companyinvestingevent_4df577bd" ON "main_companyinvestingevent" ("is_tips");
 commit;
 
-CREATE INDEX "feed_country_ba569b80" ON "feed_country" ("longitude");
+CREATE INDEX "main_companyinvestingevent_fee55b15" ON "main_companyinvestingevent" ("is_rocketpunch");
 commit;
 
-CREATE INDEX "feed_country_225d95cb" ON "feed_country" ("company_count");
+CREATE INDEX "main_companyinvestingevent_e7136bc0" ON "main_companyinvestingevent" ("event_day");
 commit;
 
-CREATE INDEX "feed_country_1a1d3fe1" ON "feed_country" ("company_investor_count");
+CREATE INDEX "main_companyinvestingevent_64a46b37" ON "main_companyinvestingevent" ("event_month");
 commit;
 
-CREATE INDEX "feed_country_43f5deee" ON "feed_country" ("company_startup_count");
+CREATE INDEX "main_companyinvestingevent_3b200b75" ON "main_companyinvestingevent" ("event_year");
 commit;
 
-CREATE INDEX "feed_country_e4dfb059" ON "feed_country" ("company_public_count");
+CREATE INDEX "main_companyinvestingevent_2b660b3e" ON "main_companyinvestingevent" ("invest_currency");
 commit;
 
-CREATE INDEX "feed_country_68c7b353" ON "feed_country" ("user_count");
+CREATE INDEX "main_companyinvestingevent_1c5f0b93" ON "main_companyinvestingevent" ("invest_amt");
 commit;
 
-CREATE INDEX "feed_country_071e6d87" ON "feed_country" ("continent_id");
+CREATE INDEX "main_companyinvestingevent_40802acb" ON "main_companyinvestingevent" ("invest_date");
 commit;
 
-CREATE INDEX "feed_country_name_e9c276ad_like" ON "feed_country" ("name" varchar_pattern_ops);
+CREATE INDEX "main_companyinvestingevent_event_round_fbdee96b_like" ON "main_companyinvestingevent" ("event_round" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_fundingstage_b068931c" ON "feed_fundingstage" ("name");
+CREATE INDEX "main_companyinvestingevent_invest_currency_f1b74553_like" ON "main_companyinvestingevent" ("invest_currency" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_fundingstage_fde81f11" ON "feed_fundingstage" ("created_at");
+CREATE INDEX "main_companyinvestor_a9b0c97b" ON "main_companyinvestor" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_fundingstage_afd1a1a8" ON "feed_fundingstage" ("updated_at");
+CREATE INDEX "main_companyinvestor_bb5855f0" ON "main_companyinvestor" ("created_time");
 commit;
 
-CREATE INDEX "feed_fundingstage_name_a2700713_like" ON "feed_fundingstage" ("name" varchar_pattern_ops);
+CREATE INDEX "main_companyinvestor_a669ba6c" ON "main_companyinvestor" ("is_user_input");
 commit;
 
-CREATE INDEX "feed_investortype_slug_8f1fcea0_like" ON "feed_investortype" ("slug" varchar_pattern_ops);
+CREATE INDEX "main_companyinvestor_e4c5f499" ON "main_companyinvestor" ("investor_day");
 commit;
 
-CREATE INDEX "feed_region_a9b0c97b" ON "feed_region" ("last_edited_time");
+CREATE INDEX "main_companyinvestor_6443feea" ON "main_companyinvestor" ("investor_month");
 commit;
 
-CREATE INDEX "feed_region_bb5855f0" ON "feed_region" ("created_time");
+CREATE INDEX "main_companyinvestor_e840ed8f" ON "main_companyinvestor" ("investor_year");
 commit;
 
-CREATE INDEX "feed_region_b068931c" ON "feed_region" ("name");
+CREATE INDEX "main_companyinvestor_c1b77059" ON "main_companyinvestor" ("investor_currency");
 commit;
 
-CREATE INDEX "feed_region_28c1e37e" ON "feed_region" ("latitude");
+CREATE INDEX "main_companyinvestor_353c5b1f" ON "main_companyinvestor" ("investor_amount");
 commit;
 
-CREATE INDEX "feed_region_ba569b80" ON "feed_region" ("longitude");
+CREATE INDEX "main_companyinvestor_2b660b3e" ON "main_companyinvestor" ("invest_currency");
 commit;
 
-CREATE INDEX "feed_region_name_9c3cddab_like" ON "feed_region" ("name" varchar_pattern_ops);
+CREATE INDEX "main_companyinvestor_1c5f0b93" ON "main_companyinvestor" ("invest_amt");
 commit;
 
-ALTER TABLE "feed_state" ADD CONSTRAINT "feed_state_continent_id_b4f559b2_fk_feed_continent_id" FOREIGN KEY ("continent_id") REFERENCES "feed_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_companyinvestor_40802acb" ON "main_companyinvestor" ("invest_date");
 commit;
 
-ALTER TABLE "feed_state" ADD CONSTRAINT "feed_state_country_id_41b89122_fk_feed_country_id" FOREIGN KEY ("country_id") REFERENCES "feed_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_companyinvestor_4264c638" ON "main_companyinvestor" ("is_active");
 commit;
 
-CREATE INDEX "feed_state_a9b0c97b" ON "feed_state" ("last_edited_time");
+CREATE INDEX "main_companyinvestor_4df577bd" ON "main_companyinvestor" ("is_tips");
 commit;
 
-CREATE INDEX "feed_state_bb5855f0" ON "feed_state" ("created_time");
+CREATE INDEX "main_companyinvestor_fee55b15" ON "main_companyinvestor" ("is_rocketpunch");
 commit;
 
-CREATE INDEX "feed_state_b068931c" ON "feed_state" ("name");
+CREATE INDEX "main_companyinvestor_347a36a7" ON "main_companyinvestor" ("is_estimate");
 commit;
 
-CREATE INDEX "feed_state_28c1e37e" ON "feed_state" ("latitude");
+CREATE INDEX "main_companyinvestor_investor_currency_3c6146e3_like" ON "main_companyinvestor" ("investor_currency" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_state_ba569b80" ON "feed_state" ("longitude");
+CREATE INDEX "main_companyinvestor_investor_amount_de085f9f_like" ON "main_companyinvestor" ("investor_amount" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_state_071e6d87" ON "feed_state" ("continent_id");
+CREATE INDEX "main_companyinvestor_invest_currency_61c9b4ff_like" ON "main_companyinvestor" ("invest_currency" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_state_93bfec8a" ON "feed_state" ("country_id");
+ALTER TABLE "main_companyresource" ADD CONSTRAINT "main_companyresource_company_id_cd1921c8_fk_main_company_id" FOREIGN KEY ("company_id") REFERENCES "main_company" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_state_name_92170e4c_like" ON "feed_state" ("name" varchar_pattern_ops);
+CREATE INDEX "main_companyresource_447d3092" ON "main_companyresource" ("company_id");
 commit;
 
-CREATE INDEX "feed_resource_fbff80ba" ON "feed_resource" ("angellist_url");
+CREATE INDEX "main_continent_a9b0c97b" ON "main_continent" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_resource_angellist_url_5906378e_like" ON "feed_resource" ("angellist_url" varchar_pattern_ops);
+CREATE INDEX "main_continent_bb5855f0" ON "main_continent" ("created_time");
 commit;
 
-CREATE INDEX "feed_resource_0693b93b" ON "feed_resource" ("company_city");
+CREATE INDEX "main_continent_b068931c" ON "main_continent" ("name");
 commit;
 
-CREATE INDEX "feed_resource_company_city_f250f033_like" ON "feed_resource" ("company_city" varchar_pattern_ops);
+CREATE INDEX "main_continent_28c1e37e" ON "main_continent" ("latitude");
 commit;
 
-CREATE INDEX "feed_resource_bc4de5a9" ON "feed_resource" ("company_class");
+CREATE INDEX "main_continent_ba569b80" ON "main_continent" ("longitude");
 commit;
 
-CREATE INDEX "feed_resource_company_class_2a3840ab_like" ON "feed_resource" ("company_class" varchar_pattern_ops);
+CREATE INDEX "main_continent_225d95cb" ON "main_continent" ("company_count");
 commit;
 
-CREATE INDEX "feed_resource_7e214e10" ON "feed_resource" ("company_continent");
+CREATE INDEX "main_continent_1a1d3fe1" ON "main_continent" ("company_investor_count");
 commit;
 
-CREATE INDEX "feed_resource_company_continent_ccecfee1_like" ON "feed_resource" ("company_continent" varchar_pattern_ops);
+CREATE INDEX "main_continent_43f5deee" ON "main_continent" ("company_startup_count");
 commit;
 
-CREATE INDEX "feed_resource_9e2b0ee2" ON "feed_resource" ("company_country");
+CREATE INDEX "main_continent_e4dfb059" ON "main_continent" ("company_public_count");
 commit;
 
-CREATE INDEX "feed_resource_company_country_b4b3077c_like" ON "feed_resource" ("company_country" varchar_pattern_ops);
+CREATE INDEX "main_continent_68c7b353" ON "main_continent" ("user_count");
 commit;
 
-CREATE INDEX "feed_resource_192c3778" ON "feed_resource" ("company_established");
+CREATE INDEX "main_continent_name_6b0bcb6a_like" ON "main_continent" ("name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_company_established_7b2c8097_like" ON "feed_resource" ("company_established" varchar_pattern_ops);
+ALTER TABLE "main_country" ADD CONSTRAINT "main_country_continent_id_38ce1f9e_fk_main_continent_id" FOREIGN KEY ("continent_id") REFERENCES "main_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_resource_f6018d4e" ON "feed_resource" ("company_founded_day");
+CREATE INDEX "main_country_a9b0c97b" ON "main_country" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_resource_2c93df8c" ON "feed_resource" ("company_founded_month");
+CREATE INDEX "main_country_bb5855f0" ON "main_country" ("created_time");
 commit;
 
-CREATE INDEX "feed_resource_ad226066" ON "feed_resource" ("company_founded_year");
+CREATE INDEX "main_country_b068931c" ON "main_country" ("name");
 commit;
 
-CREATE INDEX "feed_resource_b7eb5d9c" ON "feed_resource" ("company_industry");
+CREATE INDEX "main_country_28c1e37e" ON "main_country" ("latitude");
 commit;
 
-CREATE INDEX "feed_resource_company_industry_777bda86_like" ON "feed_resource" ("company_industry" varchar_pattern_ops);
+CREATE INDEX "main_country_ba569b80" ON "main_country" ("longitude");
 commit;
 
-CREATE INDEX "feed_resource_4264fa21" ON "feed_resource" ("company_kor_name");
+CREATE INDEX "main_country_225d95cb" ON "main_country" ("company_count");
 commit;
 
-CREATE INDEX "feed_resource_company_kor_name_3858d01f_like" ON "feed_resource" ("company_kor_name" varchar_pattern_ops);
+CREATE INDEX "main_country_1a1d3fe1" ON "main_country" ("company_investor_count");
 commit;
 
-CREATE INDEX "feed_resource_8b6b622d" ON "feed_resource" ("company_location");
+CREATE INDEX "main_country_43f5deee" ON "main_country" ("company_startup_count");
 commit;
 
-CREATE INDEX "feed_resource_company_location_ca5fe2a9_like" ON "feed_resource" ("company_location" varchar_pattern_ops);
+CREATE INDEX "main_country_e4dfb059" ON "main_country" ("company_public_count");
 commit;
 
-CREATE INDEX "feed_resource_6c50c7f1" ON "feed_resource" ("company_location_latitude");
+CREATE INDEX "main_country_68c7b353" ON "main_country" ("user_count");
 commit;
 
-CREATE INDEX "feed_resource_2885a201" ON "feed_resource" ("company_location_longitude");
+CREATE INDEX "main_country_071e6d87" ON "main_country" ("continent_id");
 commit;
 
-CREATE INDEX "feed_resource_c5b49fd9" ON "feed_resource" ("company_number");
+CREATE INDEX "main_country_name_1c6d92a2_like" ON "main_country" ("name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_company_number_77ef41f3_like" ON "feed_resource" ("company_number" varchar_pattern_ops);
+CREATE INDEX "main_feed_fad6c43b" ON "main_feed" ("frequency");
 commit;
 
-CREATE INDEX "feed_resource_16670d4e" ON "feed_resource" ("company_region");
+CREATE INDEX "main_feed_5fc73231" ON "main_feed" ("date");
 commit;
 
-CREATE INDEX "feed_resource_company_region_847f69a8_like" ON "feed_resource" ("company_region" varchar_pattern_ops);
+CREATE INDEX "main_feed_fde81f11" ON "main_feed" ("created_at");
 commit;
 
-CREATE INDEX "feed_resource_3bd52307" ON "feed_resource" ("company_state");
+CREATE INDEX "main_feed_afd1a1a8" ON "main_feed" ("updated_at");
 commit;
 
-CREATE INDEX "feed_resource_company_state_d110c9a5_like" ON "feed_resource" ("company_state" varchar_pattern_ops);
+CREATE INDEX "main_fundingstage_b068931c" ON "main_fundingstage" ("name");
 commit;
 
-CREATE INDEX "feed_resource_b109d4cd" ON "feed_resource" ("company_website");
+CREATE INDEX "main_fundingstage_fde81f11" ON "main_fundingstage" ("created_at");
 commit;
 
-CREATE INDEX "feed_resource_company_website_0b93b616_like" ON "feed_resource" ("company_website" varchar_pattern_ops);
+CREATE INDEX "main_fundingstage_afd1a1a8" ON "main_fundingstage" ("updated_at");
 commit;
 
-CREATE INDEX "feed_resource_7d826fd6" ON "feed_resource" ("corporate_number");
+CREATE INDEX "main_fundingstage_name_67ea9c02_like" ON "main_fundingstage" ("name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_corporate_number_5b198a3a_like" ON "feed_resource" ("corporate_number" varchar_pattern_ops);
+ALTER TABLE "main_instrument" ADD CONSTRAINT "main_instrument_company_id_9782a023_fk_main_company_id" FOREIGN KEY ("company_id") REFERENCES "main_company" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_resource_d69203b3" ON "feed_resource" ("e27_url");
+CREATE INDEX "main_instrument_e3c9c373" ON "main_instrument" ("broker");
 commit;
 
-CREATE INDEX "feed_resource_e27_url_44b674ba_like" ON "feed_resource" ("e27_url" varchar_pattern_ops);
+CREATE INDEX "main_instrument_cce85e72" ON "main_instrument" ("sym");
 commit;
 
-CREATE INDEX "feed_resource_33780092" ON "feed_resource" ("f6s_url");
+CREATE INDEX "main_instrument_b5fddf1e" ON "main_instrument" ("cur");
 commit;
 
-CREATE INDEX "feed_resource_f6s_url_e8800456_like" ON "feed_resource" ("f6s_url" varchar_pattern_ops);
+CREATE INDEX "main_instrument_871489d5" ON "main_instrument" ("exch");
 commit;
 
-CREATE INDEX "feed_resource_bba37091" ON "feed_resource" ("forbes_url");
+CREATE INDEX "main_instrument_193240a0" ON "main_instrument" ("secType");
 commit;
 
-CREATE INDEX "feed_resource_forbes_url_621c7a70_like" ON "feed_resource" ("forbes_url" varchar_pattern_ops);
+CREATE INDEX "main_instrument_3ca59627" ON "main_instrument" ("trade_freq");
 commit;
 
-CREATE INDEX "feed_resource_0704c6f5" ON "feed_resource" ("invested_continent_csv");
+CREATE INDEX "main_instrument_0f9f2d92" ON "main_instrument" ("mult");
 commit;
 
-CREATE INDEX "feed_resource_invested_continent_csv_35d6d04a_like" ON "feed_resource" ("invested_continent_csv" varchar_pattern_ops);
+CREATE INDEX "main_instrument_229543a1" ON "main_instrument" ("local_sym");
 commit;
 
-CREATE INDEX "feed_resource_9a8daa8f" ON "feed_resource" ("invested_founder_csv");
+CREATE INDEX "main_instrument_ea6e7a9b" ON "main_instrument" ("contractMonth");
 commit;
 
-CREATE INDEX "feed_resource_invested_founder_csv_feb1e24b_like" ON "feed_resource" ("invested_founder_csv" varchar_pattern_ops);
+CREATE INDEX "main_instrument_601c7ddc" ON "main_instrument" ("expiry");
 commit;
 
-CREATE INDEX "feed_resource_023e7239" ON "feed_resource" ("invested_funding_stage_csv");
+CREATE INDEX "main_instrument_4546e386" ON "main_instrument" ("evRule");
 commit;
 
-CREATE INDEX "feed_resource_invested_funding_stage_csv_ead477dd_like" ON "feed_resource" ("invested_funding_stage_csv" varchar_pattern_ops);
+CREATE INDEX "main_instrument_1db70381" ON "main_instrument" ("liquidHours");
 commit;
 
-CREATE INDEX "feed_resource_5630e841" ON "feed_resource" ("invested_market_csv");
+CREATE INDEX "main_instrument_9eb38def" ON "main_instrument" ("longName");
 commit;
 
-CREATE INDEX "feed_resource_invested_market_csv_5beda24f_like" ON "feed_resource" ("invested_market_csv" varchar_pattern_ops);
+CREATE INDEX "main_instrument_e69952b0" ON "main_instrument" ("minTick");
 commit;
 
-CREATE INDEX "feed_resource_259764f4" ON "feed_resource" ("invested_stages_csv");
+CREATE INDEX "main_instrument_9842a082" ON "main_instrument" ("timeZoneId");
 commit;
 
-CREATE INDEX "feed_resource_invested_stages_csv_b119f8a2_like" ON "feed_resource" ("invested_stages_csv" varchar_pattern_ops);
+CREATE INDEX "main_instrument_3bfd35b6" ON "main_instrument" ("tradingHours");
 commit;
 
-CREATE INDEX "feed_resource_fe284ac2" ON "feed_resource" ("invested_success");
+CREATE INDEX "main_instrument_d8fae1fe" ON "main_instrument" ("underConId");
 commit;
 
-CREATE INDEX "feed_resource_20ef32af" ON "feed_resource" ("invested_success_amt");
+CREATE INDEX "main_instrument_fde81f11" ON "main_instrument" ("created_at");
 commit;
 
-CREATE INDEX "feed_resource_d3380a28" ON "feed_resource" ("investor_class");
+CREATE INDEX "main_instrument_afd1a1a8" ON "main_instrument" ("updated_at");
 commit;
 
-CREATE INDEX "feed_resource_investor_class_18c09a80_like" ON "feed_resource" ("investor_class" varchar_pattern_ops);
+CREATE INDEX "main_instrument_447d3092" ON "main_instrument" ("company_id");
 commit;
 
-CREATE INDEX "feed_resource_ee724e2f" ON "feed_resource" ("investor_list_csv");
+CREATE INDEX "main_instrument_broker_e5570726_like" ON "main_instrument" ("broker" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_investor_list_csv_54807d48_like" ON "feed_resource" ("investor_list_csv" varchar_pattern_ops);
+CREATE INDEX "main_instrument_sym_50e7d8d7_like" ON "main_instrument" ("sym" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_d8e3caae" ON "feed_resource" ("is_angel");
+CREATE INDEX "main_instrument_cur_52005761_like" ON "main_instrument" ("cur" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_463223eb" ON "feed_resource" ("is_confirm");
+CREATE INDEX "main_instrument_exch_7faf5632_like" ON "main_instrument" ("exch" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_6e2900d4" ON "feed_resource" ("is_investor");
+CREATE INDEX "main_instrument_secType_fa1df52c_like" ON "main_instrument" ("secType" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_f3d6f5c9" ON "feed_resource" ("is_partner");
+CREATE INDEX "main_instrument_local_sym_78400407_like" ON "main_instrument" ("local_sym" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_fee55b15" ON "feed_resource" ("is_rocketpunch");
+CREATE INDEX "main_instrument_contractMonth_d5adc152_like" ON "main_instrument" ("contractMonth" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_61f856e3" ON "feed_resource" ("is_startup");
+CREATE INDEX "main_instrument_expiry_044aa443_like" ON "main_instrument" ("expiry" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_4df577bd" ON "feed_resource" ("is_tips");
+CREATE INDEX "main_instrument_evRule_7f405280_like" ON "main_instrument" ("evRule" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_38c5f373" ON "feed_resource" ("is_trusted_vc");
+CREATE INDEX "main_instrument_liquidHours_e1aa5559_like" ON "main_instrument" ("liquidHours" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_b7e28c0c" ON "feed_resource" ("last_funding_amt");
+CREATE INDEX "main_instrument_longName_9c9432ea_like" ON "main_instrument" ("longName" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_e83ca751" ON "feed_resource" ("last_funding_date");
+CREATE INDEX "main_instrument_timeZoneId_6fdb874a_like" ON "main_instrument" ("timeZoneId" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_5e7b1936" ON "feed_resource" ("owner_id");
+CREATE INDEX "main_instrument_tradingHours_09f1c451_like" ON "main_instrument" ("tradingHours" varchar_pattern_ops);
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_owner_id_191ed937_fk_auth_user_id" FOREIGN KEY ("owner_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_investortype_slug_53785cb8_like" ON "main_investortype" ("slug" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_dc6fb62a" ON "feed_resource" ("period_end_date");
+CREATE INDEX "main_market_b068931c" ON "main_market" ("name");
 commit;
 
-CREATE INDEX "feed_resource_1bf93bcf" ON "feed_resource" ("product_market_csv");
+CREATE INDEX "main_market_e6dec152" ON "main_market" ("vertical");
 commit;
 
-CREATE INDEX "feed_resource_product_market_csv_89b8cc1c_like" ON "feed_resource" ("product_market_csv" varchar_pattern_ops);
+CREATE INDEX "main_market_55a2ea80" ON "main_market" ("sub_vertical");
 commit;
 
-CREATE INDEX "feed_resource_f2452ee6" ON "feed_resource" ("rocketpunch_url");
+CREATE INDEX "main_market_fde81f11" ON "main_market" ("created_at");
 commit;
 
-CREATE INDEX "feed_resource_rocketpunch_url_c82a278a_like" ON "feed_resource" ("rocketpunch_url" varchar_pattern_ops);
+CREATE INDEX "main_market_afd1a1a8" ON "main_market" ("updated_at");
 commit;
 
-CREATE INDEX "feed_resource_7271259c" ON "feed_resource" ("score1");
+CREATE INDEX "main_market_name_c00d7eef_like" ON "main_market" ("name" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_ed28b0ab" ON "feed_resource" ("score2");
+CREATE INDEX "main_market_vertical_2592e68d_like" ON "main_market" ("vertical" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_f6f63d76" ON "feed_resource" ("score3");
+CREATE INDEX "main_market_sub_vertical_ef6e3e6f_like" ON "main_market" ("sub_vertical" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_a164b067" ON "feed_resource" ("score4");
+CREATE INDEX "main_market_slug_058ed5ec_like" ON "main_market" ("slug" varchar_pattern_ops);
 commit;
 
-CREATE INDEX "feed_resource_3d3a97ef" ON "feed_resource" ("score5");
+ALTER TABLE "main_prediction" ADD CONSTRAINT "main_prediction_instrument_id_c33e1b5d_fk_main_instrument_id" FOREIGN KEY ("instrument_id") REFERENCES "main_instrument" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_resource_f06814ed" ON "feed_resource" ("sec_url");
+CREATE INDEX "main_prediction_fad6c43b" ON "main_prediction" ("frequency");
 commit;
 
-CREATE INDEX "feed_resource_sec_url_d10b06e3_like" ON "feed_resource" ("sec_url" varchar_pattern_ops);
+CREATE INDEX "main_prediction_d7a744c6" ON "main_prediction" ("pred_start_date");
 commit;
 
-CREATE INDEX "feed_resource_slug_9f66723e_like" ON "feed_resource" ("slug" varchar_pattern_ops);
+CREATE INDEX "main_prediction_5fc73231" ON "main_prediction" ("date");
 commit;
 
-CREATE INDEX "feed_resource_b2337225" ON "feed_resource" ("total_asset");
+CREATE INDEX "main_prediction_fde81f11" ON "main_prediction" ("created_at");
 commit;
 
-CREATE INDEX "feed_resource_86a19171" ON "feed_resource" ("total_capital");
+CREATE INDEX "main_prediction_afd1a1a8" ON "main_prediction" ("updated_at");
 commit;
 
-CREATE INDEX "feed_resource_74cf7cd2" ON "feed_resource" ("total_debt");
+CREATE INDEX "main_prediction_9afea17b" ON "main_prediction" ("instrument_id");
 commit;
 
-CREATE INDEX "feed_resource_cbbcbb27" ON "feed_resource" ("total_funding_amt");
+CREATE INDEX "main_region_a9b0c97b" ON "main_region" ("last_edited_time");
 commit;
 
-CREATE INDEX "feed_resource_faf3b8e3" ON "feed_resource" ("total_sales");
+CREATE INDEX "main_region_bb5855f0" ON "main_region" ("created_time");
 commit;
 
-CREATE INDEX "feed_resource_a66285ba" ON "feed_resource" ("total_valuation");
+CREATE INDEX "main_region_b068931c" ON "main_region" ("name");
 commit;
 
-CREATE INDEX "feed_companyresource_e2f3ef5b" ON "feed_companyresource" ("resource_id");
+CREATE INDEX "main_region_28c1e37e" ON "main_region" ("latitude");
 commit;
 
-ALTER TABLE "feed_companyresource" ADD CONSTRAINT "feed_companyresource_resource_id_a473b9f1_fk_feed_resource_id" FOREIGN KEY ("resource_id") REFERENCES "feed_resource" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_region_ba569b80" ON "main_region" ("longitude");
 commit;
 
-CREATE INDEX "feed_companyinvestor_d3342098" ON "feed_companyinvestor" ("funding_stage_id");
+CREATE INDEX "main_region_name_91f1f519_like" ON "main_region" ("name" varchar_pattern_ops);
 commit;
 
-ALTER TABLE "feed_companyinvestor" ADD CONSTRAINT "feed_companyi_funding_stage_id_97b802f8_fk_feed_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "feed_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_city_id_33f28ede_fk_main_city_id" FOREIGN KEY ("city_id") REFERENCES "main_city" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_companyinvestor_c1cbbdc1" ON "feed_companyinvestor" ("investor_id");
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_continent_id_caf18a42_fk_main_continent_id" FOREIGN KEY ("continent_id") REFERENCES "main_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-ALTER TABLE "feed_companyinvestor" ADD CONSTRAINT "feed_companyinvestor_investor_id_3bcd20de_fk_feed_company_id" FOREIGN KEY ("investor_id") REFERENCES "feed_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_country_id_59bd0132_fk_main_country_id" FOREIGN KEY ("country_id") REFERENCES "main_country" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_companyinvestor_5e7b1936" ON "feed_companyinvestor" ("owner_id");
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_funding_stage_id_64e1cb2d_fk_main_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "main_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-ALTER TABLE "feed_companyinvestor" ADD CONSTRAINT "feed_companyinvestor_owner_id_5af338ae_fk_feed_company_id" FOREIGN KEY ("owner_id") REFERENCES "feed_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resour_invested_stages_id_80ec2faf_fk_main_fundingstage_id" FOREIGN KEY ("invested_stages_id") REFERENCES "main_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_d3342098" ON "feed_companyinvestingevent" ("funding_stage_id");
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_investor_type_id_b0910386_fk_main_investortype_id" FOREIGN KEY ("investor_type_id") REFERENCES "main_investortype" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-ALTER TABLE "feed_companyinvestingevent" ADD CONSTRAINT "feed_companyi_funding_stage_id_edb12483_fk_feed_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "feed_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_owner_id_120a2194_fk_auth_user_id" FOREIGN KEY ("owner_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-ALTER TABLE "feed_companyinvestingevent_investor" ADD CONSTRAINT "d712b834a0f440555f0755a2e74d04b1" FOREIGN KEY ("companyinvestingevent_id") REFERENCES "feed_companyinvestingevent" ("id") DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_region_id_f6e5846a_fk_main_region_id" FOREIGN KEY ("region_id") REFERENCES "main_region" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
-ALTER TABLE "feed_companyinvestingevent_investor" ADD CONSTRAINT "feed_com_companyinvestor_id_fb245131_fk_feed_companyinvestor_id" FOREIGN KEY ("companyinvestor_id") REFERENCES "feed_companyinvestor" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_4562f0d0" ON "main_resource" ("resource_type");
 commit;
 
-ALTER TABLE "feed_companyinvestingevent_investor" ADD CONSTRAINT "feed_companyinvestingeve_companyinvestingevent_id_6c279914_uniq" UNIQUE ("companyinvestingevent_id", "companyinvestor_id");
+CREATE INDEX "main_resource_d983bbbb" ON "main_resource" ("commodity_type");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_investor_7f9cf1a9" ON "feed_companyinvestingevent_investor" ("companyinvestingevent_id");
+CREATE INDEX "main_resource_4264c638" ON "main_resource" ("is_active");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_investor_479444e9" ON "feed_companyinvestingevent_investor" ("companyinvestor_id");
+CREATE INDEX "main_resource_11725655" ON "main_resource" ("is_public");
 commit;
 
-CREATE INDEX "feed_companyinvestingevent_5e7b1936" ON "feed_companyinvestingevent" ("owner_id");
+CREATE INDEX "main_resource_463223eb" ON "main_resource" ("is_confirm");
 commit;
 
-ALTER TABLE "feed_companyinvestingevent" ADD CONSTRAINT "feed_companyinvestingevent_owner_id_6d5db2c9_fk_feed_company_id" FOREIGN KEY ("owner_id") REFERENCES "feed_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_38c5f373" ON "main_resource" ("is_trusted_vc");
 commit;
 
-CREATE INDEX "feed_company_071e6d87" ON "feed_company" ("continent_id");
+CREATE INDEX "main_resource_f3d6f5c9" ON "main_resource" ("is_partner");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_continent_id_cc50b45e_fk_feed_continent_id" FOREIGN KEY ("continent_id") REFERENCES "feed_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_d8e3caae" ON "main_resource" ("is_angel");
 commit;
 
-CREATE INDEX "feed_company_93bfec8a" ON "feed_company" ("country_id");
+CREATE INDEX "main_resource_4df577bd" ON "main_resource" ("is_tips");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_country_id_4da20df2_fk_feed_country_id" FOREIGN KEY ("country_id") REFERENCES "feed_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_fee55b15" ON "main_resource" ("is_rocketpunch");
 commit;
 
-CREATE INDEX "feed_company_d3342098" ON "feed_company" ("funding_stage_id");
+CREATE INDEX "main_resource_61f856e3" ON "main_resource" ("is_startup");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_funding_stage_id_3f223dcd_fk_feed_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "feed_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_6e2900d4" ON "main_resource" ("is_investor");
 commit;
 
-CREATE INDEX "feed_company_40cf68f8" ON "feed_company" ("invested_stages_id");
+CREATE INDEX "main_resource_8a084cf7" ON "main_resource" ("ticker");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_compan_invested_stages_id_b12614ba_fk_feed_fundingstage_id" FOREIGN KEY ("invested_stages_id") REFERENCES "feed_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_5c731c8c" ON "main_resource" ("exchange");
 commit;
 
-CREATE INDEX "feed_company_674d1b03" ON "feed_company" ("investor_type_id");
+CREATE INDEX "main_resource_154c1303" ON "main_resource" ("sec_cik");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_investor_type_id_0cc5b214_fk_feed_investortype_id" FOREIGN KEY ("investor_type_id") REFERENCES "feed_investortype" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_22b6a063" ON "main_resource" ("sec_cik_int");
 commit;
 
-CREATE INDEX "feed_company_5e7b1936" ON "feed_company" ("owner_id");
+CREATE INDEX "main_resource_a9b0c97b" ON "main_resource" ("last_edited_time");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_owner_id_1815af23_fk_auth_user_id" FOREIGN KEY ("owner_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_bb5855f0" ON "main_resource" ("created_time");
 commit;
 
-CREATE INDEX "feed_company_0f442f96" ON "feed_company" ("region_id");
+CREATE INDEX "main_resource_c1007e8a" ON "main_resource" ("company_name");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_region_id_dd62d6b9_fk_feed_region_id" FOREIGN KEY ("region_id") REFERENCES "feed_region" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_4264fa21" ON "main_resource" ("company_kor_name");
 commit;
 
-CREATE INDEX "feed_company_d5582625" ON "feed_company" ("state_id");
+CREATE INDEX "main_resource_bc4de5a9" ON "main_resource" ("company_class");
 commit;
 
-ALTER TABLE "feed_company" ADD CONSTRAINT "feed_company_state_id_a24ad87a_fk_feed_state_id" FOREIGN KEY ("state_id") REFERENCES "feed_state" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_f2452ee6" ON "main_resource" ("rocketpunch_url");
 commit;
 
-CREATE INDEX "feed_city_071e6d87" ON "feed_city" ("continent_id");
+CREATE INDEX "main_resource_fbff80ba" ON "main_resource" ("angellist_url");
 commit;
 
-ALTER TABLE "feed_city" ADD CONSTRAINT "feed_city_continent_id_c2e33fc1_fk_feed_continent_id" FOREIGN KEY ("continent_id") REFERENCES "feed_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_f06814ed" ON "main_resource" ("sec_url");
 commit;
 
-CREATE INDEX "feed_city_93bfec8a" ON "feed_city" ("country_id");
+CREATE INDEX "main_resource_d69203b3" ON "main_resource" ("e27_url");
 commit;
 
-ALTER TABLE "feed_city" ADD CONSTRAINT "feed_city_country_id_e49425d5_fk_feed_country_id" FOREIGN KEY ("country_id") REFERENCES "feed_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_33780092" ON "main_resource" ("f6s_url");
 commit;
 
-CREATE INDEX "feed_city_d5582625" ON "feed_city" ("state_id");
+CREATE INDEX "main_resource_bba37091" ON "main_resource" ("forbes_url");
 commit;
 
-ALTER TABLE "feed_city" ADD CONSTRAINT "feed_city_state_id_e9958507_fk_feed_state_id" FOREIGN KEY ("state_id") REFERENCES "feed_state" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_d3380a28" ON "main_resource" ("investor_class");
 commit;
 
-CREATE INDEX "feed_resource_c7141997" ON "feed_resource" ("city_id");
+CREATE INDEX "main_resource_b7eb5d9c" ON "main_resource" ("company_industry");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_city_id_014ea983_fk_feed_city_id" FOREIGN KEY ("city_id") REFERENCES "feed_city" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_7e214e10" ON "main_resource" ("company_continent");
 commit;
 
-CREATE INDEX "feed_resource_071e6d87" ON "feed_resource" ("continent_id");
+CREATE INDEX "main_resource_9e2b0ee2" ON "main_resource" ("company_country");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_continent_id_d6a8495c_fk_feed_continent_id" FOREIGN KEY ("continent_id") REFERENCES "feed_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_0693b93b" ON "main_resource" ("company_city");
 commit;
 
-CREATE INDEX "feed_resource_93bfec8a" ON "feed_resource" ("country_id");
+CREATE INDEX "main_resource_3bd52307" ON "main_resource" ("company_state");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_country_id_00ebb216_fk_feed_country_id" FOREIGN KEY ("country_id") REFERENCES "feed_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_16670d4e" ON "main_resource" ("company_region");
 commit;
 
-CREATE INDEX "feed_resource_d3342098" ON "feed_resource" ("funding_stage_id");
+CREATE INDEX "main_resource_8b6b622d" ON "main_resource" ("company_location");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_funding_stage_id_35016e1c_fk_feed_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "feed_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_6c50c7f1" ON "main_resource" ("company_location_latitude");
 commit;
 
-CREATE INDEX "feed_resource_40cf68f8" ON "feed_resource" ("invested_stages_id");
+CREATE INDEX "main_resource_2885a201" ON "main_resource" ("company_location_longitude");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resour_invested_stages_id_39edbae1_fk_feed_fundingstage_id" FOREIGN KEY ("invested_stages_id") REFERENCES "feed_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_192c3778" ON "main_resource" ("company_established");
 commit;
 
-CREATE INDEX "feed_resource_674d1b03" ON "feed_resource" ("investor_type_id");
+CREATE INDEX "main_resource_ad226066" ON "main_resource" ("company_founded_year");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_investor_type_id_4fce7c9e_fk_feed_investortype_id" FOREIGN KEY ("investor_type_id") REFERENCES "feed_investortype" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_2c93df8c" ON "main_resource" ("company_founded_month");
 commit;
 
-CREATE INDEX "feed_resource_0f442f96" ON "feed_resource" ("region_id");
+CREATE INDEX "main_resource_f6018d4e" ON "main_resource" ("company_founded_day");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_region_id_6a0632d1_fk_feed_region_id" FOREIGN KEY ("region_id") REFERENCES "feed_region" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_b109d4cd" ON "main_resource" ("company_website");
 commit;
 
-CREATE INDEX "feed_resource_d5582625" ON "feed_resource" ("state_id");
+CREATE INDEX "main_resource_c5b49fd9" ON "main_resource" ("company_number");
 commit;
 
-ALTER TABLE "feed_resource" ADD CONSTRAINT "feed_resource_state_id_963a379b_fk_feed_state_id" FOREIGN KEY ("state_id") REFERENCES "feed_state" ("id") DEFERRABLE INITIALLY DEFERRED;
+CREATE INDEX "main_resource_7d826fd6" ON "main_resource" ("corporate_number");
+commit;
+
+CREATE INDEX "main_resource_ee724e2f" ON "main_resource" ("investor_list_csv");
+commit;
+
+CREATE INDEX "main_resource_1bf93bcf" ON "main_resource" ("product_market_csv");
+commit;
+
+CREATE INDEX "main_resource_023e7239" ON "main_resource" ("invested_funding_stage_csv");
+commit;
+
+CREATE INDEX "main_resource_b7e28c0c" ON "main_resource" ("last_funding_amt");
+commit;
+
+CREATE INDEX "main_resource_e83ca751" ON "main_resource" ("last_funding_date");
+commit;
+
+CREATE INDEX "main_resource_cbbcbb27" ON "main_resource" ("total_funding_amt");
+commit;
+
+CREATE INDEX "main_resource_a66285ba" ON "main_resource" ("total_valuation");
+commit;
+
+CREATE INDEX "main_resource_b2337225" ON "main_resource" ("total_asset");
+commit;
+
+CREATE INDEX "main_resource_74cf7cd2" ON "main_resource" ("total_debt");
+commit;
+
+CREATE INDEX "main_resource_86a19171" ON "main_resource" ("total_capital");
+commit;
+
+CREATE INDEX "main_resource_faf3b8e3" ON "main_resource" ("total_sales");
+commit;
+
+CREATE INDEX "main_resource_dc6fb62a" ON "main_resource" ("period_end_date");
+commit;
+
+CREATE INDEX "main_resource_7271259c" ON "main_resource" ("score1");
+commit;
+
+CREATE INDEX "main_resource_ed28b0ab" ON "main_resource" ("score2");
+commit;
+
+CREATE INDEX "main_resource_f6f63d76" ON "main_resource" ("score3");
+commit;
+
+CREATE INDEX "main_resource_a164b067" ON "main_resource" ("score4");
+commit;
+
+CREATE INDEX "main_resource_3d3a97ef" ON "main_resource" ("score5");
+commit;
+
+CREATE INDEX "main_resource_259764f4" ON "main_resource" ("invested_stages_csv");
+commit;
+
+CREATE INDEX "main_resource_fe284ac2" ON "main_resource" ("invested_success");
+commit;
+
+CREATE INDEX "main_resource_20ef32af" ON "main_resource" ("invested_success_amt");
+commit;
+
+CREATE INDEX "main_resource_9a8daa8f" ON "main_resource" ("invested_founder_csv");
+commit;
+
+CREATE INDEX "main_resource_5630e841" ON "main_resource" ("invested_market_csv");
+commit;
+
+CREATE INDEX "main_resource_0704c6f5" ON "main_resource" ("invested_continent_csv");
+commit;
+
+CREATE INDEX "main_resource_c7141997" ON "main_resource" ("city_id");
+commit;
+
+CREATE INDEX "main_resource_071e6d87" ON "main_resource" ("continent_id");
+commit;
+
+CREATE INDEX "main_resource_93bfec8a" ON "main_resource" ("country_id");
+commit;
+
+CREATE INDEX "main_resource_d3342098" ON "main_resource" ("funding_stage_id");
+commit;
+
+CREATE INDEX "main_resource_40cf68f8" ON "main_resource" ("invested_stages_id");
+commit;
+
+CREATE INDEX "main_resource_674d1b03" ON "main_resource" ("investor_type_id");
+commit;
+
+CREATE INDEX "main_resource_5e7b1936" ON "main_resource" ("owner_id");
+commit;
+
+CREATE INDEX "main_resource_0f442f96" ON "main_resource" ("region_id");
+commit;
+
+CREATE INDEX "main_resource_resource_type_823f13bc_like" ON "main_resource" ("resource_type" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_commodity_type_ba818312_like" ON "main_resource" ("commodity_type" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_ticker_af17e385_like" ON "main_resource" ("ticker" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_exchange_96bb0f15_like" ON "main_resource" ("exchange" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_sec_cik_815fc3a4_like" ON "main_resource" ("sec_cik" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_sec_cik_int_dd3c4955_like" ON "main_resource" ("sec_cik_int" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_name_706c98ca_like" ON "main_resource" ("company_name" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_kor_name_e72c9b0f_like" ON "main_resource" ("company_kor_name" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_class_12a91305_like" ON "main_resource" ("company_class" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_rocketpunch_url_38797bf8_like" ON "main_resource" ("rocketpunch_url" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_angellist_url_ca3b6e27_like" ON "main_resource" ("angellist_url" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_sec_url_133ed9fe_like" ON "main_resource" ("sec_url" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_e27_url_233b58d1_like" ON "main_resource" ("e27_url" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_f6s_url_feaa6f9c_like" ON "main_resource" ("f6s_url" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_forbes_url_8fb6b3cb_like" ON "main_resource" ("forbes_url" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_investor_class_2dcc38fe_like" ON "main_resource" ("investor_class" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_industry_92cf8b70_like" ON "main_resource" ("company_industry" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_continent_0fb52f64_like" ON "main_resource" ("company_continent" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_country_ce0b9a58_like" ON "main_resource" ("company_country" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_city_02d30e42_like" ON "main_resource" ("company_city" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_state_933a1bd0_like" ON "main_resource" ("company_state" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_region_0692a0b1_like" ON "main_resource" ("company_region" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_location_8014e7d4_like" ON "main_resource" ("company_location" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_established_e68ee3a7_like" ON "main_resource" ("company_established" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_website_f6874394_like" ON "main_resource" ("company_website" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_company_number_564cab8e_like" ON "main_resource" ("company_number" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_corporate_number_8b22a0df_like" ON "main_resource" ("corporate_number" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_investor_list_csv_61fc4d35_like" ON "main_resource" ("investor_list_csv" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_product_market_csv_a49174af_like" ON "main_resource" ("product_market_csv" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_invested_funding_stage_csv_55de5e0c_like" ON "main_resource" ("invested_funding_stage_csv" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_slug_4a9907dd_like" ON "main_resource" ("slug" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_invested_stages_csv_0764843b_like" ON "main_resource" ("invested_stages_csv" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_invested_founder_csv_68106918_like" ON "main_resource" ("invested_founder_csv" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_invested_market_csv_03337b34_like" ON "main_resource" ("invested_market_csv" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_invested_continent_csv_6b182876_like" ON "main_resource" ("invested_continent_csv" varchar_pattern_ops);
+commit;
+
+ALTER TABLE "main_state" ADD CONSTRAINT "main_state_continent_id_fd5c09c3_fk_main_continent_id" FOREIGN KEY ("continent_id") REFERENCES "main_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+ALTER TABLE "main_state" ADD CONSTRAINT "main_state_country_id_83be6689_fk_main_country_id" FOREIGN KEY ("country_id") REFERENCES "main_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_state_a9b0c97b" ON "main_state" ("last_edited_time");
+commit;
+
+CREATE INDEX "main_state_bb5855f0" ON "main_state" ("created_time");
+commit;
+
+CREATE INDEX "main_state_b068931c" ON "main_state" ("name");
+commit;
+
+CREATE INDEX "main_state_28c1e37e" ON "main_state" ("latitude");
+commit;
+
+CREATE INDEX "main_state_ba569b80" ON "main_state" ("longitude");
+commit;
+
+CREATE INDEX "main_state_071e6d87" ON "main_state" ("continent_id");
+commit;
+
+CREATE INDEX "main_state_93bfec8a" ON "main_state" ("country_id");
+commit;
+
+CREATE INDEX "main_state_name_8533872e_like" ON "main_state" ("name" varchar_pattern_ops);
+commit;
+
+ALTER TABLE "main_system" ADD CONSTRAINT "main_system_c2instrument_id_f94e5ddd_fk_main_instrument_id" FOREIGN KEY ("c2instrument_id") REFERENCES "main_instrument" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+ALTER TABLE "main_system" ADD CONSTRAINT "main_system_ibinstrument_id_32676a3f_fk_main_instrument_id" FOREIGN KEY ("ibinstrument_id") REFERENCES "main_instrument" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_system_2af72f10" ON "main_system" ("version");
+commit;
+
+CREATE INDEX "main_system_54b53072" ON "main_system" ("system");
+commit;
+
+CREATE INDEX "main_system_b068931c" ON "main_system" ("name");
+commit;
+
+CREATE INDEX "main_system_72701e21" ON "main_system" ("c2id");
+commit;
+
+CREATE INDEX "main_system_6596891a" ON "main_system" ("c2api");
+commit;
+
+CREATE INDEX "main_system_5ece3b5a" ON "main_system" ("c2qty");
+commit;
+
+CREATE INDEX "main_system_73875049" ON "main_system" ("ibqty");
+commit;
+
+CREATE INDEX "main_system_3ca59627" ON "main_system" ("trade_freq");
+commit;
+
+CREATE INDEX "main_system_48b578af" ON "main_system" ("ibmult");
+commit;
+
+CREATE INDEX "main_system_1267705f" ON "main_system" ("c2mult");
+commit;
+
+CREATE INDEX "main_system_521345a9" ON "main_system" ("signal");
+commit;
+
+CREATE INDEX "main_system_5fa7c197" ON "main_system" ("c2instrument_id");
+commit;
+
+CREATE INDEX "main_system_bbff59fd" ON "main_system" ("ibinstrument_id");
+commit;
+
+CREATE INDEX "main_system_version_a3ac338d_like" ON "main_system" ("version" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_system_system_649abd73_like" ON "main_system" ("system" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_system_name_1d11a37c_like" ON "main_system" ("name" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_system_c2id_90f59312_like" ON "main_system" ("c2id" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_system_c2api_483489f9_like" ON "main_system" ("c2api" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_system_signal_b6c424af_like" ON "main_system" ("signal" varchar_pattern_ops);
+commit;
+
+CREATE INDEX "main_resource_d5582625" ON "main_resource" ("state_id");
+commit;
+
+ALTER TABLE "main_resource" ADD CONSTRAINT "main_resource_state_id_f56e49a0_fk_main_state_id" FOREIGN KEY ("state_id") REFERENCES "main_state" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_instrument_e2f3ef5b" ON "main_instrument" ("resource_id");
+commit;
+
+ALTER TABLE "main_instrument" ADD CONSTRAINT "main_instrument_resource_id_1e24756a_fk_main_resource_id" FOREIGN KEY ("resource_id") REFERENCES "main_resource" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_feed_9afea17b" ON "main_feed" ("instrument_id");
+commit;
+
+ALTER TABLE "main_feed" ADD CONSTRAINT "main_feed_instrument_id_119f233f_fk_main_instrument_id" FOREIGN KEY ("instrument_id") REFERENCES "main_instrument" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_companyresource_e2f3ef5b" ON "main_companyresource" ("resource_id");
+commit;
+
+ALTER TABLE "main_companyresource" ADD CONSTRAINT "main_companyresource_resource_id_1d9934af_fk_main_resource_id" FOREIGN KEY ("resource_id") REFERENCES "main_resource" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_companyinvestor_d3342098" ON "main_companyinvestor" ("funding_stage_id");
+commit;
+
+ALTER TABLE "main_companyinvestor" ADD CONSTRAINT "main_companyi_funding_stage_id_1d4e2c15_fk_main_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "main_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_companyinvestor_c1cbbdc1" ON "main_companyinvestor" ("investor_id");
+commit;
+
+ALTER TABLE "main_companyinvestor" ADD CONSTRAINT "main_companyinvestor_investor_id_cc10970f_fk_main_company_id" FOREIGN KEY ("investor_id") REFERENCES "main_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_companyinvestor_5e7b1936" ON "main_companyinvestor" ("owner_id");
+commit;
+
+ALTER TABLE "main_companyinvestor" ADD CONSTRAINT "main_companyinvestor_owner_id_119001a4_fk_main_company_id" FOREIGN KEY ("owner_id") REFERENCES "main_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_companyinvestingevent_d3342098" ON "main_companyinvestingevent" ("funding_stage_id");
+commit;
+
+ALTER TABLE "main_companyinvestingevent" ADD CONSTRAINT "main_companyi_funding_stage_id_7525da49_fk_main_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "main_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+ALTER TABLE "main_companyinvestingevent_investor" ADD CONSTRAINT "b27363c9b83b288394ddd43ef9e9116c" FOREIGN KEY ("companyinvestingevent_id") REFERENCES "main_companyinvestingevent" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+ALTER TABLE "main_companyinvestingevent_investor" ADD CONSTRAINT "main_com_companyinvestor_id_bd115879_fk_main_companyinvestor_id" FOREIGN KEY ("companyinvestor_id") REFERENCES "main_companyinvestor" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+ALTER TABLE "main_companyinvestingevent_investor" ADD CONSTRAINT "main_companyinvestingeve_companyinvestingevent_id_a04ba487_uniq" UNIQUE ("companyinvestingevent_id", "companyinvestor_id");
+commit;
+
+CREATE INDEX "main_companyinvestingevent_investor_7f9cf1a9" ON "main_companyinvestingevent_investor" ("companyinvestingevent_id");
+commit;
+
+CREATE INDEX "main_companyinvestingevent_investor_479444e9" ON "main_companyinvestingevent_investor" ("companyinvestor_id");
+commit;
+
+CREATE INDEX "main_companyinvestingevent_5e7b1936" ON "main_companyinvestingevent" ("owner_id");
+commit;
+
+ALTER TABLE "main_companyinvestingevent" ADD CONSTRAINT "main_companyinvestingevent_owner_id_c8b6b297_fk_main_company_id" FOREIGN KEY ("owner_id") REFERENCES "main_company" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_071e6d87" ON "main_company" ("continent_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_continent_id_5a6c5aaf_fk_main_continent_id" FOREIGN KEY ("continent_id") REFERENCES "main_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_93bfec8a" ON "main_company" ("country_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_country_id_3f3cb0e9_fk_main_country_id" FOREIGN KEY ("country_id") REFERENCES "main_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_d3342098" ON "main_company" ("funding_stage_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_funding_stage_id_9a040000_fk_main_fundingstage_id" FOREIGN KEY ("funding_stage_id") REFERENCES "main_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_40cf68f8" ON "main_company" ("invested_stages_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_compan_invested_stages_id_3bdb298d_fk_main_fundingstage_id" FOREIGN KEY ("invested_stages_id") REFERENCES "main_fundingstage" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_674d1b03" ON "main_company" ("investor_type_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_investor_type_id_7ee71cba_fk_main_investortype_id" FOREIGN KEY ("investor_type_id") REFERENCES "main_investortype" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_5e7b1936" ON "main_company" ("owner_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_owner_id_66a76e83_fk_auth_user_id" FOREIGN KEY ("owner_id") REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_0f442f96" ON "main_company" ("region_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_region_id_bc485d27_fk_main_region_id" FOREIGN KEY ("region_id") REFERENCES "main_region" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_company_d5582625" ON "main_company" ("state_id");
+commit;
+
+ALTER TABLE "main_company" ADD CONSTRAINT "main_company_state_id_71d64464_fk_main_state_id" FOREIGN KEY ("state_id") REFERENCES "main_state" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_city_071e6d87" ON "main_city" ("continent_id");
+commit;
+
+ALTER TABLE "main_city" ADD CONSTRAINT "main_city_continent_id_f5fcac3e_fk_main_continent_id" FOREIGN KEY ("continent_id") REFERENCES "main_continent" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_city_93bfec8a" ON "main_city" ("country_id");
+commit;
+
+ALTER TABLE "main_city" ADD CONSTRAINT "main_city_country_id_df1a0601_fk_main_country_id" FOREIGN KEY ("country_id") REFERENCES "main_country" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_city_d5582625" ON "main_city" ("state_id");
+commit;
+
+ALTER TABLE "main_city" ADD CONSTRAINT "main_city_state_id_f92848c7_fk_main_state_id" FOREIGN KEY ("state_id") REFERENCES "main_state" ("id") DEFERRABLE INITIALLY DEFERRED;
+commit;
+
+CREATE INDEX "main_bidask_9afea17b" ON "main_bidask" ("instrument_id");
+commit;
+
+ALTER TABLE "main_bidask" ADD CONSTRAINT "main_bidask_instrument_id_b25166cf_fk_main_instrument_id" FOREIGN KEY ("instrument_id") REFERENCES "main_instrument" ("id") DEFERRABLE INITIALLY DEFERRED;
 commit;
 
 

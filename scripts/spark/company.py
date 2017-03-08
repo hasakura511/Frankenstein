@@ -21,7 +21,7 @@ sys.path.append("../../../../")
 sys.path.append("../../../")
 sys.path.append("../../")
 sys.path.append("../")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tsdp.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
 import json
 import codecs
 import StringIO
@@ -30,8 +30,8 @@ from django.template.defaultfilters import slugify
 from django.db import models
 from django.core.paginator import Page
 import os
-import tsdp.settings as settings
-from feed.models import *
+import beCOMPANY.settings as settings
+from main.models import *
 from BeautifulSoup import BeautifulSoup
 import os
 from cookielib import LWPCookieJar

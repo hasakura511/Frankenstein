@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class FeedDB {
-	String url = "jdbc:postgresql://localhost/beginning?user=postgres&password=ph0t0n!@#";
+	String url = "jdbc:postgresql://localhost/tsdp?user=tsdp&password=93768145";
 	Connection conn=null;
 	
 	private static FeedDB instance = null;

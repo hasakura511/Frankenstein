@@ -37,8 +37,8 @@
  ******************************************************************************/
 
 //JAVA imports needed.
-import java.net.*;
 import common.*;
+import java.net.*;
 
 public class ConsoleBenchmarkTool
 {

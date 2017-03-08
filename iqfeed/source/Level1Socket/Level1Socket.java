@@ -34,8 +34,14 @@
  ******************************************************************************/
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import javax.swing.*;
 import java.awt.event.*;
+import common.*;
 
 public class Level1Socket extends javax.swing.JFrame implements ActionListener, WindowListener
 {
@@ -47,6 +53,48 @@ public class Level1Socket extends javax.swing.JFrame implements ActionListener, 
     /**
      * Creates new form Level1_Example_Frame
      */
+   
+
+    public static void getFeeds() {
+  	  Connection c=FeedDB.getConnection();
+  	  Statement statement = null;
+
+  		String selectTableSQL = "SELECT sym, exch FROM feed_instrument LIMIT 10";
+  		
+  		try {
+  			statement = c.createStatement();
+
+  			System.out.println(selectTableSQL);
+
+  			// execute select SQL stetement
+  			ResultSet rs = statement.executeQuery(selectTableSQL);
+
+  			while (rs.next()) {
+
+  				String userid = rs.getString("sym");
+  				String username = rs.getString("exch");
+
+  				System.out.println("userid : " + userid);
+  				System.out.println("username : " + username);
+
+  			}
+
+  		} catch (SQLException e) {
+
+  			System.out.println(e.getMessage());
+
+  		} finally {
+
+  			if (statement != null) {
+  				//statement.close();
+  			}
+
+  			if (c != null) {
+  				//c.close();
+  			}
+
+  		}
+    }
     public Level1Socket() 
     {
 		super("Level 1 Socket");
@@ -696,6 +744,7 @@ public class Level1Socket extends javax.swing.JFrame implements ActionListener, 
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+    	getFeeds();
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
