@@ -1,4 +1,4 @@
-feed/migrations/*
+main/migrations/*
 *.pyc
 .log
 *.swp
