@@ -17,6 +17,7 @@ import logging
 import time
 #import websocket
 import threading
+import dateutil 
 #lock = threading.Lock()
 
 logging.basicConfig(stream=sys.stdout,  level=logging.DEBUG)
@@ -38,7 +39,7 @@ model=pd.DataFrame()
 [DatapointsPerSend] - Optional - Specifies the number of datapoints that IQConnect.exe will queue before attempting to send across the socket to your app.
 [IntervalType] - Optional - 's' (default) for time intervals in seconds, 'v' for volume intervals, 't' for tick intervals
 '''
-def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='',getQuote=False):
+def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
     #get_bitstampfeed()
     global feed
     global ohlc
@@ -88,16 +89,19 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                     return data
                 else:
                     date=fields[0]
-                    high=fields[1]
-                    low=fields[2]
-                    open=fields[3]
-                    close=fields[4]
-                    total_volume=fields[5]
-                    volume=fields[6]
+                    high=float(fields[1])
+                    low=float(fields[2])
+                    open=float(fields[3])
+                    close=float(fields[4])
+                    total_volume=float(fields[5])
+                    volume=float(fields[6])
                     trades=fields[7]
                     
                     
-                    quote={ 'Date':date,
+                   
+                    if date:
+                        date=dateutil.parser.parse(date)
+                        quote={ 'Date':date,
                             'Open':open,
                             'High':high,
                             'Low':low,
@@ -106,11 +110,10 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                             'TotalVolume':total_volume,
                            #'wap':WAP,
                         }
-                    #self.saveQuote(dbcontract, quote)
-                    data.loc[date] = [open,high,low,close,volume,total_volume]
-                    print date,high,low,open,close,volume,total_volume,trades
-                    if getQuote:
-                        return quote  
+                        #self.saveQuote(dbcontract, quote)
+                        
+                        data.loc[date] = [open,high,low,close,volume,total_volume]
+                        print date,high,low,open,close,volume,total_volume,trades
         except Exception as e:
             logging.error("get_btcfeed", exc_info=True)
                 

@@ -15,19 +15,22 @@ import datetime as datetime
 #SYM.run() - saves signal transmits to broker
 
 dataPath='./data/'
-lastDate=datetime.datetime.now()
+lastDate=datetime.datetime(1000,1,1)
+
 def getBackendDB():
     dbPath = 'stocks.sqlite3'
     readConn = sqlite3.connect(dbPath)
     return readConn
 
 def getFeed(symbol, maxlookback):
+    global lastDate
     interval=300
-    maxlookback=1
-    quote=dbhist.get_hist(symbol, interval, maxlookback,0,'','','',True)
-    if quote['Date'] > lastDate:
-        lastDate=quote['Date']
-        return quote
+   
+    
+    data=dbhist.get_hist(symbol, interval,  maxlookback)
+    if data.index[-1] > lastDate:
+        lastDate=data.index[-1]
+        return data
     else:
         return None
     #return data
@@ -37,6 +40,7 @@ def getFeed(symbol, maxlookback):
     #return pd.read_csv('./data/5m_#TeslaMotor.csv')
 
 def getHistory(symbol, maxlookback):
+    global lastDate
     #global dataPath
     #richie you do this
     #data = pd.read_csv(dataPath+symbol)
@@ -44,6 +48,8 @@ def getHistory(symbol, maxlookback):
     #    yield data.iloc[i:j]
     interval=300
     data=dbhist.get_hist(symbol, interval, maxlookback)
+    if data.index[-1] > lastDate:
+        lastDate=data.index[-1]
     return data
 
 class Frankenstein():
@@ -59,7 +65,7 @@ class Frankenstein():
 
     def check(self):
         #print 'lookback', self.maxlookback
-        data=self.feed.next().copy()
+        data=self.feed.copy() #self.feed.next().copy()
         data['VP']=(data.High+data.Low+data.Close)/3*data.Volume
         data['TotalVP'] = data.VP.cumsum()
         data['TotalVolume'] = data.Volume.cumsum()

@@ -10,6 +10,7 @@ from os import listdir
 from os.path import isfile, join
 import datetime
 from datetime import datetime as dt
+import scripts.iqfeed.dbhist as dbhist
 
 #API
 #SYM = FrankiesSystem(symbol, get_hist_func)
@@ -20,6 +21,8 @@ type="stock"
 duration="DAY"
 
 dataPath='./data/'
+lastDate=datetime.datetime(1000,1,1)
+
 def getBackendDB():
     dbPath = 'stocks.sqlite3'
     readConn = sqlite3.connect(dbPath)
@@ -27,28 +30,32 @@ def getBackendDB():
 
 
 def getFeed(symbol, lookback, barsize='5min'):
+    global lastDate
     interval=300
     if barsize=='5min':
         interval=300
     elif barsize=='1min':
         interval=60
     
-    maxlookback=1
-    quote=dbhist.get_hist(symbol, interval, maxlookback, 0,'','','',True)
-    if quote['Date'] > lastDate:
-        lastDate=quote['Date']
-        return quote
+    data=dbhist.get_hist(symbol, interval, lookback)
+    if data.index[-1] > lastDate:
+        lastDate=data.index[-1]
+        return data
     else:
         return None
 
     #richie you do this
     #return history
     #if there is no new feed then return None
-    yield
+    #yield
 
 def getHistory(symbol, maxlookback):
+    global lastDate
+
     interval=300
     data=dbhist.get_hist(symbol, interval, maxlookback)
+    if data.index[-1] > lastDate:
+        lastDate=data.index[-1]
     return data
     '''
     global dataPath
@@ -108,7 +115,8 @@ class Frankenstein():
 
     def check(self):
         #print 'lookback', self.maxlookback
-        data=self.feed.next().copy()
+        #data=self.feed.next().copy()
+        data=self.feed.copy() 
         start_idx=[(i,date) for i,date in enumerate(data.index)\
                    if date.minute == 35 and date.hour ==9]
         if len(start_idx)==0:
