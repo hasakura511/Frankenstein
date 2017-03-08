@@ -36,10 +36,10 @@ sys.path.append("../../")
 sys.path.append("../")
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tsdp.settings")
-import tsdp
-import tsdp.settings as settings
-from feed.models import *
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
+import beCOMPANY
+import beCOMPANY.settings as settings
+from main.models import *
 import datetime
 
 import csv
@@ -198,7 +198,7 @@ def create_bars(instrument_ids, frequency):
         
         for instrument_id in instrument_ids:
             sql = ' SELECT date, open, high, low, close, volume '
-            sql +=' FROM feed_feed '
+            sql +=' FROM main_feed '
             sql +=' WHERE frequency=%s AND instrument_id=%s ' % (frequency, instrument_id)
             sql +=' ORDER by date DESC '
             data = pd.read_sql(sql, c, index_col='date')
@@ -227,7 +227,7 @@ def cache_bar_csv(instrument_id,  frequency):
     if not rtbar.has_key(reqId):
         
         sql = ' SELECT date, open, high, low, close, volume '
-        sql +=' FROM feed_feed '
+        sql +=' FROM main_feed '
         sql +=' WHERE frequency=%s AND instrument_id=%s ' % (frequency, instrument_id)
         sql +=' ORDER by date DESC limit 1000'
         data = pd.read_sql(sql, c, index_col='date')
@@ -493,7 +493,7 @@ def get_bar(dbcontract):
         global tickerId
         
         sql = ' SELECT date, open, high, low, close, volume, wap '
-        sql +=' FROM feed_feed '
+        sql +=' FROM main_feed '
         sql +=' WHERE frequency=%s AND instrument_id=%s ' % (60, dbcontract.id)
         sql +=' ORDER by date DESC '
         data = pd.read_sql(sql, c, index_col='date')

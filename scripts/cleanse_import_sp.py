@@ -95,7 +95,7 @@ def read_csv():
                 cr.save()
                 
             #(contractMonth,currency,evMultiplier,evRule,exchange,expiry,liquidHours,longName,minTick,secType,symbol,timeZoneId,tradingHours,underConId)=row
-            inst_list=Instrument.objects.filter(resource_id=resource.id)
+            inst_list=Instrument.objects.filter(resource_id=resource.id, company_id=company.id)
             #.filter(sym=symbol).filter(contractMonth=contractMonth).filter(secType=secType)
             if inst_list and len(inst_list) > 0:
                 inst=inst_list[0]
@@ -114,7 +114,7 @@ def read_csv():
                 #inst.liquidHours=liquidHours
                 inst.longName=Name #longName
                 #inst.minTick=minTick
-                inst.secType='STK' #secType
+                inst.sec_type='STK' #secType
                 inst.sym=Symbol
                 inst.local_sym=Symbol
                 #inst.timeZoneId=timeZoneId

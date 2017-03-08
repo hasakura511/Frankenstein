@@ -58,21 +58,21 @@ def read_contract_csv(filename):
                 else:
                     inst=Instrument()
                 inst.broker='ib'
-                inst.contractMonth=contractMonth
+                inst.contract_month=contractMonth
                 inst.cur=currency
                 inst.mult=float(evMultiplier)
-                inst.evRule=evRule
+                inst.ev_rule=evRule
                 inst.exch=exchange
                 inst.expiry=expiry
-                inst.liquidHours=liquidHours
-                inst.longName=longName
-                inst.minTick=minTick
-                inst.secType=secType
+                inst.liquid_hours=liquidHours
+                inst.long_name=longName
+                inst.min_tick=minTick
+                inst.sec_type=secType
                 inst.sym=symbol
                 inst.local_sym=symbol
-                inst.timeZoneId=timeZoneId
-                inst.tradingHours=tradingHours
-                inst.underConId=underConId
+                inst.time_zone_id=timeZoneId
+                inst.trading_hours=tradingHours
+                inst.under_con_id=underConId
                 inst.save()
                 print "Saving ",inst.sym
                     

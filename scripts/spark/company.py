@@ -79,6 +79,7 @@ def getInstrument(sym, exchange, resource_type, commodity_type, name):
         inst=Instrument()
         inst.sym=sym
         inst.exch=exchange
+        inst.sec_type=resource_type
         inst.save()    
 
     if not inst.resource_id:

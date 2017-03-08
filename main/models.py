@@ -15,7 +15,7 @@ import re
 import uuid
 import operator
 from pytz import timezone
-mytz = pytz.timezone('EST')
+mytz = pytz.timezone('US/Eastern')
 
 NAME_MAX_LENGTH = 500
 COUNTRY_CITY_MAX_LENGTH = 300
@@ -1069,20 +1069,22 @@ class Instrument(models.Model):
     sym=models.CharField(max_length=255, null=True, db_index=True)
     cur=models.CharField(max_length=255, null=True, db_index=True)
     exch=models.CharField(max_length=255, null=True, db_index=True)
-    secType=models.CharField(max_length=255, null=True, db_index=True)
+    sec_type=models.CharField(max_length=255, null=True, db_index=True)
     trade_freq=models.IntegerField(null=True, db_index=True)
     mult=models.FloatField(max_length=255, null=True, db_index=True)
     local_sym=models.CharField(max_length=255, null=True, db_index=True)
     
-    contractMonth=models.CharField(max_length=255, null=True, db_index=True)
+    subscribe=models.BooleanField(default=False, db_index=True)
+    
+    contract_month=models.CharField(max_length=255, null=True, db_index=True)
     expiry=models.CharField(max_length=255, null=True, db_index=True)
-    evRule=models.CharField(max_length=255, null=True, db_index=True)
-    liquidHours=models.CharField(max_length=255, null=True, db_index=True)
-    longName=models.CharField(max_length=255, null=True, db_index=True)
-    minTick=models.FloatField(max_length=255, null=True, db_index=True)
-    timeZoneId=models.CharField(max_length=255, null=True, db_index=True)
-    tradingHours=models.CharField(max_length=255, null=True, db_index=True)
-    underConId=models.IntegerField(null=True, db_index=True)
+    ev_rule=models.CharField(max_length=255, null=True, db_index=True)
+    liquid_hours=models.CharField(max_length=255, null=True, db_index=True)
+    long_name=models.CharField(max_length=255, null=True, db_index=True)
+    min_tick=models.FloatField(max_length=255, null=True, db_index=True)
+    time_zone_id=models.CharField(max_length=255, null=True, db_index=True)
+    trading_hours=models.CharField(max_length=255, null=True, db_index=True)
+    under_con_id=models.IntegerField(null=True, db_index=True)
     
     created_at = models.DateTimeField(
         auto_now_add=True, null=True, db_index=True)
