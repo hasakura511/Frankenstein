@@ -25,13 +25,32 @@ def getBackendDB():
     readConn = sqlite3.connect(dbPath)
     return readConn
 
+
 def getFeed(symbol, lookback, barsize='5min'):
+    interval=300
+    if barsize=='5min':
+        interval=300
+    elif barsize=='1min':
+        interval=60
+    
+    maxlookback=1
+    quote=dbhist.get_hist(symbol, interval, maxlookback, 0,'','','',True)
+    if quote['Date'] > lastDate:
+        lastDate=quote['Date']
+        return quote
+    else:
+        return None
+
     #richie you do this
     #return history
     #if there is no new feed then return None
     yield
 
 def getHistory(symbol, maxlookback):
+    interval=300
+    data=dbhist.get_hist(symbol, interval, maxlookback)
+    return data
+    '''
     global dataPath
     #richie you do this
     filename=dataPath+symbol+'.csv'
@@ -49,7 +68,7 @@ def getHistory(symbol, maxlookback):
         print(filename+" Removed!")
     for i,j in enumerate(range(maxlookback,data.shape[0])):
         yield data.iloc[i:j]
-
+    '''
 
 def place_order(action, quant, sym, type, systemid, apikey, parentsig=None):
     url = 'https://api.collective2.com/world/apiv3/submitSignal'

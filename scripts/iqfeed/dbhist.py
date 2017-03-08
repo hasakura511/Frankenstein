@@ -38,7 +38,7 @@ model=pd.DataFrame()
 [DatapointsPerSend] - Optional - Specifies the number of datapoints that IQConnect.exe will queue before attempting to send across the socket to your app.
 [IntervalType] - Optional - 's' (default) for time intervals in seconds, 'v' for volume intervals, 't' for tick intervals
 '''
-def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='',getQuote=False):
     #get_bitstampfeed()
     global feed
     global ohlc
@@ -61,6 +61,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     cmd="HIX,%s,%s,%s,%s,%s,%s,%s\r\n" % (symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
     s.sendall(cmd);
     
+    data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
     while 1:
         try:
             line = fs.readline()
@@ -83,21 +84,37 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                         2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
                 '''
                 if fields[0] == '!ENDMSG!':
-                    exit();
+                    s.close()
+                    return data
                 else:
-                    timestamp=fields[0]
+                    date=fields[0]
                     high=fields[1]
                     low=fields[2]
                     open=fields[3]
                     close=fields[4]
                     total_volume=fields[5]
-                    period_volume=fields[6]
+                    volume=fields[6]
                     trades=fields[7]
-                    print timestamp,high,low,open,close,total_volume,period_volume,trades
+                    
+                    
+                    quote={ 'Date':date,
+                            'Open':open,
+                            'High':high,
+                            'Low':low,
+                            'Close':close,
+                            'Volume':volume,
+                            'TotalVolume':total_volume,
+                           #'wap':WAP,
+                        }
+                    #self.saveQuote(dbcontract, quote)
+                    data.loc[date] = [open,high,low,close,volume,total_volume]
+                    print date,high,low,open,close,volume,total_volume,trades
+                    if getQuote:
+                        return quote  
         except Exception as e:
             logging.error("get_btcfeed", exc_info=True)
                 
-    return
+    return data
 
 
 def    main():
@@ -105,7 +122,7 @@ def    main():
         symbol=sys.argv[1]
         interval=sys.argv[2]
         maxdatapoints=sys.argv[3]
-        get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+        data=get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
     else:
         print "Usage: dbhist.py AAPL 60 100"
         

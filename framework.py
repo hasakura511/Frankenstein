@@ -8,29 +8,43 @@ import talib as ta
 from os import listdir
 from os.path import isfile, join
 from .c2api import place_order
+import scripts.iqfeed.dbhist as dbhist
+import datetime as datetime
 #API
 #SYM = FrankiesSystem(symbol, get_hist_func)
 #SYM.run() - saves signal transmits to broker
 
 dataPath='./data/'
+lastDate=datetime.datetime.now()
 def getBackendDB():
     dbPath = 'stocks.sqlite3'
     readConn = sqlite3.connect(dbPath)
     return readConn
 
 def getFeed(symbol, maxlookback):
+    interval=300
+    maxlookback=1
+    quote=dbhist.get_hist(symbol, interval, maxlookback,0,'','','',True)
+    if quote['Date'] > lastDate:
+        lastDate=quote['Date']
+        return quote
+    else:
+        return None
+    #return data
     #richie you do this
     #return history
     #if there is no new feed then return None
-    return pd.read_csv('./data/5m_#TeslaMotor.csv')
+    #return pd.read_csv('./data/5m_#TeslaMotor.csv')
 
 def getHistory(symbol, maxlookback):
-    global dataPath
+    #global dataPath
     #richie you do this
-    data = pd.read_csv(dataPath+symbol)
-    for i,j in enumerate(range(maxlookback,data.shape[0])):
-        yield data.iloc[i:j]
-
+    #data = pd.read_csv(dataPath+symbol)
+    #for i,j in enumerate(range(maxlookback,data.shape[0])):
+    #    yield data.iloc[i:j]
+    interval=300
+    data=dbhist.get_hist(symbol, interval, maxlookback)
+    return data
 
 class Frankenstein():
     #i'll do this

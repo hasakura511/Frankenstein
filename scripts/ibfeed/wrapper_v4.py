@@ -1002,7 +1002,7 @@ class IBclient(object):
             """
             
             data = pd.DataFrame({}, columns=['date','open','high','low','close','volume','wap']).set_index('date')
-            
+
             tws=self.tws
             
             global finished
