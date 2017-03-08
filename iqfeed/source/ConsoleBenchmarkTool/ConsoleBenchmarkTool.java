@@ -38,8 +38,7 @@
 
 //JAVA imports needed.
 import java.net.*;
-import java.io.*;
-import java.util.Date;
+import common.*;
 
 public class ConsoleBenchmarkTool
 {

@@ -6,6 +6,7 @@
 //JAVA imports needed.
 import java.net.*;
 import java.io.*;
+import common.*;
 
 /**
  * An example program for reading retrieving streaming level 1data.
