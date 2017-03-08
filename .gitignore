@@ -1,6 +1,0 @@
-.gitignore
-main/migrations/*
-*.pyc
-.log
-*.swp
-
