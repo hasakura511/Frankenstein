@@ -37,26 +37,25 @@ def getFeed(symbol, lookback, barsize='5min'):
     elif barsize=='1min':
         interval=60
     
-    data=dbhist.get_hist(symbol, interval, lookback)
+    data=dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
+    print 'last bar', data.index[-1], 'last processed bar', lastDate
     if data.index[-1] > lastDate:
         lastDate=data.index[-1]
         return data
     else:
         return None
 
-    #richie you do this
-    #return history
-    #if there is no new feed then return None
-    #yield
+
 
 def getHistory(symbol, maxlookback):
-    global lastDate
-
+    #global lastDate
+    historylength=maxlookback*2
     interval=300
-    data=dbhist.get_hist(symbol, interval, maxlookback)
-    if data.index[-1] > lastDate:
-        lastDate=data.index[-1]
-    return data
+    data=dbhist.get_hist(symbol, interval, historylength).sort_index(ascending=True)
+    print data
+    #if data.index[-1] > lastDate:
+    #    lastDate=data.index[-1]
+    #return data
     '''
     global dataPath
     #richie you do this
@@ -66,16 +65,17 @@ def getHistory(symbol, maxlookback):
     data=data.set_index('Date')
     #print data.columns
     data.columns=['Open','High','Low','Close','Volume']
+    '''
     #print data.columns
-    for col in data.columns:
-        data[col]=data[col].astype(float)
+    #for col in data.columns:
+    #    data[col]=data[col].astype(float)
     filename = dataPath + symbol + '_signals.csv'
     if isfile(filename):
         os.remove(filename)
         print(filename+" Removed!")
     for i,j in enumerate(range(maxlookback,data.shape[0])):
         yield data.iloc[i:j]
-    '''
+    
 
 def place_order(action, quant, sym, type, systemid, apikey, parentsig=None):
     url = 'https://api.collective2.com/world/apiv3/submitSignal'
@@ -105,22 +105,38 @@ def place_order(action, quant, sym, type, systemid, apikey, parentsig=None):
 class Frankenstein():
     #i'll do this
     global dataPath
-    def __init__(self, symbol, feed, ema_lookback=9, vwap_lookback=102):
+    def __init__(self, symbol, mode, ema_lookback=9):
         self.symbol = symbol
         self.ema_lookback=ema_lookback
-        self.vwap_lookback = ema_lookback
-        self.maxlookback = max(ema_lookback, vwap_lookback)
-        self.feed = feed(symbol, self.maxlookback)
+        self.vwap_lookback = self.ema_lookback+24*60/5
+        self.maxlookback = max(self.ema_lookback, self.vwap_lookback)
+        self.mode=mode
+        if mode == 'live':
+            #self.feed = getFeed(self.symbol, self.maxlookback)
+            self.filename = dataPath+self.symbol+'_livesignals.csv'
+            if isfile(self.filename):
+                os.remove(self.filename)
+                print(self.filename+" Removed!")
+        else:
+            self.feed = getHistory(self.symbol, self.maxlookback)
+            self.filename = dataPath+self.symbol+'_signals.csv'
         self.dbConn=getBackendDB()
 
     def check(self):
         #print 'lookback', self.maxlookback
-        #data=self.feed.next().copy()
-        data=self.feed.copy() 
+        if self.mode =='live':
+            data=getFeed(self.symbol, self.maxlookback)
+            if data is None:
+                print 'new bar not ready'
+                return
+        else:
+            data=self.feed.next().copy()
+            
         start_idx=[(i,date) for i,date in enumerate(data.index)\
                    if date.minute == 35 and date.hour ==9]
+        #print start_idx
         if len(start_idx)==0:
-            print data.to_csv(dataPath+'startidx0.csv')
+            print '935 bar not found'
         else:
             start_ema = start_idx[-1][0] - self.ema_lookback
             print start_idx[-1], start_ema,
@@ -141,16 +157,16 @@ class Frankenstein():
             self.lastdata=data
 
             #savedata
-            data.to_csv(dataPath+self.symbol+'_last.csv')
+            self.lastdata=data
             #print data.iloc[-1]
             print 'end',data.iloc[-1].name
-            filename = dataPath+self.symbol+'_signals.csv'
-            if isfile(filename):
-                signalfile=pd.read_csv(filename, index_col='Date').append(data.iloc[-1])
-                signalfile.to_csv(filename, index=True)
+                
+            if isfile(self.filename):
+                signalfile=pd.read_csv(self.filename, index_col='Date').append(data.iloc[-1])
+                signalfile.to_csv(self.filename, index=True)
             else:
                 signalfile=data.iloc[-2:]
-                signalfile.to_csv(filename, index=True)
+                signalfile.to_csv(self.filename, index=True)
             #data.iloc[-1].to_sql(name=self.symbol, con=self.dbConn,
             #                 index=False, if_exists='replace')
 
@@ -168,18 +184,35 @@ class Frankenstein():
             except StopIteration:
                 print 'EOF'
                 break
-
+            
+    def runlive(self):
+        while True:
+            try:
+                self.check()
+                time.sleep(5)
+            except Exception as e:
+                print e
+                
+                
 if __name__ == "__main__":
-
+    start_time = time.time()
     if len(sys.argv) == 1:
         #filename = '5m_#TeslaMotor.csv'
         symbol = 'TSLA'
+        mode='test'
+        frank = Frankenstein(symbol, mode)
     else:
         symbol = sys.argv[1]
-    start_time = time.time()
-    frank = Frankenstein(symbol, getHistory)
-    # frank = Frankenstein('TSLA', getFeed)
-    frank.run()
+        mode = 'live'
+        frank = Frankenstein(symbol, mode)
+        frank.runlive()
+    
+
+    
+
+    
+    
+    #frank.run()
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()
 
 
