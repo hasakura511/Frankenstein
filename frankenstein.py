@@ -109,7 +109,8 @@ class Frankenstein():
         self.mode=mode
         if mode == 'live':
             #self.feed = getFeed(self.symbol, self.maxlookback)
-            self.filename = dataPath+self.symbol+'_livesignals.csv'
+            self.filename = dataPath+self.symbol+'_livesignals_'\
+                            +dt.now().strftime('%Y%m%d_%H_%M_%S')+'.csv'
             if isfile(self.filename):
                 os.remove(self.filename)
                 print(self.filename+" Removed!")
