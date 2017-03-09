@@ -188,8 +188,9 @@ class Frankenstein():
             try:
                 print dt.now()
                 self.check()
-                refreshtime=self.interval - time.localtime(time.time())[5]\
-                            - time.localtime(time.time())[4] % (self.interval / 60)
+                timenow=time.localtime(time.time())
+                refreshtime=self.interval - timenow[5]\
+                            - timenow[4] % (self.interval / 60)
                 time.sleep(refreshtime)
             except Exception as e:
                 print e
