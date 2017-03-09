@@ -113,7 +113,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                         #self.saveQuote(dbcontract, quote)
                         
                         data.loc[date] = [open,high,low,close,volume,total_volume]
-                        print date,high,low,open,close,volume,total_volume,trades
+                        #print date,high,low,open,close,volume,total_volume,trades
         except Exception as e:
             logging.error("get_btcfeed", exc_info=True)
                 
