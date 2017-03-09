@@ -186,12 +186,18 @@ class Frankenstein():
     def runlive(self):
         while True:
             try:
-                print dt.now()
+                print dt.now(),
                 self.check()
-                timenow=time.localtime(time.time())
-                refreshtime=self.interval - timenow[5]\
-                            - timenow[4] % (self.interval / 60)
-                time.sleep(refreshtime)
+
+                #print dt.now()
+                timenow = time.localtime(time.time())
+                #print timenow,
+                timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
+                #print timeleft
+                if timeleft == 0:
+                    time.sleep(1)
+                    timeleft = (interval - timenow[4] * 60 - timenow[5]) % interval
+                time.sleep(timeleft)
             except Exception as e:
                 print e
                 
