@@ -137,7 +137,7 @@ class Frankenstein():
             print '935 bar not found'
         else:
             start_ema = start_idx[-1][0] - self.ema_lookback
-            print start_idx[-1], start_ema,
+            print start_idx[-1][0], 'vwap', start_idx[-1][1], start_ema,
 
             data=data.iloc[start_ema+1:]
             print 'start_ema', data.iloc[0].name,
