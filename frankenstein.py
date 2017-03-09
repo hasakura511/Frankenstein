@@ -29,14 +29,9 @@ def getBackendDB():
     return readConn
 
 
-def getFeed(symbol, lookback, barsize='5min'):
+def getFeed(symbol, lookback, interval):
     global lastDate
-    interval=300
-    if barsize=='5min':
-        interval=300
-    elif barsize=='1min':
-        interval=60
-    
+
     data=dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
     print 'last bar', data.index[-1], 'last processed bar', lastDate
     if data.index[-1] > lastDate:
@@ -47,10 +42,10 @@ def getFeed(symbol, lookback, barsize='5min'):
 
 
 
-def getHistory(symbol, maxlookback):
+def getHistory(symbol, maxlookback,interval):
     #global lastDate
     historylength=maxlookback*2
-    interval=300
+
     data=dbhist.get_hist(symbol, interval, historylength).sort_index(ascending=True)
     print data
     #if data.index[-1] > lastDate:
@@ -105,8 +100,9 @@ def place_order(action, quant, sym, type, systemid, apikey, parentsig=None):
 class Frankenstein():
     #i'll do this
     global dataPath
-    def __init__(self, symbol, mode, ema_lookback=9):
+    def __init__(self, symbol, mode, ema_lookback=9, interval=300):
         self.symbol = symbol
+        self.interval= interval
         self.ema_lookback=ema_lookback
         self.vwap_lookback = self.ema_lookback+24*60/5
         self.maxlookback = max(self.ema_lookback, self.vwap_lookback)
@@ -118,14 +114,14 @@ class Frankenstein():
                 os.remove(self.filename)
                 print(self.filename+" Removed!")
         else:
-            self.feed = getHistory(self.symbol, self.maxlookback)
+            self.feed = getHistory(self.symbol, self.maxlookback, self.interval)
             self.filename = dataPath+self.symbol+'_signals.csv'
         self.dbConn=getBackendDB()
 
     def check(self):
         #print 'lookback', self.maxlookback
         if self.mode =='live':
-            data=getFeed(self.symbol, self.maxlookback)
+            data=getFeed(self.symbol, self.maxlookback, self.interval)
             if data is None:
                 print 'new bar not ready'
                 return
@@ -188,8 +184,11 @@ class Frankenstein():
     def runlive(self):
         while True:
             try:
+                print dt.now()
                 self.check()
-                time.sleep(5)
+                refreshtime=self.interval - time.localtime(time.time())[5]\
+                            - time.localtime(time.time())[4] % (self.interval / 60)
+                time.sleep(refreshtime)
             except Exception as e:
                 print e
                 

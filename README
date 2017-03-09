@@ -1,8 +1,6 @@
 https://github.com/hasakura511/Frankenstein.git
 syntax is
-python frankenstein.py filename
-filename needs to be in the datafolder
-for example: python frankenstein.py 5m_#TeslaMotor.csv
-it will create two files in the data folder
-filename_last and filename_signals
+python frankenstein.py symbol
+for example: python frankenstein.py TSLA
+it will create livesignals files in the data folder
 you can check them for debugging
