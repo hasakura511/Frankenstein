@@ -1,5 +1,6 @@
 import sys
 import time
+import requests
 import math
 import numpy as np
 import pandas as pd
@@ -283,8 +284,9 @@ class Frankenstein():
             "symbol"	: self.symbol,
             "typeofsymbol"	: typeofsymbol,
             "quant"			: self.lastqty
+            #"quant"		: "-100"
         }
-        print order
+        print 'Transmitting', order
 
         with open(self.portfolio_filename, 'w') as f:
             json.dump(order, f)
@@ -299,18 +301,10 @@ class Frankenstein():
         setDesiredPositions(orders)
         print 'sent signal to broker'
 
-    def close_positions():
-        print 'MARKET IS CLOSING. CLEARING POSITIONS!'
-        orders=[]
-        positions = listdir(portfolioPath)
-        for position in positions:
-            filename = portfolioPath+position
-            with open(filename, 'r') as f:
-                order = json.load(f)
-            order['quant']=0
-            orders.append(order)
-        setDesiredPositions(orders)
-        print 'sent signal to broker'
+    def close_position():
+        print 'Closing', self.symbol, self.lastqty
+        self.lastqty=0
+        self.transmit()
 
     def run(self):
         while True:
