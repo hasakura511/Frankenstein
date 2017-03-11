@@ -21,11 +21,46 @@ def getBackendDB():
     readConn = sqlite3.connect(dbPath)
     return readConn
 
-def getFeed(symbol, lookback, barsize='5min'):
+
+def getFeed(symbol, lookback, interval):
+    global lastDate
+
+    data=dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
+    print 'last bar', data.index[-1], 'last processed bar', lastDate
+    if data.index[-1] > lastDate:
+        lastDate=data.index[-1]
+        return data
+    else:
+        return None
+
+def getFeedHistory(symbol, maxlookback,interval):
+    #global lastDate
+    historylength=maxlookback*2
+
+    data=dbhist.get_hist(symbol, interval, historylength).sort_index(ascending=True)
+    print data
+    #if data.index[-1] > lastDate:
+    #    lastDate=data.index[-1]
+    #return data
+    '''
+    global dataPath
     #richie you do this
-    #return history
-    #if there is no new feed then return None
-    yield
+    filename=dataPath+symbol+'.csv'
+    data = pd.read_csv(filename)
+    data.Date=pd.to_datetime(data.Date)
+    data=data.set_index('Date')
+    #print data.columns
+    data.columns=['Open','High','Low','Close','Volume']
+    '''
+    #print data.columns
+    #for col in data.columns:
+    #    data[col]=data[col].astype(float)
+    filename = dataPath + symbol + '_signals.csv'
+    if isfile(filename):
+        os.remove(filename)
+        print(filename+" Removed!")
+    for i,j in enumerate(range(maxlookback,data.shape[0])):
+        yield data.iloc[i:j]
 
 def getHistory(symbol, maxlookback):
     global dataPath
