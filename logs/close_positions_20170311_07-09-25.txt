@@ -1,0 +1,23 @@
+MARKET IS CLOSING. CLEARING POSITIONS!
+Saved ./data/110064634/TSLA.json with qty 0
+[{u'symbol': u'TSLA', u'typeofsymbol': u'stock', u'quant': 0}]
+1
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TSLA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      }
+   ]
+}
+
+sent orders to broker
+Elapsed time:  0.02  minutes  2017-03-11 07:09:27.564000
