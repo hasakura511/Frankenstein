@@ -330,14 +330,14 @@ class Frankenstein():
         self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
 
         while True:
-            try:
+            #try:
                 print 'now', dt.now(),
                 if self.marketopen():
                     self.check()
                     self.signals.to_csv(self.signal_filename, index=True)
                     self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
                 else:
-                    print 'Market Closed. Checking every',interval,'seconds.'
+                    print 'Market Closed. Checking every', self.interval,'seconds.'
 
 
                 timenow = time.localtime(time.time())
@@ -346,13 +346,11 @@ class Frankenstein():
                 # print timeleft
                 if timeleft == 0:
                     time.sleep(1)
-                    timeleft = (interval - timenow[4] * 60 - timenow[5]) % interval
-
-
+                    timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
 
                 time.sleep(timeleft)
-            except Exception as e:
-                print e
+            #except Exception as e:
+            #    print e
 
 
 if __name__ == "__main__":
