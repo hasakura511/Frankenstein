@@ -1,6 +1,7 @@
 https://github.com/hasakura511/Frankenstein.git
 syntax is
-python frankenstein.py symbol
-for example: python frankenstein.py TSLA
+python frankenstein.py symbol size broker
+for example: python frankenstein.py TSLA 250 c2
+
 it will create livesignals files in the data folder
 you can check them for debugging

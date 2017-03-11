@@ -301,10 +301,18 @@ class Frankenstein():
         setDesiredPositions(orders)
         print 'sent signal to broker'
 
-    def close_position():
+    def close_position(self):
         print 'Closing', self.symbol, self.lastqty
         self.lastqty=0
         self.transmit()
+
+    def marketopen(self):
+        today=dt.now()
+        if today.weekday()<5 and (today.time()>datetime.time(9,30))\
+            and (today.time()<datetime.time(16,0)):
+            return True
+        else:
+            return False
 
     def run(self):
         while True:
@@ -317,20 +325,22 @@ class Frankenstein():
         self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
 
     def runlive(self):
+        self.check()
+        self.signals.to_csv(self.signal_filename, index=True)
+        self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
+
         while True:
             try:
                 print 'now', dt.now(),
+                if self.marketopen():
+                    self.check()
+                    self.signals.to_csv(self.signal_filename, index=True)
+                    self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
+                else:
+                    print 'Market Closed. Checking every',interval,'seconds.'
+
+
                 timenow = time.localtime(time.time())
-                if timenow[3] == 15 and timenow[4] >= 55:
-                    self.close_positions()
-                #if timenow[3] = 9 and timenow[4] >= 30:
-                self.check()
-                self.signals.to_csv(self.signal_filename, index=True)
-                self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
-                # print dt.now()
-
-
-
                 # print timenow,
                 timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
                 # print timeleft
