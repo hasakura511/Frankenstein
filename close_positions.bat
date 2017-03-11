@@ -13,5 +13,5 @@ rem \anaconda2\python post_processing.py >> \logs\post_processing_%fullstamp%.tx
 e:
 cd \Frankenstein
 rem wmic process where "Commandline like '%%manage.py runserver%%' and name like '%%python.exe%%'" call terminate
-d:\anaconda2\python close_positions.py
+d:\anaconda2\python close_positions.py >> \Frankenstein\logs\close_positions_%fullstamp%.txt
 
