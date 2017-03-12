@@ -188,7 +188,7 @@ class Frankenstein():
             # self.feed = getFeed(self.symbol, self.maxlookback)
             self.signal_filename = dataPath + self.symbol + '_livesignals_' \
                                    + dt.now().strftime('%Y%m%d_%H_%M_%S') + '.csv'
-            print 'Writing to', self.signal_filename
+            #print 'Writing to', self.signal_filename
             # if isfile(self.filename):
             #    os.remove(self.filename)
             #    print(self.filename+" Removed!")
