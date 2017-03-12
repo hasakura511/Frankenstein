@@ -279,7 +279,6 @@ class Frankenstein():
                 self.transmit()
 
     def transmit(self):
-
         order = {
             "symbol"	: self.symbol,
             "typeofsymbol"	: typeofsymbol,
@@ -323,13 +322,14 @@ class Frankenstein():
                 break
         self.signals.to_csv(self.signal_filename, index=True)
         self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
+        print 'Wrote to', self.signal_filename, dataPath + self.symbol + '_last.csv'
 
     def runlive(self):
         self.check()
         self.signals.to_csv(self.signal_filename, index=True)
         self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
-
-        while True:
+        print 'Writing to', self.signal_filename, dataPath + self.symbol + '_last.csv'
+        while True and self.broker is not None:
             #try:
                 print 'now', dt.now(),
                 if self.marketopen():
@@ -345,7 +345,7 @@ class Frankenstein():
                 timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
                 # print timeleft
                 if timeleft == 0:
-                    time.sleep(1)
+                    time.sleep(2)
                     timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
 
                 time.sleep(timeleft)

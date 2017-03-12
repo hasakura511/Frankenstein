@@ -3,5 +3,9 @@ syntax is
 python frankenstein.py symbol size broker
 for example: python frankenstein.py TSLA 250 c2
 
+if you leave the broker out to debug. this will create signal files for the last day and terminate.
+python frankenstein.py symbol size
+for example: python frankenstein.py TSLA 250
+
 it will create livesignals files in the data folder
 you can check them for debugging

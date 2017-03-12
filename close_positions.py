@@ -8,7 +8,7 @@ import sqlite3
 import talib as ta
 import os
 import json
-from os import listdir
+from os import listdir, remove
 from os.path import isfile, join
 import datetime
 from datetime import datetime as dt
@@ -51,11 +51,14 @@ if __name__ == "__main__":
             order = json.load(f)
 
         order['quant'] = 0
-        with open(filename, 'w') as f:
-            json.dump(order, f)
-            print 'Saved', filename, 'with qty 0'
-
         orders.append(order)
+        remove(filename)
+        print 'removed', filename
+        #with open(filename, 'w') as f:
+        #    json.dump(order, f)
+        #    print 'Saved', filename, 'with qty 0'
+
+
     print orders
     print len(orders)
     setDesiredPositions(orders)
