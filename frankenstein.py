@@ -221,21 +221,21 @@ class Frankenstein():
             print 'start_ema', data.iloc[0].name,
             EMA1 = 'EMA' + str(self.ema_lookback)
             EMA2 = 'EMA' + str(self.ema_lookback2)
+
+            #nan creating indicators
             data['ClosePC'] = data.Close.pct_change()
+            data[EMA1] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
+            data[EMA1 + 'PC'] = data[EMA1].pct_change()
+            data[EMA2] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback2)
+
+            data = data.dropna()
             data['ClosePC>' + str(self.price_pctchg)] = \
                 np.where(data['ClosePC'].values > self.price_pctchg, 1, 0)
-            data[EMA1] = \
-                ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
-            data[EMA1 + 'PC'] = \
-                data[EMA1].pct_change()
             data[EMA1 + 'PC>' + str(self.ema_lookback_pctchg)] = \
                 np.where(data[EMA1 + 'PC'].values > \
                          self.ema_lookback_pctchg, 1, 0)
-            data[EMA2] = \
-                ta.EMA(data.Close.values, timeperiod=self.ema_lookback2)
             data[EMA1 + '>' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
 
-            data = data.dropna()
             print 'start_vwap', data.iloc[0].name,
             print 'last_bar', data.iloc[-1].name
             data['VP'] = (data.High + data.Low + data.Close) / 3 * data.Volume
@@ -270,13 +270,15 @@ class Frankenstein():
                 self.signals = self.signals.append(self.lastbar)
                 self.previousqty = int(self.lastqty)
                 self.lastqty = int(self.lastbar.QTY)
+                #transmit after first bar of the day.
+                if self.broker is not None and self.previousqty != self.lastqty:
+                    self.transmit()
             else:
                 self.signals = data.copy()
                 self.previousqty = 0
                 self.lastqty = int(self.lastbar.QTY)
 
-            if self.broker is not None and self.previousqty != self.lastqty:
-                self.transmit()
+
 
     def transmit(self):
         order = {
@@ -307,7 +309,7 @@ class Frankenstein():
 
     def marketopen(self):
         today=dt.now()
-        if today.weekday()<5 and (today.time()>datetime.time(9,30))\
+        if today.weekday()<5 and (today.time()>=datetime.time(9,30))\
             and (today.time()<datetime.time(16,0)):
             return True
         else:
@@ -337,7 +339,8 @@ class Frankenstein():
                     self.signals.to_csv(self.signal_filename, index=True)
                     self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
                 else:
-                    print 'Market Closed. Checking every', self.interval,'seconds.'
+                    print 'Market Closed. Exiting.'
+                    sys.exit('market closed')
 
 
                 timenow = time.localtime(time.time())
