@@ -44,7 +44,7 @@ def runThreads(threadlist):
 logPath = './logs/'
 stocks = pd.read_csv('stocks.csv')
 runPath = './frankenstein.py'
-threadlist = [['d:/anaconda2/python',runPath]+[y for y in stocks.ix[x]] for x in stocks.index]
+threadlist = [['d:/anaconda2/python',runPath]+[str(y) for y in stocks.ix[x]] for x in stocks.index]
 threadlist = [(t[2],t) for t in threadlist]
 print len(threadlist), 'threads found..'
 runThreads(threadlist)
