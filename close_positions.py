@@ -44,7 +44,7 @@ if __name__ == "__main__":
     start_time = time.time()
     print 'MARKET IS CLOSING. CLEARING POSITIONS!'
     orders = []
-    positions = listdir(portfolioPath)
+    positions = [x for x in listdir(portfolioPath) if x[-4:]=='json']
     for position in positions:
         filename = portfolioPath + position
         with open(filename, 'r') as f:

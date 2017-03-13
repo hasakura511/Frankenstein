@@ -1,9 +1,11 @@
 https://github.com/hasakura511/Frankenstein.git
 syntax is
 python frankenstein.py symbol size broker
+where size is the USD amount of stock to buy
 for example: python frankenstein.py TSLA 250 c2
+"Run frankenstein on TSLA with $250 worth of stock route to c2"
 
-if you leave the broker out to debug. this will create signal files for the last day and terminate.
+leave the broker out to debug. this will create signal files for the last day and terminate.
 python frankenstein.py symbol size
 for example: python frankenstein.py TSLA 250
 

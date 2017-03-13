@@ -261,7 +261,7 @@ class Frankenstein():
                         state.append(x)
             data['state'] = state
             data['F']=1
-            data['QTY']=data.state*data.F
+            data['QTY']=[int(x) if x==0 else int(self.size/x) for x in (data.state*data.F*data.Close)]
 
             self.lastdata = data
             self.lastbar = data.iloc[-1]
@@ -362,7 +362,7 @@ if __name__ == "__main__":
         # filename = '5m_#TeslaMotor.csv'
         symbol = 'TSLA'
         mode = 'test'
-        size = 250
+        size = 5000
         frank = Frankenstein(symbol, mode, size)
     else:
         mode = 'live'
