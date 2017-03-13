@@ -201,6 +201,7 @@ class Frankenstein():
 
     def check(self):
         # print 'lookback', self.maxlookback
+        check_time = time.time()
         if self.mode == 'live':
             data = getFeed(self.symbol, self.maxlookback, self.interval)
             if data is None:
@@ -237,7 +238,7 @@ class Frankenstein():
             data[EMA1 + '>' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
 
             print 'start_vwap', data.iloc[0].name,
-            print 'last_bar', data.iloc[-1].name
+            print 'last_bar', data.iloc[-1].name,
             data['VP'] = (data.High + data.Low + data.Close) / 3 * data.Volume
             data['TotalVP'] = data.VP.cumsum()
             data['TotalVolume'] = data.Volume.cumsum()
@@ -278,7 +279,7 @@ class Frankenstein():
                 self.previousqty = 0
                 self.lastqty = int(self.lastbar.QTY)
 
-
+        print 'ET: ', round(((time.time() - start_time) / 60), 2), ' minutes'
 
     def transmit(self):
         order = {
