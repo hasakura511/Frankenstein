@@ -10,5 +10,6 @@ set "fullstamp=%YYYY%%MM%%DD%_%HH%-%Min%-%Sec%"
 
 e:
 cd \Frankenstein
+d:\anaconda2\python clear_signals.py >> \Frankenstein\logs\clear_signals_%fullstamp%.txt
 d:\anaconda2\python start_systems.py >> \Frankenstein\logs\runsystems_%fullstamp%.txt
 
