@@ -278,18 +278,18 @@ class Frankenstein():
             data['F']=1
             data['QTY']=[int(x) if x==0 else int(self.size/x) for x in (data.state*data.F*data.Close)]
 
+            if 'lastqty' in dir(self):
+                self.previousqty = int(self.lastqty)
+                if self.lastqty == 0 and int(self.lastbar.QTY) != 0:
+                    self.lastqty = int(self.lastbar.QTY)
+                else:
+                    data.iloc[-1].QTY = self.lastqty
+
             self.lastdata = data
             self.lastbar = data.iloc[-1]
 
             if 'signals' in dir(self):
                 self.signals = self.signals.append(self.lastbar)
-
-                self.previousqty = int(self.lastqty)
-                if self.lastqty == 0 and int(self.lastbar.QTY) !=0:
-                    self.lastqty = int(self.lastbar.QTY)
-                else:
-                    self.lastbar.QTY=self.lastqty
-
                 #transmit after first bar of the day.
                 if self.broker is not None and self.previousqty != self.lastqty:
                     self.transmit()
