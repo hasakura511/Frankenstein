@@ -1,0 +1,6 @@
+ERROR:root:get_btcfeed
+Traceback (most recent call last):
+  File "E:\Frankenstein\scripts\iqfeed\dbhist.py", line 92, in get_hist
+    high=float(fields[1])
+ValueError: could not convert string to float: !NO_DATA!
+last bar

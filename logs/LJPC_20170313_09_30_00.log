@@ -1,0 +1,6 @@
+last bar 2017-03-13 09:35:00 last processed bar 1000-01-01 00:00:00
+start_ema 2017-03-10 14:40:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 09:35:00 ET:  0.08  minutes
+Writing to ./data/LJPC_livesignals_20170313_09_31_22.csv ./data/LJPC_last.csv
+now 2017-03-13 09:31:27.400000 last bar 2017-03-13 09:35:00 last processed bar 2017-03-13 09:35:00
+new bar not ready
+now 2017-03-13 09:35:00.759000

@@ -1,0 +1,4700 @@
+last bar 2017-03-13 09:35:00 last processed bar 1000-01-01 00:00:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 09:35:00 ET:  0.2  minutes
+Writing to ./data/ZUMZ_livesignals_20170313_09_31_46.csv ./data/ZUMZ_last.csv
+now 2017-03-13 09:31:58.485000 last bar 2017-03-13 09:35:00 last processed bar 2017-03-13 09:35:00
+new bar not ready
+now 2017-03-13 09:35:00.874000 last bar 2017-03-13 09:40:00 last processed bar 2017-03-13 09:35:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 09:40:00 ET:  3.57  minutes
+now 2017-03-13 09:40:00.294000 last bar 2017-03-13 09:45:00 last processed bar 2017-03-13 09:40:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 09:45:00 ET:  8.41  minutes
+now 2017-03-13 09:45:00.947000 last bar 2017-03-13 09:45:00 last processed bar 2017-03-13 09:45:00
+new bar not ready
+now 2017-03-13 09:50:00.288000 last bar 2017-03-13 09:55:00 last processed bar 2017-03-13 09:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 09:55:00 ET:  18.43  minutes
+now 2017-03-13 09:55:00.137000 last bar 2017-03-13 09:55:00 last processed bar 2017-03-13 09:55:00
+new bar not ready
+now 2017-03-13 10:00:00.739000 last bar 2017-03-13 10:00:00 last processed bar 2017-03-13 09:55:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:00:00 ET:  28.42  minutes
+now 2017-03-13 10:05:00.573000 last bar 2017-03-13 10:10:00 last processed bar 2017-03-13 10:00:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:10:00 ET:  33.42  minutes
+now 2017-03-13 10:10:00.356000 last bar 2017-03-13 10:10:00 last processed bar 2017-03-13 10:10:00
+new bar not ready
+now 2017-03-13 10:15:00.400000 last bar 2017-03-13 10:15:00 last processed bar 2017-03-13 10:10:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:15:00 ET:  43.38  minutes
+now 2017-03-13 10:20:00.099000 last bar 2017-03-13 10:20:00 last processed bar 2017-03-13 10:15:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:20:00 ET:  48.35  minutes
+now 2017-03-13 10:25:00.286000 last bar 2017-03-13 10:25:00 last processed bar 2017-03-13 10:20:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:25:00 ET:  53.36  minutes
+now 2017-03-13 10:30:00.933000 last bar 2017-03-13 10:35:00 last processed bar 2017-03-13 10:25:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:35:00 ET:  58.38  minutes
+now 2017-03-13 10:35:00.917000 last bar 2017-03-13 10:35:00 last processed bar 2017-03-13 10:35:00
+new bar not ready
+now 2017-03-13 10:40:00.141000 last bar 2017-03-13 10:40:00 last processed bar 2017-03-13 10:35:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:40:00 ET:  68.38  minutes
+now 2017-03-13 10:45:00.121000 last bar 2017-03-13 10:45:00 last processed bar 2017-03-13 10:40:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:45:00 ET:  73.36  minutes
+now 2017-03-13 10:50:00.787000 last bar 2017-03-13 10:50:00 last processed bar 2017-03-13 10:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:50:00 ET:  78.35  minutes
+now 2017-03-13 10:55:00.293000 last bar 2017-03-13 10:55:00 last processed bar 2017-03-13 10:50:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 10:55:00 ET:  83.38  minutes
+now 2017-03-13 11:00:00.115000 last bar 2017-03-13 11:05:00 last processed bar 2017-03-13 10:55:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:05:00 ET:  88.37  minutes
+now 2017-03-13 11:05:00.208000 last bar 2017-03-13 11:05:00 last processed bar 2017-03-13 11:05:00
+new bar not ready
+now 2017-03-13 11:10:00.858000 last bar 2017-03-13 11:15:00 last processed bar 2017-03-13 11:05:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:15:00 ET:  98.37  minutes
+now 2017-03-13 11:15:00.475000 last bar 2017-03-13 11:15:00 last processed bar 2017-03-13 11:15:00
+new bar not ready
+now 2017-03-13 11:20:00.459000 last bar 2017-03-13 11:20:00 last processed bar 2017-03-13 11:15:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:20:00 ET:  108.34  minutes
+now 2017-03-13 11:25:00.597000 last bar 2017-03-13 11:30:00 last processed bar 2017-03-13 11:20:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:30:00 ET:  113.35  minutes
+now 2017-03-13 11:30:00.983000 last bar 2017-03-13 11:35:00 last processed bar 2017-03-13 11:30:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:35:00 ET:  118.35  minutes
+now 2017-03-13 11:35:00.325000 last bar 2017-03-13 11:35:00 last processed bar 2017-03-13 11:35:00
+new bar not ready
+now 2017-03-13 11:40:00.814000 last bar 2017-03-13 11:40:00 last processed bar 2017-03-13 11:35:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:40:00 ET:  128.35  minutes
+now 2017-03-13 11:45:00.491000 last bar 2017-03-13 11:45:00 last processed bar 2017-03-13 11:40:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:45:00 ET:  133.38  minutes
+now 2017-03-13 11:50:00.973000 last bar 2017-03-13 11:55:00 last processed bar 2017-03-13 11:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 11:55:00 ET:  138.38  minutes
+now 2017-03-13 11:55:00.241000 last bar 2017-03-13 11:55:00 last processed bar 2017-03-13 11:55:00
+new bar not ready
+now 2017-03-13 12:00:00.925000 last bar 2017-03-13 12:00:00 last processed bar 2017-03-13 11:55:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:00:00 ET:  148.37  minutes
+now 2017-03-13 12:05:00.321000 last bar 2017-03-13 12:05:00 last processed bar 2017-03-13 12:00:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:05:00 ET:  153.35  minutes
+now 2017-03-13 12:10:00.265000 last bar 2017-03-13 12:10:00 last processed bar 2017-03-13 12:05:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:10:00 ET:  158.38  minutes
+now 2017-03-13 12:15:00.804000 last bar 2017-03-13 12:15:00 last processed bar 2017-03-13 12:10:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:15:00 ET:  163.37  minutes
+now 2017-03-13 12:20:00.548000 last bar 2017-03-13 12:20:00 last processed bar 2017-03-13 12:15:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:20:00 ET:  168.36  minutes
+now 2017-03-13 12:25:00.035000 last bar 2017-03-13 12:25:00 last processed bar 2017-03-13 12:20:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:25:00 ET:  173.37  minutes
+now 2017-03-13 12:30:00.133000 last bar 2017-03-13 12:30:00 last processed bar 2017-03-13 12:25:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:30:00 ET:  178.33  minutes
+now 2017-03-13 12:35:00.088000 last bar 2017-03-13 12:40:00 last processed bar 2017-03-13 12:30:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:40:00 ET:  183.27  minutes
+now 2017-03-13 12:40:00.470000 last bar 2017-03-13 12:40:00 last processed bar 2017-03-13 12:40:00
+new bar not ready
+now 2017-03-13 12:45:00.992000 last bar 2017-03-13 12:45:00 last processed bar 2017-03-13 12:40:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:45:00 ET:  193.35  minutes
+now 2017-03-13 12:50:00.351000 last bar 2017-03-13 12:50:00 last processed bar 2017-03-13 12:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 12:50:00 ET:  198.36  minutes
+now 2017-03-13 12:55:00.908000 last bar 2017-03-13 13:00:00 last processed bar 2017-03-13 12:50:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:00:00 ET:  203.37  minutes
+now 2017-03-13 13:00:00.344000 last bar 2017-03-13 13:00:00 last processed bar 2017-03-13 13:00:00
+new bar not ready
+now 2017-03-13 13:05:00.148000 last bar 2017-03-13 13:05:00 last processed bar 2017-03-13 13:00:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:05:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 278}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "920",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "489",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "345",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "616",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1154",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "3875",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "278",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "212",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "396",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "133",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1818",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1838",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "310",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "138",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "674",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "877",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "553",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  213.37  minutes
+now 2017-03-13 13:10:00.212000 last bar 2017-03-13 13:15:00 last processed bar 2017-03-13 13:05:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:15:00 ET:  218.35  minutes
+now 2017-03-13 13:15:00.114000 last bar 2017-03-13 13:15:00 last processed bar 2017-03-13 13:15:00
+new bar not ready
+now 2017-03-13 13:20:00.407000 last bar 2017-03-13 13:20:00 last processed bar 2017-03-13 13:15:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:20:00 ET:  228.35  minutes
+now 2017-03-13 13:25:00.218000 last bar 2017-03-13 13:25:00 last processed bar 2017-03-13 13:20:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:25:00 ET:  233.27  minutes
+now 2017-03-13 13:30:00.582000 last bar 2017-03-13 13:30:00 last processed bar 2017-03-13 13:25:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:30:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 279}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "918",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "489",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "347",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "599",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "121",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1162",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "3921",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "99",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "279",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "213",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "398",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "136",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1831",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "310",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "664",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "878",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "554",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  238.38  minutes
+now 2017-03-13 13:35:00.867000 last bar 2017-03-13 13:40:00 last processed bar 2017-03-13 13:30:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:40:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 281}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "920",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "489",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "347",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "599",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "121",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1168",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "3906",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "99",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "281",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "214",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "398",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "135",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1872",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1838",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "310",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "146",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "656",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "875",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "554",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  243.39  minutes
+now 2017-03-13 13:40:00.765000 last bar 2017-03-13 13:45:00 last processed bar 2017-03-13 13:40:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:45:00 ET:  248.36  minutes
+now 2017-03-13 13:45:00.108000 last bar 2017-03-13 13:45:00 last processed bar 2017-03-13 13:45:00
+new bar not ready
+now 2017-03-13 13:50:00.974000 last bar 2017-03-13 13:55:00 last processed bar 2017-03-13 13:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 13:55:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 279}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "912",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "488",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "347",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "598",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1158",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "3937",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "99",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "279",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "213",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "498",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "400",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "137",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "248",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1886",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1838",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "310",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "156",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "146",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "651",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "868",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "557",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  258.36  minutes
+now 2017-03-13 13:55:00.931000 last bar 2017-03-13 14:00:00 last processed bar 2017-03-13 13:55:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:00:00 ET:  263.35  minutes
+now 2017-03-13 14:00:00.990000 last bar 2017-03-13 14:00:00 last processed bar 2017-03-13 14:00:00
+new bar not ready
+now 2017-03-13 14:05:00.501000 last bar 2017-03-13 14:05:00 last processed bar 2017-03-13 14:00:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:05:00 ET:  273.37  minutes
+now 2017-03-13 14:10:00.549000 last bar 2017-03-13 14:10:00 last processed bar 2017-03-13 14:05:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:10:00 ET:  278.35  minutes
+now 2017-03-13 14:15:00.111000 last bar 2017-03-13 14:15:00 last processed bar 2017-03-13 14:10:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:15:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 281}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "909",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "488",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "348",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "600",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1146",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "3937",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "281",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "214",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "491",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "323",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "401",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "137",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1865",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "311",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "140",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "649",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "868",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "557",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  283.38  minutes
+now 2017-03-13 14:20:00.029000 last bar 2017-03-13 14:20:00 last processed bar 2017-03-13 14:15:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:20:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 280}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "907",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "488",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "348",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "600",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "120",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1146",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "3937",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "280",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "214",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "495",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "323",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "402",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "137",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1879",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "312",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "140",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "645",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "868",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "558",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  288.37  minutes
+now 2017-03-13 14:25:00.319000 last bar 2017-03-13 14:25:00 last processed bar 2017-03-13 14:20:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:25:00 ET:  293.35  minutes
+now 2017-03-13 14:30:00.432000 last bar 2017-03-13 14:35:00 last processed bar 2017-03-13 14:25:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:35:00 ET:  298.35  minutes
+now 2017-03-13 14:35:00.194000 last bar 2017-03-13 14:35:00 last processed bar 2017-03-13 14:35:00
+new bar not ready
+now 2017-03-13 14:40:00.513000 last bar 2017-03-13 14:40:00 last processed bar 2017-03-13 14:35:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:40:00 ET:  308.37  minutes
+now 2017-03-13 14:45:00.163000 last bar 2017-03-13 14:45:00 last processed bar 2017-03-13 14:40:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:45:00 ET:  313.36  minutes
+now 2017-03-13 14:50:00.046000 last bar 2017-03-13 14:50:00 last processed bar 2017-03-13 14:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 14:50:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 281}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "904",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "487",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "347",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "595",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1149",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "4000",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "281",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "214",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "493",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "325",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "401",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "VREX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "158",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "311",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "140",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "646",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "868",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "556",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  318.36  minutes
+now 2017-03-13 14:55:00.982000 last bar 2017-03-13 15:00:00 last processed bar 2017-03-13 14:50:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:00:00 ET:  323.36  minutes
+now 2017-03-13 15:00:00.634000 last bar 2017-03-13 15:00:00 last processed bar 2017-03-13 15:00:00
+new bar not ready
+now 2017-03-13 15:05:00.245000 last bar 2017-03-13 15:10:00 last processed bar 2017-03-13 15:00:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:10:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 279}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "902",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "485",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "348",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "604",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1152",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "4079",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "279",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "214",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "496",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "325",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "400",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "138",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "247",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "VREX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "158",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1865",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "311",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "140",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "645",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "865",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "556",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  333.35  minutes
+now 2017-03-13 15:10:00.081000 last bar 2017-03-13 15:10:00 last processed bar 2017-03-13 15:10:00
+new bar not ready
+now 2017-03-13 15:15:00.967000 last bar 2017-03-13 15:15:00 last processed bar 2017-03-13 15:10:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:15:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 280}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "904",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "486",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "349",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "604",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1149",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "4034",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "280",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "212",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "495",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "324",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "401",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "138",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "248",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "VREX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1862",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "311",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "641",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "859",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "554",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  343.37  minutes
+now 2017-03-13 15:20:00.443000 last bar 2017-03-13 15:20:00 last processed bar 2017-03-13 15:15:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:20:00 ET:  348.37  minutes
+now 2017-03-13 15:25:00.198000 last bar 2017-03-13 15:25:00 last processed bar 2017-03-13 15:20:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:25:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 281}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "901",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "486",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "349",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "604",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1150",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "4032",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "281",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "212",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "493",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "325",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "400",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "248",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "VREX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1865",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "311",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "637",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "862",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "551",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  353.35  minutes
+now 2017-03-13 15:30:00.051000 last bar 2017-03-13 15:30:00 last processed bar 2017-03-13 15:25:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:30:00 ET:  358.35  minutes
+now 2017-03-13 15:35:00.914000 last bar 2017-03-13 15:35:00 last processed bar 2017-03-13 15:30:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:35:00 ET:  363.37  minutes
+now 2017-03-13 15:40:00.180000 last bar 2017-03-13 15:45:00 last processed bar 2017-03-13 15:35:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:45:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 280}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "904",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "486",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "350",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "608",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "119",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1160",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "4065",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "280",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "212",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "496",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "325",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "401",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "249",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "VREX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1855",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1858",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "311",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "140",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "158",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "638",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "553",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  368.37  minutes
+now 2017-03-13 15:45:00.164000 last bar 2017-03-13 15:50:00 last processed bar 2017-03-13 15:45:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:50:00 Transmitting {'symbol': 'ZUMZ', 'typeofsymbol': 'stock', 'quant': 282}
+Saved ./data/110064634/ZUMZ.json
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "TGTX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "429",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KERX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "903",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GSM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "486",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AMD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "351",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZAGG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "714",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "QBAK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "609",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "IONS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "120",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZFGN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1158",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ENPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "4065",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "OAS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "378",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AAOI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "98",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZUMZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "282",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GPRE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "212",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ZGNX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "496",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "325",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CENX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "401",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "REN",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "139",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AKAO",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "182",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FTK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "412",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CARB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "249",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "VREX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "157",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "EYEG",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1851",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CAR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "151",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AEZS",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1597",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WTI",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1865",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TROX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "310",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SWM",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "123",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "NVDA",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "49",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "PANW",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "42",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TELL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "469",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "X",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "140",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SRPT",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "159",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "ANET",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "39",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "GRUB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "145",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "FSLR",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "155",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AUPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTPH",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "641",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WB",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "102",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "AVXL",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "856",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "CLF",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "553",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "KITE",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "59",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SHLD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "528",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+ET:  373.35  minutes
+now 2017-03-13 15:50:00.944000 last bar 2017-03-13 15:55:00 last processed bar 2017-03-13 15:50:00
+start_ema 2017-03-10 15:10:00 start_vwap 2017-03-13 09:35:00 last_bar 2017-03-13 15:55:00 ET:  378.37  minutes
+now 2017-03-13 15:55:00.273000

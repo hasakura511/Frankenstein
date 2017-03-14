@@ -41,7 +41,7 @@ import java.sql.Statement;
 
 import javax.swing.*;
 import java.awt.event.*;
-import common.*;
+//import common.*;
 
 public class Level1Socket extends javax.swing.JFrame implements ActionListener, WindowListener
 {

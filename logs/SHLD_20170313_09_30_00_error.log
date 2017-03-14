@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 378, in <module>
+    frank.runlive()
+  File "./frankenstein.py", line 339, in runlive
+    self.check()
+  File "./frankenstein.py", line 276, in check
+    self.transmit()
+  File "./frankenstein.py", line 301, in transmit
+    order = json.load(f)
+  File "d:\anaconda2\lib\json\__init__.py", line 291, in load
+    **kw)
+  File "d:\anaconda2\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "d:\anaconda2\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "d:\anaconda2\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
