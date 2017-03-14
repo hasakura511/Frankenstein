@@ -284,7 +284,8 @@ class Frankenstein():
             if 'signals' in dir(self):
                 self.signals = self.signals.append(self.lastbar)
                 self.previousqty = int(self.lastqty)
-                self.lastqty = int(self.lastbar.QTY)
+                if self.lastqty == 0 and int(self.lastbar.QTY) !=0:
+                    self.lastqty = int(self.lastbar.QTY)
                 #transmit after first bar of the day.
                 if self.broker is not None and self.previousqty != self.lastqty:
                     self.transmit()
