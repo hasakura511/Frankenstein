@@ -30,7 +30,7 @@ def get_working_signals(systemid, apikey):
     params = {}
 
     r = requests.post(url, params=params, json=data);
-    sleep(2)
+    time.sleep(1)
     #logging.info(str(r.text))
     return r.text
 
