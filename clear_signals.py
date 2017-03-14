@@ -67,5 +67,5 @@ def clear_signals(systemid, apikey):
 if __name__ == "__main__":
     start_time = time.time()
     print 'clearing signals.'
-    clear_signals(c2id, apikey)
+    clear_signals(c2id, c2key)
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()

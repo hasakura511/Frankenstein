@@ -12,6 +12,6 @@ rem \anaconda2\python post_processing.py >> \logs\post_processing_%fullstamp%.tx
 
 e:
 cd \Frankenstein
-d:\anaconda2\python close_positions.py >> \Frankenstein\logs\close_positions_%fullstamp%.txt
-d:\anaconda2\python clear_signals.py >> \Frankenstein\logs\clear_signals_%fullstamp%.txt
+d:\anaconda2\python close_positions.py >> \Frankenstein\logs\close_positions_%fullstamp%.log
+d:\anaconda2\python clear_signals.py >> \Frankenstein\logs\clear_signals_%fullstamp%.log
 
