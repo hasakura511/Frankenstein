@@ -291,7 +291,9 @@ class Frankenstein():
             if 'signals' in dir(self):
                 self.signals = self.signals.append(self.lastbar)
                 #transmit after first bar of the day.
-                if self.broker is not None and self.previousqty != self.lastqty:
+                positions = [x for x in listdir(portfolioPath) if x[-4:] == 'json']
+                if self.broker is not None and self.previousqty != self.lastqty\
+                        and len(positions)<self.max_symbols:
                     self.transmit()
             else:
                 self.signals = data.copy()
@@ -313,7 +315,7 @@ class Frankenstein():
             json.dump(order, f)
             print 'Saved', self.portfolio_filename
         orders=[]
-        positions = listdir(portfolioPath)
+        positions = [x for x in listdir(portfolioPath) if x[-4:] == 'json']
         for position in positions:
             filename = portfolioPath+position
             with open(filename, 'r') as f:
