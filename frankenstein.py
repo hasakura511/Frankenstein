@@ -164,7 +164,17 @@ def setDesiredPositions(orders):
     #return r.json()['signalid']
 
 
-
+def findCrosses(series):
+    nrows=series.shape[0]
+    crosses = np.zeros(nrows)
+    for i in range(1,nrows):
+        if series[i]>series[i-1]:
+            crosses[i] = 1
+        elif series[i]<series[i-1]:
+            crosses[i] = -1
+        else:
+            crosses[i]=0
+    return crosses
 
 class Frankenstein():
     global dataPath
@@ -184,6 +194,8 @@ class Frankenstein():
         self.vwap_lookback = self.max_emalookback + 24 * 60 / 5
         self.maxlookback = max(self.max_emalookback, self.vwap_lookback)
         self.mode = mode
+        self.shutdown_time=datetime.time(10, 0)
+        self.max_symbols = 5
         if mode == 'live':
             # self.feed = getFeed(self.symbol, self.maxlookback)
             self.signal_filename = dataPath + self.symbol + '_livesignals_' \
@@ -228,6 +240,7 @@ class Frankenstein():
             data[EMA1] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
             data[EMA1 + 'PC'] = data[EMA1].pct_change()
             data[EMA2] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback2)
+            data[EMA1 + 'X' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
 
             data = data.dropna()
             data['ClosePC>' + str(self.price_pctchg)] = \
@@ -236,6 +249,7 @@ class Frankenstein():
                 np.where(data[EMA1 + 'PC'].values > \
                          self.ema_lookback_pctchg, 1, 0)
             data[EMA1 + '>' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
+            data[EMA1 + 'X' + EMA2] = findCrosses(data[EMA1 + '>' + EMA2])
 
             print 'start_vwap', data.iloc[0].name,
             print 'last_bar', data.iloc[-1].name,
@@ -248,7 +262,7 @@ class Frankenstein():
             # signals and f
             c1 = data['ClosePC>' + str(self.price_pctchg)]
             c2 = data[EMA1 + 'PC>' + str(self.ema_lookback_pctchg)]
-            c3 = data[EMA1 + '>' + EMA2]
+            c3 = data[EMA1 + 'X' + EMA2]
             data['impulse'] = np.where(c1 + c2 + c3 >= 3, 1, 0)
             state = []
             for i, x in enumerate(data.impulse):
@@ -279,7 +293,7 @@ class Frankenstein():
                 self.previousqty = 0
                 self.lastqty = int(self.lastbar.QTY)
 
-        print 'ET: ', round(((time.time() - start_time) / 60), 2), ' minutes'
+        print 'ET: ', round(((time.time() - check_time) / 60), 2), ' minutes'
 
     def transmit(self):
         order = {
@@ -317,6 +331,7 @@ class Frankenstein():
             return False
 
     def run(self):
+        self.check()
         while True:
             try:
                 self.check()
@@ -335,13 +350,13 @@ class Frankenstein():
         while True and self.broker is not None:
             #try:
                 print 'now', dt.now(),
-                if self.marketopen():
+                if self.marketopen() and not dt.now().time()>self.shutdown_time:
                     self.check()
                     self.signals.to_csv(self.signal_filename, index=True)
                     self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
                 else:
                     print 'Market Closed. Exiting.'
-                    sys.exit('market closed')
+                    sys.exit('System Shutdown')
 
 
                 timenow = time.localtime(time.time())
