@@ -281,10 +281,10 @@ class Frankenstein():
             for i, x in enumerate(data['_QTY']):
                 if i == 0:
                     # print 0
-                    qty.append(0)
+                    qty.append(int(0))
                 else:
                     if x != 0 and qty[i - 1] == 0:
-                        qty.append(x)
+                        qty.append(int(x))
                     else:
                         qty.append(qty[i - 1])
 
