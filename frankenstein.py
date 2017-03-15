@@ -297,7 +297,7 @@ class Frankenstein():
                 else:
                     data.iloc[-1].QTY = self.lastqty
             '''
-
+            data['timestamp'] = dt.now().strftime('%Y%m%d %H:%M:%S')
             self.lastdata = data
             self.lastbar = data.iloc[-1]
 
@@ -312,6 +312,7 @@ class Frankenstein():
                     print self.lastbar
                     self.transmit()
             else:
+
                 self.signals = data.copy()
                 self.previousqty = 0
                 self.lastqty = int(self.lastbar.QTY)
