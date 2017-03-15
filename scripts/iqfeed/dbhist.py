@@ -63,9 +63,9 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     s.sendall(cmd);
     
     data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
+    i=0
     while 1:
         try:
-            i=0
             line = fs.readline()
             # If data was received, print it
             if (len(line)):
