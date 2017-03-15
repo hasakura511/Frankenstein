@@ -65,6 +65,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
     while 1:
         try:
+            i=0
             line = fs.readline()
             # If data was received, print it
             if (len(line)):
@@ -112,7 +113,9 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                         }
                         #self.saveQuote(dbcontract, quote)
                         
-                        data.loc[date] = [open,high,low,close,volume,total_volume]
+                        if i > 0:
+                            data.loc[date] = [open,high,low,close,volume,total_volume]
+                        i+=1
                         #print date,high,low,open,close,volume,total_volume,trades
         except Exception as e:
             logging.error("get_btcfeed", exc_info=True)
