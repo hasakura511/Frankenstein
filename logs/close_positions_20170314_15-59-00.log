@@ -1,0 +1,33 @@
+MARKET IS CLOSING. CLEARING POSITIONS!
+removed ./data/110064634/ENDP.json
+removed ./data/110064634/TTD.json
+[{u'symbol': u'ENDP', u'typeofsymbol': u'stock', u'quant': 0}, {u'symbol': u'TTD', u'typeofsymbol': u'stock', u'quant': 0}]
+2
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "ENDP",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "TTD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      }
+   ]
+}
+
+sent orders to broker
+Elapsed time:  0.02  minutes  2017-03-14 15:59:02.522000
