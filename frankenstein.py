@@ -78,9 +78,9 @@ def getFeedHistory(symbol, maxlookback, interval):
 
 
 def getHistory(symbol, maxlookback, interval):
-    global dataPath
+    debugPath=dataPath+'debug/'
     # richie you do this
-    filename = dataPath + symbol + '.csv'
+    filename = debugPath + symbol + '.csv'
     data = pd.read_csv(filename)
     data.Date = pd.to_datetime(data.Date)
     data = data.set_index('Date')
@@ -89,7 +89,7 @@ def getHistory(symbol, maxlookback, interval):
     # print data.columns
     for col in data.columns:
         data[col] = data[col].astype(float)
-    filename = dataPath + symbol + '_signals.csv'
+    filename = debugPath + symbol + '_signals.csv'
     if isfile(filename):
         os.remove(filename)
         print(filename + " Removed!")
@@ -276,24 +276,40 @@ class Frankenstein():
                         state.append(x)
             data['state'] = state
             data['F']=1
-            data['QTY']=[int(x) if x==0 else int(self.size/x) for x in (data.state*data.F*data.Close)]
+            data['_QTY']=data.state * data.F * data.Close
+            qty = []
+            for i, x in enumerate(data['_QTY']):
+                if i == 0:
+                    # print 0
+                    qty.append(0)
+                else:
+                    if x != 0 and qty[i - 1] == 0:
+                        qty.append(x)
+                    else:
+                        qty.append(qty[i - 1])
 
+            data['QTY']=qty
+            '''
             if 'lastqty' in dir(self):
                 self.previousqty = int(self.lastqty)
                 if self.lastqty == 0 and int(self.lastbar.QTY) != 0:
                     self.lastqty = int(self.lastbar.QTY)
                 else:
                     data.iloc[-1].QTY = self.lastqty
+            '''
 
             self.lastdata = data
             self.lastbar = data.iloc[-1]
 
             if 'signals' in dir(self):
+                self.previousqty = int(self.lastqty)
+                self.lastqty = int(self.lastbar.QTY)
                 self.signals = self.signals.append(self.lastbar)
                 #transmit after first bar of the day.
                 positions = [x for x in listdir(portfolioPath) if x[-4:] == 'json']
                 if self.broker is not None and self.previousqty != self.lastqty\
                         and len(positions)<self.max_symbols:
+                    print self.lastbar
                     self.transmit()
             else:
                 self.signals = data.copy()
