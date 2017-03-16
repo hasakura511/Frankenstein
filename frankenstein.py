@@ -215,7 +215,10 @@ class Frankenstein():
         # print 'lookback', self.maxlookback
         check_time = time.time()
         if self.mode == 'live':
-            data = getFeed(self.symbol, self.maxlookback, self.interval)
+            if 'signals' in dir(self):
+                data = getFeed(self.symbol, self.max_emalookback, self.interval)
+            else:
+                data = getFeed(self.symbol, self.maxlookback, self.interval)
             if data is None:
                 print 'new bar not ready'
                 return
