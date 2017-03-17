@@ -217,16 +217,14 @@ class Frankenstein():
         if self.mode == 'live':
             if 'signals' in dir(self):
                 lastbar = getFeed(self.symbol, 1, self.interval)
-                print 'last bar'
-                print lastbar
-                print 'last signal bar', self.signals.index[-1],\
-                        'last bar date', lastbar.index[-1]
-                if lastbar.index[-1]>self.signals.index[-1]:
-                    data = self.signals.append(lastbar).copy()
+                if lastbar is None:
+                    print 'new bar not ready'
+                    return
                 else:
-                    data=self.lastdata.copy()
+                    data = self.signals.append(lastbar).copy()
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
+
             if data is None:
                 print 'new bar not ready'
                 return
