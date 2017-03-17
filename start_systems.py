@@ -30,7 +30,7 @@ def runThreads(threadlist):
 
         with open(errorlog_filename,'r') as f:
             txt=errorlog_filename+'\n'+f.read()
-            slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":sushi:")
+            slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
         return
 
     threads = []
@@ -49,7 +49,8 @@ def runThreads(threadlist):
 
 
 logPath = './logs/'
-stocks = pd.read_csv('stocks_test.csv')
+#stocks = pd.read_csv('stocks_test.csv')
+stocks = pd.read_csv('stocks.csv')
 runPath = './frankenstein.py'
 threadlist = [['d:/anaconda2/python',runPath]+[str(y) for y in stocks.ix[x]] for x in stocks.index]
 threadlist = [(t[2],t) for t in threadlist]
