@@ -13,6 +13,10 @@ from os.path import isfile, join
 import datetime
 from datetime import datetime as dt
 import scripts.iqfeed.dbhist as dbhist
+import slackweb
+fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
+slackhook='https://hooks.slack.com/services/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'
+slack = slackweb.Slack(url=slackhook)
 
 c2id = "110064634"
 c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
@@ -64,4 +68,6 @@ if __name__ == "__main__":
     setDesiredPositions(orders)
     print 'sent orders to broker'
     # frank.run()
+    txt = "Closed out positions... " + str(dt.now()) + "\nFrank your bill is coming in the mail."
+    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()

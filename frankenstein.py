@@ -13,6 +13,10 @@ from os.path import isfile, join
 import datetime
 from datetime import datetime as dt
 import scripts.iqfeed.dbhist as dbhist
+import slackweb
+fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
+slackhook='https://hooks.slack.com/services/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'
+slack = slackweb.Slack(url=slackhook)
 
 # API
 # SYM = FrankiesSystem(symbol, get_hist_func)
@@ -216,7 +220,7 @@ class Frankenstein():
         check_time = time.time()
         if self.mode == 'live':
             if 'signals' in dir(self):
-                lastbar = getFeed(self.symbol, 1, self.interval)
+                lastbar = getFeed(self.symbol, 2, self.interval)
                 if lastbar is None:
                     print 'new bar not ready'
                     return
@@ -336,7 +340,8 @@ class Frankenstein():
             #"quant"		: "-100"
         }
         print 'Transmitting', order
-
+        txt = "Transmitting...\n"+str(order)+"\n" + str(dt.now())
+        slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":money_mouth_face:")
         with open(self.portfolio_filename, 'w') as f:
             json.dump(order, f)
             print 'Saved', self.portfolio_filename
@@ -388,8 +393,9 @@ class Frankenstein():
                     self.signals.to_csv(self.signal_filename, index=True)
                     self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
                 else:
+
                     print 'Market Closed. Exiting.'
-                    sys.exit('System Shutdown')
+                    sys.exit('System Shutdown'+str(dt.now()))
 
 
                 timenow = time.localtime(time.time())
