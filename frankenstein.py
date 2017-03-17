@@ -233,14 +233,21 @@ class Frankenstein():
             if data is None:
                 print 'new bar not ready'
                 return
+            else:
+                start_idx = [(i, date) for i, date in enumerate(data.index) \
+                             if date.minute == 30 and date.hour == 9 and\
+                             date.day == dt.now().day]
         else:
             data = self.feed.next().copy()
+            start_idx = [(i, date) for i, date in enumerate(data.index) \
+                         if date.minute == 30 and date.hour == 9]
 
-        start_idx = [(i, date) for i, date in enumerate(data.index) \
-                     if date.minute == 35 and date.hour == 9]
         # print start_idx
         if len(start_idx) == 0:
-            print '935 bar not found'
+            txt= '9:30 bar not found. last bar '+str(data.iloc[-1].name)
+            print txt
+            if self.mode == 'live':
+                slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
         else:
             start_ema = start_idx[-1][0] - self.max_emalookback
 
