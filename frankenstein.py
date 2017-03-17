@@ -164,6 +164,7 @@ def setDesiredPositions(orders):
     r = requests.post(url, params=params, json=data);
     # sleep(2)
     print r.text
+    slack.notify(text=r.text, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
     # logging.info(str(r.text))
     #return r.json()['signalid']
 

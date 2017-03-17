@@ -1,4 +1,8 @@
 https://github.com/hasakura511/Frankenstein.git
+
+make sure stocks.csv is properly formatted
+symbols all capitalized, no duplicates
+
 syntax is
 python frankenstein.py symbol size broker
 where size is the USD amount of stock to buy
