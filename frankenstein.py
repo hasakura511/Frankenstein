@@ -220,8 +220,8 @@ class Frankenstein():
                 print 'last bar'
                 print lastbar
                 print 'last signal bar', self.signals.index[-1],\
-                        'last bar date', lastbar.name
-                if lastbar.name>self.signals.index[-1]:
+                        'last bar date', lastbar.index[-1]
+                if lastbar.index[-1]>self.signals.index[-1]:
                     data = self.signals.append(lastbar).copy()
                 else:
                     data=self.lastdata.copy()
