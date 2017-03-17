@@ -30,7 +30,7 @@ def runThreads(threadlist):
 
         with open(errorlog_filename,'r') as f:
             txt=errorlog_filename+'\n'+f.read()
-            slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
+            slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":moneybag:")
         return
 
     threads = []
