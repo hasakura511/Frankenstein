@@ -4,17 +4,20 @@ import pandas as pd
 import threading
 from datetime import datetime as dt
 import datetime
+import slackweb
 fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
-
+slackhook='https://hooks.slack.com/services/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'
+slack = slackweb.Slack(url=slackhook)
 start_time = time.time()
 
 
 def runThreads(threadlist):
     def runInThread(sym, popenArgs):
         print 'starting thread for', sym
-
-        with open(logPath + sym + '_'+fulltimestamp+'.log', 'w') as f:
-            with open(logPath + sym + '_' + fulltimestamp +'_error.log', 'w') as e:
+        log_filename=logPath + sym + '_'+fulltimestamp+'.log'
+        errorlog_filename=logPath + sym + '_' + fulltimestamp +'_error.log'
+        with open(log_filename, 'w') as f:
+            with open(errorlog_filename, 'w') as e:
                 proc = Popen(popenArgs, stdout=f, stderr=e)
                 proc.wait()
                 f.flush()
@@ -24,7 +27,11 @@ def runThreads(threadlist):
                 # proc2= Popen(popenArgs2, stdout=f, stderr=e)
                 # proc2.wait()
                 # proc_orders(sym)
-            return
+
+        with open(errorlog_filename,'r') as f:
+            txt=error_logfilename+'\n'+f.read()
+            slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":sushi:")
+        return
 
     threads = []
     for arg in threadlist:
