@@ -29,7 +29,7 @@ def runThreads(threadlist):
                 # proc_orders(sym)
 
         with open(errorlog_filename,'r') as f:
-            txt=error_logfilename+'\n'+f.read()
+            txt=errorlog_filename+'\n'+f.read()
             slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":sushi:")
         return
 
