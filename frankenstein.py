@@ -164,7 +164,7 @@ def setDesiredPositions(orders):
     r = requests.post(url, params=params, json=data);
     # sleep(2)
     print r.text
-    slack.notify(text=r.text, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
+    slack.notify(text=r.text, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
     # logging.info(str(r.text))
     #return r.json()['signalid']
 
@@ -247,7 +247,7 @@ class Frankenstein():
             txt= '9:30 bar not found. last bar '+str(data.iloc[-1].name)
             print txt
             if self.mode == 'live':
-                slack.notify(text=txt, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
+                slack.notify(text=txt, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
         else:
             start_ema = start_idx[-1][0] - self.max_emalookback
 

@@ -78,7 +78,7 @@ def setDesiredPositions(orders):
     r = requests.post(url, params=params, json=data);
     # sleep(2)
     print r.text
-    slack.notify(text=r.text, channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
+    slack.notify(text=r.text, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
     # logging.info(str(r.text))
     #return r.json()['signalid']
 
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     print orders
     print len(orders)
-    slack.notify(text='Closing Positions.\n'+str(orders), channel="#frankenstein", username="frankenstein", icon_emoji=":robot_face:")
+    slack.notify(text='Closing Positions.\n'+str(orders), channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
     setDesiredPositions(orders)
     print 'sent orders to broker'
     # frank.run()
