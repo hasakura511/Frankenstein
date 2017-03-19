@@ -244,7 +244,7 @@ class Frankenstein():
 
         # print start_idx
         if len(start_idx) == 0:
-            txt= '9:30 bar not found. last bar '+str(data.iloc[-1].name)
+            txt= self.symbol+' '+self.mode+' '+'9:30 bar not found. last bar '+str(data.iloc[-1].name)
             print txt
             if self.mode == 'live':
                 slack.notify(text=txt, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
