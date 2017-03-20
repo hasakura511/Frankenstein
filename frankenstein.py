@@ -249,19 +249,19 @@ class Frankenstein():
             else:
                 if self.broker == None:
                     start_idx = [(i, date) for i, date in enumerate(data.index) \
-                                 if date.minute == 30 and date.hour == 9]
+                                 if date.minute == 35 and date.hour == 9]
                 else:
                     start_idx = [(i, date) for i, date in enumerate(data.index) \
-                             if date.minute == 30 and date.hour == 9 and\
+                             if date.minute == 35 and date.hour == 9 and\
                              date.day == dt.now().day]
         else:
             data = self.feed.next().copy()
             start_idx = [(i, date) for i, date in enumerate(data.index) \
-                         if date.minute == 30 and date.hour == 9]
+                         if date.minute == 35 and date.hour == 9]
 
         # print start_idx
         if len(start_idx) == 0:
-            txt= self.symbol+' '+self.mode+' '+'data missing 9:30 bar!'
+            txt= self.symbol+' '+self.mode+' '+'data missing 9:35 bar!'
             print txt
             if self.mode == 'live':
                 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
@@ -283,7 +283,7 @@ class Frankenstein():
             if len(data.dropna())<1:
                 print 'data.dropna() feed returned insufficient data'
                 print data
-                txt = self.symbol + ' feed returned insufficient data!'
+                txt = self.symbol + ' feed returned insufficient data! check logs.'
                 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                 return
             else:
