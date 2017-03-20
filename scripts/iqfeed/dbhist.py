@@ -43,6 +43,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     #get_bitstampfeed()
     global feed
     global ohlc
+    symbol=symbol.upper()
     # The IP address or hostname of your reader
     READER_HOSTNAME = 'localhost'
     # The TCP port specified in Speedway Connect
@@ -89,6 +90,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                     s.close()
                     return data
                 else:
+                    print line
                     date=fields[0]
                     high=float(fields[1])
                     low=float(fields[2])
