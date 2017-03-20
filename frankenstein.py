@@ -56,8 +56,14 @@ def checkTableExists(dbcon, tablename):
 
 def getFeed(symbol, lookback, interval):
     global lastDate
+    try:
+        data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
+    except Exception as e:
+        print e
+        txt="Feed error: "+str(e)+"\n"
+        txt+=symbol+" lb"+str(lookback)+" i"+str(interval)
+        slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
 
-    data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
     print 'last bar', data.index[-1], 'last processed bar', lastDate
     if data.index[-1] > lastDate:
         lastDate = data.index[-1]
@@ -274,7 +280,15 @@ class Frankenstein():
             data[EMA2] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback2)
             data[EMA1 + 'X' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
 
-            data = data.dropna()
+            if len(data.dropna())<1:
+                print 'data.dropna() feed returned insufficient data'
+                print data
+                txt = self.symbol + ' feed returned insufficient data!'
+                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
+                return
+            else:
+                data = data.dropna()
+
             data['ClosePC>' + str(self.price_pctchg)] = \
                 np.where(data['ClosePC'].values > self.price_pctchg, 1, 0)
             data[EMA1 + 'PC>' + str(self.ema_lookback_pctchg)] = \
