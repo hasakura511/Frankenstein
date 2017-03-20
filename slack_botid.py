@@ -7,6 +7,8 @@ Created on Sat Mar 18 17:54:31 2017
 """
 
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import time
 from slackclient import SlackClient
 from .frankenstein import setDesiredPositions
