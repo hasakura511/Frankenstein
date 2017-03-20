@@ -241,7 +241,11 @@ class Frankenstein():
                 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                 return
             else:
-                start_idx = [(i, date) for i, date in enumerate(data.index) \
+                if self.broker == None:
+                    start_idx = [(i, date) for i, date in enumerate(data.index) \
+                                 if date.minute == 30 and date.hour == 9]
+                else:
+                    start_idx = [(i, date) for i, date in enumerate(data.index) \
                              if date.minute == 30 and date.hour == 9 and\
                              date.day == dt.now().day]
         else:

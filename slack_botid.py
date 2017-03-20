@@ -11,8 +11,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import time
 from slackclient import SlackClient
-from .frankenstein import setDesiredPositions
-from .clear_signals import get_working_signals, clear_signals
+from c2api.c2api import setDesiredPositions, get_working_signals, clear_signals
 
 c2id = "110064634"
 c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
