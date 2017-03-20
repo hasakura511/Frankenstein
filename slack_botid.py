@@ -34,12 +34,12 @@ def handle_command(command, channel):
     if command.startswith('ping'):
         response = "<@"+command.split()[1]+"> yo yo yo"
     if command.startswith('help'):
-        response = "*commands:*"
-        response += "BUY AAPL 100"
-        response += "SELL AAPL 100"
-        response += "CLOSE AAPL"
-        response += "CLEAR ORDERS"
-        response += "GET OPEN ORDERS"
+        response = "*commands:*\n"
+        response += "BUY AAPL 100\n"
+        response += "SELL AAPL 100\n"
+        response += "CLOSE AAPL\n"
+        response += "CLEAR ORDERS\n"
+        response += "GET OPEN ORDERS\n"
         response += "WHERE MY BABY DOLLS FRANK?"
 
     if command.startswith('buy'):

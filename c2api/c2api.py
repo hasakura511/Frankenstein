@@ -12,6 +12,7 @@ from os import listdir
 from os.path import isfile, join
 import datetime
 from datetime import datetime as dt
+from pandas.io.json import json_normalize
 
 systemid= c2id = "110064634"
 apikey=c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
