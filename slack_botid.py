@@ -38,9 +38,9 @@ def handle_command(command, channel):
         response += "BUY AAPL 100\n"
         response += "SELL AAPL 100\n"
         response += "CLOSE AAPL\n"
-        response += "CLEAR ORDERS\n"
+        #response += "CLEAR ORDERS\n"
         response += "GET OPEN ORDERS\n"
-        response += "WHERE MY BABY DOLLS FRANK?"
+        response += "WHERE MY BABY DOLLS FRANK? :dancers:"
 
     if command.startswith('buy'):
         symbol=command.split()[1]
@@ -75,9 +75,9 @@ def handle_command(command, channel):
              }]
         setDesiredPositions(orders)
 
-    if command.startswith('clear orders'):
-        response = "<@" + command.split()[1] + "> CLEARING ORDERS...\n"
-        response += clear_signals(c2id, c2key)
+    #if command.startswith('clear orders'):
+    #    response = "<@" + command.split()[1] + "> CLEARING ORDERS...\n"
+    #    response += clear_signals(c2id, c2key)
 
     if command.startswith('get open orders'):
         response = "<@" + command.split()[1] + "> GETTING OPEN ORDERS...\n"
