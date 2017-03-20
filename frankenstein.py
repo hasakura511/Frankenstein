@@ -219,11 +219,15 @@ class Frankenstein():
     def check(self):
         # print 'lookback', self.maxlookback
         check_time = time.time()
+        start_idx=[]
         if self.mode == 'live':
             if 'signals' in dir(self):
                 lastbar = getFeed(self.symbol, 2, self.interval)
                 if lastbar is None:
-                    print 'new bar not ready'
+                    #print 'new bar not ready'
+                    txt = self.symbol + ' feed did not return any data!'
+                    print txt
+                    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                     return
                 else:
                     data = self.signals.append(lastbar).copy()
@@ -231,7 +235,10 @@ class Frankenstein():
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
 
             if data is None:
-                print 'new bar not ready'
+                #print 'new bar not ready'
+                txt = self.symbol + ' feed did not return any data!'
+                print txt
+                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                 return
             else:
                 start_idx = [(i, date) for i, date in enumerate(data.index) \
@@ -244,10 +251,10 @@ class Frankenstein():
 
         # print start_idx
         if len(start_idx) == 0:
-            txt= self.symbol+' '+self.mode+' '+'9:30 bar not found. last bar '+str(data.iloc[-1].name)
+            txt= self.symbol+' '+self.mode+' '+'data missing 9:30 bar!'
             print txt
             if self.mode == 'live':
-                slack.notify(text=txt, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
+                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
         else:
             start_ema = start_idx[-1][0] - self.max_emalookback
 

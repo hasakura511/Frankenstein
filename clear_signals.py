@@ -52,17 +52,18 @@ def cancel_signal(signalid, systemid, apikey):
 
     r = requests.post(url, params=params, json=data);
     #logging.info(str(r.text))
-    print r.text
+    return r.text
 
 def clear_signals(systemid, apikey):
+    txt=''
     data = get_working_signals(systemid, apikey);
     jsondata = json.loads(data)
     if len(jsondata['response']) > 0:
         dataSet = json_normalize(jsondata['response'])
         for i in dataSet.index:
             row = dataSet.ix[i]
-            cancel_signal(row['signal_id'], systemid, apikey)
-
+            txt+=cancel_signal(row['signal_id'], systemid, apikey)
+    return txt
 
 if __name__ == "__main__":
     start_time = time.time()

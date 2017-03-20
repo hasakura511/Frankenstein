@@ -9,8 +9,11 @@ Created on Sat Mar 18 17:54:31 2017
 import os
 import time
 from slackclient import SlackClient
+from .frankenstein import setDesiredPositions
+from .clear_signals import get_working_signals, clear_signals
 
-
+c2id = "110064634"
+c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
 BOT_NAME = 'frankenstein'
 
 #slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
@@ -28,8 +31,57 @@ def handle_command(command, channel):
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
                "* command with numbers, delimited by spaces."
     if command.startswith('ping'):
-        response = "<@"+command.split()[1]+"> hello"
-    
+        response = "<@"+command.split()[1]+"> yo yo yo"
+    if command.startswith('help'):
+        response = "<@"+command.split()[1]+">"
+        response += "BUY AAPL 100"
+        response += "SELL AAPL 100"
+        response += "CLOSE AAPL"
+        response += "CLEAR ORDERS"
+        response += "GET OPEN ORDERS"
+        response += "WHERE MY BABY DOLLS FRANK?"
+
+    if command.startswith('buy'):
+        symbol=command.split()[1]
+        qty = command.split()[2]
+        response = "<@"+command.split()[1]+"> BOUGHT " + str(qty) + " " + symbol
+        orders = [{
+                "symbol"		: symbol,
+                "typeofsymbol"	: "stock",
+                "quant"			: qty
+             }]
+        setDesiredPositions(orders)
+
+    if command.startswith('sell'):
+        symbol=command.split()[1]
+        qty = int(command.split()[2])
+        response = "<@" + command.split()[1] + "> SOLD " + str(qty) + " " + symbol
+        orders = [{
+                "symbol"		: symbol,
+                "typeofsymbol"	: "stock",
+                "quant"			: '-'+qty
+             }]
+        setDesiredPositions(orders)
+
+    if command.startswith('close'):
+        symbol=command.split()[1]
+        #qty = int(command.split()[2])
+        response = "<@" + command.split()[1] + "> CLOSED " + symbol
+        orders = [{
+                "symbol"		: symbol,
+                "typeofsymbol"	: "stock",
+                "quant"			: '0'
+             }]
+        setDesiredPositions(orders)
+
+    if command.startswith('clear orders'):
+        response = "<@" + command.split()[1] + "> CLEARING ORDERS...\n"
+        response += clear_signals(c2id, c2key)
+
+    if command.startswith('get open orders'):
+        response = "<@" + command.split()[1] + "> GETTING OPEN ORDERS...\n"
+        response += get_working_signals(c2id, c2key)
+
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 

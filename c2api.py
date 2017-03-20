@@ -48,81 +48,45 @@ def place_order(dbPath, action, quant, sym, type, systemid, submit,apikey, paren
     logging.info( str(r.text)  )
     return r.json()['signalid']
 
-    
-def set_position(positions, systemid, submit, apikey):
-    if submit == False:
-        return 0;
-    url = 'https://api.collective2.com/world/apiv3/setDesiredPositions'
-    
+def setDesiredPositions(orders):
+    global c2id
+    global c2key
+    global type
+    url = 'https://collective2.com/world/apiv3/setDesiredPositions'
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
-    
-    data = { 
-          "apikey":   apikey, # "tXFaL4E6apdfmLtGasIovtGnUDXH_CQso7uBpOCUDYGVcm1w0w", 
-          "systemid": str(systemid), 
-          "positions": positions
-          #{
-          #   "symbol" : "MSFT",
-          #   "typeofsymbol" : "stock",
-          #   "quant" : -30
-          #},
-          # {
-          #    "symbol" : "@ESH6",
-          #    "typeofsymbol" : "future",
-          #   "quant" : 1
-          # }
-          #
-          #
-    }
-    
-    params={}
-    
-    r=requests.post(url, params=params, json=data);
-    sleep(2)
-    #print r.text
-    logging.info( str(r.text)  )
-    return str(r.text)
-    
-def flat_position(systemid, submit, apikey):
-    if submit == False:
-        return 0;
-    url = 'https://api.collective2.com/world/apiv3/setDesiredPositions'
-    
-    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
-    
-    data = { 
-          "apikey":   apikey, # "tXFaL4E6apdfmLtGasIovtGnUDXH_CQso7uBpOCUDYGVcm1w0w", 
-          "systemid": str(systemid), 
-          "positions": [
-					{ 
-						"symbol"  : "flat",
-						"typeofsymbol"  : "flat",
-						"quant"  : "0"
-					}
 
-				]
-          #{
-          #   "symbol" : "MSFT",
-          #   "typeofsymbol" : "stock",
-          #   "quant" : -30
-          #},
-          # {
-          #    "symbol" : "@ESH6",
-          #    "typeofsymbol" : "future",
-          #   "quant" : 1
-          # }
-          #
-          #
-    }
-    
-    params={}
-    
-    r=requests.post(url, params=params, json=data);
-    sleep(2)
-    #print r.text
-    logging.info( str(r.text)  )
-    return str(r.text)
+    '''
+    orders
+    [{
+        "symbol"		: "@ESM5",
+        "typeofsymbol"	: "future",
+        "quant"			: "-4"
+    },
+    {
+        "symbol"		: "EURUSD",
+        "typeofsymbol"	: "forex",
+        "quant"			: "-3"
+    },
+    {
+        "symbol"		: "AAPL",
+        "typeofsymbol"	: "stock",
+        "quant"			: "211"
+    }]
+    '''
 
-    
+    data = {
+            "apikey":   c2key,
+            "systemid": c2id,
+            "positions": orders,
+            }
+    params = {}
+    r = requests.post(url, params=params, json=data);
+    # sleep(2)
+    print r.text
+    slack.notify(text=r.text, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
+    # logging.info(str(r.text))
+    #return r.json()['signalid']
+
 def retrieveSignalsWorking(systemid, apikey):
     url = 'https://collective2.com/world/apiv3/retrieveSignalsWorking'
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
