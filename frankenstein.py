@@ -227,11 +227,11 @@ class Frankenstein():
         check_time = time.time()
         start_idx=[]
         if self.mode == 'live':
-            if 'signals' in dir(self):
+            if 'signals' in dir(self) and self.signals.shape[0]>self.max_emalookback:
                 lastbar = getFeed(self.symbol, 2, self.interval)
                 if lastbar is None:
                     #print 'new bar not ready'
-                    txt = self.symbol + ' feed did not return any data!'
+                    txt = self.symbol + ' feed did not return last bar!'
                     print txt
                     slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                     return
@@ -261,10 +261,10 @@ class Frankenstein():
 
         # print start_idx
         if len(start_idx) == 0:
-            txt= self.symbol+' '+self.mode+' '+'data missing 9:35 bar!'
+            txt= self.symbol+' '+self.mode+' '+'data feed missing 9:35 bar!'
             print txt
             if self.mode == 'live':
-                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
         else:
             start_ema = start_idx[-1][0] - self.max_emalookback
 
@@ -426,9 +426,16 @@ class Frankenstein():
                     self.signals.to_csv(self.signal_filename, index=True)
                     self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
                 else:
+                    if not self.marketopen():
+                        txt='Signal System Shutdown: MARKET CLOSED\n'
+                    else:
+                        txt='Signal System Shutdown: '
 
-                    print 'Market Closed. Exiting.'
-                    sys.exit('System Shutdown'+str(dt.now()))
+                    if dt.now().time()>self.shutdown_time:
+                        txt += 'shutdown time: ' + str(self.shutdown_time)
+                    txt+=' timenow ' + str(dt.now())
+                    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+                    sys.exit(txt)
 
 
                 timenow = time.localtime(time.time())
