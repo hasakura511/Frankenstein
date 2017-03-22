@@ -231,7 +231,7 @@ class Frankenstein():
                 lastbar = getFeed(self.symbol, 2, self.interval)
                 if lastbar is None:
                     #print 'new bar not ready'
-                    txt = self.symbol + ' feed did not return last bar!'
+                    txt = self.symbol + ' feed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                     print txt
                     slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                     return
@@ -242,7 +242,7 @@ class Frankenstein():
 
             if data is None:
                 #print 'new bar not ready'
-                txt = self.symbol + ' feed did not return any data!'
+                txt = self.symbol + ' feed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                 print txt
                 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                 return
@@ -357,6 +357,9 @@ class Frankenstein():
                         and len(positions)<self.max_symbols:
                     print self.lastbar
                     self.transmit()
+                else:
+                    txt=self.symbol+' lastbar received: '+ str(self.lastbar.name)+\
+                        ' QTY '+ str(self.lastqty)
             else:
 
                 self.signals = data.copy()
@@ -415,8 +418,9 @@ class Frankenstein():
 
     def runlive(self):
         self.check()
-        self.signals.to_csv(self.signal_filename, index=True)
-        self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
+        if 'signals' in dir(self):
+            self.signals.to_csv(self.signal_filename, index=True)
+            self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
         print 'Writing to', self.signal_filename, dataPath + self.symbol + '_last.csv'
         while True and self.broker is not None:
             #try:
@@ -427,12 +431,12 @@ class Frankenstein():
                     self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
                 else:
                     if not self.marketopen():
-                        txt='Signal System Shutdown: MARKET CLOSED\n'
+                        txt=self.symbol+' Signal System Shutdown: MARKET CLOSED\n'
                     else:
-                        txt='Signal System Shutdown: '
+                        txt=self.symbol+' Signal System Shutdown: '
 
                     if dt.now().time()>self.shutdown_time:
-                        txt += 'shutdown time: ' + str(self.shutdown_time)
+                        txt += ' time: ' + str(self.shutdown_time)
                     txt+=' timenow ' + str(dt.now())
                     slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
                     sys.exit(txt)

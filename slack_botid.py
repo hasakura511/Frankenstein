@@ -30,7 +30,7 @@ def handle_command(command, channel):
         returns back what it needs for clarification.
     """
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
-               "* command with numbers, delimited by spaces."
+               "* command for help."
     if command.startswith('ping'):
         response = "<@"+command.split()[1]+"> yo yo yo"
     if command.startswith('help'):
@@ -107,7 +107,7 @@ def parse_slack_output(slack_rtm_output):
 
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
-EXAMPLE_COMMAND = "do"
+EXAMPLE_COMMAND = "help"
 
 if __name__ == "__main__":
     api_call = slack_client.api_call("users.list")
