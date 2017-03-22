@@ -29,8 +29,8 @@ def handle_command(command, channel):
         are valid commands. If so, then acts on the commands. If not,
         returns back what it needs for clarification.
     """
-    response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
-               "* command for help."
+    response = "Not sure what you mean."
+    #response += " Use the *" + EXAMPLE_COMMAND + "* command for help."
     if command.startswith('ping'):
         response = "<@"+command.split()[1]+"> yo yo yo"
     if command.startswith('help'):
