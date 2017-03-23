@@ -239,7 +239,7 @@ class Frankenstein():
                     slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                     return
                 else:
-                    data = self.signals.append(lastbar).copy()
+                    data = self.signals.append(lastbar).copy()['Date','Open','High','Low','Close','Volume']
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
 
