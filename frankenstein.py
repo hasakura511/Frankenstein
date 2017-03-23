@@ -376,6 +376,7 @@ class Frankenstein():
                 self.signals = data.copy()
                 self.previousqty = 0
                 self.lastqty = int(self.lastbar.QTY)
+                self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
 
         print 'ET: ', round(((time.time() - check_time) / 60), 2), ' minutes'
 
