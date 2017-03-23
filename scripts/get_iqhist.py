@@ -15,9 +15,9 @@ def    main():
         symbol=sys.argv[1]
         interval=sys.argv[2]
         maxdatapoints=sys.argv[3]
-        while 1:
-         data=dbhist.get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
-         time.sleep(5)
+        #while 1:
+        data=dbhist.get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+        #time.sleep(5)
     else:
         print "Usage: get_iqhist.py AAPL 60 100"
         
