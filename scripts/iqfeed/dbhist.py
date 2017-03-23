@@ -85,6 +85,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
         feed_thread.daemon=True
         threads.append(feed_thread)
         [t.start() for t in threads]
+        [t.join() for t in threads]
     
     
     sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume", wap as "wap" '
@@ -145,7 +146,7 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         
                         return data
                     else:
-                        #print line
+                        print line
                         date=fields[0]
                         high=float(fields[1])
                         low=float(fields[2])
@@ -189,7 +190,7 @@ def saveQuote(symbol, instrument, interval, quote):
         frequency=interval
         
         eastern=timezone('US/Eastern')
-        date=quote['Date'].replace(tzinfo=eastern)   
+        date=quote['Date'] # .replace(tzinfo=eastern) - relativedelta(minutes=1) 
         
         bar_list=Feed.objects.filter(date=date).filter(instrument_id=instrument.id).filter(frequency=frequency)
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
