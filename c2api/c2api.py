@@ -21,6 +21,23 @@ fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
 slackhook='https://hooks.slack.com/services/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'
 slack = slackweb.Slack(url=slackhook)
 
+def retrieveSystemEquity(c2id, c2key, commission_plan='default'):
+    url = 'https://api.collective2.com/world/apiv3/retrieveSystemEquity'
+    headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
+
+    data = {
+        "commission_plan": commission_plan,
+        "systemid": str(c2id),
+        "apikey": str(c2key)
+    }
+
+    params = {}
+
+    r = requests.post(url, params=params, json=data);
+    # print r.text
+    #logging.info(r.text)
+    return json_normalize(json.loads(r.text)['equity_data'])
+
 def setDesiredPositions(orders):
     global c2id
     global c2key

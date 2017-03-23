@@ -45,7 +45,7 @@ def handle_command(command, channel):
     if command.startswith('buy'):
         symbol=command.split()[1]
         qty = command.split()[2]
-        response = "<@"+command.split()[1]+"> BOUGHT " + str(qty) + " " + symbol
+        response = "BOUGHT " + str(qty) + " " + symbol
         orders = [{
                 "symbol"		: symbol,
                 "typeofsymbol"	: "stock",
@@ -56,7 +56,7 @@ def handle_command(command, channel):
     if command.startswith('sell'):
         symbol=command.split()[1]
         qty = int(command.split()[2])
-        response = "<@" + command.split()[1] + "> SOLD " + str(qty) + " " + symbol
+        response = "SOLD " + str(qty) + " " + symbol
         orders = [{
                 "symbol"		: symbol,
                 "typeofsymbol"	: "stock",
@@ -67,7 +67,7 @@ def handle_command(command, channel):
     if command.startswith('close'):
         symbol=command.split()[1]
         #qty = int(command.split()[2])
-        response = "<@" + command.split()[1] + "> CLOSED " + symbol
+        response = "CLOSED " + symbol
         orders = [{
                 "symbol"		: symbol,
                 "typeofsymbol"	: "stock",
@@ -80,9 +80,21 @@ def handle_command(command, channel):
     #    response += clear_signals(c2id, c2key)
 
     if command.startswith('get open orders'):
-        response = "<@" + command.split()[1] + "> GETTING OPEN ORDERS...\n"
+        response = "GETTING OPEN ORDERS...\n"
         response += get_working_signals(c2id, c2key)
-
+        
+    if command.startswith('results'):
+        response = "RESULTS...\n"
+        df = retrieveSystemEquity(c2id, c2key).groupby(['YYYYMMDD']).last()
+        pc=round(df.strategy_with_cost.astype(float).pct_change()[-1]*100,2)
+        benchmark_pc=round(df.index_price.astype(float).pct_change()[-1]*100)
+        var_pc = pc-benchmark_pc
+        itd = round(df.strategy_with_cost.astype(float).pct_change(periods=df.shape[0]-1)[-1]*100)
+        benchmark_itd = round(df.index_price.astype(float).pct_change(periods=df.shape[0]-1)[-1]*100)
+        var_itd=itd-benchmark_itd
+        response+="Frank Last Day: {}% S&P500 Benchmark: {} VS: {}".format(pc, benchmark_pc, var_pc)
+        response+="Frank ITD: {}% S&P500: {} VS: {}".format(itd, benchmark_itd, var_itd)
+        
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 
