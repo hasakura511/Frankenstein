@@ -93,7 +93,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     sql +=' WHERE frequency=%s AND instrument_id=%s and date <= now() - interval \'5 minutes\' ' % (interval, instrument.id)
     sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
     data = pd.read_sql(sql, c, index_col='Date')
-    print data
+    #print data
     return data
 
 
@@ -146,7 +146,7 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         
                         return data
                     else:
-                        print line
+                        #print line
                         date=fields[0]
                         high=float(fields[1])
                         low=float(fields[2])
