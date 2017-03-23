@@ -93,8 +93,8 @@ def handle_command(command, channel):
         itd = round(df.strategy_with_cost.astype(float).pct_change(periods=df.shape[0]-1)[-1]*100)
         benchmark_itd = round(df.index_price.astype(float).pct_change(periods=df.shape[0]-1)[-1]*100)
         var_itd=itd-benchmark_itd
-        response+="Frank Last Day: {}% S&P500 Benchmark: {} VS: {}\n".format(pc, benchmark_pc, var_pc)
-        response+="Frank ITD: {}% S&P500: {} VS: {}\n".format(itd, benchmark_itd, var_itd)
+        response+="Last Day: Frank: {}%   S&P500: {}%  VS: {}%\n".format(pc, benchmark_pc, var_pc)
+        response+="ITD: Frank: {}%   S&P500: {}%  VS: {}%\n".format(itd, benchmark_itd, var_itd)
         
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
