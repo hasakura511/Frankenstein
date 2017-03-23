@@ -111,6 +111,8 @@ if __name__ == "__main__":
     last_equity = str(retrieveSystemEquity()['equity_data'][-1]['strategy_with_cost'])
     txt = 'Open Positions\n'+open_positions+'\n'
     txt += 'Account Value: '+last_equity +'\n'
-    txt += str(dt.now()) + "\nFrank your bill is coming in the mail."
+    txt += str(dt.now())
     slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
+    txt = "<@Frank> Don't be lazy, check c2/signalfiles for the trades.\nYour bill is coming in the mail."
+    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()
