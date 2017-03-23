@@ -31,7 +31,7 @@ from main.models import *
 from dateutil.parser import parse
 import psycopg2
 import threading
-
+from dateutil.relativedelta import relativedelta
 try:
     dbstr="dbname=" + settings.DATABASES['default']['NAME'] + \
           " user=" + settings.DATABASES['default']['USER'] + \
@@ -48,7 +48,7 @@ logging.basicConfig(stream=sys.stdout,  level=logging.DEBUG)
 #logging.basicConfig(filename='/logs/get_hist.log',level=logging.DEBUG)
 
 debug=False
-
+last=dict()
 feed={}
 ohlc={}
 hashist={}
@@ -67,6 +67,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     #get_bitstampfeed()
     global feed
     global ohlc
+    
     symbol=symbol.upper()
     instrument_list=Instrument.objects.filter(sym=symbol)
     if instrument_list and len(instrument_list) > 0:
@@ -76,11 +77,15 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
         instrument.sym=symbol
         instrument.save()
     
-    threads = []
-    feed_thread = threading.Thread(target=bg_get_hist, args=[instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype])
-    feed_thread.daemon=True
-    threads.append(feed_thread)
-    [t.start() for t in threads]
+    timenow=datetime.now() 
+    if not last.has_key(symbol) or last[symbol] < timenow - relativedelta(minutes=1):
+        last[symbol]=timenow
+        threads = []
+        feed_thread = threading.Thread(target=bg_get_hist, args=[instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype])
+        feed_thread.daemon=True
+        threads.append(feed_thread)
+        [t.start() for t in threads]
+    
     
     sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume", wap as "wap" '
     sql +=' FROM main_feed '
