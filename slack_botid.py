@@ -41,6 +41,7 @@ def handle_command(command, channel):
         response += "CLOSE AAPL\n"
         #response += "CLEAR ORDERS\n"
         response += "GET OPEN ORDERS\n"
+        response += "RESULTS\n"
         response += "WHERE MY BABY DOLLS FRANK? :dancers:"
 
     if command.startswith('buy'):
@@ -127,7 +128,7 @@ if __name__ == "__main__":
     members = api_call.get('members')
     users=[(x.get('name'), x.get('id')) for x in members if 'name' in x] 
     print users
-    operators=['U3ZQ523QT']
+    operators=['U3ZQ523QT','U3Z56KPU0']
     
     READ_WEBSOCKET_DELAY = 1 # 1 second delay between reading from firehose
     if slack_client.rtm_connect():
