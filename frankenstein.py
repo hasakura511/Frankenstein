@@ -58,18 +58,20 @@ def getFeed(symbol, lookback, interval):
     global lastDate
     try:
         data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
+        return data
     except Exception as e:
         print e
         txt="Feed error: "+str(e)+"\n"
         txt+=symbol+" lb"+str(lookback)+" i"+str(interval)
         slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
-
-    print 'last bar', data.index[-1], 'last processed bar', lastDate
-    if data.index[-1] > lastDate:
+    
+    
+    if data.shape[0]<1 or data.index[-1] <= lastDate:
+        return None
+    else:
+        print 'last bar', data.index[-1], 'last processed bar', lastDate
         lastDate = data.index[-1]
         return data
-    else:
-        return None
 
 
 def getFeedHistory(symbol, maxlookback, interval):
@@ -188,6 +190,7 @@ def findCrosses(series):
     return crosses
 
 class Frankenstein():
+    global lastDate
     global dataPath
     global typeofsymbol
     global portfolioPath
@@ -231,7 +234,7 @@ class Frankenstein():
                 lastbar = getFeed(self.symbol, 2, self.interval)
                 if lastbar is None:
                     #print 'new bar not ready'
-                    txt = self.symbol + ' feed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
+                    txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                     print txt
                     slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                     return
@@ -242,7 +245,7 @@ class Frankenstein():
 
             if data is None:
                 #print 'new bar not ready'
-                txt = self.symbol + ' feed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
+                txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                 print txt
                 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
                 return
@@ -358,8 +361,16 @@ class Frankenstein():
                     print self.lastbar
                     self.transmit()
                 else:
-                    txt=self.symbol+' lastbar received: '+ str(self.lastbar.name)+\
-                        ' QTY '+ str(self.lastqty)
+                    if self.mode=='live':
+                        txt=self.symbol+' lastbar received: '+ str(self.lastbar.name)+\
+                            ' QTY '+ str(self.lastqty)
+                        slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+                    
+                #write files
+                if self.mode=='live':
+                    self.signals.to_csv(self.signal_filename, index=True)
+                    self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
+                    print 'Writing to', self.signal_filename, dataPath + self.symbol + '_last.csv'
             else:
 
                 self.signals = data.copy()
@@ -375,7 +386,7 @@ class Frankenstein():
             "quant"			: self.lastqty
             #"quant"		: "-100"
         }
-        print 'Transmitting', order
+        print 'Signal Found! Transmitting order:', order
         txt = "Transmitting...\n"+str(order)+"\n" + str(dt.now())
         slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":money_mouth_face:")
         with open(self.portfolio_filename, 'w') as f:
@@ -418,41 +429,32 @@ class Frankenstein():
 
     def runlive(self):
         self.check()
-        if 'signals' in dir(self):
-            self.signals.to_csv(self.signal_filename, index=True)
-            self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
-        print 'Writing to', self.signal_filename, dataPath + self.symbol + '_last.csv'
         while True and self.broker is not None:
-            #try:
-                print 'now', dt.now(),
-                if self.marketopen() and not dt.now().time()>self.shutdown_time:
-                    self.check()
-                    self.signals.to_csv(self.signal_filename, index=True)
-                    self.lastdata.to_csv(dataPath + self.symbol + '_last.csv')
-                else:
-                    if not self.marketopen():
-                        txt=self.symbol+' Signal System Shutdown: MARKET CLOSED\n'
-                    else:
-                        txt=self.symbol+' Signal System Shutdown: '
-
-                    if dt.now().time()>self.shutdown_time:
-                        txt += ' time: ' + str(self.shutdown_time)
-                    txt+=' timenow ' + str(dt.now())
-                    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
-                    sys.exit(txt)
-
-
-                timenow = time.localtime(time.time())
-                # print timenow,
+            timenow = time.localtime(time.time())
+            # print timenow,
+            timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
+            # print timeleft
+            if timeleft == 0:
+                time.sleep(2)
                 timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
-                # print timeleft
-                if timeleft == 0:
-                    time.sleep(2)
-                    timeleft = (self.interval - timenow[4] * 60 - timenow[5]) % self.interval
 
-                time.sleep(timeleft)
-            #except Exception as e:
-            #    print e
+            time.sleep(timeleft)
+
+            print 'now', dt.now(),
+            if self.marketopen() and not dt.now().time()>self.shutdown_time:
+                self.check()
+            else:
+                if not self.marketopen():
+                    txt=self.symbol+' Signal System Shutdown: MARKET CLOSED\n'
+                else:
+                    txt=self.symbol+' Signal System Shutdown: '
+
+                if dt.now().time()>self.shutdown_time:
+                    txt += ' time: ' + str(self.shutdown_time)
+                txt+=' timenow ' + str(dt.now())
+                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+                sys.exit(txt)
+
 
 
 if __name__ == "__main__":
