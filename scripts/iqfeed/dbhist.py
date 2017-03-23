@@ -88,7 +88,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
         [t.join() for t in threads]
     
     
-    sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume", wap as "wap" '
+    sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
     sql +=' FROM main_feed '
     sql +=' WHERE frequency=%s AND instrument_id=%s and date <= now() - interval \'5 minutes\' ' % (interval, instrument.id)
     sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
