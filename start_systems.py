@@ -8,6 +8,7 @@ import slackweb
 fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
 slackhook='https://hooks.slack.com/services/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'
 slack = slackweb.Slack(url=slackhook)
+channel = "#logs"
 start_time = time.time()
 
 
@@ -30,7 +31,7 @@ def runThreads(threadlist):
 
         with open(errorlog_filename,'r') as f:
             txt=errorlog_filename+'\n'+f.read()
-            slack.notify(text=txt, channel="#logs", username="frankenstein", icon_emoji=":moneybag:")
+            slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":moneybag:")
         return
 
     threads = []
@@ -57,6 +58,6 @@ threadlist = [(t[2],t) for t in threadlist]
 print len(threadlist), 'threads found..'
 txt="Starting indentured services.. "+str(len(threadlist))+' symbols found. '+str(dt.now())
 txt+="\n WIN OR LEAVE FRANK!!!"
-slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
 runThreads(threadlist)
 print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()

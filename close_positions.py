@@ -17,7 +17,7 @@ import slackweb
 fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
 slackhook='https://hooks.slack.com/services/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'
 slack = slackweb.Slack(url=slackhook)
-
+channel="#logs"
 c2id = "110064634"
 c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
 typeofsymbol = "stock"
@@ -78,7 +78,7 @@ def setDesiredPositions(orders):
     r = requests.post(url, params=params, json=data);
     # sleep(2)
     print r.text
-    slack.notify(text=r.text, channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
+    slack.notify(text=r.text, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
     # logging.info(str(r.text))
     #return r.json()['signalid']
 
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     print orders
     print len(orders)
-    slack.notify(text='Closing Positions.\n'+str(orders), channel="#logs", username="frankenstein", icon_emoji=":robot_face:")
+    slack.notify(text='Closing Positions.\n'+str(orders), channel=channel, username="frankenstein", icon_emoji=":robot_face:")
     setDesiredPositions(orders)
     print 'sent orders to broker'
     # frank.run()
@@ -112,5 +112,5 @@ if __name__ == "__main__":
     txt = 'Open Positions\n'+open_positions+'\n'
     txt += 'Account Value: '+last_equity +'\n'
     txt += str(dt.now()) + "\nFrank your bill is coming in the mail."
-    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+    slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()

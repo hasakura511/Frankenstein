@@ -17,7 +17,7 @@ import slackweb
 fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
 slackhook='https://hooks.slack.com/services/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'
 slack = slackweb.Slack(url=slackhook)
-
+slack_channel="#logs"
 # API
 # SYM = FrankiesSystem(symbol, get_hist_func)
 # SYM.run() - saves signal transmits to broker
@@ -63,7 +63,7 @@ def getFeed(symbol, lookback, interval):
         print e
         txt="Feed error: "+str(e)+"\n"
         txt+=symbol+" lb"+str(lookback)+" i"+str(interval)
-        slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
+        slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
     
     
     if data.shape[0]<1 or data.index[-1] <= lastDate:
@@ -236,7 +236,7 @@ class Frankenstein():
                     #print 'new bar not ready'
                     txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                     print txt
-                    slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
+                    slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                     return
                 else:
                     data = self.signals.append(lastbar).copy()
@@ -247,7 +247,7 @@ class Frankenstein():
                 #print 'new bar not ready'
                 txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                 print txt
-                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
+                slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:
                 if self.broker == None:
@@ -267,7 +267,7 @@ class Frankenstein():
             txt= self.symbol+' '+self.mode+' '+'data feed missing 9:35 bar!'
             print txt
             if self.mode == 'live':
-                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
+                slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
         else:
             start_ema = start_idx[-1][0] - self.max_emalookback
 
@@ -287,7 +287,7 @@ class Frankenstein():
                 print 'data.dropna() feed returned insufficient data'
                 print data
                 txt = self.symbol + ' feed returned insufficient data! check logs.'
-                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":rage:")
+                slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:
                 data = data.dropna()
@@ -364,7 +364,7 @@ class Frankenstein():
                     if self.mode=='live':
                         txt=self.symbol+' lastbar received: '+ str(self.lastbar.name)+\
                             ' QTY '+ str(self.lastqty)
-                        slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+                        slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":robot_face:")
                     
                 #write files
                 if self.mode=='live':
@@ -388,7 +388,7 @@ class Frankenstein():
         }
         print 'Signal Found! Transmitting order:', order
         txt = "Transmitting...\n"+str(order)+"\n" + str(dt.now())
-        slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":money_mouth_face:")
+        slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":money_mouth_face:")
         with open(self.portfolio_filename, 'w') as f:
             json.dump(order, f)
             print 'Saved', self.portfolio_filename
@@ -452,7 +452,7 @@ class Frankenstein():
                 if dt.now().time()>self.shutdown_time:
                     txt += ' time: ' + str(self.shutdown_time)
                 txt+=' timenow ' + str(dt.now())
-                slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
+                slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":robot_face:")
                 sys.exit(txt)
 
 
