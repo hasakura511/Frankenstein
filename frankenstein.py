@@ -285,7 +285,7 @@ class Frankenstein():
 
             if len(data.dropna())<1:
                 print 'data.dropna() feed returned insufficient data'
-                print data
+                print data.to_csv(dataPath+self.symbol+'_debug.csv)
                 txt = self.symbol + ' feed returned insufficient data! check logs.'
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
