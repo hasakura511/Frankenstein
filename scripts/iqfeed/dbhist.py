@@ -20,6 +20,30 @@ import threading
 import dateutil 
 #lock = threading.Lock()
 
+sys.path.append("../../")
+sys.path.append("../")
+
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
+import beCOMPANY
+import beCOMPANY.settings as settings
+from main.models import *
+from dateutil.parser import parse
+import psycopg2
+import threading
+
+try:
+    dbstr="dbname=" + settings.DATABASES['default']['NAME'] + \
+          " user=" + settings.DATABASES['default']['USER'] + \
+          " password=" + settings.DATABASES['default']['PASSWORD'] + \
+          " host=" + settings.DATABASES['default']['HOST'] + \
+          " port=" + settings.DATABASES['default']['PORT']
+          
+    c=psycopg2.connect(dbstr)
+except:
+    print "I am unable to connect to the database."
+    
+    
 logging.basicConfig(stream=sys.stdout,  level=logging.DEBUG)
 #logging.basicConfig(filename='/logs/get_hist.log',level=logging.DEBUG)
 
@@ -44,6 +68,30 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     global feed
     global ohlc
     symbol=symbol.upper()
+    instrument_list=Instrument.objects.filter(sym=symbol)
+    if instrument_list and len(instrument_list) > 0:
+        instrument=instrument_list[0]
+    else:
+        instrument=Instrument()
+        instrument.sym=symbol
+        instrument.save()
+    
+    threads = []
+    feed_thread = threading.Thread(target=bg_get_hist, args=[instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype])
+    feed_thread.daemon=True
+    threads.append(feed_thread)
+    [t.start() for t in threads]
+    
+    sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume", wap as "wap" '
+    sql +=' FROM main_feed '
+    sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
+    sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
+    data = pd.read_sql(sql, c, index_col='Date')
+    print data
+    return data
+
+
+def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
     # The IP address or hostname of your reader
     READER_HOSTNAME = 'localhost'
     # The TCP port specified in Speedway Connect
@@ -88,9 +136,10 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                 '''
                 if fields[0] == '!ENDMSG!':
                     s.close()
+                    
                     return data
                 else:
-                    print line
+                    #print line
                     date=fields[0]
                     high=float(fields[1])
                     low=float(fields[2])
@@ -113,10 +162,11 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                             'TotalVolume':total_volume,
                            #'wap':WAP,
                         }
+                        
+                        saveQuote(symbol, instrument, interval, quote)
                         #self.saveQuote(dbcontract, quote)
                         
-                        if i > 0:
-                            data.loc[date] = [open,high,low,close,volume,total_volume]
+                        data.loc[date] = [open,high,low,close,volume,total_volume]
                         i+=1
                         #print date,high,low,open,close,volume,total_volume,trades
         except Exception as e:
@@ -124,7 +174,34 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                 
     return data
 
-
+def saveQuote(symbol, instrument, interval, quote):
+        #if quote.has_key('wap'):
+        #    print ' wap:' + str(quote['wap']) 
+        
+        frequency=interval
+        
+        eastern=timezone('US/Eastern')
+        date=quote['Date'].replace(tzinfo=eastern)   
+        
+        bar_list=Feed.objects.filter(date=date).filter(instrument_id=instrument.id).filter(frequency=frequency)
+        #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
+        if bar_list and len(bar_list) > 0:
+            bar=bar_list[0]
+            print "found bar id",bar.id
+        else:
+            bar=Feed()
+            bar.instrument_id=instrument.id
+            bar.frequency=frequency
+            bar.date=date
+        bar.open= quote['Open']
+        bar.high= quote['High']
+        bar.low= quote['Low']
+        bar.close= quote['Close']
+        bar.volume= quote['Volume']
+        if quote.has_key('VWAP'):
+            bar.wap=quote['VWAP']
+        bar.save()
+        
 def    main():
     if len(sys.argv) > 3:
         symbol=sys.argv[1]
