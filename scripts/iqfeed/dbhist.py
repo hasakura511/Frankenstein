@@ -84,7 +84,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     
     sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume", wap as "wap" '
     sql +=' FROM main_feed '
-    sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
+    sql +=' WHERE frequency=%s AND instrument_id=%s and date <= now() - interval \'5 minutes\' ' % (interval, instrument.id)
     sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
     data = pd.read_sql(sql, c, index_col='Date')
     print data
@@ -92,87 +92,90 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
 
 
 def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
-    # The IP address or hostname of your reader
-    READER_HOSTNAME = 'localhost'
-    # The TCP port specified in Speedway Connect
-    READER_PORT = 9100
-    # Define the size of the buffer that is used to receive data.
-    BUFFER_SIZE = 1024
-     
-    # Open a socket connection to the reader
-    s = socket.create_connection((READER_HOSTNAME, READER_PORT))
+    try:
+        # The IP address or hostname of your reader
+        READER_HOSTNAME = 'localhost'
+        # The TCP port specified in Speedway Connect
+        READER_PORT = 9100
+        # Define the size of the buffer that is used to receive data.
+        BUFFER_SIZE = 1024
          
-    # Set the socket to non-blocking
-    #s.setblocking(0)
-     
-    # Make a file pointer from the socket, so we can read lines
-    fs=s.makefile()
-    # Receive data in an infinite loop
-    cmd="HIX,%s,%s,%s,%s,%s,%s,%s\r\n" % (symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
-    s.sendall(cmd);
-    
-    data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
-    i=0
-    while 1:
-        try:
-            line = fs.readline()
-            # If data was received, print it
-            if (len(line)):
-                #print line
-                fields=line.strip().split(',')
-                '''
-                    Format    Notes
-                        Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
-                        Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
-                        High    Decimal    Example: 146.2587
-                        Low    Decimal    Example: 145.2587
-                        Open    Decimal    Example: 146.2587
-                        Close    Decimal    Example: 145.2587
-                        Total Volume    Integer    Example: 1285001
-                        Period Volume    Integer    Example: 1285
-                        Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
-                        Example data:    Request: HIX,GOOG,60,10<CR><LF>
-                        2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
-                '''
-                if fields[0] == '!ENDMSG!':
-                    s.close()
-                    
-                    return data
-                else:
+        # Open a socket connection to the reader
+        s = socket.create_connection((READER_HOSTNAME, READER_PORT))
+             
+        # Set the socket to non-blocking
+        #s.setblocking(0)
+         
+        # Make a file pointer from the socket, so we can read lines
+        fs=s.makefile()
+        # Receive data in an infinite loop
+        cmd="HIX,%s,%s,%s,%s,%s,%s,%s\r\n" % (symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
+        s.sendall(cmd);
+        
+        data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
+        i=0
+        while 1:
+            try:
+                line = fs.readline()
+                # If data was received, print it
+                if (len(line)):
                     #print line
-                    date=fields[0]
-                    high=float(fields[1])
-                    low=float(fields[2])
-                    open=float(fields[3])
-                    close=float(fields[4])
-                    total_volume=float(fields[5])
-                    volume=float(fields[6])
-                    trades=fields[7]
-                    
-                    
-                   
-                    if date:
-                        date=dateutil.parser.parse(date)
-                        quote={ 'Date':date,
-                            'Open':open,
-                            'High':high,
-                            'Low':low,
-                            'Close':close,
-                            'Volume':volume,
-                            'TotalVolume':total_volume,
-                           #'wap':WAP,
-                        }
+                    fields=line.strip().split(',')
+                    '''
+                        Format    Notes
+                            Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
+                            Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
+                            High    Decimal    Example: 146.2587
+                            Low    Decimal    Example: 145.2587
+                            Open    Decimal    Example: 146.2587
+                            Close    Decimal    Example: 145.2587
+                            Total Volume    Integer    Example: 1285001
+                            Period Volume    Integer    Example: 1285
+                            Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
+                            Example data:    Request: HIX,GOOG,60,10<CR><LF>
+                            2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
+                    '''
+                    if fields[0] == '!ENDMSG!':
+                        s.close()
                         
-                        saveQuote(symbol, instrument, interval, quote)
-                        #self.saveQuote(dbcontract, quote)
+                        return data
+                    else:
+                        #print line
+                        date=fields[0]
+                        high=float(fields[1])
+                        low=float(fields[2])
+                        open=float(fields[3])
+                        close=float(fields[4])
+                        total_volume=float(fields[5])
+                        volume=float(fields[6])
+                        trades=fields[7]
                         
-                        data.loc[date] = [open,high,low,close,volume,total_volume]
-                        i+=1
-                        #print date,high,low,open,close,volume,total_volume,trades
-        except Exception as e:
-            logging.error("get_btcfeed", exc_info=True)
-                
-    return data
+                        
+                       
+                        if date:
+                            date=dateutil.parser.parse(date)
+                            quote={ 'Date':date,
+                                'Open':open,
+                                'High':high,
+                                'Low':low,
+                                'Close':close,
+                                'Volume':volume,
+                                'TotalVolume':total_volume,
+                               #'wap':WAP,
+                            }
+                            
+                            saveQuote(symbol, instrument, interval, quote)
+                            #self.saveQuote(dbcontract, quote)
+                            
+                            data.loc[date] = [open,high,low,close,volume,total_volume]
+                            i+=1
+                            #print date,high,low,open,close,volume,total_volume,trades
+            except Exception as e:
+                logging.error("get_btcfeed", exc_info=True)
+                    
+        return data
+    except Exception as e:
+        print e
 
 def saveQuote(symbol, instrument, interval, quote):
         #if quote.has_key('wap'):
