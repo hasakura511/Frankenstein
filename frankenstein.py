@@ -453,7 +453,7 @@ class Frankenstein():
                 if dt.now().time()>self.shutdown_time:
                     txt += ' time: ' + str(self.shutdown_time)
                 txt+=' timenow ' + str(dt.now())
-                slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":robot_face:")
+                #slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":robot_face:")
                 sys.exit(txt)
 
 
