@@ -159,7 +159,9 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         
                        
                         if date:
+                            eastern=timezone('US/Eastern')
                             date=dateutil.parser.parse(date)
+                            date=eastern.localize(date,is_dst=True)
                             quote={ 'Date':date,
                                 'Open':open,
                                 'High':high,
@@ -189,14 +191,14 @@ def saveQuote(symbol, instrument, interval, quote):
         
         frequency=interval
         
-        eastern=timezone('US/Eastern')
+        
         date=quote['Date'] # .replace(tzinfo=eastern) - relativedelta(minutes=1) 
         
         bar_list=Feed.objects.filter(date=date).filter(instrument_id=instrument.id).filter(frequency=frequency)
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
         if bar_list and len(bar_list) > 0:
             bar=bar_list[0]
-            print "found bar id",bar.id
+            #print "found bar id",bar.id
         else:
             bar=Feed()
             bar.instrument_id=instrument.id

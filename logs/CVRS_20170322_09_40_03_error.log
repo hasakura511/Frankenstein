@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "./frankenstein.py", line 476, in <module>
-    frank.runlive()
-  File "./frankenstein.py", line 430, in runlive
-    self.signals.to_csv(self.signal_filename, index=True)
-AttributeError: Frankenstein instance has no attribute 'signals'
