@@ -243,6 +243,7 @@ class Frankenstein():
                     data = self.signals.append(lastbar).copy()['Date','Open','High','Low','Close','Volume']
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
+                data.to_csv(dataPath+self.symbol+'_debug.csv')
                 print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
 
             if data is None:
