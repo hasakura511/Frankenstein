@@ -1,0 +1,1862 @@
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 18:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 18:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 17:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 17:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 17:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 17:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 17:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 16:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 16:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 15:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 14:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 13:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 12:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 11:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 10:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 09:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 08:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 07:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-22 06:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 17:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 16:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 16:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 15:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 14:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 13:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 12:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 11:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 10:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 09:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 09:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 09:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 09:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-21 09:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 16:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 16:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 15:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 14:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 13:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 12:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 11:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 10:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 09:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 09:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 09:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 09:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 09:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-20 09:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 19:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 18:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 16:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 16:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 16:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 16:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 15:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:30:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:25:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:20:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:15:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:10:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:05:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 14:00:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 13:55:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 13:50:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 13:45:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 13:40:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 13:35:00) while time zone support is active.
+  RuntimeWarning)
+
+WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-17 13:30:00) while time zone support is active.
+  RuntimeWarning)
+
+start_ema 2017-03-22 15:20:00+00:00 start_vwap 2017-03-23 09:35:00+00:00 last_bar 2017-03-23 09:45:00+00:00 ET:  0.12  minutes
+now 2017-03-23 09:45:00.706000WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:50:00) while time zone support is active.
+  RuntimeWarning)
+
+found bar id 13858
+found bar id 13869
+found bar id 13872
+found bar id 13878
+found bar id 13882
+found bar id 13887
+found bar id 13894
+found bar id 13897
+found bar id 13900
+found bar id 13903
+found bar id 13905
+found bar id 13909
+found bar id 13911
+found bar id 13913
+found bar id 13920
+found bar id 13925
+found bar id 13931
+found bar id 13935
+found bar id 13943
+found bar id 13951
+found bar id 13957
+found bar id 13969
+found bar id 13979
+found bar id 13985
+found bar id 13997
+found bar id 14011
+found bar id 14022
+found bar id 14037
+found bar id 14045
+found bar id 14055
+found bar id 14061
+found bar id 14087
+found bar id 14095
+found bar id 14101
+found bar id 14106
+found bar id 14118
+found bar id 14127
+found bar id 14132
+found bar id 14138
+found bar id 14145
+found bar id 14156
+found bar id 14166
+found bar id 14177
+found bar id 14184
+found bar id 14197
+found bar id 14207
+found bar id 14219
+found bar id 14227
+found bar id 14234
+found bar id 14245
+found bar id 14255
+found bar id 14267
+found bar id 14272
+found bar id 14282
+found bar id 14289
+found bar id 14312
+found bar id 14360
+found bar id 14374
+found bar id 14387
+found bar id 14405
+found bar id 14418
+found bar id 14428
+found bar id 14440
+found bar id 14447
+found bar id 14455
+found bar id 14464
+found bar id 14474
+found bar id 14489
+found bar id 14497
+found bar id 14504
+found bar id 14510
+found bar id 14520
+found bar id 14527
+found bar id 14533
+found bar id 14542
+found bar id 14554
+found bar id 14559
+found bar id 14570
+found bar id 14581
+found bar id 14589
+found bar id 14596
+found bar id 14607
+found bar id 14621
+found bar id 14629
+found bar id 14646
+found bar id 14658
+found bar id 14666
+found bar id 14680
+found bar id 14686
+found bar id 14698
+found bar id 14705
+found bar id 14713
+found bar id 14719
+found bar id 14730
+found bar id 14732
+found bar id 14742
+found bar id 14749
+found bar id 14755
+found bar id 14761
+found bar id 14769
+found bar id 14781
+found bar id 14793
+found bar id 14803
+found bar id 14811
+found bar id 14827
+found bar id 14833
+found bar id 14845
+found bar id 14853
+found bar id 14867
+found bar id 14880
+found bar id 14886
+found bar id 14895
+found bar id 14905
+found bar id 14912
+found bar id 14923
+found bar id 14928
+found bar id 14936
+found bar id 14950
+found bar id 14959
+found bar id 14967
+found bar id 14974
+found bar id 14987
+found bar id 14999
+found bar id 15003
+found bar id 15017
+found bar id 15025
+found bar id 15035
+found bar id 15041
+found bar id 15051
+found bar id 15066
+found bar id 15072
+found bar id 15079
+found bar id 15099
+found bar id 15108
+found bar id 15115
+found bar id 15126
+found bar id 15133
+found bar id 15142
+found bar id 15149
+found bar id 15155
+found bar id 15159
+found bar id 15167
+found bar id 15174
+found bar id 15185
+found bar id 15186
+found bar id 15193
+found bar id 15201
+found bar id 15218
+found bar id 15227
+found bar id 15239
+found bar id 15249
+found bar id 15257
+found bar id 15261
+found bar id 15276
+found bar id 15287
+found bar id 15293
+found bar id 15303
+found bar id 15319
+found bar id 15334
+found bar id 15340
+found bar id 15348
+found bar id 15362
+found bar id 15371
+found bar id 15379
+found bar id 15385
+found bar id 15395
+found bar id 15400
+found bar id 15406
+found bar id 15410
+found bar id 15416
+found bar id 15424
+found bar id 15429
+found bar id 15431
+found bar id 15438
+found bar id 15445
+found bar id 15454
+found bar id 15462
+found bar id 15472
+found bar id 15477
+found bar id 15482
+found bar id 15487
+found bar id 15490
+found bar id 15495
+found bar id 15499
+found bar id 15504
+found bar id 15510
+found bar id 15515
+found bar id 15519
+found bar id 15521
+found bar id 15526
+found bar id 15530
+found bar id 15536
+found bar id 15540
+found bar id 15546
+found bar id 15551
+found bar id 15560
+found bar id 15565
+found bar id 15569
+found bar id 15574
+found bar id 15582
+found bar id 15586
+found bar id 15590
+found bar id 15596
+found bar id 15601
+found bar id 15605
+found bar id 15610
+found bar id 15617
+found bar id 15622
+found bar id 15626
+found bar id 15635
+found bar id 15639
+found bar id 15648
+found bar id 15651
+found bar id 15656
+found bar id 15661
+found bar id 15667
+found bar id 15671
+found bar id 15674
+found bar id 15679
+found bar id 15688
+found bar id 15694
+found bar id 15699
+found bar id 15705
+found bar id 15710
+found bar id 15714
+found bar id 15719
+found bar id 15723
+found bar id 15725
+found bar id 15732
+found bar id 15738
+found bar id 15742
+found bar id 15748
+found bar id 15753
+found bar id 15758
+found bar id 15764
+found bar id 15770
+found bar id 15774
+found bar id 15780
+found bar id 15786
+found bar id 15791
+found bar id 15795
+found bar id 15801
+found bar id 15803
+found bar id 15806
+found bar id 15810
+found bar id 15812
+found bar id 15816
+found bar id 15820
+found bar id 15825
+found bar id 15827
+found bar id 15832
+found bar id 15834
+found bar id 15836
+found bar id 15838
+found bar id 15840
+found bar id 15842
+found bar id 15844
+found bar id 15847
+found bar id 15849
+found bar id 15850
+found bar id 15853
+found bar id 15856
+found bar id 15859
+found bar id 15861
+found bar id 15863
+found bar id 15865
+found bar id 15866
+found bar id 15867
+found bar id 15868
+found bar id 15869
+found bar id 15870
+found bar id 15871
+found bar id 15872
+found bar id 15873
+found bar id 15874
+found bar id 15875
+found bar id 15876
+found bar id 15877
+found bar id 15878
+found bar id 15879
+found bar id 15880
+found bar id 15881
+found bar id 15882
+found bar id 15883
+found bar id 15884
+found bar id 15885
+found bar id 15886
+found bar id 15887
+found bar id 15888
+found bar id 15889
+found bar id 15890
+found bar id 15891
+found bar id 15892
+found bar id 15893
+found bar id 15894
+found bar id 15895
+found bar id 15896
+found bar id 15897
+found bar id 15898
+found bar id 15899
+found bar id 15900
+found bar id 15901
+found bar id 15902
+found bar id 15903
+found bar id 15904
+found bar id 15905
+found bar id 15906
+start_ema 2017-03-22 15:20:00+00:00 start_vwap 2017-03-23 09:35:00+00:00 last_bar 2017-03-23 09:50:00+00:00 Writing to ./data/SHLD_livesignals_20170323_09_40_09.csv ./data/SHLD_last.csv
+ET:  0.14  minutes
+now 2017-03-23 09:50:00.170000WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 09:55:00) while time zone support is active.
+  RuntimeWarning)
+
+found bar id 15916
+found bar id 13858
+found bar id 13869
+found bar id 13872
+found bar id 13878
+found bar id 13882
+found bar id 13887
+found bar id 13894
+found bar id 13897
+found bar id 13900
+found bar id 13903
+found bar id 13905
+found bar id 13909
+found bar id 13911
+found bar id 13913
+found bar id 13920
+found bar id 13925
+found bar id 13931
+found bar id 13935
+found bar id 13943
+found bar id 13951
+found bar id 13957
+found bar id 13969
+found bar id 13979
+found bar id 13985
+found bar id 13997
+found bar id 14011
+found bar id 14022
+found bar id 14037
+found bar id 14045
+found bar id 14055
+found bar id 14061
+found bar id 14087
+found bar id 14095
+found bar id 14101
+found bar id 14106
+found bar id 14118
+found bar id 14127
+found bar id 14132
+found bar id 14138
+found bar id 14145
+found bar id 14156
+found bar id 14166
+found bar id 14177
+found bar id 14184
+found bar id 14197
+found bar id 14207
+found bar id 14219
+found bar id 14227
+found bar id 14234
+found bar id 14245
+found bar id 14255
+found bar id 14267
+found bar id 14272
+found bar id 14282
+found bar id 14289
+found bar id 14312
+found bar id 14360
+found bar id 14374
+found bar id 14387
+found bar id 14405
+found bar id 14418
+found bar id 14428
+found bar id 14440
+found bar id 14447
+found bar id 14455
+found bar id 14464
+found bar id 14474
+found bar id 14489
+found bar id 14497
+found bar id 14504
+found bar id 14510
+found bar id 14520
+found bar id 14527
+found bar id 14533
+found bar id 14542
+found bar id 14554
+found bar id 14559
+found bar id 14570
+found bar id 14581
+found bar id 14589
+found bar id 14596
+found bar id 14607
+found bar id 14621
+found bar id 14629
+found bar id 14646
+found bar id 14658
+found bar id 14666
+found bar id 14680
+found bar id 14686
+found bar id 14698
+found bar id 14705
+found bar id 14713
+found bar id 14719
+found bar id 14730
+found bar id 14732
+found bar id 14742
+found bar id 14749
+found bar id 14755
+found bar id 14761
+found bar id 14769
+found bar id 14781
+found bar id 14793
+found bar id 14803
+found bar id 14811
+found bar id 14827
+found bar id 14833
+found bar id 14845
+found bar id 14853
+found bar id 14867
+found bar id 14880
+found bar id 14886
+found bar id 14895
+found bar id 14905
+found bar id 14912
+found bar id 14923
+found bar id 14928
+found bar id 14936
+found bar id 14950
+found bar id 14959
+found bar id 14967
+found bar id 14974
+found bar id 14987
+found bar id 14999
+found bar id 15003
+found bar id 15017
+found bar id 15025
+found bar id 15035
+found bar id 15041
+found bar id 15051
+found bar id 15066
+found bar id 15072
+found bar id 15079
+found bar id 15099
+found bar id 15108
+found bar id 15115
+found bar id 15126
+found bar id 15133
+found bar id 15142
+found bar id 15149
+found bar id 15155
+found bar id 15159
+found bar id 15167
+found bar id 15174
+found bar id 15185
+found bar id 15186
+found bar id 15193
+found bar id 15201
+found bar id 15218
+found bar id 15227
+found bar id 15239
+found bar id 15249
+found bar id 15257
+found bar id 15261
+found bar id 15276
+found bar id 15287
+found bar id 15293
+found bar id 15303
+found bar id 15319
+found bar id 15334
+found bar id 15340
+found bar id 15348
+found bar id 15362
+found bar id 15371
+found bar id 15379
+found bar id 15385
+found bar id 15395
+found bar id 15400
+found bar id 15406
+found bar id 15410
+found bar id 15416
+found bar id 15424
+found bar id 15429
+found bar id 15431
+found bar id 15438
+found bar id 15445
+found bar id 15454
+found bar id 15462
+found bar id 15472
+found bar id 15477
+found bar id 15482
+found bar id 15487
+found bar id 15490
+found bar id 15495
+found bar id 15499
+found bar id 15504
+found bar id 15510
+found bar id 15515
+found bar id 15519
+found bar id 15521
+found bar id 15526
+found bar id 15530
+found bar id 15536
+found bar id 15540
+found bar id 15546
+found bar id 15551
+found bar id 15560
+found bar id 15565
+found bar id 15569
+found bar id 15574
+found bar id 15582
+found bar id 15586
+found bar id 15590
+found bar id 15596
+found bar id 15601
+found bar id 15605
+found bar id 15610
+found bar id 15617
+found bar id 15622
+found bar id 15626
+found bar id 15635
+found bar id 15639
+found bar id 15648
+found bar id 15651
+found bar id 15656
+found bar id 15661
+found bar id 15667
+found bar id 15671
+found bar id 15674
+found bar id 15679
+found bar id 15688
+found bar id 15694
+found bar id 15699
+found bar id 15705
+found bar id 15710
+found bar id 15714
+found bar id 15719
+found bar id 15723
+found bar id 15725
+found bar id 15732
+found bar id 15738
+found bar id 15742
+found bar id 15748
+found bar id 15753
+found bar id 15758
+found bar id 15764
+found bar id 15770
+found bar id 15774
+found bar id 15780
+found bar id 15786
+found bar id 15791
+found bar id 15795
+found bar id 15801
+found bar id 15803
+found bar id 15806
+found bar id 15810
+found bar id 15812
+found bar id 15816
+found bar id 15820
+found bar id 15825
+found bar id 15827
+found bar id 15832
+found bar id 15834
+found bar id 15836
+found bar id 15838
+found bar id 15840
+found bar id 15842
+found bar id 15844
+found bar id 15847
+found bar id 15849
+found bar id 15850
+found bar id 15853
+found bar id 15856
+found bar id 15859
+found bar id 15861
+found bar id 15863
+found bar id 15865
+found bar id 15866
+found bar id 15867
+found bar id 15868
+found bar id 15869
+found bar id 15870
+found bar id 15871
+found bar id 15872
+found bar id 15873
+found bar id 15874
+found bar id 15875
+found bar id 15876
+found bar id 15877
+found bar id 15878
+found bar id 15879
+found bar id 15880
+found bar id 15881
+found bar id 15882
+found bar id 15883
+found bar id 15884
+found bar id 15885
+found bar id 15886
+found bar id 15887
+found bar id 15888
+found bar id 15889
+found bar id 15890
+found bar id 15891
+found bar id 15892
+found bar id 15893
+found bar id 15894
+found bar id 15895
+found bar id 15896
+found bar id 15897
+found bar id 15898
+found bar id 15899
+found bar id 15900
+found bar id 15901
+found bar id 15902
+found bar id 15903
+found bar id 15904
+found bar id 15905
+start_ema 2017-03-22 15:20:00+00:00 start_vwap 2017-03-23 09:35:00+00:00 last_bar 2017-03-23 09:55:00+00:00 Writing to ./data/SHLD_livesignals_20170323_09_40_09.csv ./data/SHLD_last.csv
+ET:  0.11  minutes
+now 2017-03-23 09:55:00.852000WARNING:py.warnings:d:\anaconda2\lib\site-packages\django\db\models\fields\__init__.py:1453: RuntimeWarning: DateTimeField Feed.date received a naive datetime (2017-03-23 10:00:00) while time zone support is active.
+  RuntimeWarning)
+
+found bar id 15917
+found bar id 15916
+found bar id 13858
+found bar id 13869
+found bar id 13872
+found bar id 13878
+found bar id 13882
+found bar id 13887
+found bar id 13894
+found bar id 13897
+found bar id 13900
+found bar id 13903
+found bar id 13905
+found bar id 13909
+found bar id 13911
+found bar id 13913
+found bar id 13920
+found bar id 13925
+found bar id 13931
+found bar id 13935
+found bar id 13943
+found bar id 13951
+found bar id 13957
+found bar id 13969
+found bar id 13979
+found bar id 13985
+found bar id 13997
+found bar id 14011
+found bar id 14022
+found bar id 14037
+found bar id 14045
+found bar id 14055
+found bar id 14061
+found bar id 14087
+found bar id 14095
+found bar id 14101
+found bar id 14106
+found bar id 14118
+found bar id 14127
+found bar id 14132
+found bar id 14138
+found bar id 14145
+found bar id 14156
+found bar id 14166
+found bar id 14177
+found bar id 14184
+found bar id 14197
+found bar id 14207
+found bar id 14219
+found bar id 14227
+found bar id 14234
+found bar id 14245
+found bar id 14255
+found bar id 14267
+found bar id 14272
+found bar id 14282
+found bar id 14289
+found bar id 14312
+found bar id 14360
+found bar id 14374
+found bar id 14387
+found bar id 14405
+found bar id 14418
+found bar id 14428
+found bar id 14440
+found bar id 14447
+found bar id 14455
+found bar id 14464
+found bar id 14474
+found bar id 14489
+found bar id 14497
+found bar id 14504
+found bar id 14510
+found bar id 14520
+found bar id 14527
+found bar id 14533
+found bar id 14542
+found bar id 14554
+found bar id 14559
+found bar id 14570
+found bar id 14581
+found bar id 14589
+found bar id 14596
+found bar id 14607
+found bar id 14621
+found bar id 14629
+found bar id 14646
+found bar id 14658
+found bar id 14666
+found bar id 14680
+found bar id 14686
+found bar id 14698
+found bar id 14705
+found bar id 14713
+found bar id 14719
+found bar id 14730
+found bar id 14732
+found bar id 14742
+found bar id 14749
+found bar id 14755
+found bar id 14761
+found bar id 14769
+found bar id 14781
+found bar id 14793
+found bar id 14803
+found bar id 14811
+found bar id 14827
+found bar id 14833
+found bar id 14845
+found bar id 14853
+found bar id 14867
+found bar id 14880
+found bar id 14886
+found bar id 14895
+found bar id 14905
+found bar id 14912
+found bar id 14923
+found bar id 14928
+found bar id 14936
+found bar id 14950
+found bar id 14959
+found bar id 14967
+found bar id 14974
+found bar id 14987
+found bar id 14999
+found bar id 15003
+found bar id 15017
+found bar id 15025
+found bar id 15035
+found bar id 15041
+found bar id 15051
+found bar id 15066
+found bar id 15072
+found bar id 15079
+found bar id 15099
+found bar id 15108
+found bar id 15115
+found bar id 15126
+found bar id 15133
+found bar id 15142
+found bar id 15149
+found bar id 15155
+found bar id 15159
+found bar id 15167
+found bar id 15174
+found bar id 15185
+found bar id 15186
+found bar id 15193
+found bar id 15201
+found bar id 15218
+found bar id 15227
+found bar id 15239
+found bar id 15249
+found bar id 15257
+found bar id 15261
+found bar id 15276
+found bar id 15287
+found bar id 15293
+found bar id 15303
+found bar id 15319
+found bar id 15334
+found bar id 15340
+found bar id 15348
+found bar id 15362
+found bar id 15371
+found bar id 15379
+found bar id 15385
+found bar id 15395
+found bar id 15400
+found bar id 15406
+found bar id 15410
+found bar id 15416
+found bar id 15424
+found bar id 15429
+found bar id 15431
+found bar id 15438
+found bar id 15445
+found bar id 15454
+found bar id 15462
+found bar id 15472
+found bar id 15477
+found bar id 15482
+found bar id 15487
+found bar id 15490
+found bar id 15495
+found bar id 15499
+found bar id 15504
+found bar id 15510
+found bar id 15515
+found bar id 15519
+found bar id 15521
+found bar id 15526
+found bar id 15530
+found bar id 15536
+found bar id 15540
+found bar id 15546
+found bar id 15551
+found bar id 15560
+found bar id 15565
+found bar id 15569
+found bar id 15574
+found bar id 15582
+found bar id 15586
+found bar id 15590
+found bar id 15596
+found bar id 15601
+found bar id 15605
+found bar id 15610
+found bar id 15617
+found bar id 15622
+found bar id 15626
+found bar id 15635
+found bar id 15639
+found bar id 15648
+found bar id 15651
+found bar id 15656
+found bar id 15661
+found bar id 15667
+found bar id 15671
+found bar id 15674
+found bar id 15679
+found bar id 15688
+found bar id 15694
+found bar id 15699
+found bar id 15705
+found bar id 15710
+found bar id 15714
+found bar id 15719
+found bar id 15723
+found bar id 15725
+found bar id 15732
+found bar id 15738
+found bar id 15742
+found bar id 15748
+found bar id 15753
+found bar id 15758
+found bar id 15764
+found bar id 15770
+found bar id 15774
+found bar id 15780
+found bar id 15786
+found bar id 15791
+found bar id 15795
+found bar id 15801
+found bar id 15803
+found bar id 15806
+found bar id 15810
+found bar id 15812
+found bar id 15816
+found bar id 15820
+found bar id 15825
+found bar id 15827
+found bar id 15832
+found bar id 15834
+found bar id 15836
+found bar id 15838
+found bar id 15840
+found bar id 15842
+found bar id 15844
+found bar id 15847
+found bar id 15849
+found bar id 15850
+found bar id 15853
+found bar id 15856
+found bar id 15859
+found bar id 15861
+found bar id 15863
+found bar id 15865
+found bar id 15866
+found bar id 15867
+found bar id 15868
+found bar id 15869
+found bar id 15870
+found bar id 15871
+found bar id 15872
+found bar id 15873
+found bar id 15874
+found bar id 15875
+found bar id 15876
+found bar id 15877
+found bar id 15878
+found bar id 15879
+found bar id 15880
+found bar id 15881
+found bar id 15882
+found bar id 15883
+found bar id 15884
+found bar id 15885
+found bar id 15886
+found bar id 15887
+found bar id 15888
+found bar id 15889
+found bar id 15890
+found bar id 15891
+found bar id 15892
+found bar id 15893
+found bar id 15894
+found bar id 15895
+found bar id 15896
+found bar id 15897
+found bar id 15898
+found bar id 15899
+found bar id 15900
+found bar id 15901
+found bar id 15902
+found bar id 15903
+found bar id 15904
+start_ema 2017-03-22 15:20:00+00:00 start_vwap 2017-03-23 09:35:00+00:00 last_bar 2017-03-23 10:00:00+00:00 Writing to ./data/SHLD_livesignals_20170323_09_40_09.csv ./data/SHLD_last.csv
+ET:  0.12  minutes
+now 2017-03-23 10:00:00.888000
