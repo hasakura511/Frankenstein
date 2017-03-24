@@ -232,6 +232,7 @@ class Frankenstein():
         if self.mode == 'live':
             if 'signals' in dir(self) and self.signals.shape[0]>self.max_emalookback:
                 lastbar = getFeed(self.symbol, 2, self.interval)
+                print 2,'bars requested', lastbar.shape[0], 'bars returned'
                 if lastbar is None:
                     #print 'new bar not ready'
                     txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
@@ -242,6 +243,7 @@ class Frankenstein():
                     data = self.signals.append(lastbar).copy()['Date','Open','High','Low','Close','Volume']
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
+                print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
 
             if data is None:
                 #print 'new bar not ready'
@@ -285,7 +287,7 @@ class Frankenstein():
 
             if len(data.dropna())<1:
                 print 'data.dropna() feed returned insufficient data'
-                print data.to_csv(dataPath+self.symbol+'_debug.csv')
+                data.to_csv(dataPath+self.symbol+'_debug.csv')
                 txt = self.symbol + ' feed returned insufficient data! check logs.'
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
