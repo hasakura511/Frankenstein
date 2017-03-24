@@ -206,7 +206,7 @@ class Frankenstein():
         self.ema_lookback_pctchg = 0.001
         self.ema_lookback2 = 20
         self.max_emalookback = max(self.ema_lookback, self.ema_lookback2)
-        self.vwap_lookback = self.max_emalookback + 24 * 60 / 5
+        self.vwap_lookback = self.max_emalookback + 24 * 60 / 5 * 2
         self.maxlookback = max(self.max_emalookback, self.vwap_lookback)
         self.mode = mode
         self.shutdown_time=datetime.time(10, 0)

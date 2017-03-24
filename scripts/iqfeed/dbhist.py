@@ -158,7 +158,7 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         
                        
                         if date:
-                            eastern=timezone('EST5EDT')
+                            eastern=timezone('US/Eastern')
                             date=dateutil.parser.parse(date)
                             date=eastern.localize(date,is_dst=True)
                             quote={ 'Date':date,
