@@ -19,7 +19,6 @@ import time
 import threading
 import dateutil 
 #lock = threading.Lock()
-
 sys.path.append("../../")
 sys.path.append("../")
 
@@ -159,7 +158,7 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         
                        
                         if date:
-                            eastern=timezone('US/Eastern')
+                            eastern=timezone('EST5EDT')
                             date=dateutil.parser.parse(date)
                             date=eastern.localize(date,is_dst=True)
                             quote={ 'Date':date,

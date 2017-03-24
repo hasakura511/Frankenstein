@@ -58,6 +58,7 @@ def getFeed(symbol, lookback, interval):
     global lastDate
     try:
         data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
+        data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
         return data
     except Exception as e:
         print e
@@ -243,7 +244,7 @@ class Frankenstein():
                     data = self.signals.append(lastbar).copy()['Date','Open','High','Low','Close','Volume']
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
-                data.to_csv(dataPath+self.symbol+'_debug.csv')
+                data.to_csv(dataPath+self.symbol+'_feed.csv')
                 print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
 
             if data is None:
@@ -272,6 +273,7 @@ class Frankenstein():
             if self.mode == 'live':
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
         else:
+            print 'start_idx', start_idx
             start_ema = start_idx[-1][0] - self.max_emalookback
 
             data = data.iloc[start_ema + 1:]
