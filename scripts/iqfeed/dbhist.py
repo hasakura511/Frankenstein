@@ -31,6 +31,7 @@ from dateutil.parser import parse
 import psycopg2
 import threading
 from dateutil.relativedelta import relativedelta
+eastern=timezone('US/Eastern')
 try:
     dbstr="dbname=" + settings.DATABASES['default']['NAME'] + \
           " user=" + settings.DATABASES['default']['USER'] + \
@@ -77,8 +78,10 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
         instrument.save()
     
     timenow=datetime.now() 
-    if not last.has_key(symbol) or last[symbol] < timenow - relativedelta(minutes=1):
-        last[symbol]=timenow
+    mykey = "%s|%s|%s" % (symbol, interval, maxdatapoints)
+    if not last.has_key(mykey) or last[mykey] < timenow - relativedelta(minutes=1):
+        last[mykey]=timenow
+        (symbol, interval, maxdatapoints)=mykey.split('|')
         threads = []
         feed_thread = threading.Thread(target=bg_get_hist, args=[instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype])
         feed_thread.daemon=True
@@ -92,7 +95,8 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     sql +=' WHERE frequency=%s AND instrument_id=%s and date <= now() - interval \'5 minutes\' ' % (interval, instrument.id)
     sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
     data = pd.read_sql(sql, c, index_col='Date')
-    #print data
+    data.index=data.index.tz_convert(eastern)
+    #print data.index[-1]
     return data
 
 
@@ -158,9 +162,10 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         
                        
                         if date:
-                            eastern=timezone('US/Eastern')
+                            
                             date=dateutil.parser.parse(date)
                             date=eastern.localize(date,is_dst=True)
+                            #print date
                             quote={ 'Date':date,
                                 'Open':open,
                                 'High':high,
@@ -170,7 +175,7 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                                 'TotalVolume':total_volume,
                                #'wap':WAP,
                             }
-                            
+                            #print quote
                             saveQuote(symbol, instrument, interval, quote)
                             #self.saveQuote(dbcontract, quote)
                             

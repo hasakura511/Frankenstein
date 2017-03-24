@@ -52,13 +52,14 @@ def runThreads(threadlist):
 logPath = './logs/'
 #stocks = pd.read_csv('stocks_test.csv')
 stocks = pd.read_csv('stocks.csv')
+stocklist=stocks.Symbol.tolist()
 runPath = './frankenstein.py'
 threadlist = [['d:/anaconda2/python',runPath]+[str(y) for y in stocks.ix[x]] for x in stocks.index]
 threadlist = [(t[2],t) for t in threadlist]
 print len(threadlist), 'threads found..'
-txt="Starting indentured services.. "+str(len(threadlist))+' symbols found. '+str(dt.now())
+txt=str(len(threadlist))+' symbols found. '+str(stocklist)
 slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
-txt="I hope you picked good stocks today..\n BETTER WIN OR LEAVE FRANK!!!"
+txt+="\nI hope you picked good stocks today..\n BETTER WIN OR LEAVE FRANK!!!"
 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
 runThreads(threadlist)
 print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()

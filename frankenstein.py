@@ -8,6 +8,7 @@ import sqlite3
 import talib as ta
 import os
 import json
+from pytz import timezone
 from os import listdir
 from os.path import isfile, join
 import datetime
@@ -56,10 +57,20 @@ def checkTableExists(dbcon, tablename):
 
 def getFeed(symbol, lookback, interval):
     global lastDate
+    eastern = timezone('EST5EDT')
     try:
         data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
-        data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
-        return data
+        #data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
+        data.index=[x.astimezone(eastern) for x in data.index]
+        data.index=[x.replace(tzinfo=None) for x in data.index]
+        data.to_csv(dataPath+symbol+'_feed.csv')
+        #print data
+        if data.shape[0]<1 or data.index[-1] <= lastDate:
+            return None
+        else:
+            print 'last bar', data.index[-1], 'last processed bar', lastDate
+            lastDate = data.index[-1]
+            return data
     except Exception as e:
         print e
         txt="Feed error: "+str(e)+"\n"
@@ -67,12 +78,7 @@ def getFeed(symbol, lookback, interval):
         slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
     
     
-    if data.shape[0]<1 or data.index[-1] <= lastDate:
-        return None
-    else:
-        print 'last bar', data.index[-1], 'last processed bar', lastDate
-        lastDate = data.index[-1]
-        return data
+
 
 
 def getFeedHistory(symbol, maxlookback, interval):
@@ -241,11 +247,10 @@ class Frankenstein():
                     slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                     return
                 else:
-                    data = self.signals.append(lastbar).copy()['Date','Open','High','Low','Close','Volume']
+                    data = self.signals.append(lastbar.iloc[0]).copy()['Date','Open','High','Low','Close','Volume']
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
-                data.to_csv(dataPath+self.symbol+'_feed.csv')
-                print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
+
 
             if data is None:
                 #print 'new bar not ready'
@@ -254,6 +259,7 @@ class Frankenstein():
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:
+                print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
                 if self.broker == None:
                     start_idx = [(i, date) for i, date in enumerate(data.index) \
                                  if date.minute == 35 and date.hour == 9]
@@ -338,11 +344,12 @@ class Frankenstein():
                     qty.append(int(0))
                 else:
                     if x != 0 and qty[i - 1] == 0:
-                        qty.append(int(x))
+                        qty.append(int(self.size/x))
                     else:
                         qty.append(qty[i - 1])
 
             data['QTY']=qty
+            data['value']=qty*data.Close
             '''
             if 'lastqty' in dir(self):
                 self.previousqty = int(self.lastqty)
