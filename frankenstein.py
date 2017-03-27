@@ -66,11 +66,13 @@ def getFeed(symbol, lookback, interval):
         data.to_csv(dataPath+symbol+'_feed.csv')
         #print data
         if data.shape[0]<1 or data.index[-1] <= lastDate:
+            print 'return None: last bar', data.index[-1], 'last processed bar', lastDate
             return None
         else:
-            print 'last bar', data.index[-1], 'last processed bar', lastDate
+            print 'return data: last bar', data.index[-1], 'last processed bar', lastDate
             lastDate = data.index[-1]
             return data
+        
     except Exception as e:
         print e
         txt="Feed error: "+str(e)+"\n"
@@ -239,14 +241,16 @@ class Frankenstein():
         if self.mode == 'live':
             if 'signals' in dir(self) and self.signals.shape[0]>self.max_emalookback:
                 lastbar = getFeed(self.symbol, 2, self.interval)
-                print 2,'bars requested', lastbar.shape[0], 'bars returned'
+                
                 if lastbar is None:
                     #print 'new bar not ready'
+                    print 2,'bars requested None returned'
                     txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                     print txt
                     slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                     return
                 else:
+                    print 2,'bars requested', lastbar.shape[0], 'bars returned'
                     data = self.signals.append(lastbar.iloc[0]).copy()['Date','Open','High','Low','Close','Volume']
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
