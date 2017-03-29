@@ -1,0 +1,16 @@
+MARKET IS CLOSING. CLEARING POSITIONS!
+[]
+0
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://collective2.com:443 "POST /world/apiv3/setDesiredPositions HTTP/1.1" 200 None
+{
+   "ok" : "1",
+   "response" : []
+}
+
+sent orders to broker
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://api.collective2.com:443 "POST /world/apiv3/getDesiredPositions HTTP/1.1" 200 None
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.collective2.com
+DEBUG:requests.packages.urllib3.connectionpool:https://api.collective2.com:443 "POST /world/apiv3/retrieveSystemEquity HTTP/1.1" 200 None
+Elapsed time:  0.13  minutes  2017-03-28 15:59:09.539000
