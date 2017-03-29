@@ -1,6 +1,16 @@
 import sys
 import iqfeed.dbhist as dbhist
 import time
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
+import beCOMPANY
+import beCOMPANY.settings as settings
+from main.models import *
+from dateutil.parser import parse
+import psycopg2
+import threading
+from dateutil.relativedelta import relativedelta
+import time
 """
 Created on Tue Mar 08 20:10:29 2016
 3 mins - 2150 dp per request
@@ -16,7 +26,16 @@ def    main():
         interval=sys.argv[2]
         maxdatapoints=sys.argv[3]
         #while 1:
-        data=dbhist.get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+        symbol=symbol.upper()
+        instrument_list=Instrument.objects.filter(sym=symbol)
+        if instrument_list and len(instrument_list) > 0:
+            instrument=instrument_list[0]
+        else:
+            instrument=Instrument()
+            instrument.sym=symbol
+            instrument.save()
+        data=dbhist.bg_get_hist(instrument, symbol, interval, maxdatapoints)
+        #data=dbhist.get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
         #time.sleep(5)
     else:
         print "Usage: get_iqhist.py AAPL 60 100"
