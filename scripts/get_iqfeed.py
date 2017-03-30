@@ -28,7 +28,7 @@ def    main():
         interval=sys.argv[1]
         maxdatapoints=sys.argv[2]
         i=0
-        with open("../stocks.txt", 'rb') as f:
+        with open("../stocks.csv", 'rb') as f:
             reader = csv.reader(f)
             rownum=0
             for row in reader:
@@ -37,15 +37,13 @@ def    main():
                 if rownum > 1:
                     (symbol,qty,exch)=row
                     symbols.append(symbol)
-                '''
-                if i > 2:
+                if i > 10:
                     i=0
                     feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints])
                     feed_thread.daemon=True
                     threads.append(feed_thread)
                     symbols=[]
-                '''
-        #[t.start() for t in threads]
+        [t.start() for t in threads]
         #while 1:
         data=dbhist.get_mult_hist(symbols, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
         #time.sleep(5)

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 495, in <module>
+    frank.runlive()
+  File "./frankenstein.py", line 458, in runlive
+    time.sleep(timeleft)
+IOError: [Errno 4] Interrupted function call

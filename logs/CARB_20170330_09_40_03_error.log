@@ -1,0 +1,17 @@
+no mem for new parser
+Traceback (most recent call last):
+  File "./frankenstein.py", line 6, in <module>
+    import pandas as pd
+  File "d:\anaconda2\lib\site-packages\pandas\__init__.py", line 39, in <module>
+    
+  File "d:\anaconda2\lib\site-packages\pandas\core\api.py", line 10, in <module>
+    
+  File "d:\anaconda2\lib\site-packages\pandas\core\groupby.py", line 40, in <module>
+    
+  File "d:\anaconda2\lib\site-packages\pandas\core\frame.py", line 65, in <module>
+    
+  File "d:\anaconda2\lib\site-packages\pandas\core\generic.py", line 42, in <module>
+    
+  File "d:\anaconda2\lib\site-packages\pandas\core\internals.py", line 55, in <module>
+    
+MemoryError

@@ -9,7 +9,6 @@ from tzlocal import get_localzone
 
 import json
 import time
-from pandas.io.json import json_normalize
 import pandas as pd
 import threading
 import sys

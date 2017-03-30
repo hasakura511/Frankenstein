@@ -1,0 +1,7 @@
+'Index' object has no attribute 'tz_convert'
+IMMY getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:41:23.648000
+now 2017-03-30 09:45:01.432000 server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+IMMY getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:45:09.863000

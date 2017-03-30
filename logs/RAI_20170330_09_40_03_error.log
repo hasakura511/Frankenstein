@@ -1,0 +1,25 @@
+no mem for new parser
+Traceback (most recent call last):
+  File "./frankenstein.py", line 16, in <module>
+    
+  File "E:\Frankenstein\scripts\iqfeed\dbhist.py", line 28, in <module>
+    
+  File "E:\Frankenstein\beCOMPANY\settings.py", line 128, in <module>
+    ],
+  File "d:\anaconda2\lib\site-packages\django\__init__.py", line 18, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "d:\anaconda2\lib\site-packages\django\apps\registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "d:\anaconda2\lib\site-packages\django\apps\config.py", line 90, in create
+    module = import_module(entry)
+  File "d:\anaconda2\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "d:\anaconda2\lib\site-packages\django\contrib\admin\__init__.py", line 4, in <module>
+    from django.contrib.admin.filters import (
+  File "d:\anaconda2\lib\site-packages\django\contrib\admin\filters.py", line 10, in <module>
+    from django.contrib.admin.options import IncorrectLookupParameters
+  File "d:\anaconda2\lib\site-packages\django\contrib\admin\options.py", line 8, in <module>
+    from django.contrib import messages
+  File "d:\anaconda2\lib\site-packages\django\contrib\messages\__init__.py", line 1, in <module>
+    from django.contrib.messages.api import *  # NOQA
+MemoryError

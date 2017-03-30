@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 16, in <module>
+    import scripts.iqfeed.dbhist as dbhist
+  File "E:\Frankenstein\scripts\iqfeed\dbhist.py", line 28, in <module>
+    import beCOMPANY.settings as settings
+  File "E:\Frankenstein\beCOMPANY\settings.py", line 128, in <module>
+    django.setup()
+  File "d:\anaconda2\lib\site-packages\django\__init__.py", line 15, in setup
+    from django.utils.log import configure_logging
+  File "d:\anaconda2\lib\site-packages\django\utils\log.py", line 14, in <module>
+    from django.views.debug import ExceptionReporter
+  File "d:\anaconda2\lib\site-packages\django\views\debug.py", line 10, in <module>
+    from django.template import Context, Engine, TemplateDoesNotExist
+  File "d:\anaconda2\lib\site-packages\django\template\__init__.py", line 44, in <module>
+    from .engine import Engine
+  File "d:\anaconda2\lib\site-packages\django\template\engine.py", line 9, in <module>
+    from .base import Context, Template
+ImportError: cannot import name Context

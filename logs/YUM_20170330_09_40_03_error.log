@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 6, in <module>
+    import pandas as pd
+  File "d:\anaconda2\lib\site-packages\pandas\__init__.py", line 31, in <module>
+    "the C extensions first.".format(module))
+ImportError: C extension: DLL load failed: The paging file is too small for this operation to complete. not built. If you want to import pandas from the source directory, you may need to run 'python setup.py build_ext --inplace --force' to build the C extensions first.
