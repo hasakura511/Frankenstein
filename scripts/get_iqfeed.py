@@ -1,6 +1,6 @@
 import sys
 import iqfeed.dbhist as dbhist
-import time
+import time as tt
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
 import beCOMPANY
@@ -28,6 +28,7 @@ def    main():
         interval=sys.argv[1]
         maxdatapoints=sys.argv[2]
         i=0
+        seen=dict()
         with open("../stocks.csv", 'rb') as f:
             reader = csv.reader(f)
             rownum=0
@@ -36,6 +37,7 @@ def    main():
                 i+=1
                 if rownum > 1:
                     (symbol,qty,exch)=row
+                    seen[symbol]=qty
                     symbols.append(symbol)
                 if i > 10:
                     i=0
@@ -43,10 +45,37 @@ def    main():
                     feed_thread.daemon=True
                     threads.append(feed_thread)
                     symbols=[]
+        
+        if len(symbols) > 0:
+            feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints])
+            feed_thread.daemon=True
+            threads.append(feed_thread)
         [t.start() for t in threads]
-        #while 1:
-        data=dbhist.get_mult_hist(symbols, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
-        #time.sleep(5)
+        while 1:
+            threads=[]
+            try:
+                with open("../stocks.csv", 'rb') as f:
+                    reader = csv.reader(f)
+                    rownum=0
+                    symbols=[]
+                    for row in reader:
+                        rownum+=1
+                        i+=1
+                        if rownum > 1:
+                            (symbol,qty,exch)=row
+                            if not seen.has_key(symbol):
+                                print 'Found New Symbol, ', symbol
+                                seen[symbol]=qty
+                                symbols.append(symbol)
+                    if len(symbols) > 0:
+                        feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints])
+                        feed_thread.daemon=True
+                        threads.append(feed_thread)
+                [t.start() for t in threads]
+                        
+                tt.sleep(5)
+            except Exception as e:
+                print e
     else:
         print "Usage: get_iqhist.py 300 100"
         

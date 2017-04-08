@@ -77,19 +77,6 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
         instrument.sym=symbol
         instrument.save()
     
-    #timenow=datetime.now() 
-    #mykey = "%s|%s|%s" % (symbol, interval, maxdatapoints)
-    #if not last.has_key(mykey) or last[mykey] < timenow - relativedelta(minutes=1):
-    #    last[mykey]=timenow
-    #    (symbol, interval, maxdatapoints)=mykey.split('|')
-    #    threads = []
-    #    feed_thread = threading.Thread(target=bg_get_hist, args=[instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype])
-    #    feed_thread.daemon=True
-    #    threads.append(feed_thread)
-    #    [t.start() for t in threads]
-    #    [t.join() for t in threads]
-    
-    
     sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
     sql +=' FROM main_feed2 '
     sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
