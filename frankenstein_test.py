@@ -284,7 +284,7 @@ class Frankenstein():
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
         else:
             print 'start_idx', start_idx
-            start_ema = start_idx[0][0] - self.max_emalookback
+            start_ema = start_idx[1][0] - self.max_emalookback
 
             data = data.iloc[start_ema + 1:]
             print 'start_ema', data.iloc[0].name,

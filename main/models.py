@@ -1166,6 +1166,46 @@ class Feed(models.Model):
         self.updated_at = datetime.now().replace(tzinfo=eastern)  
         super(Feed, self).save(*args, **kwargs)
 
+class Feed2(models.Model):
+    instrument=models.ForeignKey(Instrument, db_index=True)
+    frequency=models.IntegerField(null=True, db_index=True)
+    date=models.DateTimeField(
+        null=True, db_index=True)
+    open=models.FloatField(null=True)
+    high=models.FloatField(null=True)
+    low=models.FloatField(null=True)
+    close=models.FloatField(null=True)
+    change=models.FloatField(null=True)
+    settle=models.FloatField(null=True)
+    open_interest=models.FloatField(null=True)
+    
+    volume=models.FloatField(null=True)
+    wap=models.FloatField(null=True)
+    
+    created_at = models.DateTimeField(
+        auto_now_add=True, null=True, db_index=True)
+    updated_at = models.DateTimeField(
+        auto_now_add=True, null=True, db_index=True)
+    crawl_source=models.CharField(max_length=200, default='', blank=True, null=True)
+
+    def __repr__(self):
+        #return '{ "date":"%s", "open":%s, "high":%s, "low":%s, "close":%s,"volume":%s }' % (self.date, self.open, self.high, self.low, self.close, self.volume)
+        return '{ "date":"%s",  "close":%s,"volume":%s }' % (self.date,  self.close, self.volume)
+        
+    def __str__(self):
+        return self.__repr__()
+    
+    def __unicode__(self):
+        return self.__repr__()
+    
+    def save(self, *args, **kwargs):
+        eastern=timezone('US/Eastern')
+       
+        if self.created_at == None:
+            self.created_at = datetime.now().replace(tzinfo=eastern)  
+        if self.updated_at == None:
+            self.updated_at = datetime.now().replace(tzinfo=eastern)  
+        super(Feed2, self).save(*args, **kwargs)
 
 class Prediction(models.Model):
     instrument=models.ForeignKey(Instrument, db_index=True)

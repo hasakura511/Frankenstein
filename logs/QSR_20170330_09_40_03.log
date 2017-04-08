@@ -1,8 +1,0 @@
-'Index' object has no attribute 'tz_convert'
-QSR getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:41:54.590000
-now 2017-03-30 09:45:01.507000 'Index' object has no attribute 'tz_convert'
-QSR getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:45:09.222000
-now 2017-03-30 09:50:00.618000 'Index' object has no attribute 'tz_convert'
-QSR getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:01.405000
-now 2017-03-30 09:55:00.874000 'Index' object has no attribute 'tz_convert'
-QSR getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.645000

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!\bin\sh
 #@ECHO OFF 
 # -----------------------------------------------------------
 # -----------------------------------------------------------
@@ -30,9 +30,9 @@
 # -----------------------------------------------------------
 # -----------------------------------------------------------
 # -----------------------------------------------------------
-# Website for API information: http://www.iqfeed.net/dev/api/docs/
+# Website for API information: http:\\www.iqfeed.net\dev\api\docs\
 # -----------------------------------------------------------
-javac -verbose -cp "." common/Java_Config.java  common/IQFeed_Socket.java Level1Socket/Level1Socket.java -d Level1Socket/classes
+javac -verbose -cp "..\jars\postgresql-42.0.0.jar;." common\FeedDB.java  common\Java_Config.java  common\IQFeed_Socket.java Level1Socket\Level1Socket.java -d Level1Socket\classes
 # This command executes the tool.
-java -cp "Level1Socket/classes" Level1Socket
+java -cp "..\jars\postgresql-42.0.0.jar;Level1Socket\classes" Level1Socket
 #pause

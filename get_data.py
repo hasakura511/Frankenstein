@@ -47,8 +47,9 @@ def getFeed(symbol, lookback, interval):
         #data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
         data.index=[x.astimezone(eastern) for x in data.index]
         data.index=[x.replace(tzinfo=None) for x in data.index]
-        filename=dataPath+symbol+'_feed.csv')
+        filename=dataPath+symbol+'_hist.csv'
         data.to_csv(filename)
+        print 'wrote to', filename
         #print data
         if data.shape[0]<1:
             #print 'return None: last bar', data.index[-1], 'last processed bar', lastDate
@@ -75,6 +76,6 @@ if __name__ == "__main__":
     interval= int(sys.argv[3])
     data=getFeed(symbol, lookback, interval)
     if data is not None:
-        print 'Success!'
+        print 'Success!', data.shape[0], 'bars returned'
     # frank.run()
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()
