@@ -51,7 +51,7 @@ def runThreads(threadlist):
 
 logPath = './logs/'
 #stocks = pd.read_csv('stocks_test.csv')
-stocks = pd.read_csv('stocks.csv')
+stocks = pd.read_csv('frankenstein.csv')
 stocks.columns= [x.lower().strip() for x in stocks.columns]
 stocklist=stocks.symbol.tolist()
 runPath = './frankenstein.py'
