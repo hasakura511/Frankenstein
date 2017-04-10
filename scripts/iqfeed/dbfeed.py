@@ -319,7 +319,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                         'TotalVolume':symstate[sym]['total_volume'],
                                                        #'wap':WAP,
                                                     }
-                                                    print quote
+                                                    #print quote
                                                     saveQuote(sym.upper(), instDict[sym.upper()], interval, quote)
                                             
                                                     symstate[sym]['startdate']=symstate[sym]['enddate']
@@ -526,7 +526,6 @@ def bg_get_history_mult(symbols, interval, maxdatapoints,datadirection=0,request
                                 if date:
                                     
                                     date=dateutil.parser.parse(date)
-                                    date=eastern.localize(date,is_dst=True)
                                     #print date
                                     quote={ 'Date':date,
                                         'Open':open,
