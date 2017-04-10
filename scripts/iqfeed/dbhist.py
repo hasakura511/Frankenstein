@@ -91,7 +91,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     
     
     sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
-    sql +=' FROM main_feed '
+    sql +=' FROM main_feedlive '
     sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
     sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
     data = pd.read_sql(sql, c, index_col='Date')
