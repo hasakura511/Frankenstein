@@ -1,0 +1,3 @@
+'Index' object has no attribute 'tz_convert'
+SSKN getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:47:58.145000
+now 2017-04-10 09:50:00.125000 'Index' object has no attribute 'tz_convert'

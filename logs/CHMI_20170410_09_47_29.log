@@ -1,0 +1,10 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+CHMI getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:49:18.517000
+now 2017-04-10 09:50:00.526000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+CHMI getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:02.197000
+now 2017-04-10 09:55:00.276000 global name 'c' is not defined
+CHMI getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.342000
+now 2017-04-10 10:00:01.084000

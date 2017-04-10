@@ -1,0 +1,11 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+WFM getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:46.706000
+now 2017-04-10 09:50:00.467000 FATAL:  sorry, too many clients already
+
+WFM getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:01.831000
+now 2017-04-10 09:55:00.592000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+WFM getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.666000
+now 2017-04-10 10:00:01.148000

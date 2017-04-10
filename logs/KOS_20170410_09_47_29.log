@@ -1,0 +1,10 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+KOS getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:49:14.117000
+now 2017-04-10 09:50:01.015000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+KOS getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:02.016000
+now 2017-04-10 09:55:00.138000 global name 'c' is not defined
+KOS getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.211000
+now 2017-04-10 10:00:00.954000

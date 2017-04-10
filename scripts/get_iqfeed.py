@@ -68,6 +68,10 @@ def    main():
                                 seen[symbol]=qty
                                 symbols.append(symbol)
                     if len(symbols) > 0:
+                        feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, 10000, 0,'','','', False])
+                        feed_thread.daemon=True
+                        threads.append(feed_thread)
+
                         feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints])
                         feed_thread.daemon=True
                         threads.append(feed_thread)

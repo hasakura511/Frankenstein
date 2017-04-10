@@ -1,0 +1,11 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+LZB getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:56.557000
+now 2017-04-10 09:50:00.531000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+LZB getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:01.686000
+now 2017-04-10 09:55:00.588000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+LZB getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.644000
+now 2017-04-10 10:00:01.146000

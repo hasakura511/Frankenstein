@@ -1,0 +1,8 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+IBKR getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:48.303000
+now 2017-04-10 09:50:02.546000 server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+

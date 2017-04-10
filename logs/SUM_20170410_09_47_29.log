@@ -1,0 +1,9 @@
+I am unable to connect to the database.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+SUM getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:38.634000
+now 2017-04-10 09:50:00.650000 FATAL:  sorry, too many clients already
+
+SUM getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:02.353000

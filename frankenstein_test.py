@@ -14,6 +14,7 @@ from os.path import isfile, join
 import datetime
 from datetime import datetime as dt
 import scripts.iqfeed.dbhist as dbhist
+
 import slackweb
 fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
 slackhook='https://hooks.slack.com/services/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'
@@ -59,7 +60,7 @@ def getFeed(symbol, lookback, interval):
     global lastDate
     eastern = timezone('EST5EDT')
     try:
-        data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
+        data = dbhist.get_realtime_hist(symbol, interval, lookback).sort_index(ascending=True)
         #data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
         data.index=[x.astimezone(eastern) for x in data.index]
         data.index=[x.replace(tzinfo=None) for x in data.index]
@@ -87,7 +88,7 @@ def getFeedHistory(symbol, maxlookback, interval):
     # global lastDate
     historylength = maxlookback * 2
 
-    data = dbhist.get_hist(symbol, interval, historylength).sort_index(ascending=True)
+    data = dbhist.get_realtime_hist(symbol, interval, historylength).sort_index(ascending=True)
     print data
 
     filename = dataPath + symbol + '_signals.csv'

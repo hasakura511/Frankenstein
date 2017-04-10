@@ -99,7 +99,31 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     #print data.index[-1]
     return data
 
-
+def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+    #get_bitstampfeed()
+    global feed
+    global ohlc
+    
+    symbol=symbol.upper()
+    instrument_list=Instrument.objects.filter(sym=symbol)
+    if instrument_list and len(instrument_list) > 0:
+        instrument=instrument_list[0]
+    else:
+        instrument=Instrument()
+        instrument.sym=symbol
+        instrument.save()
+    
+    bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
+    
+    
+    sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
+    sql +=' FROM main_feed '
+    sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
+    sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
+    data = pd.read_sql(sql, c, index_col='Date')
+    data.index=data.index.tz_convert(eastern)
+    #print data.index[-1]
+    return data
 
 def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
     try:
@@ -190,19 +214,19 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
     except Exception as e:
         print e
 
-def get_mult_hist(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+def get_mult_hist(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=True):
     #get_bitstampfeed()
     global feed
     global ohlc
     
     
     
-    bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
+    bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype, loop=True)
     
 
 
 
-def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
+def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=True):
     try:
         # The IP address or hostname of your reader
         READER_HOSTNAME = 'localhost'
@@ -299,7 +323,8 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                 #print date,high,low,open,close,volume,total_volume,trades
                     except Exception as e:
                         logging.error("get_btcfeed", exc_info=True)
-                        
+            if not loop:
+                break;            
         return data
     except Exception as e:
         print e

@@ -1,0 +1,7 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+TWOU getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:37.486000
+now 2017-04-10 09:50:00.975000 FATAL:  sorry, too many clients already
+
+TWOU getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:02.410000

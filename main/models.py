@@ -1166,7 +1166,7 @@ class Feed(models.Model):
         self.updated_at = datetime.now().replace(tzinfo=eastern)  
         super(Feed, self).save(*args, **kwargs)
 
-class Feed2(models.Model):
+class FeedLive(models.Model):
     instrument=models.ForeignKey(Instrument, db_index=True)
     frequency=models.IntegerField(null=True, db_index=True)
     date=models.DateTimeField(
@@ -1205,7 +1205,7 @@ class Feed2(models.Model):
             self.created_at = datetime.now().replace(tzinfo=eastern)  
         if self.updated_at == None:
             self.updated_at = datetime.now().replace(tzinfo=eastern)  
-        super(Feed2, self).save(*args, **kwargs)
+        super(FeedLive, self).save(*args, **kwargs)
 
 class Prediction(models.Model):
     instrument=models.ForeignKey(Instrument, db_index=True)

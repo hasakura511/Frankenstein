@@ -1,0 +1,6 @@
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+AGRO getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:33.885000
+now 2017-04-10 09:50:00.964000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+AGRO getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:02.212000

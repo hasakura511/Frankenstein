@@ -78,7 +78,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
         instrument.save()
     
     sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
-    sql +=' FROM main_feed2 '
+    sql +=' FROM main_feedlive '
     sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
     sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
     data = pd.read_sql(sql, c, index_col='Date')
@@ -202,8 +202,12 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
         BUFFER_SIZE = 1024
          
         # Open a socket connection to the reader
-        s = socket.create_connection((READER_HOSTNAME, READER_PORT))
-             
+        s=None
+        while s==None:
+            try:
+                s = socket.create_connection((READER_HOSTNAME, READER_PORT))
+            except Exception as e:
+                s=None
         cmd = "S,REQUEST ALL UPDATE FIELDNAMES\r\n";
         s.sendall(cmd);
 
@@ -212,6 +216,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
         
         # Make a file pointer from the socket, so we can read lines
         fs=s.makefile()
+        instDict=dict()
         while 1:
             for symbol in symbols:
                 symbol=symbol.upper()
@@ -223,6 +228,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                     instrument=Instrument()
                     instrument.sym=symbol
                     instrument.save()
+                instDict[symbol]=instrument
                 # Receive data in an infinite loop
                 cmd="w%s\r\n" % (symbol)
                 s.sendall(cmd);
@@ -237,7 +243,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
             while 1:
                 #try:
                     line = fs.readline()
-                    print line
+                    #print line
                     # If data was received, print it
                     if (len(line)):
                         #print line
@@ -263,7 +269,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                             print 'Done',symbol
                             #return data
                         else:
-                            print line
+                            #print line
                             '''
                             Symbol,Ask,Ask Size,Bid,Bid Size,Total Volume,VWAP,
                             Open,High,Low,Close,Most Recent Trade,Most Recent Trade Size,Most Recent Trade Time,Most Recent Trade Market Center,Message Contents,Most Recent Trade Conditions
@@ -271,12 +277,13 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                             
 
                             if fields[0] == 'T':
-                                print 'Timestamp: ', line
+                                #print 'Timestamp: ', line
                                 datenow=parse(fields[1])
                                 min_interval=datenow.minute
                                 diff=(min_interval * 60) % interval
-
+                                
                                 for sym in symstate.keys():
+                                    print diff, sym, ' '
                                     if diff == 0:
                                         date=datetime(datenow.year, datenow.month, datenow.day, datenow.hour, datenow.minute)
                                         if symstate.has_key(sym) and symstate[sym].has_key('ask'):
@@ -293,14 +300,14 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                 symstate[sym]['last_total_volume']=total_volume
                                                 symstate[sym]['open']=mid
                                                 symstate[sym]['close']=mid
-                                        
+                                            print date, symstate[sym]['enddate']
                                             if date > symstate[sym]['enddate']:
-                                                diff_sec=symstate[sym]['enddate'] - symstate[sym]['enddate'].minute
+                                                diff_sec=date - symstate[sym]['enddate']
                                                 diff_sec=diff_sec.total_seconds()
+                                                print diff_sec
                                                 if diff_sec >= interval:
                                                     symstate[sym]['date']=date
                                                     symstate[sym]['close']=mid
-                                                    date=eastern.localize(date,is_dst=True)
                                                     #print date
                                                     symstate[sym]['volume']=total_volume - symstate[sym]['last_total_volume']
                                                     quote={ 'Date':date,
@@ -312,11 +319,11 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                         'TotalVolume':symstate[sym]['total_volume'],
                                                        #'wap':WAP,
                                                     }
-                                                    self.saveQuote(dbcontract, quote)
+                                                    print quote
+                                                    saveQuote(sym.upper(), instDict[sym.upper()], interval, quote)
                                             
                                                     symstate[sym]['startdate']=symstate[sym]['enddate']
                                                     symstate[sym]['enddate']=date
-                                                    saveQuote(symbol, instrument, interval, quote)
                                                     symstate[sym]['last_total_volume']=total_volume
                                                     symstate[sym]['asksize']=0
                                                     symstate[sym]['bidsize']=0
@@ -324,42 +331,72 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                     
                             if fields[0] == 'Q':
                                 sym=fields[1]
-                                ask=float(fields[2])
-                                asksize=float(fields[3])
-                                bid=float(fields[4])
-                                bidsize=float(fields[5])
-                                total_volume=float(fields[6])
-                                vwap=float(fields[7])
-                                open=float(fields[8])
-                                high=float(fields[9])
-                                low=float(fields[10])
-                                close=float(fields[11])
+                                ask=0
+                                asksize=0
+                                bid=0
+                                bidsize=0
+                                total_volume=0
+                                vwap=0
+                                open=0
+                                high=0
+                                low=0
+                                close=0
+                                if fields[2]:
+                                    ask=float(fields[2])
+                                if fields[3]:
+                                    asksize=float(fields[3])
+                                if fields[4]:
+                                    bid=float(fields[4])
+                                if fields[5]:
+                                    bidsize=float(fields[5])
+                                if fields[6]:
+                                    total_volume=float(fields[6])
+                                if fields[7]:
+                                    vwap=float(fields[7])
+                                if fields[8]:
+                                    open=float(fields[8])
+                                if fields[9]:
+                                    high=float(fields[9])
+                                if fields[10]:
+                                    low=float(fields[10])
+                                if fields[11]:
+                                    close=float(fields[11])
 
                                 
                                 if not symstate.has_key(sym):
-                                    mid=(ask+bid)/2
                                     symstate[sym]=dict()
-                                    symstate[sym]['ask']=ask
                                     symstate[sym]['asksize']=0
-                                    symstate[sym]['bid']=bid
                                     symstate[sym]['bidsize']=0
-                                    symstate[sym]['vwap']=vwap
-                                    symstate[sym]['total_volume']=total_volume
                                     symstate[sym]['last_total_volume']=total_volume
                                     
-                                if symstate.has_key(sym):
-                                    symstate[sym]=dict()
-                                    mid=(ask+bid)/2
-                                    if mid > symstate[sym]['high']:
-                                        symstate[sym]['high']=mid
+                                if ask:
                                     symstate[sym]['ask']=ask
-                                    
-                                    symstate[sym]['asksize']+=asksize
-                                    if mid < symstate[sym]['low']:
-                                        symstate[sym]['low']=mid
-                                    symstate[sym]['bidsize']+=bidsize
+                                if bid:
+                                    symstate[sym]['bid']=bid
+                                if vwap:
                                     symstate[sym]['vwap']=vwap
+                                if total_volume:
                                     symstate[sym]['total_volume']=total_volume
+                                    
+                                if symstate.has_key(sym):
+                                    if not ask and symstate[sym].has_key('ask'):
+                                        ask=symstate['ask']
+                                    if not bid and symstate[sym].has_key('bid'):
+                                        bid=symstate['bid']
+                                    if ask and bid:
+                                        mid=(ask+bid)/2
+                                        if not symstate[sym].has_key('high') or mid > symstate[sym]['high']:
+                                            symstate[sym]['high']=mid
+                                        if not symstate[sym].has_key('low') or mid < symstate[sym]['low']:
+                                            symstate[sym]['low']=mid
+                                    if asksize:
+                                        symstate[sym]['asksize']+=asksize
+                                    if bidsize:
+                                        symstate[sym]['bidsize']+=bidsize
+                                    if vwap:
+                                        symstate[sym]['vwap']=vwap
+                                    if total_volume:
+                                        symstate[sym]['total_volume']=total_volume
                                     
                                     
                 #except Exception as e:
@@ -376,15 +413,16 @@ def saveQuote(symbol, instrument, interval, quote):
         
         
         date=quote['Date'] # .replace(tzinfo=eastern) - relativedelta(minutes=1) 
-        
-        bar_list=Feed2.objects.filter(date=date).filter(instrument_id=instrument.id).filter(frequency=frequency)
+        date=eastern.localize(date,is_dst=True)
+                                                    
+        bar_list=FeedLive.objects.filter(date=date).filter(instrument_id=instrument.id).filter(frequency=frequency)
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
         if bar_list and len(bar_list) > 0:
             bar=bar_list[0]
             #print "found bar id",bar.id
         else:
             print 'New Bar: ', quote
-            bar=Feed2()
+            bar=FeedLive()
             bar.instrument_id=instrument.id
             bar.frequency=frequency
             bar.date=date
@@ -396,6 +434,123 @@ def saveQuote(symbol, instrument, interval, quote):
         if quote.has_key('VWAP'):
             bar.wap=quote['VWAP']
         bar.save()
+
+
+
+def get_mult_history(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=True):
+    #get_bitstampfeed()
+    global feed
+    global ohlc
+    
+    
+    
+    bg_get_history_mult(symbols, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype, loop=True)
+    
+
+
+
+def bg_get_history_mult(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=True):
+    try:
+        # The IP address or hostname of your reader
+        READER_HOSTNAME = 'localhost'
+        # The TCP port specified in Speedway Connect
+        READER_PORT = 9100
+        # Define the size of the buffer that is used to receive data.
+        BUFFER_SIZE = 1024
+         
+        # Open a socket connection to the reader
+        s = socket.create_connection((READER_HOSTNAME, READER_PORT))
+             
+        # Set the socket to non-blocking
+        #s.setblocking(0)
+         
+        # Make a file pointer from the socket, so we can read lines
+        fs=s.makefile()
+        while 1:
+            for symbol in symbols:
+                symbol=symbol.upper()
+                print 'Getting ', symbol
+                instrument_list=Instrument.objects.filter(sym=symbol)
+                if instrument_list and len(instrument_list) > 0:
+                    instrument=instrument_list[0]
+                else:
+                    instrument=Instrument()
+                    instrument.sym=symbol
+                    instrument.save()
+                # Receive data in an infinite loop
+                cmd="HIX,%s,%s,%s,%s,%s,%s,%s\r\n" % (symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
+                s.sendall(cmd);
+                
+                data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
+                i=0
+                while 1:
+                    try:
+                        line = fs.readline()
+                        # If data was received, print it
+                        if (len(line)):
+                            #print line
+                            fields=line.strip().split(',')
+                            '''
+                                Format    Notes
+                                    Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
+                                    Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
+                                    High    Decimal    Example: 146.2587
+                                    Low    Decimal    Example: 145.2587
+                                    Open    Decimal    Example: 146.2587
+                                    Close    Decimal    Example: 145.2587
+                                    Total Volume    Integer    Example: 1285001
+                                    Period Volume    Integer    Example: 1285
+                                    Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
+                                    Example data:    Request: HIX,GOOG,60,10<CR><LF>
+                                    2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
+                            '''
+                            if fields[0] == '!ENDMSG!':
+                                #s.close()
+                                time.sleep(1)
+                                print 'Done',symbol
+                                break;
+                                #return data
+                            else:
+                                #print line
+                                date=fields[0]
+                                high=float(fields[1])
+                                low=float(fields[2])
+                                open=float(fields[3])
+                                close=float(fields[4])
+                                total_volume=float(fields[5])
+                                volume=float(fields[6])
+                                trades=fields[7]
+                                
+                                
+                               
+                                if date:
+                                    
+                                    date=dateutil.parser.parse(date)
+                                    date=eastern.localize(date,is_dst=True)
+                                    #print date
+                                    quote={ 'Date':date,
+                                        'Open':open,
+                                        'High':high,
+                                        'Low':low,
+                                        'Close':close,
+                                        'Volume':volume,
+                                        'TotalVolume':total_volume,
+                                       #'wap':WAP,
+                                    }
+                                    if i > 0:
+                                        saveQuote(symbol, instrument, interval, quote)
+                                    #self.saveQuote(dbcontract, quote)
+                                    
+                                    data.loc[date] = [open,high,low,close,volume,total_volume]
+                                    i+=1
+                                #print date,high,low,open,close,volume,total_volume,trades
+                    except Exception as e:
+                        logging.error("get_btcfeed", exc_info=True)
+            if not loop:
+                break;            
+        return data
+    except Exception as e:
+        print e
         
 def    main():
     if len(sys.argv) > 3:

@@ -1,0 +1,13 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+CBIO getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:49:27.535000
+now 2017-04-10 09:50:00.414000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+CBIO getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:01.853000
+now 2017-04-10 09:55:01.002000 server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+CBIO getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:02.258000
+now 2017-04-10 10:00:01.300000

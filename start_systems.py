@@ -55,7 +55,7 @@ stocks = pd.read_csv('frankenstein.csv')
 stocks.columns= [x.lower().strip() for x in stocks.columns]
 stocklist=stocks.symbol.tolist()
 runPath = './frankenstein.py'
-threadlist = [['d:/anaconda2/python',runPath]+[str(y) for y in stocks.ix[x]] for x in stocks.index]
+threadlist = [['e:/anaconda2/python',runPath]+[str(y) for y in stocks.ix[x]] for x in stocks.index]
 threadlist = [(t[2],t) for t in threadlist]
 print len(threadlist), 'threads found..'
 txt=str(len(threadlist))+' symbols found. '+str(stocklist)

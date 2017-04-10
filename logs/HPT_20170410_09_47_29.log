@@ -1,0 +1,10 @@
+I am unable to connect to the database.
+FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+HPT getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:49:03.835000
+now 2017-04-10 09:50:00.177000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
+
+HPT getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:01.298000
+now 2017-04-10 09:55:00.423000 global name 'c' is not defined
+HPT getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.563000
+now 2017-04-10 10:00:00.005000
