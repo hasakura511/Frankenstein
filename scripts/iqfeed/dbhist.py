@@ -351,18 +351,20 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
 def saveQuote(symbol, instrument, interval, quote):
         #if quote.has_key('wap'):
         #    print ' wap:' + str(quote['wap']) 
-        
         frequency=interval
         
         
         date=quote['Date'] # .replace(tzinfo=eastern) - relativedelta(minutes=1) 
         
-        bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency).execute()
+        bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
-        if bar_list and len(bar_list) > 0:
-            bar=bar_list[0]
+        if bar_list and bar_list.count() > 0:
+            print symbol
+            bar=bar_list.execute()[0]
             #print "found bar id",bar.id
         else:
+            print symbol
+        
             #print 'New Bar: ', quote
             bar=Feed()
             bar.instrument_id=instrument.id
