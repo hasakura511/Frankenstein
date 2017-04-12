@@ -30,6 +30,10 @@ from dateutil.parser import parse
 import threading
 from dateutil.relativedelta import relativedelta
 import time
+
+import pyelasticsearch
+from pyelasticsearch import bulk_chunks
+es = pyelasticsearch.ElasticSearch(port=9200)
 eastern=timezone('US/Eastern')
 '''
 try:
@@ -169,67 +173,100 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
         
         data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
         i=0
-        while 1:
-            try:
-                line = fs.readline()
-                # If data was received, print it
-                if (len(line)):
-                    #print line
-                    fields=line.strip().split(',')
-                    '''
-                        Format    Notes
-                            Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
-                            Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
-                            High    Decimal    Example: 146.2587
-                            Low    Decimal    Example: 145.2587
-                            Open    Decimal    Example: 146.2587
-                            Close    Decimal    Example: 145.2587
-                            Total Volume    Integer    Example: 1285001
-                            Period Volume    Integer    Example: 1285
-                            Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
-                            Example data:    Request: HIX,GOOG,60,10<CR><LF>
-                            2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
-                    '''
-                    if fields[0] == '!ENDMSG!':
-                        s.close()
+        def documents():
+                    while 1:
+                        try:
+                            line = fs.readline()
+                            # If data was received, print it
+                            if (len(line)):
+                                #print line
+                                fields=line.strip().split(',')
+                                '''
+                                    Format    Notes
+                                        Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
+                                        Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
+                                        High    Decimal    Example: 146.2587
+                                        Low    Decimal    Example: 145.2587
+                                        Open    Decimal    Example: 146.2587
+                                        Close    Decimal    Example: 145.2587
+                                        Total Volume    Integer    Example: 1285001
+                                        Period Volume    Integer    Example: 1285
+                                        Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
+                                        Example data:    Request: HIX,GOOG,60,10<CR><LF>
+                                        2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
+                                '''
+                                if fields[0] == '!ENDMSG!':
+                                    #s.close()
+                                    #time.sleep(1)
+                                    print 'Done',symbol
+                                    break;
+                                    #return data
+                                else:
+                                    #print line
+                                    date=fields[0]
+                                    high=float(fields[1])
+                                    low=float(fields[2])
+                                    open=float(fields[3])
+                                    close=float(fields[4])
+                                    total_volume=float(fields[5])
+                                    volume=float(fields[6])
+                                    trades=fields[7]
+                                    
+                                    
+                                   
+                                    if date:
+                                        
+                                        date=dateutil.parser.parse(date)
+                                        date=eastern.localize(date,is_dst=True)
+                                        #print date
+                                        quote={ 'Date':date,
+                                            'Open':open,
+                                            'High':high,
+                                            'Low':low,
+                                            'Close':close,
+                                            'Volume':volume,
+                                            'TotalVolume':total_volume,
+                                           #'wap':WAP,
+                                        }
+                                        frequency=interval
+                                    
+                                        feed={  'instrument_id':instrument.id,
+                                                'frequency' : frequency,
+                                                'date':date,
+                                                'open': quote['Open'],
+                                                'high': quote['High'],
+                                                'low': quote['Low'],
+                                                'close': quote['Close'],
+                                                'volume': quote['Volume']
+                                            }
+                                        bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
+                                        if bar_list and bar_list.count() > 0:
+                                                #print 'update', symbol
+                                                mydoc=bar_list.execute()[0]._id
+                                                yield es.update_op(doc=feed,
+                                                   id=mydoc, 
+                                                   index='beginning',
+                                                   doc_type='feed',
+                                                   doc_as_upsert=True)
+                                        else:
+                                            #print 'insert', symbol
+                                            yield es.index_op(feed)
+                                            
+                                            #saveQuote(symbol, instrument, interval, quote)
+                                        #self.saveQuote(dbcontract, quote)
+                                        
+                                        data.loc[date] = [open,high,low,close,volume,total_volume]
+                                                                            #print date,high,low,open,close,volume,total_volume,trades
+                        except Exception as e:
+                            logging.error("get_btcfeed", exc_info=True)
+                
                         
-                        return data
-                    else:
-                        #print line
-                        date=fields[0]
-                        high=float(fields[1])
-                        low=float(fields[2])
-                        open=float(fields[3])
-                        close=float(fields[4])
-                        total_volume=float(fields[5])
-                        volume=float(fields[6])
-                        trades=fields[7]
-                        
-                        
-                       
-                        if date:
-                            
-                            date=dateutil.parser.parse(date)
-                            date=eastern.localize(date,is_dst=True)
-                            #print date
-                            quote={ 'Date':date,
-                                'Open':open,
-                                'High':high,
-                                'Low':low,
-                                'Close':close,
-                                'Volume':volume,
-                                'TotalVolume':total_volume,
-                               #'wap':WAP,
-                            }
-                            #print quote
-                            saveQuote(symbol, instrument, interval, quote)
-                            #self.saveQuote(dbcontract, quote)
-                            
-                            data.loc[date] = [open,high,low,close,volume,total_volume]
-                            i+=1
-                            #print date,high,low,open,close,volume,total_volume,trades
-            except Exception as e:
-                logging.error("get_btcfeed", exc_info=True)
+        for chunk in bulk_chunks(documents(),
+                         docs_per_chunk=500,
+                         bytes_per_chunk=10000):
+                            # We specify a default index and doc type here so we don't
+                            # have to repeat them in every operation:
+                            es.bulk(chunk, doc_type='feed', index='beginning')
                     
         return data
     except Exception as e:
@@ -280,69 +317,100 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                 
                 data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
                 i=0
-                while 1:
-                    try:
-                        line = fs.readline()
-                        # If data was received, print it
-                        if (len(line)):
-                            #print line
-                            fields=line.strip().split(',')
-                            '''
-                                Format    Notes
-                                    Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
-                                    Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
-                                    High    Decimal    Example: 146.2587
-                                    Low    Decimal    Example: 145.2587
-                                    Open    Decimal    Example: 146.2587
-                                    Close    Decimal    Example: 145.2587
-                                    Total Volume    Integer    Example: 1285001
-                                    Period Volume    Integer    Example: 1285
-                                    Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
-                                    Example data:    Request: HIX,GOOG,60,10<CR><LF>
-                                    2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
-                            '''
-                            if fields[0] == '!ENDMSG!':
-                                #s.close()
-                                time.sleep(1)
-                                print 'Done',symbol
-                                break;
-                                #return data
-                            else:
+                def documents():
+                    while 1:
+                        try:
+                            line = fs.readline()
+                            # If data was received, print it
+                            if (len(line)):
                                 #print line
-                                date=fields[0]
-                                high=float(fields[1])
-                                low=float(fields[2])
-                                open=float(fields[3])
-                                close=float(fields[4])
-                                total_volume=float(fields[5])
-                                volume=float(fields[6])
-                                trades=fields[7]
-                                
-                                
-                               
-                                if date:
+                                fields=line.strip().split(',')
+                                '''
+                                    Format    Notes
+                                        Request ID    Text    This field will only exist if the request specified a RequestID. If not specified in the request, the first field in each message will be the Timestamp.
+                                        Time Stamp    CCYY-MM-DD HH:MM:SS    Example: 2008-09-01 16:00:01
+                                        High    Decimal    Example: 146.2587
+                                        Low    Decimal    Example: 145.2587
+                                        Open    Decimal    Example: 146.2587
+                                        Close    Decimal    Example: 145.2587
+                                        Total Volume    Integer    Example: 1285001
+                                        Period Volume    Integer    Example: 1285
+                                        Number of Trades    Integer    Example: 10000 - Will be zero for all requests other than tick interval requests
+                                        Example data:    Request: HIX,GOOG,60,10<CR><LF>
+                                        2013-08-12 13:44:00,886.0680,886.0680,886.0680,886.0680,1010550,200,0,<CR><LF>
+                                '''
+                                if fields[0] == '!ENDMSG!':
+                                    #s.close()
+                                    #time.sleep(1)
+                                    print 'Done',symbol
+                                    break;
+                                    #return data
+                                else:
+                                    #print line
+                                    date=fields[0]
+                                    high=float(fields[1])
+                                    low=float(fields[2])
+                                    open=float(fields[3])
+                                    close=float(fields[4])
+                                    total_volume=float(fields[5])
+                                    volume=float(fields[6])
+                                    trades=fields[7]
                                     
-                                    date=dateutil.parser.parse(date)
-                                    date=eastern.localize(date,is_dst=True)
-                                    #print date
-                                    quote={ 'Date':date,
-                                        'Open':open,
-                                        'High':high,
-                                        'Low':low,
-                                        'Close':close,
-                                        'Volume':volume,
-                                        'TotalVolume':total_volume,
-                                       #'wap':WAP,
-                                    }
-                                    if i > 0:
-                                        saveQuote(symbol, instrument, interval, quote)
-                                    #self.saveQuote(dbcontract, quote)
                                     
-                                    data.loc[date] = [open,high,low,close,volume,total_volume]
-                                    i+=1
-                                #print date,high,low,open,close,volume,total_volume,trades
-                    except Exception as e:
-                        logging.error("get_btcfeed", exc_info=True)
+                                   
+                                    if date:
+                                        
+                                        date=dateutil.parser.parse(date)
+                                        date=eastern.localize(date,is_dst=True)
+                                        #print date
+                                        quote={ 'Date':date,
+                                            'Open':open,
+                                            'High':high,
+                                            'Low':low,
+                                            'Close':close,
+                                            'Volume':volume,
+                                            'TotalVolume':total_volume,
+                                           #'wap':WAP,
+                                        }
+                                        frequency=interval
+                                    
+                                        feed={  'instrument_id':instrument.id,
+                                                'frequency' : frequency,
+                                                'date':date,
+                                                'open': quote['Open'],
+                                                'high': quote['High'],
+                                                'low': quote['Low'],
+                                                'close': quote['Close'],
+                                                'volume': quote['Volume']
+                                            }
+                                        bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
+                                        if bar_list and bar_list.count() > 0:
+                                                print 'update', symbol
+                                                mydoc=bar_list.execute()[0]._id
+                                                yield es.update_op(doc=feed,
+                                                   id=mydoc, 
+                                                   index='beginning',
+                                                   doc_type='feed',
+                                                   doc_as_upsert=True)
+                                        else:
+                                            print 'insert', symbol
+                                            yield es.index_op(feed)
+                                            
+                                            #saveQuote(symbol, instrument, interval, quote)
+                                        #self.saveQuote(dbcontract, quote)
+                                        
+                                        data.loc[date] = [open,high,low,close,volume,total_volume]
+                                                                            #print date,high,low,open,close,volume,total_volume,trades
+                        except Exception as e:
+                            logging.error("get_btcfeed", exc_info=True)
+                
+                        
+                for chunk in bulk_chunks(documents(),
+                         docs_per_chunk=500,
+                         bytes_per_chunk=10000):
+                            # We specify a default index and doc type here so we don't
+                            # have to repeat them in every operation:
+                            es.bulk(chunk, doc_type='feed', index='beginning')
             if not loop:
                 break;            
         return data
