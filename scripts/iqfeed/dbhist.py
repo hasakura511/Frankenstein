@@ -235,19 +235,19 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
     except Exception as e:
         print e
 
-def get_mult_hist(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=True):
+def get_mult_hist(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=False):
     #get_bitstampfeed()
     global feed
     global ohlc
     
     
     
-    bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype, loop=True)
+    bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype, loop)
     
 
 
 
-def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=True):
+def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype='', loop=False):
     try:
         # The IP address or hostname of your reader
         READER_HOSTNAME = 'localhost'
@@ -359,7 +359,6 @@ def saveQuote(symbol, instrument, interval, quote):
         bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
         if bar_list and bar_list.count() > 0:
-            print symbol
             bar=bar_list.execute()[0]
             #print "found bar id",bar.id
         else:

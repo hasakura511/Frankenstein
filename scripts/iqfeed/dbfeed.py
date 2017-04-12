@@ -226,6 +226,18 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                 instrument.sym=symbol
                 instrument.save()
             instDict[symbol]=instrument
+            sym=symbol
+            if not symstate.has_key(sym):
+                symstate[sym]=dict()
+                symstate[sym]['ask']=0
+                symstate[sym]['bid']=0
+                symstate[sym]['asksize']=0
+                symstate[sym]['bidsize']=0
+                symstate[sym]['last_total_volume']=0
+                symstate[sym]['vwap']=0
+                symstate[sym]['total_volume']=0
+                symstate[sym]['high']=0
+                symstate[sym]['low']=0
             # Receive data in an infinite loop
             cmd="w%s\r\n" % (symbol)
             s.sendall(cmd);
@@ -278,7 +290,6 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                             datenow=parse(fields[1])
                             min_interval=datenow.minute
                             diff=(min_interval * 60) % interval
-                            
                             for sym in symstate.keys():
                                 print diff, sym, ' '
                                 if diff == 0:
@@ -303,28 +314,34 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                             diff_sec=diff_sec.total_seconds()
                                             print diff_sec
                                             if diff_sec >= interval:
-                                                symstate[sym]['date']=date
-                                                symstate[sym]['close']=mid
-                                                #print date
-                                                symstate[sym]['volume']=total_volume - symstate[sym]['last_total_volume']
-                                                quote={ 'Date':date,
-                                                    'Open':symstate[sym]['open'],
-                                                    'High':symstate[sym]['high'],
-                                                    'Low':symstate[sym]['low'],
-                                                    'Close':symstate[sym]['close'],
-                                                    'Volume':symstate[sym]['volume'],
-                                                    'TotalVolume':symstate[sym]['total_volume'],
-                                                   #'wap':WAP,
-                                                }
-                                                #print quote
-                                                saveQuote(sym.upper(), instDict[sym.upper()], interval, quote)
-                                        
-                                                symstate[sym]['startdate']=symstate[sym]['enddate']
-                                                symstate[sym]['enddate']=date
-                                                symstate[sym]['last_total_volume']=total_volume
-                                                symstate[sym]['asksize']=0
-                                                symstate[sym]['bidsize']=0
-                                                symstate[sym]['open']=symstate[sym]['close']
+                                                    symstate[sym]['date']=date
+                                                    symstate[sym]['close']=mid
+                                                    #print date
+                                                    symstate[sym]['volume']=total_volume - symstate[sym]['last_total_volume']
+                                                    quote={ 'Date':date,
+                                                        'Open':symstate[sym]['open'],
+                                                        'High':symstate[sym]['high'],
+                                                        'Low':symstate[sym]['low'],
+                                                        'Close':symstate[sym]['close'],
+                                                        'Volume':symstate[sym]['volume'],
+                                                        'TotalVolume':symstate[sym]['total_volume'],
+                                                       #'wap':WAP,
+                                                    }
+                                                    #print quote
+                                                    tradinghour=False
+                                                    if datenow.hour >= 8 and datenow.hour <= 20:
+                                                        if quote['Open'] > 0 and quote['Close'] > 0 \
+                                                        and quote['High'] > 0 and quote['Low'] > 0:
+                                                            tradinghour=True
+                                                    if tradinghour and mid > 0 and ask > 0 and bid > 0:    
+                                                        saveQuote(sym.upper(), instDict[sym.upper()], interval, quote)
+                                            
+                                                    symstate[sym]['startdate']=symstate[sym]['enddate']
+                                                    symstate[sym]['enddate']=date
+                                                    symstate[sym]['last_total_volume']=total_volume
+                                                    symstate[sym]['asksize']=0
+                                                    symstate[sym]['bidsize']=0
+                                                    symstate[sym]['open']=symstate[sym]['close']
                                 
                         if fields[0] == 'Q':
                             sym=fields[1]
@@ -384,7 +401,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                     mid=(ask+bid)/2
                                     if not symstate[sym].has_key('high') or mid > symstate[sym]['high']:
                                         symstate[sym]['high']=mid
-                                    if not symstate[sym].has_key('low') or mid < symstate[sym]['low']:
+                                    if not symstate[sym].has_key('low') or (symstate[sym]['low'] > 0 and mid < symstate[sym]['low']):
                                         symstate[sym]['low']=mid
                                 if asksize:
                                     symstate[sym]['asksize']+=asksize
