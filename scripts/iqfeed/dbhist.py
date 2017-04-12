@@ -21,17 +21,17 @@ sys.path.append("../../")
 sys.path.append("../")
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
-import beCOMPANY
-import beCOMPANY.settings as settings
-from main.models import *
+#os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
+#import beCOMPANY
+#import beCOMPANY.settings as settings
+from scripts.elasticmodel import *
 from dateutil.parser import parse
-import psycopg2
+#import psycopg2
 import threading
 from dateutil.relativedelta import relativedelta
 import time
 eastern=timezone('US/Eastern')
-
+'''
 try:
     dbstr="dbname=" + settings.DATABASES['default']['NAME'] + \
           " user=" + settings.DATABASES['default']['USER'] + \
@@ -42,9 +42,11 @@ try:
     c=psycopg2.connect(dbstr)
 except:
     print "I am unable to connect to the database."
-    
-    
-logging.basicConfig(stream=sys.stdout,  level=logging.DEBUG)
+''' 
+Instrument.init()
+Feed.init()
+#Sequence.init()
+logging.basicConfig(stream=sys.stdout,  level=logging.ERROR)
 #logging.basicConfig(filename='/logs/get_hist.log',level=logging.DEBUG)
 
 debug=False
@@ -69,7 +71,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     global ohlc
     
     symbol=symbol.upper()
-    instrument_list=Instrument.objects.filter(sym=symbol)
+    instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
     if instrument_list and len(instrument_list) > 0:
         instrument=instrument_list[0]
     else:
@@ -88,16 +90,25 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     #    threads.append(feed_thread)
     #    [t.start() for t in threads]
     #    [t.join() for t in threads]
+    from pandas.io.json import json_normalize
     
-    
-    sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
-    sql +=' FROM main_feedlive '
-    sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
-    sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
-    data = pd.read_sql(sql, c, index_col='Date')
-    data.index=data.index.tz_convert(eastern)
-    #print data.index[-1]
+    feed_list=Feed.search().filter('term',frequency=interval).filter('term',instrument_id=instrument.id).sort('-date')
+    feed_list=feed_list[:int(maxdatapoints)]
+    res=[]
+    for feed in feed_list:
+        quote={ 'Date':feed.date,
+                                'Open':feed.open,
+                                'High':feed.high,
+                                'Low':feed.low,
+                                'Close':feed.close,
+                                'Volume':feed.volume
+                            }
+        res.append(quote)
+    data = json_normalize(res)
+    data=data.set_index('Date')
+    #data.to_csv('test.csv')
     return data
+    
 
 def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
     #get_bitstampfeed()
@@ -105,7 +116,7 @@ def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid=
     global ohlc
     
     symbol=symbol.upper()
-    instrument_list=Instrument.objects.filter(sym=symbol)
+    instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
     if instrument_list and len(instrument_list) > 0:
         instrument=instrument_list[0]
     else:
@@ -116,13 +127,23 @@ def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid=
     bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
     
     
-    sql = ' SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume" '
-    sql +=' FROM main_feed '
-    sql +=' WHERE frequency=%s AND instrument_id=%s ' % (interval, instrument.id)
-    sql +=' ORDER by date DESC LIMIT %s ' % (maxdatapoints)
-    data = pd.read_sql(sql, c, index_col='Date')
-    data.index=data.index.tz_convert(eastern)
-    #print data.index[-1]
+    from pandas.io.json import json_normalize
+    
+    feed_list=Feed.search().filter('term',frequency=interval).filter('term',instrument_id=instrument.id).sort('-date')
+    feed_list=feed_list[:int(maxdatapoints)]
+    res=[]
+    for feed in feed_list:
+        quote={ 'Date':feed.date,
+                               'Open':feed.open,
+                                'High':feed.high,
+                                'Low':feed.low,
+                                'Close':feed.close,
+                                'Volume':feed.volume
+                            }
+        res.append(quote)
+    data = json_normalize(res)
+    data=data.set_index('Date')
+    #data.to_csv('test.csv')
     return data
 
 def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
@@ -247,14 +268,13 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
             for symbol in symbols:
                 symbol=symbol.upper()
                 print 'Getting ', symbol
-                instrument_list=Instrument.objects.filter(sym=symbol)
+                instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
                 if instrument_list and len(instrument_list) > 0:
                     instrument=instrument_list[0]
                 else:
                     instrument=Instrument()
                     instrument.sym=symbol
-                    instrument.save()
-                # Receive data in an infinite loop
+                    instrument.save()                # Receive data in an infinite loop
                 cmd="HIX,%s,%s,%s,%s,%s,%s,%s\r\n" % (symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
                 s.sendall(cmd);
                 
@@ -337,13 +357,13 @@ def saveQuote(symbol, instrument, interval, quote):
         
         date=quote['Date'] # .replace(tzinfo=eastern) - relativedelta(minutes=1) 
         
-        bar_list=Feed.objects.filter(date=date).filter(instrument_id=instrument.id).filter(frequency=frequency)
+        bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency).execute()
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
         if bar_list and len(bar_list) > 0:
             bar=bar_list[0]
             #print "found bar id",bar.id
         else:
-            print 'New Bar: ', quote
+            #print 'New Bar: ', quote
             bar=Feed()
             bar.instrument_id=instrument.id
             bar.frequency=frequency

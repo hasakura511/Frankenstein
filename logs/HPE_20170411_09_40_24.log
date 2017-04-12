@@ -1,0 +1,8 @@
+Execution failed on sql:  SELECT date as "Date", open as "Open", high as "High", low as "Low", close as "Close", volume as "Volume"  FROM main_feedlive  WHERE frequency=300 AND instrument_id=231  ORDER by date DESC LIMIT 596 
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+unable to rollback
+HPE getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 11:06:35.979000
+now 2017-04-11 11:10:00.733000

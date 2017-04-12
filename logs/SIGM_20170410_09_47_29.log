@@ -1,6 +1,0 @@
-I am unable to connect to the database.
-FATAL:  remaining connection slots are reserved for non-replication superuser connections
-
-SIGM getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:49:14.261000
-now 2017-04-10 09:50:02.528000 FATAL:  remaining connection slots are reserved for non-replication superuser connections
-

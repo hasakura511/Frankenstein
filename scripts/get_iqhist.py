@@ -5,7 +5,7 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
 import beCOMPANY
 import beCOMPANY.settings as settings
-from main.models import *
+from elasticmodel import *
 from dateutil.parser import parse
 import psycopg2
 import threading
@@ -27,14 +27,14 @@ def    main():
         maxdatapoints=sys.argv[3]
         #while 1:
         symbol=symbol.upper()
-        instrument_list=Instrument.objects.filter(sym=symbol)
+        instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
         if instrument_list and len(instrument_list) > 0:
             instrument=instrument_list[0]
         else:
             instrument=Instrument()
             instrument.sym=symbol
             instrument.save()
-        data=dbhist.bg_get_hist(instrument, symbol, interval, maxdatapoints)
+        data=dbhist.get_realtime_hist(symbol, interval, maxdatapoints)
         #data=dbhist.get_hist(symbol, interval, maxdatapoints) #,datadirection=0,requestid='',datapointspersend='',intervaltype=''):
         #time.sleep(5)
     else:

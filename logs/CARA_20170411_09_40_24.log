@@ -1,0 +1,5 @@
+return data: last bar 2017-04-11 10:50:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+start_idx [(580, Timestamp('2017-04-11 09:35:00'))]
+start_ema 2017-04-10 20:40:00 start_vwap 2017-04-11 09:35:00 last_bar 2017-04-11 10:50:00 ET:  23.21  minutes
+now 2017-04-11 11:10:00.682000

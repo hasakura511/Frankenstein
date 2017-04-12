@@ -1,0 +1,11 @@
+return data: last bar 2017-04-10 16:00:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+AGRO live data feed missing 9:35 bar!
+ET:  0.08  minutes
+now 2017-04-11 09:45:01.051000 return None: last bar 2017-04-10 16:00:00 last processed bar 2017-04-10 16:00:00
+AGRO getFeed did not return any data! last bar: 2017-04-10 16:00:00 now: 09:49:56.041000
+now 2017-04-11 09:50:00.645000 return None: last bar 2017-04-10 16:00:00 last processed bar 2017-04-10 16:00:00
+AGRO getFeed did not return any data! last bar: 2017-04-10 16:00:00 now: 09:50:02.056000
+now 2017-04-11 09:55:00.040000 return None: last bar 2017-04-10 16:00:00 last processed bar 2017-04-10 16:00:00
+AGRO getFeed did not return any data! last bar: 2017-04-10 16:00:00 now: 09:55:00.613000
+now 2017-04-11 10:00:00.765000

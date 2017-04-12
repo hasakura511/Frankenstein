@@ -1,0 +1,11 @@
+return data: last bar 2017-04-10 20:00:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+LNCE live data feed missing 9:35 bar!
+ET:  0.06  minutes
+now 2017-04-11 09:45:01.226000 return None: last bar 2017-04-10 20:00:00 last processed bar 2017-04-10 20:00:00
+LNCE getFeed did not return any data! last bar: 2017-04-10 20:00:00 now: 09:49:56.041000
+now 2017-04-11 09:50:00.640000 return None: last bar 2017-04-10 20:00:00 last processed bar 2017-04-10 20:00:00
+LNCE getFeed did not return any data! last bar: 2017-04-10 20:00:00 now: 09:50:00.740000
+now 2017-04-11 09:55:00.990000 return None: last bar 2017-04-10 20:00:00 last processed bar 2017-04-10 20:00:00
+LNCE getFeed did not return any data! last bar: 2017-04-10 20:00:00 now: 09:55:01.097000
+now 2017-04-11 10:00:00.201000

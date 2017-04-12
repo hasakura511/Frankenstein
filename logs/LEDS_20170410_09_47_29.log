@@ -1,7 +1,0 @@
-'Index' object has no attribute 'tz_convert'
-LEDS getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:48:18.169000
-now 2017-04-10 09:50:00.992000 'Index' object has no attribute 'tz_convert'
-LEDS getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:02.231000
-now 2017-04-10 09:55:00.970000 'Index' object has no attribute 'tz_convert'
-LEDS getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:02.315000
-now 2017-04-10 10:00:01.353000
