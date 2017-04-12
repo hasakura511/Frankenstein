@@ -394,9 +394,9 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                 
                             if symstate.has_key(sym):
                                 if not ask and symstate[sym].has_key('ask'):
-                                    ask=symstate['ask']
+                                    ask=symstate[sym]['ask']
                                 if not bid and symstate[sym].has_key('bid'):
-                                    bid=symstate['bid']
+                                    bid=symstate[sym]['bid']
                                 if ask and bid and ask > 0 and bid > 0:
                                     mid=(ask+bid)/2
                                     if not symstate[sym].has_key('high') or mid > symstate[sym]['high']:

@@ -172,9 +172,10 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
         s.sendall(cmd);
         
         data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
-        i=0
         def documents():
+                    i=0
                     while 1:
+                        i+=1
                         try:
                             line = fs.readline()
                             # If data was received, print it
@@ -241,15 +242,16 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                                             }
                                         bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
                                         if bar_list and bar_list.count() > 0:
-                                                #print 'update', symbol
-                                                mydoc=bar_list.execute()[0]._id
-                                                yield es.update_op(doc=feed,
-                                                   id=mydoc, 
-                                                   index='beginning',
-                                                   doc_type='feed',
-                                                   doc_as_upsert=True)
+                                                if i == 1:
+                                                    print 'update', symbol
+                                                    mydoc=bar_list.execute()[0]._id
+                                                    yield es.update_op(doc=feed,
+                                                       id=mydoc, 
+                                                       index='beginning',
+                                                       doc_type='feed',
+                                                       doc_as_upsert=True)
                                         else:
-                                            #print 'insert', symbol
+                                            print 'insert', symbol
                                             yield es.index_op(feed)
                                             
                                             #saveQuote(symbol, instrument, interval, quote)
@@ -316,9 +318,12 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                 s.sendall(cmd);
                 
                 data = pd.DataFrame({}, columns=['Date','Open','High','Low','Close','Volume','TotalVolume']).set_index('Date')
-                i=0
                 def documents():
+                    i=0
+                    
                     while 1:
+                        i+=1
+                        
                         try:
                             line = fs.readline()
                             # If data was received, print it
@@ -385,13 +390,14 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                             }
                                         bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
                                         if bar_list and bar_list.count() > 0:
-                                                print 'update', symbol
-                                                mydoc=bar_list.execute()[0]._id
-                                                yield es.update_op(doc=feed,
-                                                   id=mydoc, 
-                                                   index='beginning',
-                                                   doc_type='feed',
-                                                   doc_as_upsert=True)
+                                                if i == 1:
+                                                   print 'update', symbol
+                                                   mydoc=bar_list.execute()[0]._id
+                                                   yield es.update_op(doc=feed,
+                                                       id=mydoc, 
+                                                       index='beginning',
+                                                       doc_type='feed',
+                                                       doc_as_upsert=True)
                                         else:
                                             print 'insert', symbol
                                             yield es.index_op(feed)
