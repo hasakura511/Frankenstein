@@ -40,7 +40,7 @@ def    main():
                     seen[symbol]=qty
 
                     symbols.append(symbol)
-                if i > 1:
+                if i > 50:
                     i=0
                     #feed_thread = threading.Thread(target=dbhist.get_mult_history, args=[symbols, interval, 10000, 0,'','','', False])
                     #feed_thread.daemon=True
@@ -76,7 +76,7 @@ def    main():
                                 print 'Found New Symbol, ', symbol
                                 seen[symbol]=qty
                                 symbols.append(symbol)
-                    if len(symbols) > 10:
+                    if len(symbols) > 0:
                         #feed_thread = threading.Thread(target=dbhist.get_mult_history, args=[symbols, interval, 10000, 0,'','','', False])
                         #feed_thread.daemon=True
                         #threads.append(feed_thread)
