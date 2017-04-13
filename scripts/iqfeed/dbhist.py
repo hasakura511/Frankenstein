@@ -303,6 +303,8 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
          
         # Make a file pointer from the socket, so we can read lines
         fs=s.makefile()
+        tickerdict=dict()
+        
         while 1:
             for symbol in symbols:
                 symbol=symbol.upper()
@@ -313,7 +315,26 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                 else:
                     instrument=Instrument()
                     instrument.sym=symbol
-                    instrument.save()                # Receive data in an infinite loop
+                    instrument.save()   
+            
+                from pandas.io.json import json_normalize
+    
+                feed_list=Feed.search().filter('term',frequency=interval).filter('term',instrument_id=instrument.id).sort('-date')
+                feed_list=feed_list[:int(maxdatapoints)]
+                res=[]
+                index=0
+                for feed in feed_list:
+                    index+=1
+                    quote={ 'Date':feed.date,
+                                            'Open':feed.open,
+                                            'High':feed.high,
+                                            'Low':feed.low,
+                                            'Close':feed.close,
+                                            'Volume':feed.volume
+                                        }
+                    mykey="%s|%s|%s|%s|%s|%s|%s" % (instrument.id, interval, feed.date.year, feed.date.month, feed.date.day, feed.date.hour, feed.date.minute)
+                    if index > 1:
+                        tickerdict[mykey]=quote
                 cmd="HIX,%s,%s,%s,%s,%s,%s,%s\r\n" % (symbol, interval, maxdatapoints,datadirection,requestid,datapointspersend,intervaltype)
                 s.sendall(cmd);
                 
@@ -388,19 +409,23 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                 'close': quote['Close'],
                                                 'volume': quote['Volume']
                                             }
-                                        bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
-                                        if bar_list and bar_list.count() > 0:
-                                                if i == 1:
-                                                   print 'update', symbol
-                                                   mydoc=bar_list.execute()[0]._id
-                                                   yield es.update_op(doc=feed,
-                                                       id=mydoc, 
-                                                       index='beginning',
-                                                       doc_type='feed',
-                                                       doc_as_upsert=True)
-                                        else:
-                                            print 'insert', symbol
-                                            yield es.index_op(feed)
+                                        mykey="%s|%s|%s|%s|%s|%s|%s" % (instrument.id, interval, date.year, date.month, date.day, date.hour, date.minute)
+                                        if not tickerdict.has_key(mykey):
+                                            if i > 1:
+                                                tickerdict[mykey]=quote
+                                                bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
+                                                if bar_list and bar_list.count() > 0:
+                                                        if i == 1:
+                                                           print 'update', symbol
+                                                           mydoc=bar_list.execute()[0]._id
+                                                           yield es.update_op(doc=feed,
+                                                               id=mydoc, 
+                                                               index='beginning',
+                                                               doc_type='feed',
+                                                               doc_as_upsert=True)
+                                                else:
+                                                    print 'insert', symbol
+                                                    yield es.index_op(feed)
                                             
                                             #saveQuote(symbol, instrument, interval, quote)
                                         #self.saveQuote(dbcontract, quote)

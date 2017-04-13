@@ -27,6 +27,10 @@ def    main():
         threads = []
         interval=sys.argv[1]
         maxdatapoints=sys.argv[2]
+        loop=False
+        if len(sys.argv) > 3:
+            if sys.argv[3]:
+                loop=True
         i=0
         seen=dict()
         with open("../stocks.csv", 'rb') as f:
@@ -41,13 +45,13 @@ def    main():
                     symbols.append(symbol)
                 if i > 10:
                     i=0
-                    feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints])
+                    feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
                     feed_thread.daemon=True
                     threads.append(feed_thread)
                     symbols=[]
         
         if len(symbols) > 0:
-            feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints])
+            feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
             feed_thread.daemon=True
             threads.append(feed_thread)
         [t.start() for t in threads]
@@ -72,7 +76,7 @@ def    main():
                         #feed_thread.daemon=True
                         #threads.append(feed_thread)
 
-                        feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', False])
+                        feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
                         feed_thread.daemon=True
                         threads.append(feed_thread)
                 [t.start() for t in threads]

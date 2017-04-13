@@ -1,0 +1,13 @@
+return data: last bar 2017-04-12 16:05:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+GPRE live data feed missing 9:35 bar!
+ET:  0.04  minutes
+now 2017-04-13 09:45:03.173000 return None: last bar 2017-04-12 16:05:00 last processed bar 2017-04-12 16:05:00
+GPRE getFeed did not return any data! last bar: 2017-04-12 16:05:00 now: 09:45:08.076000
+now 2017-04-13 09:50:02.442000 return None: last bar 2017-04-12 16:05:00 last processed bar 2017-04-12 16:05:00
+GPRE getFeed did not return any data! last bar: 2017-04-12 16:05:00 now: 09:50:13.454000
+now 2017-04-13 09:55:00.240000 return data: last bar 2017-04-13 09:55:00 last processed bar 2017-04-12 16:05:00
+596 bars requested 596 bars returned
+start_idx [(591, Timestamp('2017-04-13 09:35:00'))]
+start_ema 2017-04-12 14:35:00 start_vwap 2017-04-13 09:35:00 last_bar 2017-04-13 09:55:00 ET:  0.35  minutes
+now 2017-04-13 10:00:02.411000

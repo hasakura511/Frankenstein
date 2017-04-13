@@ -1,0 +1,13 @@
+return data: last bar 2017-04-11 16:30:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+DBD live data feed missing 9:35 bar!
+ET:  0.05  minutes
+now 2017-04-13 09:45:06.015000 return None: last bar 2017-04-11 16:30:00 last processed bar 2017-04-11 16:30:00
+DBD getFeed did not return any data! last bar: 2017-04-11 16:30:00 now: 09:45:14.936000
+now 2017-04-13 09:50:01.481000 return None: last bar 2017-04-11 16:30:00 last processed bar 2017-04-11 16:30:00
+DBD getFeed did not return any data! last bar: 2017-04-11 16:30:00 now: 09:50:14.127000
+now 2017-04-13 09:55:03.710000 return data: last bar 2017-04-13 09:55:00 last processed bar 2017-04-11 16:30:00
+596 bars requested 596 bars returned
+start_idx [(591, Timestamp('2017-04-13 09:35:00'))]
+start_ema 2017-04-11 15:05:00 start_vwap 2017-04-13 09:35:00 last_bar 2017-04-13 09:55:00 ET:  0.14  minutes
+now 2017-04-13 10:00:00.391000

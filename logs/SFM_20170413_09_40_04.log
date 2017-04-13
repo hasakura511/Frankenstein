@@ -1,0 +1,13 @@
+return data: last bar 2017-04-12 17:00:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+SFM live data feed missing 9:35 bar!
+ET:  0.04  minutes
+now 2017-04-13 09:45:04.581000 return None: last bar 2017-04-12 17:00:00 last processed bar 2017-04-12 17:00:00
+SFM getFeed did not return any data! last bar: 2017-04-12 17:00:00 now: 09:45:09.534000
+now 2017-04-13 09:50:02.890000 return None: last bar 2017-04-12 17:00:00 last processed bar 2017-04-12 17:00:00
+SFM getFeed did not return any data! last bar: 2017-04-12 17:00:00 now: 09:50:05.954000
+now 2017-04-13 09:55:03.707000 return data: last bar 2017-04-13 09:55:00 last processed bar 2017-04-12 17:00:00
+596 bars requested 596 bars returned
+start_idx [(591, Timestamp('2017-04-13 09:35:00'))]
+start_ema 2017-04-12 14:50:00 start_vwap 2017-04-13 09:35:00 last_bar 2017-04-13 09:55:00 ET:  0.28  minutes
+now 2017-04-13 10:00:02.415000

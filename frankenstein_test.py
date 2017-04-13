@@ -216,7 +216,7 @@ class Frankenstein():
         self.ema_lookback2 = 20
         self.max_emalookback = max(self.ema_lookback, self.ema_lookback2)
         self.vwap_lookback = self.max_emalookback + 24 * 60 / 5 * 2
-        self.maxlookback = max(self.max_emalookback, self.vwap_lookback, 6000)
+        self.maxlookback = max(self.max_emalookback, self.vwap_lookback, 500)
         self.mode = mode
         self.shutdown_time=datetime.time(10, 0)
         self.max_symbols = 5
@@ -291,14 +291,18 @@ class Frankenstein():
             print 'start_ema', data.iloc[0].name,
             EMA1 = 'EMA' + str(self.ema_lookback)
             EMA2 = 'EMA' + str(self.ema_lookback2)
-
+            
             #nan creating indicators
             data['ClosePC'] = data.Close.pct_change()
+            data['0.001<ClosePC<0.05']=[1 if x>0.001 and x<0.05 else 0 for x in data.ClosePC]
+            data['HighPC>0.001']=np.where(data.Close.pct_change().values>0.001,1,0)
+            data['SAR'] = ta.SAR(data.High.values, data.Low.values, acceleration=0.04, maximum=0.2)
+            data['SART'] = np.where(data.SAR>data.Close,-1,1)
             data[EMA1] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback)
             data[EMA1 + 'PC'] = data[EMA1].pct_change()
             data[EMA2] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback2)
             data[EMA1 + 'X' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
-
+            
             if len(data.dropna())<1:
                 print 'data.dropna() feed returned insufficient data'
                 data.to_csv(dataPath+self.symbol+'_debug.csv')

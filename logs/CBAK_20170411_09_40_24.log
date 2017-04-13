@@ -1,9 +1,0 @@
-'Index' object has no attribute 'tz_convert'
-CBAK getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:40:59.694000
-now 2017-04-11 09:45:00.888000 'Index' object has no attribute 'tz_convert'
-CBAK getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:45:06.878000
-now 2017-04-11 09:50:00.910000 'Index' object has no attribute 'tz_convert'
-CBAK getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:50:03.312000
-now 2017-04-11 09:55:00.090000 'Index' object has no attribute 'tz_convert'
-CBAK getFeed did not return any data! last bar: 1000-01-01 00:00:00 now: 09:55:01.808000
-now 2017-04-11 10:00:00.843000
