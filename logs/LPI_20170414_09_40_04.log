@@ -1,0 +1,11 @@
+return data: last bar 2017-04-13 16:00:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+LPI live data feed missing 9:35 bar!
+ET:  0.04  minutes
+now 2017-04-14 09:45:04.175000 return None: last bar 2017-04-13 16:00:00 last processed bar 2017-04-13 16:00:00
+LPI getFeed did not return any data! last bar: 2017-04-13 16:00:00 now: 09:45:16.022000
+now 2017-04-14 09:50:00.366000 return None: last bar 2017-04-13 16:00:00 last processed bar 2017-04-13 16:00:00
+LPI getFeed did not return any data! last bar: 2017-04-13 16:00:00 now: 09:50:07.414000
+now 2017-04-14 09:55:00.735000 return None: last bar 2017-04-13 16:00:00 last processed bar 2017-04-13 16:00:00
+LPI getFeed did not return any data! last bar: 2017-04-13 16:00:00 now: 09:55:05.223000
+now 2017-04-14 10:00:00.317000

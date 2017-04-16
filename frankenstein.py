@@ -217,7 +217,7 @@ class Frankenstein():
         self.vwap_lookback = self.max_emalookback + 24 * 60 / 5 * 2
         self.maxlookback = max(self.max_emalookback, self.vwap_lookback)
         self.mode = mode
-        self.shutdown_time=datetime.time(10, 0)
+        self.shutdown_time=datetime.time(15, 55)
         self.max_symbols = 5
         if mode == 'live':
             # self.feed = getFeed(self.symbol, self.maxlookback)

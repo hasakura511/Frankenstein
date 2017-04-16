@@ -1,0 +1,20 @@
+return data: last bar 2017-04-14 09:40:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+start_idx [(594, Timestamp('2017-04-14 09:35:00'))]
+start_ema 2017-04-14 08:00:00 start_vwap 2017-04-14 09:35:00 last_bar 2017-04-14 09:40:00 ET:  0.02  minutes
+now 2017-04-14 09:45:01.903000 return data: last bar 2017-04-14 09:45:00 last processed bar 2017-04-14 09:40:00
+596 bars requested 596 bars returned
+start_idx [(593, Timestamp('2017-04-14 09:35:00'))]
+start_ema 2017-04-14 08:00:00 start_vwap 2017-04-14 09:35:00 last_bar 2017-04-14 09:45:00 Writing to ./data/NAV_livesignals_20170414_09_40_31.csv ./data/NAV_last.csv
+ET:  0.2  minutes
+now 2017-04-14 09:50:01.539000 return data: last bar 2017-04-14 09:50:00 last processed bar 2017-04-14 09:45:00
+596 bars requested 596 bars returned
+start_idx [(592, Timestamp('2017-04-14 09:35:00'))]
+start_ema 2017-04-14 08:00:00 start_vwap 2017-04-14 09:35:00 last_bar 2017-04-14 09:50:00 Writing to ./data/NAV_livesignals_20170414_09_40_31.csv ./data/NAV_last.csv
+ET:  0.23  minutes
+now 2017-04-14 09:55:01.063000 return data: last bar 2017-04-14 09:55:00 last processed bar 2017-04-14 09:50:00
+596 bars requested 596 bars returned
+start_idx [(591, Timestamp('2017-04-14 09:35:00'))]
+start_ema 2017-04-14 08:00:00 start_vwap 2017-04-14 09:35:00 last_bar 2017-04-14 09:55:00 Writing to ./data/NAV_livesignals_20170414_09_40_31.csv ./data/NAV_last.csv
+ET:  0.16  minutes
+now 2017-04-14 10:00:01.076000

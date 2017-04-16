@@ -1,0 +1,11 @@
+return data: last bar 2017-04-13 16:35:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+ARNC live data feed missing 9:35 bar!
+ET:  0.05  minutes
+now 2017-04-14 09:45:03.449000 return None: last bar 2017-04-13 16:35:00 last processed bar 2017-04-13 16:35:00
+ARNC getFeed did not return any data! last bar: 2017-04-13 16:35:00 now: 09:45:19.019000
+now 2017-04-14 09:50:02 return None: last bar 2017-04-13 16:35:00 last processed bar 2017-04-13 16:35:00
+ARNC getFeed did not return any data! last bar: 2017-04-13 16:35:00 now: 09:50:14.475000
+now 2017-04-14 09:55:04.899000 return None: last bar 2017-04-13 16:35:00 last processed bar 2017-04-13 16:35:00
+ARNC getFeed did not return any data! last bar: 2017-04-13 16:35:00 now: 09:55:15.618000
+now 2017-04-14 10:00:00.612000

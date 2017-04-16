@@ -1,0 +1,11 @@
+return data: last bar 2017-04-13 16:40:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+HTZ live data feed missing 9:35 bar!
+ET:  0.04  minutes
+now 2017-04-14 09:45:02.729000 return None: last bar 2017-04-13 16:40:00 last processed bar 2017-04-13 16:40:00
+HTZ getFeed did not return any data! last bar: 2017-04-13 16:40:00 now: 09:45:12.700000
+now 2017-04-14 09:50:00.304000 return None: last bar 2017-04-13 16:40:00 last processed bar 2017-04-13 16:40:00
+HTZ getFeed did not return any data! last bar: 2017-04-13 16:40:00 now: 09:50:05.486000
+now 2017-04-14 09:55:03.729000 return None: last bar 2017-04-13 16:40:00 last processed bar 2017-04-13 16:40:00
+HTZ getFeed did not return any data! last bar: 2017-04-13 16:40:00 now: 09:55:13.338000
+now 2017-04-14 10:00:01.488000
