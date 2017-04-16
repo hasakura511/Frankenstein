@@ -43,7 +43,7 @@ def    main():
                     (symbol,qty,exch)=row
                     seen[symbol]=qty
                     symbols.append(symbol)
-                if i > 50:
+                if i > 25:
                     i=0
                     feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
                     feed_thread.daemon=True

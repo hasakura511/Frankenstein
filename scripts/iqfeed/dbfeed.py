@@ -353,7 +353,7 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                     if tradinghour:    
                                                         saveQuote(sym.upper(), instDict[sym.upper()], interval, quote)
                                                     else:
-                                                        print 'Not Saved: '
+                                                        print 'Not Saved: ', sym, quote
                                                         
                                                     symstate[sym]['startdate']=symstate[sym]['enddate']
                                                     symstate[sym]['enddate']=date
@@ -453,7 +453,7 @@ def saveQuote(symbol, instrument, interval, quote):
                                                     
         bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency).execute()
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
-        print 'New Bar: ', quote
+        print 'New Bar: ', symbol,  quote
         if bar_list and len(bar_list) > 0:
             bar=bar_list[0]
             #print "found bar id",bar.id

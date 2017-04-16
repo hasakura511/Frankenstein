@@ -40,7 +40,7 @@ def    main():
                     seen[symbol]=qty
 
                     symbols.append(symbol)
-                if i > 50:
+                if i > 25:
                     i=0
                     #feed_thread = threading.Thread(target=dbhist.get_mult_history, args=[symbols, interval, 10000, 0,'','','', False])
                     #feed_thread.daemon=True
