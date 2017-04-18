@@ -75,7 +75,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     global ohlc
     
     symbol=symbol.upper()
-    instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
+    instrument_list=Instrument.search().filter('term',**{'sym.raw':symbol}).execute()
     if instrument_list and len(instrument_list) > 0:
         instrument=instrument_list[0]
     else:
@@ -120,9 +120,10 @@ def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid=
     global ohlc
     
     symbol=symbol.upper()
-    instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
+    instrument_list=Instrument.search().filter('term',**{'sym.raw':symbol}).execute()
     if instrument_list and len(instrument_list) > 0:
         instrument=instrument_list[0]
+        print instrument.id, symbol
     else:
         instrument=Instrument()
         instrument.sym=symbol
@@ -207,8 +208,8 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                                     date=fields[0]
                                     high=float(fields[1])
                                     low=float(fields[2])
-                                    open=float(fields[3])
-                                    close=float(fields[4])
+                                    open_price=float(fields[3])
+                                    close_price=float(fields[4])
                                     total_volume=float(fields[5])
                                     volume=float(fields[6])
                                     trades=fields[7]
@@ -221,10 +222,10 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                                         date=eastern.localize(date,is_dst=True)
                                         #print date
                                         quote={ 'Date':date,
-                                            'Open':open,
+                                            'Open':open_price,
                                             'High':high,
                                             'Low':low,
-                                            'Close':close,
+                                            'Close':close_price,
                                             'Volume':volume,
                                             'TotalVolume':total_volume,
                                            #'wap':WAP,
@@ -257,7 +258,7 @@ def bg_get_hist(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                                             #saveQuote(symbol, instrument, interval, quote)
                                         #self.saveQuote(dbcontract, quote)
                                         
-                                        data.loc[date] = [open,high,low,close,volume,total_volume]
+                                        data.loc[date] = [open_price,high,low,close_price,volume,total_volume]
                                                                             #print date,high,low,open,close,volume,total_volume,trades
                         except Exception as e:
                             logging.error("get_btcfeed", exc_info=True)
@@ -309,9 +310,10 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
             for symbol in symbols:
                 symbol=symbol.upper()
                 print 'Getting ', symbol
-                instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
+                instrument_list=Instrument.search().filter('term',**{'sym.raw':symbol}).execute()
                 if instrument_list and len(instrument_list) > 0:
                     instrument=instrument_list[0]
+                    print instrument.id, symbol
                 else:
                     instrument=Instrument()
                     instrument.sym=symbol
@@ -376,8 +378,8 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                     date=fields[0]
                                     high=float(fields[1])
                                     low=float(fields[2])
-                                    open=float(fields[3])
-                                    close=float(fields[4])
+                                    open_price=float(fields[3])
+                                    close_price=float(fields[4])
                                     total_volume=float(fields[5])
                                     volume=float(fields[6])
                                     trades=fields[7]
@@ -387,13 +389,13 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                     if date:
                                         
                                         date=dateutil.parser.parse(date)
-                                        date=eastern.localize(date,is_dst=True)
+                                        #date=eastern.localize(date,is_dst=True)
                                         #print date
                                         quote={ 'Date':date,
-                                            'Open':open,
+                                            'Open':open_price,
                                             'High':high,
                                             'Low':low,
-                                            'Close':close,
+                                            'Close':close_price,
                                             'Volume':volume,
                                             'TotalVolume':total_volume,
                                            #'wap':WAP,
@@ -411,10 +413,16 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                             }
                                         mykey="%s|%s|%s|%s|%s|%s|%s" % (instrument.id, interval, date.year, date.month, date.day, date.hour, date.minute)
                                         if not tickerdict.has_key(mykey):
-                                            if i > 1:
+                                            if date < datetime.now():
+                                                with open('logs\\' + symbol + '_hist.csv', 'a') as outfile:
+                                                    log= "%s,%s,%s,%s,%s,%s,%s\r\n" % (date, symbol, str(quote['Open']), str(quote['High']),str(quote['Low']),str(quote['Close']),str(quote['Volume']))
+                                                    print 'logging ',symbol
+                                                    outfile.write(log)
+                                                outfile.close()
                                                 tickerdict[mykey]=quote
                                                 bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
                                                 if bar_list and bar_list.count() > 0:
+
                                                         if i == 1:
                                                            print 'update', symbol
                                                            mydoc=bar_list.execute()[0]._id
@@ -425,12 +433,13 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                                doc_as_upsert=True)
                                                 else:
                                                     print 'insert', symbol
+                                                    
                                                     yield es.index_op(feed)
                                             
                                             #saveQuote(symbol, instrument, interval, quote)
                                         #self.saveQuote(dbcontract, quote)
                                         
-                                        data.loc[date] = [open,high,low,close,volume,total_volume]
+                                        data.loc[date] = [open_price,high,low,close_price,volume,total_volume]
                                                                             #print date,high,low,open,close,volume,total_volume,trades
                         except Exception as e:
                             logging.error("get_btcfeed", exc_info=True)
@@ -477,6 +486,7 @@ def saveQuote(symbol, instrument, interval, quote):
             bar.wap=quote['VWAP']
         bar.save()
         
+
 def    main():
     if len(sys.argv) > 3:
         symbol=sys.argv[1]

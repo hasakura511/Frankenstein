@@ -252,7 +252,7 @@ class Frankenstein():
                     return
                 else:
                     print 2,'bars requested', lastbar.shape[0], 'bars returned'
-                    data = self.signals.append(lastbar.iloc[0]).copy()['Date','Open','High','Low','Close','Volume']
+                    data = self.signals.append(lastbar.iloc[-1]).copy()
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
 
@@ -295,7 +295,7 @@ class Frankenstein():
             #nan creating indicators
             data['ClosePC'] = data.Close.pct_change()
             data['0.001<ClosePC<0.05']=[1 if x>0.001 and x<0.05 else 0 for x in data.ClosePC]
-            data['HighPC>0.001']=np.where(data.Close.pct_change().values>0.001,1,0)
+            data['HighPC>0.001']=np.where(data.Close.pct_change().fillna(0).values>0.001,1,0)
             data['SAR'] = ta.SAR(data.High.values, data.Low.values, acceleration=0.04, maximum=0.2)
             data['SART'] = np.where(data.SAR>data.Close,-1,1)
             data[EMA1] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback)

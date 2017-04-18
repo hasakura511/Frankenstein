@@ -59,7 +59,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     global ohlc
     
     symbol=symbol.upper()
-    instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
+    instrument_list=Instrument.search().filter('term',**{'sym.raw':symbol}).execute()
     if instrument_list and len(instrument_list) > 0:
         instrument=instrument_list[0]
     else:
@@ -140,8 +140,8 @@ def bg_get_feed(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         date=fields[0]
                         high=float(fields[1])
                         low=float(fields[2])
-                        open=float(fields[3])
-                        close=float(fields[4])
+                        open_price=float(fields[3])
+                        close_price=float(fields[4])
                         total_volume=float(fields[5])
                         volume=float(fields[6])
                         trades=fields[7]
@@ -154,10 +154,10 @@ def bg_get_feed(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                             date=eastern.localize(date,is_dst=True)
                             #print date
                             quote={ 'Date':date,
-                                'Open':open,
+                                'Open':open_price,
                                 'High':high,
                                 'Low':low,
-                                'Close':close,
+                                'Close':close_price,
                                 'Volume':volume,
                                 'TotalVolume':total_volume,
                                #'wap':WAP,
@@ -166,7 +166,7 @@ def bg_get_feed(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                             saveQuote(symbol, instrument, interval, quote)
                             #self.saveQuote(dbcontract, quote)
                             
-                            data.loc[date] = [open,high,low,close,volume,total_volume]
+                            data.loc[date] = [open_price,high,low,close_price,volume,total_volume]
                             i+=1
                             #print date,high,low,open,close,volume,total_volume,trades
             except Exception as e:
@@ -220,9 +220,10 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
             symbol=symbol.upper()
             #print 'Getting ', symbol
             symbol=symbol.upper()
-            instrument_list=Instrument.search().filter('match_phrase',sym=symbol).execute()
+            instrument_list=Instrument.search().filter('term',**{'sym.raw':symbol}).execute()
             if instrument_list and len(instrument_list) > 0:
                 instrument=instrument_list[0]
+                print instrument.id, symbol
             else:
                 instrument=Instrument()
                 instrument.sym=symbol
@@ -373,10 +374,10 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                             bidsize=0
                             total_volume=0
                             vwap=0
-                            open=0
+                            open_price=0
                             high=0
                             low=0
-                            close=0
+                            close_price=0
                             if fields[2]:
                                 ask=float(fields[2])
                             if fields[3]:
@@ -390,13 +391,13 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                             if fields[7]:
                                 vwap=float(fields[7])
                             if fields[8]:
-                                open=float(fields[8])
+                                open_price=float(fields[8])
                             if fields[9]:
                                 high=float(fields[9])
                             if fields[10]:
                                 low=float(fields[10])
                             if fields[11]:
-                                close=float(fields[11])
+                                close_price=float(fields[11])
 
                             
                             if not symstate.has_key(sym):
@@ -449,7 +450,7 @@ def saveQuote(symbol, instrument, interval, quote):
         
         
         date=quote['Date'] # .replace(tzinfo=eastern) - relativedelta(minutes=1) 
-        date=eastern.localize(date,is_dst=True)
+        #date=eastern.localize(date,is_dst=True)
                                                     
         bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency).execute()
         #print "close Bar: " + str(dbcontract.id) + " freq ",dbcontract.frequency, " date:" + str(quote['date']) + "date ",date, " open: " + str(quote['open']) + " high:"  + str(quote['high']) + ' low:' + str(quote['low']) + ' close: ' + str(quote['close']) + ' volume:' + str(quote['volume']) 
@@ -470,7 +471,12 @@ def saveQuote(symbol, instrument, interval, quote):
         if quote.has_key('VWAP'):
             bar.wap=quote['VWAP']
         bar.save()
-
+        
+        with open('logs\\' + symbol + '_feed.csv', 'a') as outfile:
+            log= "%s,%s,%s,%s,%s,%s,%s\r\n" % (date, symbol, str(quote['Open']), str(quote['High']),str(quote['Low']),str(quote['Close']),str(quote['Volume']))
+            print 'logging ',symbol
+            outfile.write(log)
+        outfile.close()
 
 def    main():
     if len(sys.argv) > 3:

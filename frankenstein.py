@@ -251,7 +251,7 @@ class Frankenstein():
                     return
                 else:
                     print 2,'bars requested', lastbar.shape[0], 'bars returned'
-                    data = self.signals.append(lastbar.iloc[0]).copy()['Date','Open','High','Low','Close','Volume']
+                    data = self.signals.append(lastbar.iloc[-1]).copy()
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
 
