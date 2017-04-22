@@ -1,0 +1,35 @@
+return data: last bar 2017-04-21 09:45:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 181 bars returned
+start_idx [(178, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 09:45:00 ET:  0.02  minutes
+now 2017-04-21 09:50:00.061000 return None: last bar 2017-04-21 09:45:00 last processed bar 2017-04-21 09:45:00
+NKTR getFeed did not return any data! last bar: 2017-04-21 09:45:00 now: 09:50:00.319000
+now 2017-04-21 09:55:00.506000 return data: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 09:45:00
+596 bars requested 182 bars returned
+start_idx [(178, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 09:50:00 Writing to ./data/NKTR_livesignals_20170421_09_45_46.csv ./data/NKTR_last.csv
+ET:  0.06  minutes
+now 2017-04-21 10:00:01.271000 return data: last bar 2017-04-21 09:55:00 last processed bar 2017-04-21 09:50:00
+596 bars requested 596 bars returned
+start_idx [(591, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 09:55:00 Writing to ./data/NKTR_livesignals_20170421_09_45_46.csv ./data/NKTR_last.csv
+ET:  0.17  minutes
+now 2017-04-21 10:05:00.699000 return data: last bar 2017-04-21 10:00:00 last processed bar 2017-04-21 09:55:00
+596 bars requested 596 bars returned
+start_idx [(590, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:00:00 Writing to ./data/NKTR_livesignals_20170421_09_45_46.csv ./data/NKTR_last.csv
+ET:  0.15  minutes
+now 2017-04-21 10:10:01.740000 return data: last bar 2017-04-21 10:05:00 last processed bar 2017-04-21 10:00:00
+596 bars requested 596 bars returned
+start_idx [(589, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:05:00 Writing to ./data/NKTR_livesignals_20170421_09_45_46.csv ./data/NKTR_last.csv
+ET:  0.16  minutes
+now 2017-04-21 10:15:00.066000 return data: last bar 2017-04-21 10:10:00 last processed bar 2017-04-21 10:05:00
+596 bars requested 596 bars returned
+start_idx [(588, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:10:00 Writing to ./data/NKTR_livesignals_20170421_09_45_46.csv ./data/NKTR_last.csv
+ET:  0.22  minutes
+now 2017-04-21 10:20:00.341000 return data: last bar 2017-04-21 10:15:00 last processed bar 2017-04-21 10:10:00
+596 bars requested 596 bars returned
+start_idx [(587, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:15:00

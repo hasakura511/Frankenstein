@@ -1,0 +1,363 @@
+return data: last bar 2017-04-21 09:45:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 7 bars returned
+start_idx [(4, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 15:55:00 data.dropna() feed returned insufficient data
+now 2017-04-21 09:50:00.670000 return None: last bar 2017-04-21 09:45:00 last processed bar 2017-04-21 09:45:00
+ITCI getFeed did not return any data! last bar: 2017-04-21 09:45:00 now: 09:50:01.479000
+now 2017-04-21 09:55:01.483000 return data: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 09:45:00
+596 bars requested 8 bars returned
+start_idx [(4, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 15:55:00 data.dropna() feed returned insufficient data
+now 2017-04-21 10:00:00.903000 return data: last bar 2017-04-21 09:55:00 last processed bar 2017-04-21 09:50:00
+596 bars requested 9 bars returned
+start_idx [(4, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 15:55:00 data.dropna() feed returned insufficient data
+now 2017-04-21 10:05:00.739000 return data: last bar 2017-04-21 10:00:00 last processed bar 2017-04-21 09:55:00
+596 bars requested 10 bars returned
+start_idx [(4, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 15:55:00 data.dropna() feed returned insufficient data
+now 2017-04-21 10:10:01.842000 return data: last bar 2017-04-21 10:05:00 last processed bar 2017-04-21 10:00:00
+596 bars requested 596 bars returned
+start_idx [(589, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:05:00 ET:  0.14  minutes
+now 2017-04-21 10:15:01.383000 return data: last bar 2017-04-21 10:10:00 last processed bar 2017-04-21 10:05:00
+596 bars requested 596 bars returned
+start_idx [(588, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:10:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.2  minutes
+now 2017-04-21 10:20:00.453000 return data: last bar 2017-04-21 10:15:00 last processed bar 2017-04-21 10:10:00
+596 bars requested 596 bars returned
+start_idx [(587, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:15:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.22  minutes
+now 2017-04-21 10:25:00.879000 return data: last bar 2017-04-21 10:25:00 last processed bar 2017-04-21 10:15:00
+596 bars requested 596 bars returned
+start_idx [(585, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:25:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.18  minutes
+now 2017-04-21 10:30:01.677000 return data: last bar 2017-04-21 10:30:00 last processed bar 2017-04-21 10:25:00
+596 bars requested 596 bars returned
+start_idx [(584, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:30:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.19  minutes
+now 2017-04-21 10:35:00.005000 return data: last bar 2017-04-21 10:35:00 last processed bar 2017-04-21 10:30:00
+596 bars requested 596 bars returned
+start_idx [(583, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:35:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.04  minutes
+now 2017-04-21 10:40:02.750000 return data: last bar 2017-04-21 10:40:00 last processed bar 2017-04-21 10:35:00
+596 bars requested 596 bars returned
+start_idx [(582, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:40:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.17  minutes
+now 2017-04-21 10:45:01.142000 return data: last bar 2017-04-21 10:45:00 last processed bar 2017-04-21 10:40:00
+596 bars requested 596 bars returned
+start_idx [(581, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:45:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.2  minutes
+now 2017-04-21 10:50:01.477000 return data: last bar 2017-04-21 10:50:00 last processed bar 2017-04-21 10:45:00
+596 bars requested 596 bars returned
+start_idx [(580, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:50:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.19  minutes
+now 2017-04-21 10:55:02.152000 return data: last bar 2017-04-21 10:55:00 last processed bar 2017-04-21 10:50:00
+596 bars requested 596 bars returned
+start_idx [(579, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:55:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.14  minutes
+now 2017-04-21 11:00:00.976000 return data: last bar 2017-04-21 11:00:00 last processed bar 2017-04-21 10:55:00
+596 bars requested 596 bars returned
+start_idx [(578, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:00:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.21  minutes
+now 2017-04-21 11:05:00.298000 return data: last bar 2017-04-21 11:05:00 last processed bar 2017-04-21 11:00:00
+596 bars requested 596 bars returned
+start_idx [(577, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:05:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.21  minutes
+now 2017-04-21 11:10:00.059000 return data: last bar 2017-04-21 11:10:00 last processed bar 2017-04-21 11:05:00
+596 bars requested 596 bars returned
+start_idx [(576, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:10:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.09  minutes
+now 2017-04-21 11:15:01.858000 return data: last bar 2017-04-21 11:15:00 last processed bar 2017-04-21 11:10:00
+596 bars requested 596 bars returned
+start_idx [(575, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:15:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.18  minutes
+now 2017-04-21 11:20:00.900000 return data: last bar 2017-04-21 11:20:00 last processed bar 2017-04-21 11:15:00
+596 bars requested 596 bars returned
+start_idx [(574, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-20 14:40:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:20:00 Writing to ./data/ITCI_livesignals_20170421_09_45_46.csv ./data/ITCI_last.csv
+ET:  0.17  minutes
+now 2017-04-21 11:25:00.079000 return data: last bar 2017-04-21 11:25:00 last processed bar 2017-04-21 11:20:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 11:30:01.412000 return data: last bar 2017-04-21 11:30:00 last processed bar 2017-04-21 11:25:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 11:35:00.325000 return data: last bar 2017-04-21 11:35:00 last processed bar 2017-04-21 11:30:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 11:40:01.303000 return data: last bar 2017-04-21 11:40:00 last processed bar 2017-04-21 11:35:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 11:45:01.052000 return data: last bar 2017-04-21 11:45:00 last processed bar 2017-04-21 11:40:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 11:50:01.424000 return data: last bar 2017-04-21 11:50:00 last processed bar 2017-04-21 11:45:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 11:55:00.990000 return data: last bar 2017-04-21 11:55:00 last processed bar 2017-04-21 11:50:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:00:00.762000 return data: last bar 2017-04-21 12:00:00 last processed bar 2017-04-21 11:55:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:05:00.787000 return data: last bar 2017-04-21 12:05:00 last processed bar 2017-04-21 12:00:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:10:00.728000 return data: last bar 2017-04-21 12:10:00 last processed bar 2017-04-21 12:05:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:15:00.861000 return data: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:10:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:20:01.052000 return data: last bar 2017-04-21 12:20:00 last processed bar 2017-04-21 12:15:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:25:00.998000 return data: last bar 2017-04-21 12:25:00 last processed bar 2017-04-21 12:20:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:30:00.902000 return data: last bar 2017-04-21 12:30:00 last processed bar 2017-04-21 12:25:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:35:00.671000 return data: last bar 2017-04-21 12:35:00 last processed bar 2017-04-21 12:30:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:40:01.072000 return data: last bar 2017-04-21 12:40:00 last processed bar 2017-04-21 12:35:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:45:00.321000 return data: last bar 2017-04-21 12:45:00 last processed bar 2017-04-21 12:40:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:50:01.056000 return data: last bar 2017-04-21 12:50:00 last processed bar 2017-04-21 12:45:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:55:00.594000 return data: last bar 2017-04-21 12:55:00 last processed bar 2017-04-21 12:50:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:00:00.120000 return data: last bar 2017-04-21 13:00:00 last processed bar 2017-04-21 12:55:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:05:00.622000 return data: last bar 2017-04-21 13:05:00 last processed bar 2017-04-21 13:00:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:10:00.264000 return data: last bar 2017-04-21 13:10:00 last processed bar 2017-04-21 13:05:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:15:00.445000 return data: last bar 2017-04-21 13:15:00 last processed bar 2017-04-21 13:10:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:20:00.532000 return data: last bar 2017-04-21 13:20:00 last processed bar 2017-04-21 13:15:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:25:00.710000 return data: last bar 2017-04-21 13:25:00 last processed bar 2017-04-21 13:20:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:30:00.636000 return data: last bar 2017-04-21 13:30:00 last processed bar 2017-04-21 13:25:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:35:00.714000 return data: last bar 2017-04-21 13:35:00 last processed bar 2017-04-21 13:30:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:40:00.580000 return data: last bar 2017-04-21 13:40:00 last processed bar 2017-04-21 13:35:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:45:00.762000 return data: last bar 2017-04-21 13:45:00 last processed bar 2017-04-21 13:40:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:50:00.191000 return data: last bar 2017-04-21 13:50:00 last processed bar 2017-04-21 13:45:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 13:55:00.332000 return data: last bar 2017-04-21 13:55:00 last processed bar 2017-04-21 13:50:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:00:00.942000 return data: last bar 2017-04-21 14:00:00 last processed bar 2017-04-21 13:55:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:05:00.271000 return data: last bar 2017-04-21 14:05:00 last processed bar 2017-04-21 14:00:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:10:01.084000 return data: last bar 2017-04-21 14:10:00 last processed bar 2017-04-21 14:05:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:15:00.659000 return data: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:10:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:20:00.916000 return data: last bar 2017-04-21 14:20:00 last processed bar 2017-04-21 14:15:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:25:00.950000 return data: last bar 2017-04-21 14:25:00 last processed bar 2017-04-21 14:20:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:30:00.079000 return data: last bar 2017-04-21 14:30:00 last processed bar 2017-04-21 14:25:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:35:00.856000 return data: last bar 2017-04-21 14:35:00 last processed bar 2017-04-21 14:30:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:40:00.032000 return data: last bar 2017-04-21 14:40:00 last processed bar 2017-04-21 14:35:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:45:00.426000 return data: last bar 2017-04-21 14:45:00 last processed bar 2017-04-21 14:40:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:50:00.270000 return data: last bar 2017-04-21 14:50:00 last processed bar 2017-04-21 14:45:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:55:00.961000 return data: last bar 2017-04-21 14:55:00 last processed bar 2017-04-21 14:50:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:00:00.966000 return data: last bar 2017-04-21 15:00:00 last processed bar 2017-04-21 14:55:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:05:00.344000 return data: last bar 2017-04-21 15:05:00 last processed bar 2017-04-21 15:00:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:10:00.841000 return data: last bar 2017-04-21 15:10:00 last processed bar 2017-04-21 15:05:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:15:00.575000 return data: last bar 2017-04-21 15:15:00 last processed bar 2017-04-21 15:10:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:20:00.422000 return data: last bar 2017-04-21 15:20:00 last processed bar 2017-04-21 15:15:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:25:01.220000 return data: last bar 2017-04-21 15:25:00 last processed bar 2017-04-21 15:20:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:30:00.676000 return data: last bar 2017-04-21 15:30:00 last processed bar 2017-04-21 15:25:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:35:00.209000 return data: last bar 2017-04-21 15:35:00 last processed bar 2017-04-21 15:30:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:40:00.464000 return data: last bar 2017-04-21 15:40:00 last processed bar 2017-04-21 15:35:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:45:00.544000 return data: last bar 2017-04-21 15:45:00 last processed bar 2017-04-21 15:40:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:50:00.067000 return data: last bar 2017-04-21 15:50:00 last processed bar 2017-04-21 15:45:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 15:55:00.735000

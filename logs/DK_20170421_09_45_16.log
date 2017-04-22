@@ -1,0 +1,371 @@
+return data: last bar 2017-04-21 09:45:00 last processed bar 1000-01-01 00:00:00
+596 bars requested 596 bars returned
+start_idx [(593, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:00:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 09:45:00 ET:  0.01  minutes
+now 2017-04-21 09:50:01.556000 return data: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 09:45:00
+596 bars requested 596 bars returned
+start_idx [(589, Timestamp('2017-04-21 09:35:00')), (590, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 09:50:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.24  minutes
+now 2017-04-21 09:55:01.482000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 09:50:00
+DK getFeed did not return any data! last bar: 2017-04-21 09:50:00 now: 09:55:06.029000
+now 2017-04-21 10:00:00.206000 return data: last bar 2017-04-21 09:55:00 last processed bar 2017-04-21 09:50:00
+596 bars requested 596 bars returned
+start_idx [(587, Timestamp('2017-04-21 09:35:00')), (588, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 09:55:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.15  minutes
+now 2017-04-21 10:05:00.404000 return data: last bar 2017-04-21 10:00:00 last processed bar 2017-04-21 09:55:00
+596 bars requested 596 bars returned
+start_idx [(586, Timestamp('2017-04-21 09:35:00')), (587, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:00:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.13  minutes
+now 2017-04-21 10:10:01.451000 return data: last bar 2017-04-21 10:05:00 last processed bar 2017-04-21 10:00:00
+596 bars requested 596 bars returned
+start_idx [(585, Timestamp('2017-04-21 09:35:00')), (586, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:05:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.18  minutes
+now 2017-04-21 10:15:00.355000 ConnectionTimeout caused by - ReadTimeoutError(HTTPConnectionPool(host=u'localhost', port=9200): Read timed out. (read timeout=10))
+DK getFeed did not return any data! last bar: 2017-04-21 10:05:00 now: 10:15:13.496000
+now 2017-04-21 10:20:00.451000 return data: last bar 2017-04-21 10:15:00 last processed bar 2017-04-21 10:05:00
+596 bars requested 596 bars returned
+start_idx [(583, Timestamp('2017-04-21 09:35:00')), (584, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:15:00 Close                        22.18
+High                         22.23
+Low                         22.175
+Open                         22.19
+Volume                       15046
+ClosePC                          0
+EMA9                        22.104
+EMA9PC                 0.000860407
+EMA20                      22.0234
+EMA9XEMA20                       0
+ClosePC>0.003                    0
+EMA9PC>0.001                     0
+EMA9>EMA20                       1
+VP                          333946
+TotalVP                 2.3398e+06
+TotalVolume                 106299
+VWAP                       22.0115
+EMA9>VWAP                        1
+impulse                          0
+state                            1
+F                                1
+_QTY                         22.18
+QTY                            226
+value                      5012.68
+timestamp        20170421 10:20:02
+Name: 2017-04-21 10:15:00, dtype: object
+Signal Found! Transmitting order: {'symbol': 'DK', 'typeofsymbol': 'stock', 'quant': 226}
+Saved ./data/110064634/DK.json
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "DK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "226",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.23  minutes
+now 2017-04-21 10:25:02.530000 return data: last bar 2017-04-21 10:25:00 last processed bar 2017-04-21 10:15:00
+596 bars requested 596 bars returned
+start_idx [(581, Timestamp('2017-04-21 09:35:00')), (582, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:25:00 Close                        22.28
+High                        22.285
+Low                         22.235
+Open                        22.235
+Volume                        7876
+ClosePC                 0.00202384
+EMA9                       22.1603
+EMA9PC                  0.00135238
+EMA20                      22.0661
+EMA9XEMA20                       0
+ClosePC>0.003                    0
+EMA9PC>0.001                     1
+EMA9>EMA20                       1
+VP                          175372
+TotalVP                3.84422e+06
+TotalVolume                 173986
+VWAP                        22.095
+EMA9>VWAP                        1
+impulse                          0
+state                            0
+F                                1
+_QTY                             0
+QTY                              0
+value                            0
+timestamp        20170421 10:25:12
+Name: 2017-04-21 10:25:00, dtype: object
+Signal Found! Transmitting order: {'symbol': 'DK', 'typeofsymbol': 'stock', 'quant': 0}
+Saved ./data/110064634/DK.json
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "SPU",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "1388",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "DK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SAEX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "875",
+         "expir" : null
+      }
+   ]
+}
+
+sent signal to broker
+Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.21  minutes
+now 2017-04-21 10:30:00.284000 return data: last bar 2017-04-21 10:30:00 last processed bar 2017-04-21 10:25:00
+596 bars requested 596 bars returned
+start_idx [(580, Timestamp('2017-04-21 09:35:00')), (581, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:30:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.21  minutes
+now 2017-04-21 10:35:01.021000 return data: last bar 2017-04-21 10:35:00 last processed bar 2017-04-21 10:30:00
+596 bars requested 596 bars returned
+start_idx [(579, Timestamp('2017-04-21 09:35:00')), (580, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:35:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.21  minutes
+now 2017-04-21 10:40:01.862000 return data: last bar 2017-04-21 10:40:00 last processed bar 2017-04-21 10:35:00
+596 bars requested 596 bars returned
+start_idx [(578, Timestamp('2017-04-21 09:35:00')), (579, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:40:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.19  minutes
+now 2017-04-21 10:45:00.133000 return data: last bar 2017-04-21 10:45:00 last processed bar 2017-04-21 10:40:00
+596 bars requested 596 bars returned
+start_idx [(577, Timestamp('2017-04-21 09:35:00')), (578, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:45:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.22  minutes
+now 2017-04-21 10:50:01.092000 return data: last bar 2017-04-21 10:50:00 last processed bar 2017-04-21 10:45:00
+596 bars requested 596 bars returned
+start_idx [(576, Timestamp('2017-04-21 09:35:00')), (577, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:50:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.17  minutes
+now 2017-04-21 10:55:00.580000 return data: last bar 2017-04-21 10:55:00 last processed bar 2017-04-21 10:50:00
+596 bars requested 596 bars returned
+start_idx [(575, Timestamp('2017-04-21 09:35:00')), (576, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 10:55:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.17  minutes
+now 2017-04-21 11:00:00.978000 return data: last bar 2017-04-21 11:00:00 last processed bar 2017-04-21 10:55:00
+596 bars requested 596 bars returned
+start_idx [(574, Timestamp('2017-04-21 09:35:00')), (575, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:00:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.21  minutes
+now 2017-04-21 11:05:00.316000 return data: last bar 2017-04-21 11:05:00 last processed bar 2017-04-21 11:00:00
+596 bars requested 596 bars returned
+start_idx [(573, Timestamp('2017-04-21 09:35:00')), (574, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:05:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.22  minutes
+now 2017-04-21 11:10:01.347000 return data: last bar 2017-04-21 11:10:00 last processed bar 2017-04-21 11:05:00
+596 bars requested 596 bars returned
+start_idx [(572, Timestamp('2017-04-21 09:35:00')), (573, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:10:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.07  minutes
+now 2017-04-21 11:15:01.866000 return data: last bar 2017-04-21 11:15:00 last processed bar 2017-04-21 11:10:00
+596 bars requested 596 bars returned
+start_idx [(571, Timestamp('2017-04-21 09:35:00')), (572, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:15:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.18  minutes
+now 2017-04-21 11:20:01.197000 return data: last bar 2017-04-21 11:20:00 last processed bar 2017-04-21 11:15:00
+596 bars requested 596 bars returned
+start_idx [(570, Timestamp('2017-04-21 09:35:00')), (571, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:20:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.17  minutes
+now 2017-04-21 11:25:00.894000 return data: last bar 2017-04-21 11:25:00 last processed bar 2017-04-21 11:20:00
+596 bars requested 596 bars returned
+start_idx [(569, Timestamp('2017-04-21 09:35:00')), (570, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 08:05:00 start_vwap 2017-04-21 09:35:00 last_bar 2017-04-21 11:25:00 Writing to ./data/DK_livesignals_20170421_09_45_53.csv ./data/DK_last.csv
+ET:  0.04  minutes
+now 2017-04-21 11:30:00.384000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 11:30:00.503000
+now 2017-04-21 11:35:00.758000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 11:35:01.210000
+now 2017-04-21 11:40:01.337000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 11:40:01.870000
+now 2017-04-21 11:45:00.296000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 11:45:00.839000
+now 2017-04-21 11:50:00.478000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 11:50:00.927000
+now 2017-04-21 11:55:00.431000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 11:55:01.133000
+now 2017-04-21 12:00:00.517000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 12:00:00.856000
+now 2017-04-21 12:05:01 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 12:05:01.440000
+now 2017-04-21 12:10:00.711000 return None: last bar 2017-04-21 09:50:00 last processed bar 2017-04-21 11:25:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 11:25:00 now: 12:10:01.143000
+now 2017-04-21 12:15:00.150000 return data: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 11:25:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 12:20:00.168000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:20:00.180000
+now 2017-04-21 12:25:00.194000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:25:00.227000
+now 2017-04-21 12:25:02.574000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:25:02.587000
+now 2017-04-21 12:30:00.922000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:30:01.225000
+now 2017-04-21 12:35:00.603000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:35:00.963000
+now 2017-04-21 12:40:01.070000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:40:01.598000
+now 2017-04-21 12:45:00.318000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:45:01.170000
+now 2017-04-21 12:50:00.714000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:50:01.052000
+now 2017-04-21 12:55:00.215000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 12:55:00.247000
+now 2017-04-21 13:00:00.325000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:00:00.996000
+now 2017-04-21 13:05:01.044000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:05:01.404000
+now 2017-04-21 13:10:00.857000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:10:01.626000
+now 2017-04-21 13:15:00.669000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:15:00.938000
+now 2017-04-21 13:20:00.972000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:20:01.475000
+now 2017-04-21 13:25:00.677000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:25:01.477000
+now 2017-04-21 13:30:00.411000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:30:00.501000
+now 2017-04-21 13:35:00.863000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:35:01.192000
+now 2017-04-21 13:40:00.837000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:40:01.345000
+now 2017-04-21 13:45:00.763000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:45:01.167000
+now 2017-04-21 13:50:00.277000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:50:00.363000
+now 2017-04-21 13:55:00.872000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 13:55:01.051000
+now 2017-04-21 14:00:00.393000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 14:00:00.581000
+now 2017-04-21 14:05:00.313000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 14:05:00.377000
+now 2017-04-21 14:10:01.079000 return None: last bar 2017-04-21 12:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 12:15:00 now: 14:10:01.630000
+now 2017-04-21 14:15:00.658000 return data: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 12:15:00
+2 bars requested 2 bars returned
+596 bars requested 22 bars returned
+start_idx [(0, Timestamp('2017-04-21 09:35:00'))]
+start_ema 2017-04-21 09:50:00 data.dropna() feed returned insufficient data
+now 2017-04-21 14:20:00.919000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:20:01.707000
+now 2017-04-21 14:25:00.051000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:25:00.068000
+now 2017-04-21 14:30:00.424000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:30:00.950000
+now 2017-04-21 14:35:00.600000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:35:00.615000
+now 2017-04-21 14:40:00.718000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:40:00.773000
+now 2017-04-21 14:45:00.794000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:45:01.477000
+now 2017-04-21 14:50:01.006000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:50:01.275000
+now 2017-04-21 14:55:00.406000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 14:55:00.653000
+now 2017-04-21 15:00:00.697000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:00:01.102000
+now 2017-04-21 15:05:00.347000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:05:01.211000
+now 2017-04-21 15:10:00.840000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:10:01.183000
+now 2017-04-21 15:15:00.058000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:15:00.073000
+now 2017-04-21 15:20:00.423000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:20:00.948000
+now 2017-04-21 15:25:00.429000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:25:00.680000
+now 2017-04-21 15:30:00.674000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:30:00.923000
+now 2017-04-21 15:35:00.088000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:35:00.100000
+now 2017-04-21 15:40:00.479000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:40:00.782000
+now 2017-04-21 15:45:00.191000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:45:00.220000
+now 2017-04-21 15:50:00.320000 return None: last bar 2017-04-21 14:15:00 last processed bar 2017-04-21 14:15:00
+2 bars requested None returned
+DK getFeed did not return any data! last bar: 2017-04-21 14:15:00 now: 15:50:00.649000
+now 2017-04-21 15:55:00.014000

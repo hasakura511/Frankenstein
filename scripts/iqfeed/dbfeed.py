@@ -73,7 +73,8 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     feed_list=feed_list[:int(maxdatapoints)]
     res=[]
     for feed in feed_list:
-        quote={ 'Date':feed.date,
+        #feed.date=eastern.localize(feed.date,is_dst=True)
+        quote={ 'Date':datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second),
                                 'Open':feed.open,
                                 'High':feed.high,
                                 'Low':feed.low,

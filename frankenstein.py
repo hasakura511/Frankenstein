@@ -61,8 +61,8 @@ def getFeed(symbol, lookback, interval):
     try:
         data = dbhist.get_hist(symbol, interval, lookback).sort_index(ascending=True)
         #data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
-        data.index=[x.astimezone(eastern) for x in data.index]
-        data.index=[x.replace(tzinfo=None) for x in data.index]
+        #data.index=[x.astimezone(eastern) for x in data.index]
+        #data.index=[x.replace(tzinfo=None) for x in data.index]
         data.to_csv(dataPath+symbol+'_feed.csv')
         #print data
         if data.shape[0]<1 or data.index[-1] <= lastDate:
@@ -254,7 +254,11 @@ class Frankenstein():
                     data = self.signals.append(lastbar.iloc[-1]).copy()
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
-
+                if data.shape[0]<self.maxlookback:
+                    txt=self.symbol + ': '+ str(self.maxlookback)+' bars requested '+str(data.shape[0])+' bars returned.'
+                    print txt
+                    slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
+                    
 
             if data is None:
                 #print 'new bar not ready'
@@ -263,7 +267,7 @@ class Frankenstein():
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:
-                print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
+                #print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
                 if self.broker == None:
                     start_idx = [(i, date) for i, date in enumerate(data.index) \
                                  if date.minute == 35 and date.hour == 9]
@@ -301,7 +305,7 @@ class Frankenstein():
             if len(data.dropna())<1:
                 print 'data.dropna() feed returned insufficient data'
                 data.to_csv(dataPath+self.symbol+'_debug.csv')
-                txt = self.symbol + ' feed returned insufficient data! check logs.'
+                txt = self.symbol + ' returned insufficient data! check logs.'
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:

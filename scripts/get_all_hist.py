@@ -1,26 +1,15 @@
-import numpy as np
-import pandas as pd# -*- coding: utf-8 -*- 
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
-from django.db import models
-
-sys.path.append("../")
-
+import iqfeed.dbhist as dbhist
+import time as tt
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "beCOMPANY.settings")
 import beCOMPANY
-import beCOMPANY.settings as bsettings
+import beCOMPANY.settings as settings
 from main.models import *
 import datetime
-
-import time
-import ibfeed.get_feed as ibfeed
-import time
-import os
-import logging
+import psycopg2
+import csv
 import threading
-import sys
 
 """
 Created on Tue Mar 08 20:10:29 2016
@@ -30,32 +19,77 @@ Created on Tue Mar 08 20:10:29 2016
 1 hour - 500 datapoint per request
 @author: Hidemi
 """
-logging.basicConfig(filename='/logs/get_hist.log',level=logging.DEBUG)
 
-interval='1m'
-minDataPoints=10000
-#interval='30m'
-#interval='1d'
 
-def start_feed(symFilter, durationStr, barSizeSetting, whatToShow, minDataPoints):
-    
-    if durationStr == '1 min':
+def    main():
+    if len(sys.argv) > 2:
+        symbols=[]
         threads = []
-        feed_thread = threading.Thread(target=ibfeed.get_bar_realtime, args=[ whatToShow, barSizeSetting, symFilter])
-        feed_thread.daemon=True
-        threads.append(feed_thread)
+        interval=sys.argv[1]
+        maxdatapoints=sys.argv[2]
+        loop=False
+        if len(sys.argv) > 3:
+            if sys.argv[3]:
+                loop=True
+        i=0
+        seen=dict()
+        with open("../stocks.csv", 'rb') as f:
+            reader = csv.reader(f)
+            rownum=0
+            for row in reader:
+                rownum+=1
+                i+=1
+                if rownum > 1:
+                    (symbol,qty,exch)=row
+                    seen[symbol]=qty
+                    symbols.append(symbol)
+                if i > 25:
+                    i=0
+                    feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
+                    feed_thread.daemon=True
+                    threads.append(feed_thread)
+                    symbols=[]
+        
+        if len(symbols) > 0:
+            feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
+            feed_thread.daemon=True
+            threads.append(feed_thread)
         [t.start() for t in threads]
-    data=ibfeed.get_bar_hist(whatToShow, minDataPoints, durationStr, barSizeSetting, symFilter)
-    #[t.join() for t in threads]
+        while 1:
+            threads=[]
+            try:
+                with open("../stocks.csv", 'rb') as f:
+                    reader = csv.reader(f)
+                    rownum=0
+                    symbols=[]
+                    for row in reader:
+                        rownum+=1
+                        i+=1
+                        if rownum > 1:
+                            (symbol,qty,exch)=row
+                            if not seen.has_key(symbol):
+                                print 'Found New Symbol, ', symbol
+                                seen[symbol]=qty
+                                symbols.append(symbol)
+                    if len(symbols) > 0:
+                        #feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, 10000, 0,'','','', False])
+                        #feed_thread.daemon=True
+                        #threads.append(feed_thread)
 
-contracts=ibfeed.get_contracts()
-for contract in contracts:
-    symFilter=contract.symbol
-    (durationStr, barSizeSetting,whatToShow)=ibfeed.interval_to_ibhist_duration(interval)
-    start_feed(symFilter, durationStr, barSizeSetting, whatToShow, minDataPoints)
-    time.sleep(10)
-else:
-    print 'The syntax is: get_hist.py EURAUD 30m 10000'
-    exit()
-    
-
+                        feed_thread = threading.Thread(target=dbhist.get_mult_hist, args=[symbols, interval, maxdatapoints,0,'','','', loop])
+                        feed_thread.daemon=True
+                        threads.append(feed_thread)
+                [t.start() for t in threads]
+                        
+                tt.sleep(5)
+                print 'History Running',datetime.datetime.now()
+            except Exception as e:
+                print e
+    else:
+        print "Usage: get_iqhist.py 300 100"
+        
+if    __name__    ==    "__main__":
+    try:
+        main()
+    except    KeyboardInterrupt:
+        pass

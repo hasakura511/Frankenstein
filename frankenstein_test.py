@@ -62,9 +62,9 @@ def getFeed(symbol, lookback, interval):
     try:
         data = dbhist.get_realtime_hist(symbol, interval, lookback).sort_index(ascending=True)
         #data.index=[x.replace(tzinfo=None) for x in data.index.to_pydatetime()]
-        data.index=[x.astimezone(eastern) for x in data.index]
-        data.index=[x.replace(tzinfo=None) for x in data.index]
-        data.to_csv(dataPath+symbol+'_feed.csv')
+        #data.index=[x.astimezone(eastern) for x in data.index]
+        #data.index=[x.replace(tzinfo=None) for x in data.index]
+        data.to_csv(dataPath+symbol+'_hist.csv')
         #print data
         if data.shape[0]<1 or data.index[-1] <= lastDate:
             print 'return None: last bar', data.index[-1], 'last processed bar', lastDate

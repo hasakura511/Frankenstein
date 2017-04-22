@@ -1,0 +1,61 @@
+MARKET IS CLOSING. CLEARING POSITIONS!
+removed ./data/110064634/DK.json
+removed ./data/110064634/HTZ.json
+removed ./data/110064634/SAEX.json
+removed ./data/110064634/SPU.json
+removed ./data/110064634/WRD.json
+[{u'symbol': u'DK', u'typeofsymbol': u'stock', u'quant': 0}, {u'symbol': u'HTZ', u'typeofsymbol': u'stock', u'quant': 0}, {u'symbol': u'SAEX', u'typeofsymbol': u'stock', u'quant': 0}, {u'symbol': u'SPU', u'typeofsymbol': u'stock', u'quant': 0}, {u'symbol': u'WRD', u'typeofsymbol': u'stock', u'quant': 0}]
+5
+{
+   "ok" : "1",
+   "response" : [
+      {
+         "underlying" : null,
+         "symbol" : "SPU",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "DK",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "HTZ",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "WRD",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      },
+      {
+         "underlying" : null,
+         "symbol" : "SAEX",
+         "putcall" : null,
+         "strike" : null,
+         "typeofsymbol" : "stock",
+         "quant" : "0",
+         "expir" : null
+      }
+   ]
+}
+
+sent orders to broker
+Elapsed time:  0.13  minutes  2017-04-21 15:59:09.545000

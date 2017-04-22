@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 495, in <module>
+    frank = Frankenstein(symbol, mode, size, broker=broker)
+  File "./frankenstein.py", line 462, in runlive
+    time.sleep(timeleft)
+  File "./frankenstein.py", line 383, in check
+    else:
+  File "e:\anaconda2\lib\site-packages\slackweb\slackweb.py", line 26, in notify
+    return self.send(kwargs)
+  File "e:\anaconda2\lib\site-packages\slackweb\slackweb.py", line 35, in send
+    response = self.opener.open(req, data.encode('utf-8')).read()
+  File "e:\anaconda2\lib\urllib2.py", line 429, in open
+    response = self._open(req, data)
+  File "e:\anaconda2\lib\urllib2.py", line 447, in _open
+    '_open', req)
+  File "e:\anaconda2\lib\urllib2.py", line 407, in _call_chain
+    result = func(*args)
+  File "e:\anaconda2\lib\urllib2.py", line 1241, in https_open
+    context=self._context)
+  File "e:\anaconda2\lib\urllib2.py", line 1198, in do_open
+    raise URLError(err)
+urllib2.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
