@@ -74,6 +74,7 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     res=[]
     for feed in feed_list:
         #feed.date=eastern.localize(feed.date,is_dst=True)
+        date=datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second)
         quote={ 'Date':datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second),
                                 'Open':feed.open,
                                 'High':feed.high,
@@ -81,7 +82,8 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
                                 'Close':feed.close,
                                 'Volume':feed.volume
                             }
-        res.append(quote)
+        if date <= datetime.now():
+            res.append(quote)
     data = json_normalize(res)
     data=data.set_index('Date')
     #data.to_csv('test.csv')
@@ -152,7 +154,7 @@ def bg_get_feed(instrument, symbol, interval, maxdatapoints,datadirection=0,requ
                         if date:
                             
                             date=dateutil.parser.parse(date)
-                            date=eastern.localize(date,is_dst=True)
+                            #date=eastern.localize(date,is_dst=True)
                             #print date
                             quote={ 'Date':date,
                                 'Open':open_price,
@@ -303,8 +305,8 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                         
 
                         if fields[0] == 'T':
-                            #print 'Timestamp: ', line
                             datenow=parse(fields[1])
+                            print 'Timestamp: ', datenow
                             min_interval=datenow.minute
                             diff=(min_interval * 60) % interval
                             for sym in symstate.keys():

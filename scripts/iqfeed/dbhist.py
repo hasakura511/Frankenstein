@@ -101,14 +101,16 @@ def get_hist(symbol, interval, maxdatapoints,datadirection=0,requestid='',datapo
     res=[]
     for feed in feed_list:
         #feed.date=eastern.localize(feed.date,is_dst=True)
-        quote={ 'Date':datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second),
+        date=datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second)
+        quote={ 'Date':date,
                                 'Open':feed.open,
                                 'High':feed.high,
                                 'Low':feed.low,
                                 'Close':feed.close,
                                 'Volume':feed.volume
                             }
-        res.append(quote)
+        if date <= datetime.now():
+            res.append(quote)
     data = json_normalize(res)
     data=data.set_index('Date')
     #data.to_csv('test.csv')
@@ -140,6 +142,7 @@ def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid=
     res=[]
     for feed in feed_list:
         #feed.date=eastern.localize(feed.date,is_dst=True)
+        date=datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second)
         quote={ 'Date':datetime(feed.date.year,feed.date.month,feed.date.day,feed.date.hour,feed.date.minute,feed.date.second),
                                'Open':feed.open,
                                 'High':feed.high,
@@ -147,7 +150,8 @@ def get_realtime_hist(symbol, interval, maxdatapoints,datadirection=0,requestid=
                                 'Close':feed.close,
                                 'Volume':feed.volume
                             }
-        res.append(quote)
+        if date <= datetime.now():
+            res.append(quote)
     data = json_normalize(res)
     data=data.set_index('Date')
     #data.to_csv('test.csv')
