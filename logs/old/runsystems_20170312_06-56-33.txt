@@ -1,5 +1,0 @@
-3 threads found..
-starting thread for TSLA
-starting thread for GOOG
-starting thread for AAPL
-Elapsed time:  0.0  minutes  2017-03-12 06:56:34.399000
