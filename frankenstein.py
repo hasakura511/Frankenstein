@@ -15,20 +15,6 @@ import datetime
 from datetime import datetime as dt
 import scripts.iqfeed.dbhist as dbhist
 import slackweb
-fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
-slackhook='https://hooks.slack.com/services/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'
-slack = slackweb.Slack(url=slackhook)
-slack_channel="#logs"
-# API
-# SYM = FrankiesSystem(symbol, get_hist_func)
-# SYM.run() - saves signal transmits to broker
-c2id = "110064634"
-c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
-typeofsymbol = "stock"
-duration = "DAY"
-dataPath = './data/'
-portfolioPath=dataPath+c2id+'/'
-lastDate = datetime.datetime(1000, 1, 1)
 
 
 def getBackendDB():
@@ -219,6 +205,7 @@ class Frankenstein():
         self.mode = mode
         self.shutdown_time=datetime.time(15, 55)
         self.max_symbols = 5
+        self.feederror = False
         if mode == 'live':
             # self.feed = getFeed(self.symbol, self.maxlookback)
             self.signal_filename = dataPath + self.symbol + '_livesignals_' \
@@ -239,11 +226,12 @@ class Frankenstein():
         check_time = time.time()
         start_idx=[]
         if self.mode == 'live':
-            if 'signals' in dir(self) and self.signals.shape[0]>self.max_emalookback:
+            if 'signals' in dir(self) and self.signals.shape[0]>self.max_emalookback and not self.feederror:
                 lastbar = getFeed(self.symbol, 2, self.interval)
                 
                 if lastbar is None:
                     #print 'new bar not ready'
+                    self.feederror = True
                     print 2,'bars requested None returned'
                     txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                     print txt
@@ -254,14 +242,18 @@ class Frankenstein():
                     data = self.signals.append(lastbar.iloc[-1]).copy()
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
-                if data.shape[0]<self.maxlookback:
-                    txt=self.symbol + ': '+ str(self.maxlookback)+' bars requested '+str(data.shape[0])+' bars returned.'
+                if data is not None and data.shape[0]<self.maxlookback:
+                    self.feederror = True
+                    txt=self.symbol + ': Warning! '+ str(self.maxlookback)+' bars requested '+str(data.shape[0])+' bars returned.'
                     print txt
                     slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
+                elif data is not None and data.shape[0]>=self.maxlookback:
+                    self.feederror = False
                     
 
             if data is None:
                 #print 'new bar not ready'
+                self.feederror = True
                 txt = self.symbol + ' getFeed did not return any data! last bar: '+str(lastDate)+' now: '+str(dt.now().time())
                 print txt
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
@@ -479,6 +471,21 @@ class Frankenstein():
 
 
 if __name__ == "__main__":
+    fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
+    slackhook='https://hooks.slack.com/services/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'
+    slack = slackweb.Slack(url=slackhook)
+    slack_channel="#logs"
+    # API
+    # SYM = FrankiesSystem(symbol, get_hist_func)
+    # SYM.run() - saves signal transmits to broker
+    c2id = "110064634"
+    c2key = "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF"
+    typeofsymbol = "stock"
+    duration = "DAY"
+    dataPath = './data/'
+    portfolioPath=dataPath+c2id+'/'
+    lastDate = datetime.datetime(1000, 1, 1)
+
     start_time = time.time()
     if len(sys.argv) == 1:
         # filename = '5m_#TeslaMotor.csv'
@@ -494,6 +501,7 @@ if __name__ == "__main__":
             broker = sys.argv[3]
             frank = Frankenstein(symbol, mode, size, broker=broker)
         else:
+            dataPath = './data/check/'
             frank = Frankenstein(symbol, mode, size)
 
         frank.runlive()

@@ -14,6 +14,8 @@ import datetime
 from datetime import datetime as dt
 import scripts.iqfeed.dbhist as dbhist
 import slackweb
+import shutil
+
 fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
 slackhook='https://hooks.slack.com/services/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'
 slack = slackweb.Slack(url=slackhook)
@@ -24,6 +26,7 @@ typeofsymbol = "stock"
 duration = "DAY"
 dataPath = './data/'
 portfolioPath=dataPath+c2id+'/'
+closed_dir=portfolioPath+fulltimestamp[:8]+'/'
 
 def getDesiredPositions():
     global c2id
@@ -84,18 +87,23 @@ def setDesiredPositions(orders):
 
 if __name__ == "__main__":
     start_time = time.time()
+    if not os.path.exists(closed_dir):
+        os.makedirs(closed_dir)
+        
     print 'MARKET IS CLOSING. CLEARING POSITIONS!'
     orders = []
     positions = [x for x in listdir(portfolioPath) if x[-4:]=='json']
     for position in positions:
         filename = portfolioPath + position
+        newfilename = closed_dir + position
         with open(filename, 'r') as f:
             order = json.load(f)
 
         order['quant'] = 0
         orders.append(order)
-        remove(filename)
-        print 'removed', filename
+        #remove(filename)
+        shutil.move(filename, newfilename)
+        print 'moved', filename, 'to', newfilename
         #with open(filename, 'w') as f:
         #    json.dump(order, f)
         #    print 'Saved', filename, 'with qty 0'

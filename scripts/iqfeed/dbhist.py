@@ -425,19 +425,21 @@ def bg_get_hist_mult(symbols, interval, maxdatapoints,datadirection=0,requestid=
                                                     print 'logging ',symbol
                                                     outfile.write(log)
                                                 outfile.close()
-                                                tickerdict[mykey]=quote
                                                 bar_list=Feed.search().filter('term',date=date).filter('term',instrument_id=instrument.id).filter('term',frequency=frequency)
                                                 if bar_list and bar_list.count() > 0:
 
-                                                        if i == 1:
-                                                           print 'update', symbol
-                                                           mydoc=bar_list.execute()[0]._id
-                                                           yield es.update_op(doc=feed,
-                                                               id=mydoc, 
-                                                               index='beginning',
-                                                               doc_type='feed',
-                                                               doc_as_upsert=True)
+                                                    
+                                                       tickerdict[mykey]=quote
+                                                       print 'update', symbol
+                                                       mydoc=bar_list.execute()[0]._id
+                                                       yield es.update_op(doc=feed,
+                                                           id=mydoc, 
+                                                           index='beginning',
+                                                           doc_type='feed',
+                                                           doc_as_upsert=True)
                                                 else:
+                                                    tickerdict[mykey]=quote
+
                                                     print 'insert', symbol
                                                     
                                                     yield es.index_op(feed)

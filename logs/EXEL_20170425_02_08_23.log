@@ -1,0 +1,4 @@
+return data: last bar 2017-04-24 20:55:00 last processed bar 1000-01-01 00:00:00
+start_idx [(150, Timestamp('2017-04-22 09:35:00')), (306, Timestamp('2017-04-23 09:35:00')), (457, Timestamp('2017-04-24 09:35:00'))]
+start_ema 2017-04-23 20:35:00 start_vwap 2017-04-24 09:35:00 last_bar 2017-04-24 20:55:00 ET:  0.02  minutes
+Elapsed time:  0.02  minutes  2017-04-25 02:09:08.183000

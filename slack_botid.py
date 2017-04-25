@@ -8,6 +8,10 @@ Created on Sat Mar 18 17:54:31 2017
 
 import os
 import sys
+import datetime
+import pandas as pd
+from os import listdir, remove
+from os.path import isfile, join
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import time
 from slackclient import SlackClient
@@ -23,6 +27,11 @@ SLACK_BOT_TOKEN='xoxb-156360318612-rOsZj0PhdcnBozPfHWBHJiGS'
 BOT_ID='U4LAL9CJ0'
 slack_client = SlackClient(SLACK_BOT_TOKEN)
 
+fulltimestamp=datetime.datetime.now().strftime('%Y%m%d_%H_%M_%S')
+dataPath = './data/'
+portfolioPath=dataPath+c2id+'/'
+closed_dir=portfolioPath+fulltimestamp[:8]+'/'
+check_dir=dataPath+'check/'
 def handle_command(command, channel):
     print command
     """
@@ -97,6 +106,31 @@ def handle_command(command, channel):
         response+="Last Day: Frank: {}%   S&P500: {}%  VS: {}%\n".format(pc, benchmark_pc, var_pc)
         response+="ITD: Frank: {}%   S&P500: {}%  VS: {}%\n".format(itd, benchmark_itd, var_itd)
         
+        positions = [x for x in listdir(closed_dir) if x[-4:]=='json']
+        checks = [x for x in listdir(check_dir) if x[-8:]=='last.csv']
+        response +='\nChecking {} symbols in frankenstein.csv..\n'.format(len(checks))
+        errors=0
+        for i,check in enumerate(checks):
+            sym=check.split('_')[0]
+            df = pd.read_csv(check_dir+check, index_col='Date')
+            df.index=pd.to_datetime(df.index)
+            df=df.ix[[x for x in df.index if x.time()<datetime.time(16,0)]]
+            if df.iloc[-1].state != 0:
+                #check closed trades
+                if sym+'.json' in positions:
+                    position = sym+'.json'
+
+                    filename = closed_dir + position
+                    with open(filename, 'r') as f:
+                        order = json.load(f)
+                    response += '\nCheck\n'
+                    response += str(df.iloc[-1])+'\n'
+                    response += '\nOrder\n'
+                    response += str(order)+'\n'                    
+                else:
+                    errors +=1
+                    response += '{}. #{}. {} triggered but not transmitted to c2. Check what happened frank.\n'.format(errors, i+1, sym)
+                    
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 
