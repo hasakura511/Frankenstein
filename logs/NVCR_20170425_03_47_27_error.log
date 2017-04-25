@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 3, in <module>
+    import requests
+  File "e:\anaconda2\lib\site-packages\requests\__init__.py", line 63, in <module>
+    from . import utils
+  File "e:\anaconda2\lib\site-packages\requests\utils.py", line 22, in <module>
+    from . import certs
+  File "e:\anaconda2\lib\site-packages\requests\certs.py", line 17, in <module>
+    from certifi import where
+  File "e:\anaconda2\lib\site-packages\certifi\__init__.py", line 1, in <module>
+    from .core import where, old_where
+KeyboardInterrupt

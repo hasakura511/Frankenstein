@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 507, in <module>
+    frank.runlive()
+  File "./frankenstein.py", line 454, in runlive
+    time.sleep(timeleft)
+KeyboardInterrupt

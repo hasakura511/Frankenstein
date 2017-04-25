@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 3, in <module>
+    import requests
+  File "e:\anaconda2\lib\site-packages\requests\__init__.py", line 52, in <module>
+    from .packages.urllib3.contrib import pyopenssl
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\contrib\pyopenssl.py", line 46, in <module>
+    import idna
+  File "e:\anaconda2\lib\site-packages\idna\__init__.py", line 1, in <module>
+    from .core import *
+KeyboardInterrupt

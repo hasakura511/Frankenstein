@@ -14,4 +14,4 @@ e:
 cd \Frankenstein
 e:\anaconda2\python close_positions.py >> \Frankenstein\logs\close_positions_%fullstamp%.log
 e:\anaconda2\python clear_signals.py >> \Frankenstein\logs\clear_signals_%fullstamp%.log
-
+e:\anaconda2\python check_systems.py >> \Frankenstein\logs\check_systems_%fullstamp%.log

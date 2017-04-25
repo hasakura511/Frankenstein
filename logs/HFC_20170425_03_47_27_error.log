@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 3, in <module>
+    import requests
+  File "e:\anaconda2\lib\site-packages\requests\__init__.py", line 52, in <module>
+    from .packages.urllib3.contrib import pyopenssl
+  File "e:\anaconda2\lib\site-packages\requests\packages\__init__.py", line 39, in <module>
+    from . import idna
+  File "e:\anaconda2\lib\site-packages\requests\packages\idna\__init__.py", line 1, in <module>
+    from .core import *
+  File "e:\anaconda2\lib\site-packages\requests\packages\idna\core.py", line 2, in <module>
+    import bisect
+  File "e:\anaconda2\lib\bisect.py", line 1, in <module>
+    """Bisection algorithms."""
+KeyboardInterrupt

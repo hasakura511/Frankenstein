@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "./frankenstein.py", line 3, in <module>
+    import requests
+  File "e:\anaconda2\lib\site-packages\requests\__init__.py", line 52, in <module>
+    from .packages.urllib3.contrib import pyopenssl
+  File "e:\anaconda2\lib\site-packages\requests\packages\__init__.py", line 27, in <module>
+    from . import urllib3
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\__init__.py", line 8, in <module>
+    from .connectionpool import (
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\connectionpool.py", line 11, in <module>
+    from .exceptions import (
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\exceptions.py", line 2, in <module>
+    from .packages.six.moves.http_client import (
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\packages\six.py", line 203, in load_module
+    mod = mod._resolve()
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\packages\six.py", line 115, in _resolve
+    return _import_module(self.mod)
+  File "e:\anaconda2\lib\site-packages\requests\packages\urllib3\packages\six.py", line 82, in _import_module
+    __import__(name)
+  File "e:\anaconda2\lib\httplib.py", line 1230, in <module>
+    import ssl
+  File "e:\anaconda2\lib\ssl.py", line 146, in <module>
+    import base64        # for DER-to-PEM translation
+  File "e:\anaconda2\lib\base64.py", line 3, in <module>
+    """RFC 3548: Base16, Base32, Base64 Data Encodings"""
+KeyboardInterrupt
