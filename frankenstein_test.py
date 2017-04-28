@@ -72,7 +72,8 @@ def getFeed(symbol, lookback, interval):
         else:
             print 'return data: last bar', data.index[-1], 'last processed bar', lastDate
             lastDate = data.index[-1]
-            return data
+            data=data[data.Volume != 0]
+            return data[['Open','High','Low','Close','Volume']]
         
     except Exception as e:
         print e
@@ -302,11 +303,11 @@ class Frankenstein():
             data[EMA1 + 'PC'] = data[EMA1].pct_change()
             data[EMA2] = ta.EMA(data.Close.values, timeperiod=self.ema_lookback2)
             data[EMA1 + 'X' + EMA2] = np.where(data[EMA1] > data[EMA2], 1, 0)
-            
+            data.to_csv(dataPath+self.symbol+'_debug.csv')
             if len(data.dropna())<1:
-                print 'data.dropna() feed returned insufficient data'
-                data.to_csv(dataPath+self.symbol+'_debug.csv')
-                txt = self.symbol + ' feed returned insufficient data! check logs.'
+                print 'data.dropna() feed returned insufficient data. check debug file'
+                
+                txt = self.symbol + ' feed returned insufficient data! check debug file.'
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:

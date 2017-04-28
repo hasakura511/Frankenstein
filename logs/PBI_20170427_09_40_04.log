@@ -1,0 +1,369 @@
+return data: last bar 2017-04-27 09:35:00 last processed bar 1000-01-01 00:00:00
+PBI: Warning! 596 bars requested 20 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:35:00 ET:  0.04  minutes
+now 2017-04-27 09:45:01.217000 return None: last bar 2017-04-27 09:35:00 last processed bar 2017-04-27 09:35:00
+PBI getFeed did not return any data! last bar: 2017-04-27 09:35:00 now: 09:45:01.368000
+now 2017-04-27 09:50:01.578000 return data: last bar 2017-04-27 09:40:00 last processed bar 2017-04-27 09:35:00
+PBI: Warning! 596 bars requested 21 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 09:55:01.920000 return data: last bar 2017-04-27 09:45:00 last processed bar 2017-04-27 09:40:00
+PBI: Warning! 596 bars requested 22 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 10:00:00.849000 return data: last bar 2017-04-27 09:50:00 last processed bar 2017-04-27 09:45:00
+PBI: Warning! 596 bars requested 23 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:50:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 10:05:00.121000 return data: last bar 2017-04-27 09:55:00 last processed bar 2017-04-27 09:50:00
+PBI: Warning! 596 bars requested 24 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:55:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:10:02.585000 return data: last bar 2017-04-27 10:00:00 last processed bar 2017-04-27 09:55:00
+PBI: Warning! 596 bars requested 25 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:00:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:15:00.182000 return data: last bar 2017-04-27 10:10:00 last processed bar 2017-04-27 10:00:00
+PBI: Warning! 596 bars requested 27 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:10:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 10:20:02.640000 return data: last bar 2017-04-27 10:15:00 last processed bar 2017-04-27 10:10:00
+PBI: Warning! 596 bars requested 28 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:15:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:25:00.198000 return data: last bar 2017-04-27 10:20:00 last processed bar 2017-04-27 10:15:00
+PBI: Warning! 596 bars requested 29 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:20:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 10:30:01.598000 return data: last bar 2017-04-27 10:25:00 last processed bar 2017-04-27 10:20:00
+PBI: Warning! 596 bars requested 30 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:25:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:35:00.641000 return data: last bar 2017-04-27 10:30:00 last processed bar 2017-04-27 10:25:00
+PBI: Warning! 596 bars requested 31 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:30:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:40:03.305000 return data: last bar 2017-04-27 10:35:00 last processed bar 2017-04-27 10:30:00
+PBI: Warning! 596 bars requested 32 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:35:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.04  minutes
+now 2017-04-27 10:45:03.566000 return data: last bar 2017-04-27 10:40:00 last processed bar 2017-04-27 10:35:00
+PBI: Warning! 596 bars requested 33 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:50:01.587000 return data: last bar 2017-04-27 10:45:00 last processed bar 2017-04-27 10:40:00
+PBI: Warning! 596 bars requested 34 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 10:55:00.556000 return data: last bar 2017-04-27 10:50:00 last processed bar 2017-04-27 10:45:00
+PBI: Warning! 596 bars requested 35 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:50:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:00:00.199000 return data: last bar 2017-04-27 10:55:00 last processed bar 2017-04-27 10:50:00
+PBI: Warning! 596 bars requested 36 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:55:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:05:02.386000 return data: last bar 2017-04-27 11:00:00 last processed bar 2017-04-27 10:55:00
+PBI: Warning! 596 bars requested 37 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:00:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 11:10:00.744000 return data: last bar 2017-04-27 11:05:00 last processed bar 2017-04-27 11:00:00
+PBI: Warning! 596 bars requested 38 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:05:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 11:15:01.505000 return data: last bar 2017-04-27 11:10:00 last processed bar 2017-04-27 11:05:00
+PBI: Warning! 596 bars requested 39 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:10:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:20:00.417000 return data: last bar 2017-04-27 11:15:00 last processed bar 2017-04-27 11:10:00
+PBI: Warning! 596 bars requested 40 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:15:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.11  minutes
+now 2017-04-27 11:25:03.738000 return data: last bar 2017-04-27 11:20:00 last processed bar 2017-04-27 11:15:00
+PBI: Warning! 596 bars requested 41 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:20:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 11:30:02.242000 return data: last bar 2017-04-27 11:25:00 last processed bar 2017-04-27 11:20:00
+PBI: Warning! 596 bars requested 42 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:25:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:35:00.985000 return data: last bar 2017-04-27 11:30:00 last processed bar 2017-04-27 11:25:00
+PBI: Warning! 596 bars requested 43 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:30:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:40:01.369000 return data: last bar 2017-04-27 11:35:00 last processed bar 2017-04-27 11:30:00
+PBI: Warning! 596 bars requested 44 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:35:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:45:00.023000 return data: last bar 2017-04-27 11:40:00 last processed bar 2017-04-27 11:35:00
+PBI: Warning! 596 bars requested 45 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:50:00.638000 return data: last bar 2017-04-27 11:45:00 last processed bar 2017-04-27 11:40:00
+PBI: Warning! 596 bars requested 46 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:55:00.789000 return data: last bar 2017-04-27 11:50:00 last processed bar 2017-04-27 11:45:00
+PBI: Warning! 596 bars requested 47 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:50:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:00:00.535000 return data: last bar 2017-04-27 11:55:00 last processed bar 2017-04-27 11:50:00
+PBI: Warning! 596 bars requested 48 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:55:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.09  minutes
+now 2017-04-27 12:05:01.951000 return data: last bar 2017-04-27 12:00:00 last processed bar 2017-04-27 11:55:00
+PBI: Warning! 596 bars requested 49 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:00:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:10:00.951000 return data: last bar 2017-04-27 12:05:00 last processed bar 2017-04-27 12:00:00
+PBI: Warning! 596 bars requested 50 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:05:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:15:01.288000 return data: last bar 2017-04-27 12:10:00 last processed bar 2017-04-27 12:05:00
+PBI: Warning! 596 bars requested 51 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:10:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:20:00.374000 return data: last bar 2017-04-27 12:15:00 last processed bar 2017-04-27 12:10:00
+PBI: Warning! 596 bars requested 52 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:15:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 12:25:00.524000 return data: last bar 2017-04-27 12:20:00 last processed bar 2017-04-27 12:15:00
+PBI: Warning! 596 bars requested 53 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:20:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:30:00.773000 return data: last bar 2017-04-27 12:25:00 last processed bar 2017-04-27 12:20:00
+PBI: Warning! 596 bars requested 54 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:25:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 12:35:01.238000 return data: last bar 2017-04-27 12:30:00 last processed bar 2017-04-27 12:25:00
+PBI: Warning! 596 bars requested 55 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:30:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:40:00.791000 return data: last bar 2017-04-27 12:35:00 last processed bar 2017-04-27 12:30:00
+PBI: Warning! 596 bars requested 56 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:35:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.09  minutes
+now 2017-04-27 12:45:00.887000 return data: last bar 2017-04-27 12:40:00 last processed bar 2017-04-27 12:35:00
+PBI: Warning! 596 bars requested 57 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:50:00.295000 return data: last bar 2017-04-27 12:45:00 last processed bar 2017-04-27 12:40:00
+PBI: Warning! 596 bars requested 58 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:55:01.304000 return data: last bar 2017-04-27 12:50:00 last processed bar 2017-04-27 12:45:00
+PBI: Warning! 596 bars requested 59 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:50:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:00:01.285000 return data: last bar 2017-04-27 12:55:00 last processed bar 2017-04-27 12:50:00
+PBI: Warning! 596 bars requested 60 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:55:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 13:05:00.688000 return data: last bar 2017-04-27 13:00:00 last processed bar 2017-04-27 12:55:00
+PBI: Warning! 596 bars requested 61 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:00:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.1  minutes
+now 2017-04-27 13:10:00.617000 return data: last bar 2017-04-27 13:05:00 last processed bar 2017-04-27 13:00:00
+PBI: Warning! 596 bars requested 62 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:05:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:15:00.104000 return data: last bar 2017-04-27 13:10:00 last processed bar 2017-04-27 13:05:00
+PBI: Warning! 596 bars requested 63 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:10:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:20:00.125000 return data: last bar 2017-04-27 13:15:00 last processed bar 2017-04-27 13:10:00
+PBI: Warning! 596 bars requested 64 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:15:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:25:00.162000 return data: last bar 2017-04-27 13:20:00 last processed bar 2017-04-27 13:15:00
+PBI: Warning! 596 bars requested 65 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:20:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.1  minutes
+now 2017-04-27 13:30:00.879000 return data: last bar 2017-04-27 13:25:00 last processed bar 2017-04-27 13:20:00
+PBI: Warning! 596 bars requested 66 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:25:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:35:01.328000 return data: last bar 2017-04-27 13:30:00 last processed bar 2017-04-27 13:25:00
+PBI: Warning! 596 bars requested 67 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:30:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:40:01.323000 return data: last bar 2017-04-27 13:35:00 last processed bar 2017-04-27 13:30:00
+PBI: Warning! 596 bars requested 68 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:35:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:45:00.102000 return data: last bar 2017-04-27 13:40:00 last processed bar 2017-04-27 13:35:00
+PBI: Warning! 596 bars requested 69 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 13:50:00.190000 return data: last bar 2017-04-27 13:45:00 last processed bar 2017-04-27 13:40:00
+PBI: Warning! 596 bars requested 70 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:55:01.159000 return data: last bar 2017-04-27 13:50:00 last processed bar 2017-04-27 13:45:00
+PBI: Warning! 596 bars requested 71 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:50:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:00:00.265000 return data: last bar 2017-04-27 13:55:00 last processed bar 2017-04-27 13:50:00
+PBI: Warning! 596 bars requested 72 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:55:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:05:00.487000 return data: last bar 2017-04-27 14:00:00 last processed bar 2017-04-27 13:55:00
+PBI: Warning! 596 bars requested 73 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:00:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:10:00.542000 return data: last bar 2017-04-27 14:05:00 last processed bar 2017-04-27 14:00:00
+PBI: Warning! 596 bars requested 74 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:05:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.04  minutes
+now 2017-04-27 14:15:01.179000 return data: last bar 2017-04-27 14:10:00 last processed bar 2017-04-27 14:05:00
+PBI: Warning! 596 bars requested 75 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:10:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:20:00.022000 return data: last bar 2017-04-27 14:15:00 last processed bar 2017-04-27 14:10:00
+PBI: Warning! 596 bars requested 76 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:15:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.09  minutes
+now 2017-04-27 14:25:01.134000 return data: last bar 2017-04-27 14:25:00 last processed bar 2017-04-27 14:15:00
+PBI: Warning! 596 bars requested 78 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:25:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:30:00.851000 return None: last bar 2017-04-27 14:25:00 last processed bar 2017-04-27 14:25:00
+PBI getFeed did not return any data! last bar: 2017-04-27 14:25:00 now: 14:30:00.975000
+now 2017-04-27 14:35:00.409000 return data: last bar 2017-04-27 14:30:00 last processed bar 2017-04-27 14:25:00
+PBI: Warning! 596 bars requested 79 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:30:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:40:00.047000 return data: last bar 2017-04-27 14:35:00 last processed bar 2017-04-27 14:30:00
+PBI: Warning! 596 bars requested 80 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:35:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:45:01.652000 return data: last bar 2017-04-27 14:40:00 last processed bar 2017-04-27 14:35:00
+PBI: Warning! 596 bars requested 81 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.04  minutes
+now 2017-04-27 14:50:00.573000 return data: last bar 2017-04-27 14:45:00 last processed bar 2017-04-27 14:40:00
+PBI: Warning! 596 bars requested 82 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:55:03.369000 return data: last bar 2017-04-27 14:50:00 last processed bar 2017-04-27 14:45:00
+PBI: Warning! 596 bars requested 83 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:50:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:00:00.724000 return data: last bar 2017-04-27 14:55:00 last processed bar 2017-04-27 14:50:00
+PBI: Warning! 596 bars requested 84 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:55:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.03  minutes
+now 2017-04-27 15:05:00.289000 return data: last bar 2017-04-27 15:00:00 last processed bar 2017-04-27 14:55:00
+PBI: Warning! 596 bars requested 85 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:00:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.08  minutes
+now 2017-04-27 15:10:01.371000 return data: last bar 2017-04-27 15:05:00 last processed bar 2017-04-27 15:00:00
+PBI: Warning! 596 bars requested 86 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:05:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.02  minutes
+now 2017-04-27 15:15:01.163000 return data: last bar 2017-04-27 15:10:00 last processed bar 2017-04-27 15:05:00
+PBI: Warning! 596 bars requested 87 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:10:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:20:01.498000 return data: last bar 2017-04-27 15:15:00 last processed bar 2017-04-27 15:10:00
+PBI: Warning! 596 bars requested 88 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:15:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.05  minutes
+now 2017-04-27 15:25:02.148000 return data: last bar 2017-04-27 15:20:00 last processed bar 2017-04-27 15:15:00
+PBI: Warning! 596 bars requested 89 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:20:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:30:01.144000 return data: last bar 2017-04-27 15:25:00 last processed bar 2017-04-27 15:20:00
+PBI: Warning! 596 bars requested 90 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:25:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.04  minutes
+now 2017-04-27 15:35:01.920000 return data: last bar 2017-04-27 15:30:00 last processed bar 2017-04-27 15:25:00
+PBI: Warning! 596 bars requested 91 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:30:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:40:00.329000 return data: last bar 2017-04-27 15:35:00 last processed bar 2017-04-27 15:30:00
+PBI: Warning! 596 bars requested 92 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:35:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:45:02.649000 return data: last bar 2017-04-27 15:40:00 last processed bar 2017-04-27 15:35:00
+PBI: Warning! 596 bars requested 93 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:40:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.04  minutes
+now 2017-04-27 15:50:00.245000 return data: last bar 2017-04-27 15:45:00 last processed bar 2017-04-27 15:40:00
+PBI: Warning! 596 bars requested 94 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:45:00 Writing to ./data/PBI_livesignals_20170427_09_40_48.csv ./data/PBI_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:55:02.336000

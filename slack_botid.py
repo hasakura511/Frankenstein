@@ -9,7 +9,9 @@ Created on Sat Mar 18 17:54:31 2017
 import os
 import sys
 import datetime
+from datetime import datetime as dt
 import pandas as pd
+import json
 from os import listdir, remove
 from os.path import isfile, join
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -123,13 +125,14 @@ def handle_command(command, channel):
                     filename = closed_dir + position
                     with open(filename, 'r') as f:
                         order = json.load(f)
-                    response += '\nCheck\n'
-                    response += str(df.iloc[-1])+'\n'
-                    response += '\nOrder\n'
-                    response += str(order)+'\n'                    
+                    response += '\n'+sym+' Signal '
+                    response += str(df[df.state ==1].iloc[0].name)
+                    response += '\nOrder '
+                    response += 'Timestamp '+dt.fromtimestamp(int(os.path.getctime(filename))).strftime('%Y-%m-%d %H:%M:%S')
+                    response += ' '+str(order)+'\n'                    
                 else:
                     errors +=1
-                    response += '{}. #{}. {} triggered but not transmitted to c2. Check what happened frank.\n'.format(errors, i+1, sym)
+                    response += '{}. #{}. {} triggered {} but not transmitted to c2. Check what happened frank.\n'.format(errors, i+1, sym, str(df.ix[df[df.state ==1].index[0]].name))
                     
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)

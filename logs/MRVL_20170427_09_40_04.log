@@ -1,0 +1,369 @@
+return data: last bar 2017-04-27 09:35:00 last processed bar 1000-01-01 00:00:00
+MRVL: Warning! 596 bars requested 20 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:35:00 ET:  0.05  minutes
+now 2017-04-27 09:45:03.642000 return None: last bar 2017-04-27 09:35:00 last processed bar 2017-04-27 09:35:00
+MRVL getFeed did not return any data! last bar: 2017-04-27 09:35:00 now: 09:45:03.927000
+now 2017-04-27 09:50:02.215000 return data: last bar 2017-04-27 09:40:00 last processed bar 2017-04-27 09:35:00
+MRVL: Warning! 596 bars requested 21 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 09:55:01.181000 return data: last bar 2017-04-27 09:45:00 last processed bar 2017-04-27 09:40:00
+MRVL: Warning! 596 bars requested 22 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:00:02.850000 return data: last bar 2017-04-27 09:50:00 last processed bar 2017-04-27 09:45:00
+MRVL: Warning! 596 bars requested 23 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:50:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.04  minutes
+now 2017-04-27 10:05:00.544000 return data: last bar 2017-04-27 09:55:00 last processed bar 2017-04-27 09:50:00
+MRVL: Warning! 596 bars requested 24 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:55:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 10:10:02.813000 return data: last bar 2017-04-27 10:00:00 last processed bar 2017-04-27 09:55:00
+MRVL: Warning! 596 bars requested 25 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:00:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:15:02.420000 return data: last bar 2017-04-27 10:10:00 last processed bar 2017-04-27 10:00:00
+MRVL: Warning! 596 bars requested 27 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:10:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.04  minutes
+now 2017-04-27 10:20:00.847000 return data: last bar 2017-04-27 10:15:00 last processed bar 2017-04-27 10:10:00
+MRVL: Warning! 596 bars requested 28 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:15:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 10:25:01.432000 return data: last bar 2017-04-27 10:20:00 last processed bar 2017-04-27 10:15:00
+MRVL: Warning! 596 bars requested 29 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:20:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 10:30:00.257000 return data: last bar 2017-04-27 10:25:00 last processed bar 2017-04-27 10:20:00
+MRVL: Warning! 596 bars requested 30 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:25:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:35:00.098000 return data: last bar 2017-04-27 10:30:00 last processed bar 2017-04-27 10:25:00
+MRVL: Warning! 596 bars requested 31 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:30:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:40:02.375000 return data: last bar 2017-04-27 10:35:00 last processed bar 2017-04-27 10:30:00
+MRVL: Warning! 596 bars requested 32 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:35:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:45:01.150000 return data: last bar 2017-04-27 10:40:00 last processed bar 2017-04-27 10:35:00
+MRVL: Warning! 596 bars requested 33 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.1  minutes
+now 2017-04-27 10:50:00.141000 return data: last bar 2017-04-27 10:45:00 last processed bar 2017-04-27 10:40:00
+MRVL: Warning! 596 bars requested 34 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 10:55:00.539000 return data: last bar 2017-04-27 10:50:00 last processed bar 2017-04-27 10:45:00
+MRVL: Warning! 596 bars requested 35 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:50:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:00:00.659000 return data: last bar 2017-04-27 10:55:00 last processed bar 2017-04-27 10:50:00
+MRVL: Warning! 596 bars requested 36 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:55:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:05:00.505000 return data: last bar 2017-04-27 11:00:00 last processed bar 2017-04-27 10:55:00
+MRVL: Warning! 596 bars requested 37 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:00:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.11  minutes
+now 2017-04-27 11:10:00.405000 return data: last bar 2017-04-27 11:05:00 last processed bar 2017-04-27 11:00:00
+MRVL: Warning! 596 bars requested 38 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:05:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:15:00.706000 return data: last bar 2017-04-27 11:10:00 last processed bar 2017-04-27 11:05:00
+MRVL: Warning! 596 bars requested 39 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:10:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:20:03.299000 return data: last bar 2017-04-27 11:15:00 last processed bar 2017-04-27 11:10:00
+MRVL: Warning! 596 bars requested 40 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:15:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:25:01.192000 return data: last bar 2017-04-27 11:20:00 last processed bar 2017-04-27 11:15:00
+MRVL: Warning! 596 bars requested 41 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:20:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:30:03.185000 return data: last bar 2017-04-27 11:25:00 last processed bar 2017-04-27 11:20:00
+MRVL: Warning! 596 bars requested 42 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:25:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.05  minutes
+now 2017-04-27 11:35:00.558000 return data: last bar 2017-04-27 11:30:00 last processed bar 2017-04-27 11:25:00
+MRVL: Warning! 596 bars requested 43 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:30:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:40:00.058000 return data: last bar 2017-04-27 11:35:00 last processed bar 2017-04-27 11:30:00
+MRVL: Warning! 596 bars requested 44 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:35:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:45:00.734000 return data: last bar 2017-04-27 11:40:00 last processed bar 2017-04-27 11:35:00
+MRVL: Warning! 596 bars requested 45 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:50:01.399000 return data: last bar 2017-04-27 11:45:00 last processed bar 2017-04-27 11:40:00
+MRVL: Warning! 596 bars requested 46 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:55:00.738000 return data: last bar 2017-04-27 11:50:00 last processed bar 2017-04-27 11:45:00
+MRVL: Warning! 596 bars requested 47 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:50:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:00:00.379000 return data: last bar 2017-04-27 11:55:00 last processed bar 2017-04-27 11:50:00
+MRVL: Warning! 596 bars requested 48 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:55:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 12:05:00.959000 return data: last bar 2017-04-27 12:00:00 last processed bar 2017-04-27 11:55:00
+MRVL: Warning! 596 bars requested 49 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:00:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:10:00.911000 return data: last bar 2017-04-27 12:05:00 last processed bar 2017-04-27 12:00:00
+MRVL: Warning! 596 bars requested 50 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:05:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 12:15:00.791000 return data: last bar 2017-04-27 12:10:00 last processed bar 2017-04-27 12:05:00
+MRVL: Warning! 596 bars requested 51 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:10:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:20:00.651000 return data: last bar 2017-04-27 12:15:00 last processed bar 2017-04-27 12:10:00
+MRVL: Warning! 596 bars requested 52 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:15:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:25:00.952000 return data: last bar 2017-04-27 12:20:00 last processed bar 2017-04-27 12:15:00
+MRVL: Warning! 596 bars requested 53 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:20:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:30:00.688000 return data: last bar 2017-04-27 12:25:00 last processed bar 2017-04-27 12:20:00
+MRVL: Warning! 596 bars requested 54 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:25:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 12:35:03.090000 return data: last bar 2017-04-27 12:30:00 last processed bar 2017-04-27 12:25:00
+MRVL: Warning! 596 bars requested 55 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:30:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:40:01.444000 return data: last bar 2017-04-27 12:35:00 last processed bar 2017-04-27 12:30:00
+MRVL: Warning! 596 bars requested 56 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:35:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:45:00.270000 return data: last bar 2017-04-27 12:40:00 last processed bar 2017-04-27 12:35:00
+MRVL: Warning! 596 bars requested 57 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:50:01.085000 return data: last bar 2017-04-27 12:45:00 last processed bar 2017-04-27 12:40:00
+MRVL: Warning! 596 bars requested 58 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:55:00.110000 return data: last bar 2017-04-27 12:50:00 last processed bar 2017-04-27 12:45:00
+MRVL: Warning! 596 bars requested 59 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:50:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:00:00.670000 return data: last bar 2017-04-27 12:55:00 last processed bar 2017-04-27 12:50:00
+MRVL: Warning! 596 bars requested 60 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:55:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:05:00.870000 return data: last bar 2017-04-27 13:00:00 last processed bar 2017-04-27 12:55:00
+MRVL: Warning! 596 bars requested 61 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:00:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:10:01.469000 return data: last bar 2017-04-27 13:05:00 last processed bar 2017-04-27 13:00:00
+MRVL: Warning! 596 bars requested 62 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:05:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 13:15:00.825000 return data: last bar 2017-04-27 13:10:00 last processed bar 2017-04-27 13:05:00
+MRVL: Warning! 596 bars requested 63 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:10:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:20:01.192000 return data: last bar 2017-04-27 13:15:00 last processed bar 2017-04-27 13:10:00
+MRVL: Warning! 596 bars requested 64 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:15:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:25:01.088000 return data: last bar 2017-04-27 13:20:00 last processed bar 2017-04-27 13:15:00
+MRVL: Warning! 596 bars requested 65 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:20:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:30:01.256000 return data: last bar 2017-04-27 13:25:00 last processed bar 2017-04-27 13:20:00
+MRVL: Warning! 596 bars requested 66 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:25:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 13:35:00.842000 return data: last bar 2017-04-27 13:30:00 last processed bar 2017-04-27 13:25:00
+MRVL: Warning! 596 bars requested 67 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:30:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:40:01.089000 return data: last bar 2017-04-27 13:35:00 last processed bar 2017-04-27 13:30:00
+MRVL: Warning! 596 bars requested 68 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:35:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:45:02.323000 return data: last bar 2017-04-27 13:40:00 last processed bar 2017-04-27 13:35:00
+MRVL: Warning! 596 bars requested 69 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 13:50:00.298000 return data: last bar 2017-04-27 13:45:00 last processed bar 2017-04-27 13:40:00
+MRVL: Warning! 596 bars requested 70 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:55:00.795000 return data: last bar 2017-04-27 13:50:00 last processed bar 2017-04-27 13:45:00
+MRVL: Warning! 596 bars requested 71 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:50:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 14:00:00.256000 return data: last bar 2017-04-27 13:55:00 last processed bar 2017-04-27 13:50:00
+MRVL: Warning! 596 bars requested 72 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:55:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 14:05:01.156000 return data: last bar 2017-04-27 14:00:00 last processed bar 2017-04-27 13:55:00
+MRVL: Warning! 596 bars requested 73 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:00:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:10:01.492000 return data: last bar 2017-04-27 14:05:00 last processed bar 2017-04-27 14:00:00
+MRVL: Warning! 596 bars requested 74 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:05:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:15:00.150000 return data: last bar 2017-04-27 14:10:00 last processed bar 2017-04-27 14:05:00
+MRVL: Warning! 596 bars requested 75 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:10:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 14:20:01.553000 return data: last bar 2017-04-27 14:15:00 last processed bar 2017-04-27 14:10:00
+MRVL: Warning! 596 bars requested 76 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:15:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.06  minutes
+now 2017-04-27 14:25:01.153000 return data: last bar 2017-04-27 14:25:00 last processed bar 2017-04-27 14:15:00
+MRVL: Warning! 596 bars requested 78 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:25:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 14:30:00.561000 return None: last bar 2017-04-27 14:25:00 last processed bar 2017-04-27 14:25:00
+MRVL getFeed did not return any data! last bar: 2017-04-27 14:25:00 now: 14:30:03.515000
+now 2017-04-27 14:35:01.156000 return data: last bar 2017-04-27 14:30:00 last processed bar 2017-04-27 14:25:00
+MRVL: Warning! 596 bars requested 79 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:30:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:40:00.347000 return data: last bar 2017-04-27 14:35:00 last processed bar 2017-04-27 14:30:00
+MRVL: Warning! 596 bars requested 80 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:35:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 14:45:01.283000 return data: last bar 2017-04-27 14:40:00 last processed bar 2017-04-27 14:35:00
+MRVL: Warning! 596 bars requested 81 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.04  minutes
+now 2017-04-27 14:50:01.724000 return data: last bar 2017-04-27 14:45:00 last processed bar 2017-04-27 14:40:00
+MRVL: Warning! 596 bars requested 82 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.03  minutes
+now 2017-04-27 14:55:00.267000 return data: last bar 2017-04-27 14:50:00 last processed bar 2017-04-27 14:45:00
+MRVL: Warning! 596 bars requested 83 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:50:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:00:00.424000 return data: last bar 2017-04-27 14:55:00 last processed bar 2017-04-27 14:50:00
+MRVL: Warning! 596 bars requested 84 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:55:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 15:05:01.255000 return data: last bar 2017-04-27 15:00:00 last processed bar 2017-04-27 14:55:00
+MRVL: Warning! 596 bars requested 85 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:00:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 15:10:00.679000 return data: last bar 2017-04-27 15:05:00 last processed bar 2017-04-27 15:00:00
+MRVL: Warning! 596 bars requested 86 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:05:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.03  minutes
+now 2017-04-27 15:15:01.200000 return data: last bar 2017-04-27 15:10:00 last processed bar 2017-04-27 15:05:00
+MRVL: Warning! 596 bars requested 87 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:10:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:20:00.596000 return data: last bar 2017-04-27 15:15:00 last processed bar 2017-04-27 15:10:00
+MRVL: Warning! 596 bars requested 88 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:15:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 15:25:00.836000 return data: last bar 2017-04-27 15:20:00 last processed bar 2017-04-27 15:15:00
+MRVL: Warning! 596 bars requested 89 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:20:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.04  minutes
+now 2017-04-27 15:30:00.006000 return data: last bar 2017-04-27 15:25:00 last processed bar 2017-04-27 15:20:00
+MRVL: Warning! 596 bars requested 90 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:25:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.04  minutes
+now 2017-04-27 15:35:00.829000 return data: last bar 2017-04-27 15:30:00 last processed bar 2017-04-27 15:25:00
+MRVL: Warning! 596 bars requested 91 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:30:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 15:40:00.850000 return data: last bar 2017-04-27 15:35:00 last processed bar 2017-04-27 15:30:00
+MRVL: Warning! 596 bars requested 92 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:35:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.09  minutes
+now 2017-04-27 15:45:00.310000 return data: last bar 2017-04-27 15:40:00 last processed bar 2017-04-27 15:35:00
+MRVL: Warning! 596 bars requested 93 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:40:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.08  minutes
+now 2017-04-27 15:50:00.058000 return data: last bar 2017-04-27 15:45:00 last processed bar 2017-04-27 15:40:00
+MRVL: Warning! 596 bars requested 94 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:45:00 Writing to ./data/MRVL_livesignals_20170427_09_40_30.csv ./data/MRVL_last.csv
+ET:  0.05  minutes
+now 2017-04-27 15:55:02.043000

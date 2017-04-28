@@ -239,7 +239,7 @@ class Frankenstein():
                     return
                 else:
                     print 2,'bars requested', lastbar.shape[0], 'bars returned'
-                    data = self.signals.append(lastbar.iloc[-1]).copy()
+                    data = self.signals.append(lastbar.iloc[-1])[['Open','High','Low','Close','Volume']].copy()
             else:
                 data = getFeed(self.symbol, self.maxlookback, self.interval)
                 if data is not None and data.shape[0]<self.maxlookback:
@@ -248,6 +248,7 @@ class Frankenstein():
                     print txt
                     slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 elif data is not None and data.shape[0]>=self.maxlookback:
+                    print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
                     self.feederror = False
                     
 
@@ -259,6 +260,7 @@ class Frankenstein():
                 slack.notify(text=txt, channel=slack_channel, username="frankenstein", icon_emoji=":rage:")
                 return
             else:
+                data=data[['Open','High','Low','Close','Volume']]
                 #print self.maxlookback,'bars requested', data.shape[0], 'bars returned'
                 if self.broker == None:
                     start_idx = [(i, date) for i, date in enumerate(data.index) \

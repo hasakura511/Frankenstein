@@ -1,0 +1,366 @@
+return data: last bar 2017-04-27 09:35:00 last processed bar 1000-01-01 00:00:00
+PES: Warning! 596 bars requested 20 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:35:00 ET:  0.04  minutes
+now 2017-04-27 09:45:01.380000 return None: last bar 2017-04-27 09:35:00 last processed bar 2017-04-27 09:35:00
+PES getFeed did not return any data! last bar: 2017-04-27 09:35:00 now: 09:45:01.489000
+now 2017-04-27 09:50:00.605000 return data: last bar 2017-04-27 09:40:00 last processed bar 2017-04-27 09:35:00
+PES: Warning! 596 bars requested 21 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 09:55:02.639000 return data: last bar 2017-04-27 09:45:00 last processed bar 2017-04-27 09:40:00
+PES: Warning! 596 bars requested 22 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:00:01.809000 return data: last bar 2017-04-27 09:50:00 last processed bar 2017-04-27 09:45:00
+PES: Warning! 596 bars requested 23 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:05:00.270000 return data: last bar 2017-04-27 09:55:00 last processed bar 2017-04-27 09:50:00
+PES: Warning! 596 bars requested 24 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 09:55:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:10:01.733000 return data: last bar 2017-04-27 10:00:00 last processed bar 2017-04-27 09:55:00
+PES: Warning! 596 bars requested 25 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:00:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 10:15:00.560000 return data: last bar 2017-04-27 10:10:00 last processed bar 2017-04-27 10:00:00
+PES: Warning! 596 bars requested 27 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:10:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 10:20:01.104000 return data: last bar 2017-04-27 10:15:00 last processed bar 2017-04-27 10:10:00
+PES: Warning! 596 bars requested 28 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:15:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:25:00.080000 return data: last bar 2017-04-27 10:20:00 last processed bar 2017-04-27 10:15:00
+PES: Warning! 596 bars requested 29 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:20:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:30:00.650000 return data: last bar 2017-04-27 10:25:00 last processed bar 2017-04-27 10:20:00
+PES: Warning! 596 bars requested 30 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:25:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:35:00.235000 return data: last bar 2017-04-27 10:30:00 last processed bar 2017-04-27 10:25:00
+PES: Warning! 596 bars requested 31 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:30:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 10:40:01.469000 return data: last bar 2017-04-27 10:35:00 last processed bar 2017-04-27 10:30:00
+PES: Warning! 596 bars requested 32 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:35:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 10:45:00.237000 return data: last bar 2017-04-27 10:40:00 last processed bar 2017-04-27 10:35:00
+PES: Warning! 596 bars requested 33 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 10:50:00.363000 return data: last bar 2017-04-27 10:45:00 last processed bar 2017-04-27 10:40:00
+PES: Warning! 596 bars requested 34 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 10:55:02.382000 return data: last bar 2017-04-27 10:50:00 last processed bar 2017-04-27 10:45:00
+PES: Warning! 596 bars requested 35 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:00:00.506000 return data: last bar 2017-04-27 10:55:00 last processed bar 2017-04-27 10:50:00
+PES: Warning! 596 bars requested 36 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 10:55:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:05:02.175000 return data: last bar 2017-04-27 11:05:00 last processed bar 2017-04-27 10:55:00
+PES: Warning! 596 bars requested 38 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:05:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:10:00.389000 return data: last bar 2017-04-27 11:10:00 last processed bar 2017-04-27 11:05:00
+PES: Warning! 596 bars requested 39 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:10:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:15:00.953000 return None: last bar 2017-04-27 11:10:00 last processed bar 2017-04-27 11:10:00
+PES getFeed did not return any data! last bar: 2017-04-27 11:10:00 now: 11:15:01.153000
+now 2017-04-27 11:20:01.959000 return data: last bar 2017-04-27 11:20:00 last processed bar 2017-04-27 11:10:00
+PES: Warning! 596 bars requested 41 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:20:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 11:25:01.869000 return data: last bar 2017-04-27 11:25:00 last processed bar 2017-04-27 11:20:00
+PES: Warning! 596 bars requested 42 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:25:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:30:00.454000 return None: last bar 2017-04-27 11:25:00 last processed bar 2017-04-27 11:25:00
+PES getFeed did not return any data! last bar: 2017-04-27 11:25:00 now: 11:30:00.545000
+now 2017-04-27 11:35:00.001000 return data: last bar 2017-04-27 11:35:00 last processed bar 2017-04-27 11:25:00
+PES: Warning! 596 bars requested 44 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:35:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:40:00.934000 return data: last bar 2017-04-27 11:40:00 last processed bar 2017-04-27 11:35:00
+PES: Warning! 596 bars requested 45 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 11:45:00.012000 return data: last bar 2017-04-27 11:45:00 last processed bar 2017-04-27 11:40:00
+PES: Warning! 596 bars requested 46 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 11:50:00.632000 return data: last bar 2017-04-27 11:50:00 last processed bar 2017-04-27 11:45:00
+PES: Warning! 596 bars requested 47 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 11:55:01.187000 return data: last bar 2017-04-27 11:55:00 last processed bar 2017-04-27 11:50:00
+PES: Warning! 596 bars requested 48 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 11:55:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:00:01.036000 return data: last bar 2017-04-27 12:00:00 last processed bar 2017-04-27 11:55:00
+PES: Warning! 596 bars requested 49 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:00:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 12:05:00.569000 return data: last bar 2017-04-27 12:05:00 last processed bar 2017-04-27 12:00:00
+PES: Warning! 596 bars requested 50 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:05:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:10:00.152000 return data: last bar 2017-04-27 12:10:00 last processed bar 2017-04-27 12:05:00
+PES: Warning! 596 bars requested 51 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:10:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:15:00.263000 return data: last bar 2017-04-27 12:15:00 last processed bar 2017-04-27 12:10:00
+PES: Warning! 596 bars requested 52 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:15:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:20:00.571000 return data: last bar 2017-04-27 12:20:00 last processed bar 2017-04-27 12:15:00
+PES: Warning! 596 bars requested 53 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:20:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:25:00.496000 return data: last bar 2017-04-27 12:25:00 last processed bar 2017-04-27 12:20:00
+PES: Warning! 596 bars requested 54 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:25:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:30:01.309000 return data: last bar 2017-04-27 12:30:00 last processed bar 2017-04-27 12:25:00
+PES: Warning! 596 bars requested 55 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:30:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 12:35:00.496000 return data: last bar 2017-04-27 12:35:00 last processed bar 2017-04-27 12:30:00
+PES: Warning! 596 bars requested 56 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:35:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:40:00.323000 return data: last bar 2017-04-27 12:40:00 last processed bar 2017-04-27 12:35:00
+PES: Warning! 596 bars requested 57 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 12:45:00.550000 return data: last bar 2017-04-27 12:45:00 last processed bar 2017-04-27 12:40:00
+PES: Warning! 596 bars requested 58 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:50:00.162000 return data: last bar 2017-04-27 12:50:00 last processed bar 2017-04-27 12:45:00
+PES: Warning! 596 bars requested 59 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 12:55:00.500000 return data: last bar 2017-04-27 12:55:00 last processed bar 2017-04-27 12:50:00
+PES: Warning! 596 bars requested 60 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 12:55:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:00:00.132000 return data: last bar 2017-04-27 13:00:00 last processed bar 2017-04-27 12:55:00
+PES: Warning! 596 bars requested 61 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:00:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 13:05:00.450000 return data: last bar 2017-04-27 13:05:00 last processed bar 2017-04-27 13:00:00
+PES: Warning! 596 bars requested 62 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:05:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:10:02.007000 return data: last bar 2017-04-27 13:10:00 last processed bar 2017-04-27 13:05:00
+PES: Warning! 596 bars requested 63 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:10:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:15:00.762000 return data: last bar 2017-04-27 13:15:00 last processed bar 2017-04-27 13:10:00
+PES: Warning! 596 bars requested 64 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:15:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:20:00.243000 return data: last bar 2017-04-27 13:20:00 last processed bar 2017-04-27 13:15:00
+PES: Warning! 596 bars requested 65 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:20:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:25:00.844000 return data: last bar 2017-04-27 13:25:00 last processed bar 2017-04-27 13:20:00
+PES: Warning! 596 bars requested 66 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:25:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 13:30:00.260000 return data: last bar 2017-04-27 13:30:00 last processed bar 2017-04-27 13:25:00
+PES: Warning! 596 bars requested 67 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:30:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:35:00.531000 return data: last bar 2017-04-27 13:35:00 last processed bar 2017-04-27 13:30:00
+PES: Warning! 596 bars requested 68 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:35:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:40:01.328000 return data: last bar 2017-04-27 13:40:00 last processed bar 2017-04-27 13:35:00
+PES: Warning! 596 bars requested 69 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 13:45:01.207000 return data: last bar 2017-04-27 13:45:00 last processed bar 2017-04-27 13:40:00
+PES: Warning! 596 bars requested 70 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:50:00.780000 return data: last bar 2017-04-27 13:50:00 last processed bar 2017-04-27 13:45:00
+PES: Warning! 596 bars requested 71 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 13:55:00.562000 return data: last bar 2017-04-27 13:55:00 last processed bar 2017-04-27 13:50:00
+PES: Warning! 596 bars requested 72 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 13:55:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:00:01.032000 return data: last bar 2017-04-27 14:00:00 last processed bar 2017-04-27 13:55:00
+PES: Warning! 596 bars requested 73 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:00:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:05:00.573000 return data: last bar 2017-04-27 14:05:00 last processed bar 2017-04-27 14:00:00
+PES: Warning! 596 bars requested 74 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:05:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 14:10:01.087000 return data: last bar 2017-04-27 14:10:00 last processed bar 2017-04-27 14:05:00
+PES: Warning! 596 bars requested 75 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:10:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:15:00.215000 return data: last bar 2017-04-27 14:15:00 last processed bar 2017-04-27 14:10:00
+PES: Warning! 596 bars requested 76 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:15:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.04  minutes
+now 2017-04-27 14:20:00.700000 return data: last bar 2017-04-27 14:20:00 last processed bar 2017-04-27 14:15:00
+PES: Warning! 596 bars requested 77 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:20:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:25:00.788000 return data: last bar 2017-04-27 14:25:00 last processed bar 2017-04-27 14:20:00
+PES: Warning! 596 bars requested 78 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:25:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:30:00.387000 return data: last bar 2017-04-27 14:30:00 last processed bar 2017-04-27 14:25:00
+PES: Warning! 596 bars requested 79 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:30:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:35:00.081000 return data: last bar 2017-04-27 14:35:00 last processed bar 2017-04-27 14:30:00
+PES: Warning! 596 bars requested 80 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:35:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.09  minutes
+now 2017-04-27 14:40:00.270000 return data: last bar 2017-04-27 14:40:00 last processed bar 2017-04-27 14:35:00
+PES: Warning! 596 bars requested 81 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:45:00.376000 return data: last bar 2017-04-27 14:45:00 last processed bar 2017-04-27 14:40:00
+PES: Warning! 596 bars requested 82 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 14:50:01.232000 return data: last bar 2017-04-27 14:50:00 last processed bar 2017-04-27 14:45:00
+PES: Warning! 596 bars requested 83 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.08  minutes
+now 2017-04-27 14:55:02.231000 return data: last bar 2017-04-27 14:55:00 last processed bar 2017-04-27 14:50:00
+PES: Warning! 596 bars requested 84 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 14:55:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:00:01.327000 return data: last bar 2017-04-27 15:00:00 last processed bar 2017-04-27 14:55:00
+PES: Warning! 596 bars requested 85 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:00:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:05:00.331000 return data: last bar 2017-04-27 15:05:00 last processed bar 2017-04-27 15:00:00
+PES: Warning! 596 bars requested 86 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:05:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:10:02.085000 return data: last bar 2017-04-27 15:10:00 last processed bar 2017-04-27 15:05:00
+PES: Warning! 596 bars requested 87 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:10:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:15:01.929000 return data: last bar 2017-04-27 15:15:00 last processed bar 2017-04-27 15:10:00
+PES: Warning! 596 bars requested 88 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:15:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:20:00.426000 return data: last bar 2017-04-27 15:20:00 last processed bar 2017-04-27 15:15:00
+PES: Warning! 596 bars requested 89 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:20:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:25:02.132000 return data: last bar 2017-04-27 15:25:00 last processed bar 2017-04-27 15:20:00
+PES: Warning! 596 bars requested 90 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:25:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.06  minutes
+now 2017-04-27 15:30:00.798000 return data: last bar 2017-04-27 15:30:00 last processed bar 2017-04-27 15:25:00
+PES: Warning! 596 bars requested 91 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:30:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:35:00.038000 return data: last bar 2017-04-27 15:35:00 last processed bar 2017-04-27 15:30:00
+PES: Warning! 596 bars requested 92 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:35:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.04  minutes
+now 2017-04-27 15:40:00.358000 return data: last bar 2017-04-27 15:40:00 last processed bar 2017-04-27 15:35:00
+PES: Warning! 596 bars requested 93 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:40:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.05  minutes
+now 2017-04-27 15:45:01.135000 return data: last bar 2017-04-27 15:45:00 last processed bar 2017-04-27 15:40:00
+PES: Warning! 596 bars requested 94 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:45:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:50:00.544000 return data: last bar 2017-04-27 15:50:00 last processed bar 2017-04-27 15:45:00
+PES: Warning! 596 bars requested 95 bars returned.
+start_idx [(19, Timestamp('2017-04-27 09:35:00'))]
+start_ema 2017-04-27 08:00:00 start_vwap 2017-04-27 09:35:00 last_bar 2017-04-27 15:50:00 Writing to ./data/PES_livesignals_20170427_09_40_46.csv ./data/PES_last.csv
+ET:  0.07  minutes
+now 2017-04-27 15:55:01.337000
