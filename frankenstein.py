@@ -57,6 +57,7 @@ def getFeed(symbol, lookback, interval):
         else:
             print 'return data: last bar', data.index[-1], 'last processed bar', lastDate
             lastDate = data.index[-1]
+            data=data[data.Volume != 0]
             return data
         
     except Exception as e:
@@ -112,7 +113,7 @@ def place_order(action, quant, sym, parentsig=None):
     headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
     parentsig = "" if parentsig == None else parentsig
     data = {
-        "apikey": c2key,  # "tXFaL4E6apdfmLtGasIovtGnUDXH_CQso7uBpOCUDYGVcm1w0w",
+        "apikey": c2key,  # "aQWcUGsCEMPTUjuogyk8G5qb3pk4XM6IG5iRdgCnKdWLxFVjeF",
         "systemid": c2id,
         "signal": {
             "action": action,

@@ -60,7 +60,7 @@ threadlist = [(t[2],t) for t in threadlist]
 print len(threadlist), 'threads found..'
 txt=str(len(threadlist))+' symbols found. '+str(stocklist)
 slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
-txt+="\nI hope you picked good stocks today..\n BETTER WIN OR LEAVE FRANK!!!"
+txt+="\nReminder..\nDummy logic being used to test feed for missing bars and misquotes..\nAll symbol that trigger should be sent to broker during testing.""
 slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
 runThreads(threadlist)
 print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()

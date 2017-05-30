@@ -132,7 +132,15 @@ def handle_command(command, channel):
                     response += ' '+str(order)+'\n'                    
                 else:
                     errors +=1
-                    response += '{}. #{}. {} triggered {} but not transmitted to c2. Check what happened frank.\n'.format(errors, i+1, sym, str(df.ix[df[df.state ==1].index[0]].name))
+                    bar=df.ix[df[df.state ==1].index[0]]
+                    print type(bar)
+                    if type(bar)==type(pd.Series()):
+                        bartime=str(bar.name)
+                    else:
+                        print bar
+                        bartime=str(bar.iloc[-1].name)
+
+                    response += '{}. #{}. {} triggered {} but not transmitted to c2. Check what happened frank.\n'.format(errors, i+1, sym, bartime )
                     
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)

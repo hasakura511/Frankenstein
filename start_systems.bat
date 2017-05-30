@@ -13,6 +13,7 @@ cd \Frankenstein
 move .\data\*.csv .\data\old\
 move .\logs\*.log .\logs\old\
 del .\data\check\*.csv
-e:\anaconda2\python clear_signals.py >> \Frankenstein\logs\clear_signals_%fullstamp%.log
-e:\anaconda2\python start_systems.py >> \Frankenstein\logs\runsystems_%fullstamp%.log
+rem e:\anaconda2\python get_iqfeed.py 300 1000 >> \Frankenstein\logs\get_iqfeed_%fullstamp%.log
+rem e:\anaconda2\python clear_signals.py >> \Frankenstein\logs\clear_signals_%fullstamp%.log
+rem e:\anaconda2\python start_systems.py >> \Frankenstein\logs\runsystems_%fullstamp%.log
 

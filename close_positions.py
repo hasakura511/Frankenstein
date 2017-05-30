@@ -121,6 +121,6 @@ if __name__ == "__main__":
     txt += 'Account Value: '+last_equity +'\n'
     txt += str(dt.now())
     slack.notify(text=txt, channel=channel, username="frankenstein", icon_emoji=":robot_face:")
-    txt = "<@Frank> Don't be lazy, check c2/signalfiles for the trades.\nYour bill is coming in the mail."
+    txt = "<@everyone> Run scripts for missing bars, misquotes, response/execution times from iqfeed <-> db <-> c2 (in microseonds)."
     slack.notify(text=txt, channel="#home", username="frankenstein", icon_emoji=":robot_face:")
     print 'Elapsed time: ', round(((time.time() - start_time) / 60), 2), ' minutes ', dt.now()
